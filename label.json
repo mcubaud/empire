@@ -1,0 +1,388 @@
+[{
+        "titre":"HEURACHNON",
+        "lat":-15.29643,
+        "long":-74.179688,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":6,
+        "descr":""
+        },
+    {
+        "titre":"MENTHIS",
+        "lat":-29.284583,
+        "long":-60.820313,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":6,
+        "descr":""
+        },
+    {
+        "titre":"VAISMIE",
+        "lat":-7.235479,
+        "long":24.785156,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":6,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p>"
+        },
+    {
+        "titre":"DUCHMIE",
+        "lat":27.974329,
+        "long":60.292969,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":6,
+        "descr":""
+        },
+    {
+        "titre":"LARIUM",
+        "lat":26.18351,
+        "long":-44.296875,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":6,
+        "descr":""
+        },
+    {
+        "titre":"Dragonoland",
+        "lat":16.254635,
+        "long":-53.614133,
+        "class":"textes_provinces",
+        "zoom_min":5,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p>"
+        },
+    {
+        "titre":"Petit-Chienland",
+        "lat":16.6,
+        "long":-48.910749,
+        "class":"textes_provinces",
+        "zoom_min":5,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p>"
+        },
+    {
+        "titre":"Buratie",
+        "lat":17.409423,
+        "long":-43.196088,
+        "class":"textes_provinces",
+        "zoom_min":5,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p>"
+        },  
+    {
+        "titre":"Surcantardie",
+        "lat":-16.317737,
+        "long":-74.949641,
+        "class":"textes_provinces",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p>"
+        },
+    {
+        "titre":"Rohanor",
+        "lat":-16.517631,
+        "long":-71.367453,
+        "class":"textes_provinces",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p>"
+        },
+    {
+        "titre":"Territoires Inexplorés",
+        "lat":-12.044665,
+        "long":-75.301593,
+        "class":"textes_provinces",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p>"
+        },
+    {
+        "titre":"Empire de l'Aigle",
+        "lat":-21.831279,
+        "long":-74.840046,
+        "class":"royaumes_ennemis",
+        "zoom_min":5,
+        "zoom_max":9,
+        "descr":"<a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p>"
+        },
+    {
+        "titre":"Royaumes des Papos",
+        "lat":23.371669,
+        "long":-52.558488,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":9,
+        "descr":"Les Papos sont les ennemis héréditaires des Playmobils, et la guerre entre ces peuples fait rage depuis des temps immémoriaux."
+        },
+    {
+        "titre":"L'Empire Playmobil",
+        "lat":16.628691,
+        "long":-50.44714,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":4,
+        "descr":""
+        },
+    {   
+        "titre":"Archipel Méga-Block",
+        "lat":13.250219,
+        "long":-53.570266,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":"Les Méga-Blocks sont un peuple de pirates qui attaquent et pillent les convois impériaux."
+        },
+    {   
+        "titre":"Baie du Loup",
+        "lat":16.063424,
+        "long":-46.008697,
+        "class":"mers",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Mer de Buratie",
+        "lat":16.190145,
+        "long":-39.305275,
+        "class":"mers",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {
+        "titre":"Toble",
+        "lat":-22.893574,
+        "long":-75.962976,
+        "class":"geographie",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {
+        "titre":"Zarta",
+        "lat":-20.853456,
+        "long":-76.149793,
+        "class":"geographie",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {
+        "titre":"Antée",
+        "lat":-21.68321,
+        "long":-72.138729,
+        "class":"geographie",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {
+        "titre":"Timinouville",
+        "lat":-15.661983,
+        "long":-74.039537,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire."
+        },
+    {
+        "titre":"Bouquetinbourg",
+        "lat":-15.049823,
+        "long":-75.523081,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Bouquetinbourg est la seconde plus grande ville de Surcantardie."
+        },
+    {
+        "titre":"Piou-Piouta",
+        "lat":-16.859716,
+        "long":-73.860962,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou."
+        },
+    {
+        "titre":"Elfonport",
+        "lat":-18.052523,
+        "long":-74.910432,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe."
+        },
+    {
+        "titre":"Néléfantarah",
+        "lat":-14.440484,
+        "long":-71.599492,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor."
+        },
+    {
+        "titre":"Gla-gla-Gorath",
+        "lat":-15.94419,
+        "long":-69.904406,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Cité de Sam",
+        "lat":-18.75585,
+        "long":-70.607716,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer."
+        },
+    {
+        "titre":"Sirva",
+        "lat":-13.026709,
+        "long":-77.623139,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire."
+        },
+    {
+        "titre":"Lunanera",
+        "lat":-18.396563,
+        "long": -71.844671,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"La petite ville de Lunanera , au bord de la mer, est une ville commerçante au rythme effréné."
+        },
+    {
+        "titre":"Oustitipolis",
+        "lat":-19.620341,
+        "long":-72.391385,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Magnilor",
+        "lat":-15.913487,
+        "long":-71.781345,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Dragonoville",
+        "lat":14.590074,
+        "long":-54.360621,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux."
+        },
+    {
+        "titre":"Pontcastel",
+        "lat":15.540093,
+        "long":-52.641033,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon."
+        },
+    {
+        "titre":"Port de Dragonoville",
+        "lat":14.281352,
+        "long":-52.844307,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial."
+        },
+    {
+        "titre":"Alaris",
+        "lat":15.18699,
+        "long":-53.427143,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Alaris est une ville de la province de Dragonoland. Elle est située sur le sommet d'une colline, dont la falaise sert de défense naturelle."
+        },
+    {
+        "titre":"Chiot-chiotville",
+        "lat":14.536225,
+        "long":-51.573049,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Chiot-chiotville est une ville de Dragonoland. C'est la ville la plus proche de Petit-chienland, et on y ressent le mélange des cultures des 2 provinces."
+        },
+    {
+        "titre":"Carouacas",
+        "lat":17.568352,
+        "long":-54.052963,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent."
+        },
+    {
+        "titre":"Petit-Chienville",
+        "lat":15.811482, 
+        "long":-48.977083,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César."
+        },
+    {
+        "titre":"Coyote Town",
+        "lat":17.391591,
+        "long":-50.372532,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":" Coyote Town est une ville qui se trouve au nord ouest de Petit-Chienland, proche de la source du fleuve Arlant et du désert. Son nom lui vient du Dieu Coyote, le dieu de la ruse. Elle abrite la grande garnison de Tuniques bleues, sa population est surtout composées de cow-boys, chercheurs d'or et d'aventuriers."
+        },
+    {
+        "titre":"Port César",
+        "lat":14.667393,
+        "long":-48.795003,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Port-César est le plus important port de Petit-Chienland, de sa position stratégique à l'embouchure du fleuve Arlant elle tient la voie commerciale en direction de la capitale."
+        },
+    {
+        "titre":"Wulf",
+        "lat":16.804637,
+        "long":-47.026434,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Grises et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers."
+        },
+    {
+        "titre":"Fort Tigrou",
+        "lat":14.265665,
+        "long":-46.325963,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire."
+        },
+    {
+        "titre":"La Forteresse Rouge",
+        "lat":15.718697,
+        "long":-49.966579,
+        "class":"ville",
+        "zoom_min":8,
+        "zoom_max":12,
+        "descr":"La forteresse Rouge est un puissant bastion se trouvant dans la forêt de Bruma non loin de Petit-Chienville."
+        }
+]

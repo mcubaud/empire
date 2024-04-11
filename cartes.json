@@ -1,0 +1,64 @@
+[   {
+        "nom":"fond.jpg",
+        "imageBounds" : [[-1000,720],[1000,-720]],
+        "zoom" :-1
+    },
+
+    {
+        "nom":"monde.png",
+        "imageBounds" : [[45,90], [-45,-90]],
+        "zoom" :0
+    },
+
+    {
+        "nom":"papa.png",
+        "imageBounds" : [[39.091365, -72.597656], [5.933045, -15.292969]],
+        "zoom" :2
+    },
+
+    {
+        "nom":"Vaismie.JPG",
+        "imageBounds" : [[22.751092, -26.193694], [-32.132707, 79.315769]],
+        "zoom" :2
+    },
+
+    {
+        "nom":"carteChezMaman.png",
+        "imageBounds" : [[-0.030588, -91.054688], [-38.313207, -29.53125]],
+        "zoom" :2
+    },
+
+
+
+    {
+        "nom":"Heurachnon.png",
+        "imageBounds" : [[-8.579527, -81.750391], [-19.855782, -68.708496]],
+        "zoom" :5
+    },
+
+    {
+        "nom":"Petit-Chienland2.png",
+        "imageBounds" : [[19.041842, -51.637115], [13.19737,  -44.34494]],
+        "zoom" :5
+    },
+    {
+        "nom":"dragonoland.png",
+        "imageBounds" : [[19.52, -58.75], [11.46, -50.8]],
+        "zoom" :5
+    },
+
+    {
+        "nom":"empireAigle.png",
+        "imageBounds" : [[-19.989699, -79.47792], [-24.689094, -70.75291]],
+        "zoom" :5
+    },
+
+    
+    {
+        "nom":"ouistitipolis.png",
+        "imageBounds" : [[-19.389914, -72.992529], [-20.88859,  -71.322168]],
+        "zoom" :5
+    }
+
+   
+]
