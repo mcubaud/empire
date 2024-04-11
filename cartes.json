@@ -17,7 +17,7 @@
     },
 
     {
-        "nom":"Vaismie.JPG",
+        "nom":"vaismie.JPG",
         "imageBounds" : [[22.751092, -26.193694], [-32.132707, 79.315769]],
         "zoom" :2
     },
@@ -55,7 +55,7 @@
 
     
     {
-        "nom":"ouistitipolis.png",
+        "nom":"Ouistitipolis.png",
         "imageBounds" : [[-19.389914, -72.992529], [-20.88859,  -71.322168]],
         "zoom" :5
     }
