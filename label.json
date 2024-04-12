@@ -283,8 +283,17 @@
         "long":-54.360621,
         "class":"ville",
         "zoom_min":7,
-        "zoom_max":12,
+        "zoom_max":8,
         "descr":"Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux."
+        },
+    {
+        "titre":"Dragonoville",
+        "lat":14.230074,
+        "long":-54.280701,
+        "class":"ville",
+        "zoom_min":8,
+        "zoom_max":12,
+        "descr":"<h3>Dragonoville</h3><img url='Blasons/Dragonoville.png' width=50px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p>"
         },
     {
         "titre":"Pontcastel",
