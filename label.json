@@ -393,5 +393,14 @@
         "zoom_min":8,
         "zoom_max":12,
         "descr":"La forteresse Rouge est un puissant bastion se trouvant dans la forêt de Bruma non loin de Petit-Chienville."
+        },
+    {
+        "titre":"Hippoport",
+        "lat":16.064396,
+        "long":-45.060425,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Hippoport est la plus grande ville de Buratie."
         }
 ]
