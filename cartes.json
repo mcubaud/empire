@@ -37,9 +37,14 @@
     },
 
     {
-        "nom":"Petit-Chienland2.png",
+        "nom":"Petit-Chienland2_fat.png",
         "imageBounds" : [[19.041842, -51.637115], [13.19737,  -44.34494]],
         "zoom" :5
+    },
+    {
+        "nom":"Petit-Chienland2.png",
+        "imageBounds" : [[19.041842, -51.637115], [13.19737,  -44.34494]],
+        "zoom" :7
     },
     {
         "nom":"dragonoland.png",
