@@ -102,7 +102,7 @@
         "lat":15.320684,
         "long":-37.331543,
         "class":"textes_provinces",
-        "zoom_min":6,
+        "zoom_min":5,
         "zoom_max":9,
         "descr":""
         },
@@ -147,7 +147,7 @@
         "lat":21.979502,
         "long":-39.594727,
         "class":"royaumes_ennemis",
-        "zoom_min":6,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":""
         },
@@ -165,7 +165,7 @@
         "lat":25.520476,
         "long":-31.376953,
         "class":"royaumes_ennemis",
-        "zoom_min":6,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":""
         },
@@ -174,7 +174,7 @@
         "lat":28.497299,
         "long":-39.375,
         "class":"royaumes_ennemis",
-        "zoom_min":6,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":""
         },
@@ -183,7 +183,7 @@
         "lat":32.326126,
         "long":-44.384766,
         "class":"royaumes_ennemis",
-        "zoom_min":6,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":""
         },
