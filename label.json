@@ -156,7 +156,7 @@
         "lat":16.712812,
         "long":-33.178711,
         "class":"royaumes_ennemis",
-        "zoom_min":6,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":""
         },
