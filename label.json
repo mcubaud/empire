@@ -284,7 +284,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":7,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville (499523 habitants) :</a><img src='Blasons/Dragonoville.png' width=250px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville :</a><img src='Blasons/Dragonoville.png' width=250px></img><b>499523 habitants</b><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
         },
     {
         "titre":"Dragonoville",
@@ -293,7 +293,7 @@
         "class":"ville",
         "zoom_min":8,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville (499523 habitants) :</a><img src='Blasons/Dragonoville.png' width=250px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville :</a><img src='Blasons/Dragonoville.png' width=250px></img><b>499523 habitants</b><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
         },
     {
         "titre":"Pontcastel",
@@ -302,7 +302,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/pontcastel'>Pontcastel (104294 habitants) :</a><img src='Blasons/pontcastel.png' width=250px></img><p>Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/pontcastel'>Pontcastel :</a><img src='Blasons/pontcastel.png' width=250px></img><b>104294 habitants</b><p>Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon.</p></div>"
         },
     {
         "titre":"Port de Dragonoville",
@@ -311,7 +311,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/port-de-dragonoville-1'>Port de Dragonoville (75253 habitants) :</a><img src='Blasons/portDeDragonoville.png' width=250px></img><p>Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/port-de-dragonoville-1'>Port de Dragonoville :</a><img src='Blasons/portDeDragonoville.png' width=250px></img><b>75253 habitants</b><p>Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial.</p></div>"
         },
     {
         "titre":"Alaris",
@@ -320,7 +320,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Alaris est une ville de la province de Dragonoland. Elle est située sur le sommet d'une colline, dont la falaise sert de défense naturelle."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/la-ville-de-dragonoland-a-l-est-de-la-grande-foret-noire'>Alaris :</a><img src='Blasons/blason.png' width=250px></img><b>37670 habitants</b><p>Alaris est une ville de la province de Dragonoland. Elle est située sur le sommet d'une colline, dont la falaise sert de défense naturelle.</p></div>"
         },
     {
         "titre":"Chiot-chiotville",
@@ -329,7 +329,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Chiot-chiotville est une ville de Dragonoland. C'est la ville la plus proche de Petit-chienland, et on y ressent le mélange des cultures des 2 provinces."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/chiot-chiotville-1'>Chiot-chiotville</a><img src='Blasons/blason-chiot-chiotville.png' width=250px></img><b>32553 habitants</b><p>Chiot-chiotville est une ville de Dragonoland. C'est la ville la plus proche de Petit-chienland, et on y ressent le mélange des cultures des 2 provinces.</p></div>"
         },
     {
         "titre":"Carouacas",
@@ -338,7 +338,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent."
+        "descr":"<div class='popup_content'><a href=''>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 100000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
         },
     {
         "titre":"Petit-Chienville",
