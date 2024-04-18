@@ -44,7 +44,7 @@
         "descr":""
         },
     {
-        "titre":"DRAGONOLAND",
+        "titre":"Dragonoland",
         "lat":16.254635,
         "long":-53.614133,
         "class":"textes_provinces",
@@ -53,7 +53,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p>"
         },
     {
-        "titre":"PETIT-CHIENLAND",
+        "titre":"Petit-Chienland",
         "lat":16.6,
         "long":-48.910749,
         "class":"textes_provinces",
@@ -62,7 +62,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p>"
         },
     {
-        "titre":"BURATIE",
+        "titre":"Buratie",
         "lat":17.409423,
         "long":-43.196088,
         "class":"textes_provinces",
@@ -71,7 +71,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p>"
         },  
     {
-        "titre":"SURCANTARDIE",
+        "titre":"Surcantardie",
         "lat":-16.317737,
         "long":-74.949641,
         "class":"textes_provinces",
@@ -80,7 +80,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p>"
         },
     {
-        "titre":"ROHANOR",
+        "titre":"Rohanor",
         "lat":-16.517631,
         "long":-71.367453,
         "class":"textes_provinces",
@@ -89,13 +89,22 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p>"
         },
     {
-        "titre":"TERRITOIRES INEXPLORÉS",
+        "titre":"Territoires Inexplorés",
         "lat":-12.044665,
         "long":-75.301593,
         "class":"textes_provinces",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p>"
+        },
+    {
+        "titre":"Territoires Orientaux",
+        "lat":15.320684,
+        "long":-37.331543,
+        "class":"textes_provinces",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
         },
     {
         "titre":"Empire de l'Aigle",
@@ -132,6 +141,51 @@
         "zoom_min":6,
         "zoom_max":9,
         "descr":"Les Méga-Blocks sont un peuple de pirates qui attaquent et pillent les convois impériaux."
+        },
+    {   
+        "titre":"Terre des Morts",
+        "lat":21.979502,
+        "long":-39.594727,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaumes Méga-Blocks",
+        "lat":16.712812,
+        "long":-33.178711,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume Keenway",
+        "lat":25.520476,
+        "long":-31.376953,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Terre des Géants",
+        "lat":28.497299,
+        "long":-39.375,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume des Actions-Man",
+        "lat":32.326126,
+        "long":-44.384766,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
         },
     {   
         "titre":"Baie du Loup",
