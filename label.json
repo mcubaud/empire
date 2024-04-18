@@ -44,7 +44,7 @@
         "descr":""
         },
     {
-        "titre":"Dragonoland",
+        "titre":"DRAGONOLAND",
         "lat":16.254635,
         "long":-53.614133,
         "class":"textes_provinces",
@@ -53,7 +53,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p>"
         },
     {
-        "titre":"Petit-Chienland",
+        "titre":"PETIT-CHIENLAND",
         "lat":16.6,
         "long":-48.910749,
         "class":"textes_provinces",
@@ -62,7 +62,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p>"
         },
     {
-        "titre":"Buratie",
+        "titre":"BURATIE",
         "lat":17.409423,
         "long":-43.196088,
         "class":"textes_provinces",
@@ -71,7 +71,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p>"
         },  
     {
-        "titre":"Surcantardie",
+        "titre":"SURCANTARDIE",
         "lat":-16.317737,
         "long":-74.949641,
         "class":"textes_provinces",
@@ -80,7 +80,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p>"
         },
     {
-        "titre":"Rohanor",
+        "titre":"ROHANOR",
         "lat":-16.517631,
         "long":-71.367453,
         "class":"textes_provinces",
@@ -89,7 +89,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p>"
         },
     {
-        "titre":"Territoires Inexplorés",
+        "titre":"TERRITOIRES INEXPLORÉS",
         "lat":-12.044665,
         "long":-75.301593,
         "class":"textes_provinces",
@@ -149,6 +149,33 @@
         "class":"mers",
         "zoom_min":6,
         "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Baie d'Arkhan",
+        "lat":13.771102,
+        "long":-55.008545,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":20,
+        "descr":""
+        },
+    {   
+        "titre":"Cap d'Asserez",
+        "lat":12.723709,
+        "long":-56.37085,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":20,
+        "descr":""
+        },
+    {   
+        "titre":"Golfe d'Ephèse",
+        "lat":17.587451,
+        "long":-56.447754,
+        "class":"mers",
+        "zoom_min":7,
+        "zoom_max":20,
         "descr":""
         },
     {
