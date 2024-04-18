@@ -84,7 +84,11 @@ button:hover, button:focus {
     border: 1px solid black;
 }
 
-
+.popup_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #mapid{
     border: 1px solid black;

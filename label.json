@@ -284,7 +284,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":7,
-        "descr":"Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville (499523 habitants) :</a><img src='Blasons/Dragonoville.png' width=250px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
         },
     {
         "titre":"Dragonoville",
@@ -293,7 +293,7 @@
         "class":"ville",
         "zoom_min":8,
         "zoom_max":12,
-        "descr":"<div style='dispay:flex;flex_direction:column;justify_items:center;>'<h3>Dragonoville</h3><img src='Blasons/Dragonoville.png' width=250px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville (499523 habitants) :</a><img src='Blasons/Dragonoville.png' width=250px></img><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
         },
     {
         "titre":"Pontcastel",
@@ -302,7 +302,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/pontcastel'>Pontcastel (104294 habitants) :</a><img src='Blasons/pontcastel.png' width=250px></img><p>Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon.</p></div>"
         },
     {
         "titre":"Port de Dragonoville",
@@ -311,7 +311,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/port-de-dragonoville-1'>Port de Dragonoville (75253 habitants) :</a><img src='Blasons/portDeDragonoville.png' width=250px></img><p>Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial.</p></div>"
         },
     {
         "titre":"Alaris",
