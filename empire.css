@@ -1,7 +1,9 @@
 body {
     background-color: gainsboro;
-    height: 690px;
 }
+html, body {
+    height: 100%;
+ }
 
 h1 {
     grid-row: 1;
