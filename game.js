@@ -78,10 +78,20 @@ function print_neighborhoods(location_name, marker, popup){
     <p>Vous pouvez accéder aux quartiers suivants :</p>
     `
     for(neighborhood in neighborhoods){
-        popup_content += `<button onclick=show_characters(neighborhoods[neighborhood])>${neighborhood}</button>`
+        popup_content += `<button id=${neighborhood})>${neighborhood}</button>`
     }
     popup_content += "</div>"
     popup.setContent(popup_content)
+    marker.on(
+        "popupopen",
+        function(e){
+            setTimeout(function(){
+                for(neighborhood in neighborhoods){
+                    document.getElementById(neighborhood).onclick=show_characters(neighborhoods[neighborhood])
+                }
+            },1000)
+        }
+    )
 }
 
 function update_time(current_day){
