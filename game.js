@@ -98,7 +98,7 @@ function update_time(current_day){
     positions_day = npcs_positions["days"][Math.floor(current_day)]
     remaining_days = 7 - Math.floor(current_day);
     remaining_hours = 24 - (current_day*24)%24;
-    document.getElementById("remaining_time").innerHtml="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
+    document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
 }
 
 function show_characters(neighborhood){
