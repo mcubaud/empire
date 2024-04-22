@@ -17,7 +17,7 @@ request3.onload = function() {
 function set_popups_using_daily_position(positions_day, current_day){
     for(location_name in positions_day){
         for(i_marker in listeMarkers){
-            marker = listeMarkers[i_marker];
+            var marker = listeMarkers[i_marker];
             if(marker.name==location_name){
                 popup = marker.getPopup();
                 if(current_position == location_name){
@@ -29,18 +29,14 @@ function set_popups_using_daily_position(positions_day, current_day){
                         popup.setContent(popup_content)
                     }
                     if(!(popup.getContent().includes("button_go"))){
-                        // Create the button element
-                        var button = document.createElement('button');
-                        button.textContent = "S'y rendre";
-                        button.className = 'button_go';
-                        
-                        // Add event listener to the button
-                        button.addEventListener('click', function() {
-                            go_location(location_name, marker, popup);
-                        });
+
                         popup.setContent(
-                            popup.getContent()+ button.outerHTML
+                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, marker, popup)>S'y rendre</button>"
                         )
+                        popup.once=function(){
+                            marker.openPopup()
+                        	document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, marker, popup)}
+                        }
                     }
                 }
                 
@@ -87,4 +83,8 @@ function update_time(current_day){
     remaining_days = 7 - Math.floor(current_day);
     remaining_hours = 24 - (current_day*24)%24;
     document.getElementById("remaining_time").innerHtml="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
+}
+
+function show_characters(neighborhood){
+    console.log(neighborhood)
 }
