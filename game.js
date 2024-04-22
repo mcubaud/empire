@@ -30,7 +30,7 @@ function set_popups_using_daily_position(positions_day, current_day){
                     }
                     if(!(popup.getContent().includes("button_go"))){
                         popup.setContent(
-                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, popup)>S'y rendre</button>"
+                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, marker, popup)>S'y rendre</button>"
                         )
                     }
                 }
@@ -40,8 +40,15 @@ function set_popups_using_daily_position(positions_day, current_day){
     }
 }
 
-function go_location(location_name, popup){
-    console.log(location_name, popup)
+function go_location(location_name, marker, popup){
+    console.log(location_name, popup);
+    travel_time = get_travel_time(current_position, location_name);
+    current_day += travel_time;
+    current_position = location_name;
+    update_time(current_day);
+    set_popups_using_daily_position(positions_day, current_day)
+    marker.openPopup()
+
 }
 
 function get_travel_time(current_position, location_name){
@@ -51,4 +58,24 @@ function get_travel_time(current_position, location_name){
 function print_neighborhoods(location_name, marker, popup){
     flavour_text = positions_day[location_name]["flavour_text"]
     neighborhoods = positions_day[location_name]["neighborhoods"]
+    popup_content = popup.getContent()
+    if(popup_content.includes("button_go")){
+        popup_content = popup_content.split("<button class='button_go'")[0]
+        popup.setContent(popup_content)
+    }
+    popup_content += `<div  class='div_neighborhood'>
+    <i>${flavour_text}</i>
+    <p>Vous pouvez accéder aux quartiers suivants :</p>
+    `
+    for(neighborhood in neighborhoods){
+        popup_content += `<button onclick=show_characters(neighborhoods[neighborhood])>${neighborhood}</button>`
+    }
+    popup_content += "</div>"
+}
+
+function update_time(current_day){
+    positions_day = npcs_positions["days"][Math.floor(current_day)]
+    remaining_days = 7 - Math.floor(current_day);
+    remaining_hours = 24 - (current_day*24)%24;
+    document.getElementById("remaining_time").innerHtml="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
 }
