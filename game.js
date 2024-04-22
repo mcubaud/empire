@@ -1,7 +1,7 @@
 mymap.flyTo({"lat":14.203151, "lng":-54.283447},10)
 current_day = 0
 current_position = "Dragonoville"
-
+npcs_positions={}
 alert("You are sent by the Emperor to the city of Dragonoville to secretly investigate on a possible plot against the Empire.\nEveryone is suspect: conspirators may be the lord of the Barbares, or the High-Priest of Dragono, or the Grand Master of the guilds of Merchants, of Craftmens or of Warriors. It may also be the lord of another city in Dragonoland, such as the warlike lord of Alaris, or the lords of Pontcastel, Dragonoville's port or Chiot-chiotville. Foreign spies may also be part of the plot. All these people will be in Dragonoville for the festival of Dragono that takes place in a week. You arrive in Dragonoville. What is the first thing you are doing?")
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
