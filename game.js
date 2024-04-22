@@ -81,6 +81,7 @@ function print_neighborhoods(location_name, marker, popup){
         popup_content += `<button onclick=show_characters(neighborhoods[neighborhood])>${neighborhood}</button>`
     }
     popup_content += "</div>"
+    popup.setContent(popup_content)
 }
 
 function update_time(current_day){
