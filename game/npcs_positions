@@ -1,0 +1,21 @@
+{
+    "days":{
+        "0":
+            {
+            "Dragonoville":{
+                "Quartier du Marché":[
+                    "Un commerçant de Dragonoville",
+                    ""
+                ]
+                ,
+                "Quartier des Temples":[
+                    "Grand prêtre de Dragono"
+                ]
+                ,
+                "Forteresse":[
+                    "Seigneur de Dragonoville"
+                ]
+            }
+        }
+    }
+}

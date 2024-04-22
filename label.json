@@ -50,7 +50,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":8,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><b>4 301 560 habitants</b><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p></div>"
         },
     {
         "titre":"Petit-Chienland",
@@ -75,7 +75,7 @@
         "lat":-16.317737,
         "long":-74.949641,
         "class":"textes_provinces",
-        "zoom_min":6,
+        "zoom_min":5,
         "zoom_max":9,
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p>"
         },
@@ -84,7 +84,7 @@
         "lat":-16.517631,
         "long":-71.367453,
         "class":"textes_provinces",
-        "zoom_min":6,
+        "zoom_min":5,
         "zoom_max":9,
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p>"
         },
@@ -93,7 +93,7 @@
         "lat":-12.044665,
         "long":-75.301593,
         "class":"textes_provinces",
-        "zoom_min":6,
+        "zoom_min":5,
         "zoom_max":9,
         "descr":"<a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p>"
         },
