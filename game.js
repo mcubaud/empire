@@ -35,10 +35,9 @@ function set_popups_using_daily_position(positions_day, current_day){
                         )
                         marker.on(
                             "popupopen",
-                            function(){
-                                marker.openPopup()
+                            function(e){
                                 setTimeout(function(){
-                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, marker, popup)}
+                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, e.target)}
                                 },1000)
                             }
                         )
@@ -50,8 +49,8 @@ function set_popups_using_daily_position(positions_day, current_day){
     }
 }
 
-function go_location(location_name, marker, popup){
-    console.log(location_name, popup);
+function go_location(location_name, marker){
+    console.log(location_name);
     travel_time = get_travel_time(current_position, location_name);
     current_day += travel_time;
     current_position = location_name;
