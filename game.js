@@ -9,7 +9,7 @@ request3.open('GET', requestURL3);
 request3.responseType = 'json';
 request3.send();
 request3.onload = function() {
-    var npcs_positions=request3.response;
+    npcs_positions=request3.response;
     positions_day = npcs_positions["days"][current_day]
     set_popups_using_daily_position(positions_day, current_day)
 }
@@ -37,7 +37,7 @@ function set_popups_using_daily_position(positions_day, current_day){
                             "popupopen",
                             function(e){
                                 setTimeout(function(){
-                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, e.target)}
+                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(e.target)}
                                 },1000)
                             }
                         )
@@ -49,7 +49,8 @@ function set_popups_using_daily_position(positions_day, current_day){
     }
 }
 
-function go_location(location_name, marker){
+function go_location(marker){
+    location_name = marker.name;
     console.log(location_name);
     travel_time = get_travel_time(current_position, location_name);
     current_day += travel_time;
