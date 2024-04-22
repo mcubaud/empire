@@ -29,8 +29,17 @@ function set_popups_using_daily_position(positions_day, current_day){
                         popup.setContent(popup_content)
                     }
                     if(!(popup.getContent().includes("button_go"))){
+                        // Create the button element
+                        var button = document.createElement('button');
+                        button.textContent = "S'y rendre";
+                        button.className = 'button_go';
+                        
+                        // Add event listener to the button
+                        button.addEventListener('click', function() {
+                            go_location(location_name, marker, popup);
+                        });
                         popup.setContent(
-                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, marker, popup)>S'y rendre</button>"
+                            popup.getContent()+ button.outerHTML
                         )
                     }
                 }
