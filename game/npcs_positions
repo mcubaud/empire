@@ -15,6 +15,23 @@
                 "Forteresse":[
                     "Seigneur de Dragonoville"
                 ]
+            },
+            "Alaris":{
+                "Forteresse":[],
+                "Marché":[]
+            },
+            "Pontcastel":{
+                "Forteresse":[],
+                "Marché":[]
+            },
+            "Port de Dragonoville":{
+                "Forteresse":[],
+                "Marché":[],
+                "Port":[]
+            },
+            "Chiotchioville":{
+                "Forteresse":[],
+                "Marché":[]
             }
         }
     }

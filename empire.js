@@ -47,6 +47,7 @@ request2.onload = function() {
     var labels=request2.response;
     labels.forEach(function(label){
         var marker=L.marker([label.lat,label.long],{icon:L.divIcon({className: label.class ,html:"<h3>"+label.titre+"</h3>"})})
+        marker.name = label.titre;
         marker.zoom_min=label.zoom_min;
         marker.zoom_max=label.zoom_max;
         if(label.descr){
