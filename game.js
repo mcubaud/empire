@@ -22,7 +22,7 @@ function set_popups_using_daily_position(positions_day, current_day){
                 popup = marker.get_popup();
                 if(not(popup.getContent().includes("button_go"))){
                     popup.setContent(
-                        popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, popup)>S'y rendre</button>"
+                        popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, popup, current_day)>S'y rendre</button>"
                     )
                 }
             }
@@ -30,6 +30,6 @@ function set_popups_using_daily_position(positions_day, current_day){
     }
 }
 
-function go_location(location_name, popup){
+function go_location(location_name, popup, current_day){
     console.log(location_name, popup)
 }
