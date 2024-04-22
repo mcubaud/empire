@@ -19,17 +19,35 @@ function set_popups_using_daily_position(positions_day, current_day){
         for(i_marker in listeMarkers){
             marker = listeMarkers[i_marker];
             if(marker.name==location_name){
-                popup = marker.get_popup();
-                if(not(popup.getContent().includes("button_go"))){
-                    popup.setContent(
-                        popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, popup, current_day)>S'y rendre</button>"
-                    )
+                popup = marker.getPopup();
+                if(current_position == location_name){
+                    print_neighborhoods(location_name, marker, popup)
+                }else{
+                    if(popup.getContent().includes("div_neighborhood")){
+                        popup_content = popup.getContent()
+                        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
+                        popup.setContent(popup_content)
+                    }
+                    if(not(popup.getContent().includes("button_go"))){
+                        popup.setContent(
+                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, popup)>S'y rendre</button>"
+                        )
+                    }
                 }
+                
             }
         }
     }
 }
 
-function go_location(location_name, popup, current_day){
+function go_location(location_name, popup){
     console.log(location_name, popup)
+}
+
+function get_travel_time(current_position, location_name){
+    return 0.5
+}
+
+function print_neighborhoods(location_name, marker, popup){
+
 }
