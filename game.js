@@ -49,5 +49,6 @@ function get_travel_time(current_position, location_name){
 }
 
 function print_neighborhoods(location_name, marker, popup){
-
+    flavour_text = positions_day[location_name]["flavour_text"]
+    neighborhoods = positions_day[location_name]["neighborhoods"]
 }
