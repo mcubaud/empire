@@ -31,14 +31,17 @@ function set_popups_using_daily_position(positions_day, current_day){
                     if(!(popup.getContent().includes("button_go"))){
 
                         popup.setContent(
-                            popup.getContent()+ "<button class='button_go' onclick=go_location(location_name, marker, popup)>S'y rendre</button>"
+                            popup.getContent()+ "<button class='button_go'>S'y rendre</button>"
                         )
-                        marker.onclick=function(){
-                            marker.openPopup()
-                            setTimeout(function(){
-                        	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, marker, popup)}
-                            },1000)
-                        }
+                        marker.on(
+                            "popupopen",
+                            function(){
+                                marker.openPopup()
+                                setTimeout(function(){
+                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(location_name, marker, popup)}
+                                },1000)
+                            }
+                        )
                     }
                 }
                 
