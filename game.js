@@ -107,7 +107,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
-                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(){show_characters(popup, marker, neighborhoods[neighborhood])}
+                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)}
                 }
             },1000)
         }
@@ -121,7 +121,9 @@ function update_time(current_day){
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
 }
 
-function show_characters(popup, marker, neighborhood){
+function show_characters(e, popup, marker, neighborhoods){
+    neighborhood_name = e.target.id.replaceAll("_", " ")
+    neighborhood = neighborhoods[neighborhood_name]
     console.log(neighborhood);
     current_day+=1/24;
     update_time(current_day);
@@ -143,7 +145,7 @@ function show_characters(popup, marker, neighborhood){
     popup.setContent(popup_content)
     setTimeout(function(){
         for(character in neighborhood["characters"]){
-            document.getElementById("char_"+character).onclick=function(){talk_character(neighborhood["characters"][character])}
+            document.getElementById("char_"+character).onclick=function(e){talk_character(e, neighborhood["characters"])}
         }
         document.getElementById("Retour").onclick = function(){
             print_neighborhoods(current_position, marker, popup)
@@ -154,6 +156,8 @@ function show_characters(popup, marker, neighborhood){
     
 }
 
-function talk_character(character){
+function talk_character(e, characters){
+    char_id = e.target.id;
+    character = characters[char_id.replaceAll("char_", "")]
     console.log(character)
 }
