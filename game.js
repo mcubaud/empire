@@ -4,7 +4,7 @@ current_position = "Dragonoville"
 npcs_positions={}
 npcs_dialogues={}
 travel_times={}
-unlocked_subjects={"":true}
+unlocked_subjects={"":true, "before_cesar":true}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
@@ -122,6 +122,9 @@ function print_neighborhoods(marker, popup){
     for(neighborhood in neighborhoods){
         popup_content += `<button id=${neighborhood.replaceAll(" ", "_")}>${neighborhood}</button>`
     }
+    popup_content += `<p>Vous pouvez également vous reposer dans une taverne</p>
+    <button id="Repos">Se reposer dans une taverne (8h)</button>
+    `
     popup_content += "</div>"
     popup.setContent(popup_content)
     marker.on(
@@ -131,6 +134,13 @@ function print_neighborhoods(marker, popup){
                 for(neighborhood in neighborhoods){
                     console.log(neighborhood.replaceAll(" ", "_"))
                     document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)}
+                }
+                document.getElementById("Repos").onclick=function(e){
+                    current_day+=8/24;
+                    update_time(current_day);
+                    set_popups_using_daily_position(positions_day, current_day);
+                    marker.closePopup();
+                    marker.openPopup();
                 }
             },1000)
         }

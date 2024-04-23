@@ -1,17 +1,44 @@
 {
-    "Seigneur de Dragonoville":{
+    "template":{
         "description":"",
+        "dialogues":[]
+    },
+    "Seigneur de Dragonoville":{
+        "description":"Le joueur demande audience devant Drakan IX, seigneur de Dragonoville, et Grand Maître des Barbares.",
         "dialogues":[
             {
-                "question":"Bonjour",
-                "answer":"Bonjour",
-                "need":"",
-                "unlock":"test"
+                "question":"Quand est-ce que l'Empereur arrive à Dragonoville ?",
+                "answer":"Il arrivera 3 jours avant le début du festival.",
+                "need":"before_cesar",
+                "unlock":"emperor_arrival"
             },
             {
-                "question":"Au revoir",
-                "answer":"Au revoir",
-                "need":"test",
+                "question":"Est-ce que tout est fait pour assurer la protection de l'Empereur pendant son séjour à Dragonoville ?",
+                "answer":"Oui, la garde de la ville sera renforcée par les chevaliers barbares, et César sera accompagné par sa garde prétorienne. César séjournera ici, à la forteresse. Durant le festival, toute personne cherchant à acceder à l'esplanade des Temples ou à la forteresse sera fouillée.",
+                "need":"emperor_arrival",
+                "unlock":""
+            }
+        ]
+    },
+    "Un commerçant de Dragonoville":{
+        "description":"Le joueur interroge un commerçant, à la recherche d'indices sur les événements à venir.",
+        "dialogues":[
+            {
+                "question":"Qu'est-ce que vous vendez ?",
+                "answer":"J'importe des denrées rares depuis nos colonies lointaines, elles s'arrachent à prix d'or à Dragonoville !",
+                "need":"",
+                "unlock":""
+            },
+            {
+                "question":"Comment se porte le commerce ?",
+                "answer":"Il aurait dû être florrissant, avec l'afflux de personnes venues de tout l'Empire pour le Festival de Dragono ! Malheureusement, une grande partie des marchandises que je voulais importer a disparue aux mains de pirates ! Quelle tragédie !",
+                "need":"",
+                "unlock":"pirates"
+            },
+            {
+                "question":"Vous avez été victime de pirates ?",
+                "answer":"Oui ! Ces chiens se terrent dans les îles de l'archipel Méga-Block, et attaquent les navires de commerce impériaux avant de disparaître !",
+                "need":"pirates",
                 "unlock":""
             }
         ]
