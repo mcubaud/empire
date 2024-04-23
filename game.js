@@ -2,6 +2,7 @@ mymap.flyTo({"lat":14.203151, "lng":-54.283447},9)
 current_day = 0
 current_position = "Dragonoville"
 npcs_positions={}
+npcs_dialogues={}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
@@ -13,6 +14,14 @@ request3.onload = function() {
     positions_day = npcs_positions["days"][current_day]
     set_popups_using_daily_position(positions_day, current_day)
 }
+var request4 = new XMLHttpRequest();
+requestURL4 = "game/npcs_dialogues.json"
+request4.open('GET', requestURL4);
+request4.responseType = 'json';
+request4.send();
+request4.onload = function() {
+    npcs_dialogues=request4.response;
+}
 
 function set_popups_using_daily_position(positions_day, current_day){
     for(location_name in positions_day){
@@ -21,7 +30,7 @@ function set_popups_using_daily_position(positions_day, current_day){
             if(marker.name==location_name){
                 popup = marker.getPopup();
                 if(current_position == location_name){
-                    print_neighborhoods(location_name, marker, popup)
+                    print_neighborhoods(marker, popup)
                 }else{
                     if(popup.getContent().includes("div_neighborhood")){
                         popup_content = popup.getContent()
@@ -75,9 +84,9 @@ function get_travel_time(current_position, location_name){
     return 0.5
 }
 
-function print_neighborhoods(location_name, marker, popup){
-    flavour_text = positions_day[location_name]["flavour_text"]
-    neighborhoods = positions_day[location_name]["neighborhoods"]
+function print_neighborhoods(marker, popup){
+    flavour_text = positions_day[current_position]["flavour_text"]
+    neighborhoods = positions_day[current_position]["neighborhoods"]
     popup_content = popup.getContent()
     if(popup_content.includes("button_go")){
         popup_content = popup_content.split("<button class='button_go'")[0]
@@ -107,6 +116,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
+                    console.log(neighborhood.replaceAll(" ", "_"))
                     document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)}
                 }
             },1000)
@@ -148,7 +158,7 @@ function show_characters(e, popup, marker, neighborhoods){
             document.getElementById("char_"+character).onclick=function(e){talk_character(e, neighborhood["characters"])}
         }
         document.getElementById("Retour").onclick = function(){
-            print_neighborhoods(current_position, marker, popup)
+            print_neighborhoods(marker, popup)
             marker.closePopup();
             marker.openPopup();
         }
