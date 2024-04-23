@@ -20,21 +20,33 @@
                 }
             },
             "Alaris":{
-                "Forteresse":[],
-                "Marché":[]
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[]
+                }
             },
             "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
                 "Forteresse":[],
                 "Marché":[]
+                }
             },
             "Port de Dragonoville":{
-                "Forteresse":[],
-                "Marché":[],
-                "Port":[]
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[],
+                    "Port":[]
+                }
             },
             "Chiotchioville":{
-                "Forteresse":[],
-                "Marché":[]
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[]
+                }
             }
         }
     }

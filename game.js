@@ -73,12 +73,12 @@ function print_neighborhoods(location_name, marker, popup){
         popup_content = popup_content.split("<button class='button_go'")[0]
         popup.setContent(popup_content)
     }
-    popup_content += `<div  class='div_neighborhood'>
+    popup_content += `<div class='div_neighborhood'>
     <i>${flavour_text}</i>
     <p>Vous pouvez accéder aux quartiers suivants :</p>
     `
     for(neighborhood in neighborhoods){
-        popup_content += `<button id=${neighborhood})>${neighborhood}</button>`
+        popup_content += `<button id=${neighborhood.replace(" ", "_")})>${neighborhood}</button>`
     }
     popup_content += "</div>"
     popup.setContent(popup_content)
@@ -87,7 +87,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
-                    document.getElementById(neighborhood).onclick=show_characters(neighborhoods[neighborhood])
+                    document.getElementById(neighborhood.replace(" ", "_")).onclick=show_characters(neighborhoods[neighborhood])
                 }
             },1000)
         }
