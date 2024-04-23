@@ -3,98 +3,708 @@
         "0":
             {
             "Dragonoville":{
-                "flavour_text":"",
+                "flavour_text":"Le soleil se lève sur Dragonoville, baignant ses rues de lumière dorée. Les marchands s'activent déjà sur les places, déballant leurs marchandises colorées. Les cloches du magnifique temple de Dragono retentissent, appelant les fidèles à la prière. Mais sous cette apparence de tranquillité, des murmures s'élèvent dans les coins sombres de la ville, des rumeurs d'un complot qui circulent parmi les habitants.",
                 "neighborhoods":{
-                    "Quartier du Marché":[
-                        "Un commerçant de Dragonoville",
-                        ""
-                    ]
-                    ,
-                    "Quartier des Temples":[
-                        "Grand prêtre de Dragono"
-                    ]
-                    ,
-                    "Forteresse":[
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                            "Un commerçant de Dragonoville",
+                            ""
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                            "Grand prêtre de Dragono"
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
                         "Seigneur de Dragonoville"
-                    ]
+                        ]
+                    }
                 }
             },
             "Alaris":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             },
             "Pontcastel":{
                 "flavour_text":"",
                 "neighborhoods":{
-                "Forteresse":[],
-                "Marché":[]
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
                 }
             },
             "Port de Dragonoville":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[],
-                    "Port":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             },
             "Chiotchioville":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             }
         },
         "1":
             {
             "Dragonoville":{
-                "flavour_text":"",
+                "flavour_text":"Dragonoville s'éveille à une nouvelle journée animée. Les artisans forgent l'acier dans leurs ateliers, exploitant la chaleur du volcan des Dieux pour alimenter leurs forges. Les rues résonnent du brouhaha des commerçants et des cris des enfants qui jouent dans les parcs. Pourtant, l'ombre du complot plane toujours, et l'Empereur doit arriver d'ici 2 jours, pressant le joueur de chercher des réponses avant qu'il ne soit trop tard.",
                 "neighborhoods":{
-                    "Quartier du Marché":[
-                        "Un commerçant de Dragonoville",
-                        ""
-                    ]
-                    ,
-                    "Quartier des Temples":[
-                        "Grand prêtre de Dragono"
-                    ]
-                    ,
-                    "Forteresse":[
-                        "Seigneur de Dragonoville"
-                    ]
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             },
             "Alaris":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             },
             "Pontcastel":{
                 "flavour_text":"",
                 "neighborhoods":{
-                "Forteresse":[],
-                "Marché":[]
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
                 }
             },
             "Port de Dragonoville":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[],
-                    "Port":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             },
             "Chiotchioville":{
                 "flavour_text":"",
                 "neighborhoods":{
-                    "Forteresse":[],
-                    "Marché":[]
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "2":
+            {
+            "Dragonoville":{
+                "flavour_text":"La tension monte dans les rues de Dragonoville. Les habitants chuchotent nerveusement entre eux, se demandant ce que l'avenir leur réserve. Les gardes patrouillent avec une vigilance accrue, leurs regards scrutateurs balayant chaque recoin de la ville. Le joueur sent le poids du temps qui lui échappe, car l'Empereur arrive demain, le pressant de redoubler d'efforts dans sa quête pour déjouer le complot qui se trame.",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "3":
+            {
+            "Dragonoville":{
+                "flavour_text":"L'excitation est à son comble alors que Dragonoville se prépare à accueillir l'empereur. Les rues sont décorées de bannières festives, et une foule enthousiaste se rassemble le long du parcours du cortège impérial. Pour le joueur, c'est un moment crucial, car l'arrivée de l'empereur signifie qu'il doit être prêt à agir. Les rumeurs de complot sont devenues plus pressantes, le poussant à accélérer ses recherches.",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "4":
+            {
+            "Dragonoville":{
+                "flavour_text":"Dragonoville déborde de vie alors que les festivités battent leur plein. Les rues résonnent de musique et de rires, et les marchés regorgent de délices culinaires et d'objets artisanaux. Pourtant, le joueur sait que derrière cette façade de célébration, le danger rôde toujours. Il se hâte de rassembler les dernières pièces du puzzle, conscient que le temps presse.",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "5":
+            {
+            "Dragonoville":{
+                "flavour_text":"La ville est plongée dans une atmosphère électrique alors que la nuit tombe sur Dragonoville. Les feux d'artifice illuminent le ciel nocturne, éclairant les visages souriants des habitants. Mais pour le joueur, c'est un moment d'urgence. Les pièces du complot commencent à se mettre en place, et il doit agir rapidement pour les arrêter avant qu'il ne soit trop tard.",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "6":
+            {
+            "Dragonoville":{
+                "flavour_text":"C'est le grand jour de la fête de Dragono à Dragonoville. La ville est en ébullition, alors que les citoyens se pressent vers le magnifique temple dédié au dieu Dragono. Le joueur se tient prêt, conscient que le moment de la vérité est arrivé. Alors que l'empereur et les nobles entrent dans le temple, il sait que c'est maintenant ou jamais.",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            }
+        },
+        "7":
+            {
+            "Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Quartier du Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Quartier des Temples":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":{
+                    "description":"",
+                    "characters":[
+                    ]
+                },
+                "Marché":{
+                    "description":"",
+                    "characters":[
+                    ]
+                }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Port":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    },
+                    "Marché":{
+                        "description":"",
+                        "characters":[
+                        ]
+                    }
                 }
             }
         }

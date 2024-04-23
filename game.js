@@ -78,7 +78,7 @@ function print_neighborhoods(location_name, marker, popup){
     <p>Vous pouvez accéder aux quartiers suivants :</p>
     `
     for(neighborhood in neighborhoods){
-        popup_content += `<button id=${neighborhood.replace(" ", "_")})>${neighborhood}</button>`
+        popup_content += `<button id=${neighborhood.replaceAll(" ", "_")})>${neighborhood}</button>`
     }
     popup_content += "</div>"
     popup.setContent(popup_content)
@@ -87,7 +87,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
-                    document.getElementById(neighborhood.replace(" ", "_")).onclick=show_characters(neighborhoods[neighborhood])
+                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=show_characters(neighborhoods[neighborhood])
                 }
             },1000)
         }
