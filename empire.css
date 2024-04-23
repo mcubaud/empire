@@ -147,6 +147,10 @@ button:hover, button:focus {
     margin: 0px 0px;
 }
 
+.leaflet-popup-content-wrapper{
+    max-height: 500px;
+    overflow: auto;
+}
 
 .leaflet-popup-content a{
     color: #df3f1d;

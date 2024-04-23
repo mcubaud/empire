@@ -7,6 +7,12 @@
                 "answer":"Bonjour",
                 "need":"",
                 "unlock":"test"
+            },
+            {
+                "question":"Au revoir",
+                "answer":"Au revoir",
+                "need":"test",
+                "unlock":""
             }
         ]
     }

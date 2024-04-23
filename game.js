@@ -170,6 +170,7 @@ function talk_character(e, popup, marker, characters){
     popup_content = popup.getContent()
     popup_content += `<div class='div_character'>
     <i>${character_dialogs["description"]}</i>
+    <div class='popup_content' id='list_dialogs'>
     `
     for(i_dialog in character_dialogs["dialogues"]){
         dialog=character_dialogs["dialogues"][i_dialog]
@@ -178,7 +179,7 @@ function talk_character(e, popup, marker, characters){
         }
         
     }
-    popup_content += `<button id="Retour">Retour</button>`
+    popup_content += `<button id="Retour">Retour</button></div>`
     popup_content += "</div>"
     popup.setContent(popup_content)
     setTimeout(function(){
@@ -187,5 +188,35 @@ function talk_character(e, popup, marker, characters){
             marker.closePopup();
             marker.openPopup();
         }
+        for(i_dialog in character_dialogs["dialogues"]){
+            if(unlocked_subjects[dialog["need"]]){
+                dialog=character_dialogs["dialogues"][i_dialog]
+                document.getElementById("dialog_"+i_dialog).onclick=function(e){
+                    add_answer(e, dialog, character_dialogs["dialogues"])
+                }
+            }
+        }
     },1000)
+}
+function add_answer(e, dialog, character_dialogs){
+    answer = document.createElement("p");
+    answer.innerHTML = dialog[answer];
+    e.target.insertAdjacentElement("afterend", answer);
+    e.target.onclick="";
+    unlocked_subjects[dialog["unlock"]]=true;
+    //Add new unlocked dialog possibilities
+    for(i_dialog in character_dialogs){
+        new_dialog=character_dialogs["dialogues"][i_dialog]
+        if(unlocked_subjects[new_dialog["need"]]){
+            if(document.getElementById("dialog_"+i_dialog)===null){
+                new_button = document.createElement(button)
+                new_button.outerHTML= `<button id=${"dialog_"+i_dialog}>${new_dialog["question"]}</button>`
+                document.getElementById('list_dialogs').appendChild(new_button)
+                document.getElementById("dialog_"+i_dialog).onclick=function(e){
+                    add_answer(e, new_dialog, character_dialogs["dialogues"])
+                }
+            }
+        }
+        
+    }
 }
