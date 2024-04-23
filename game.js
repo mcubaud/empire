@@ -2,7 +2,7 @@ mymap.flyTo({"lat":14.203151, "lng":-54.283447},9)
 current_day = 0
 current_position = "Dragonoville"
 npcs_positions={}
-alert("You are sent by the Emperor to the city of Dragonoville to secretly investigate on a possible plot against the Empire.\nEveryone is suspect: conspirators may be the lord of the Barbares, or the High-Priest of Dragono, or the Grand Master of the guilds of Merchants, of Craftmens or of Warriors. It may also be the lord of another city in Dragonoland, such as the warlike lord of Alaris, or the lords of Pontcastel, Dragonoville's port or Chiot-chiotville. Foreign spies may also be part of the plot. All these people will be in Dragonoville for the festival of Dragono that takes place in a week. You arrive in Dragonoville. What is the first thing you are doing?")
+alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
 request3.open('GET', requestURL3);
@@ -142,11 +142,13 @@ function show_characters(popup, marker, neighborhood){
     popup_content += "</div>"
     popup.setContent(popup_content)
     setTimeout(function(){
-        for(neighborhood in neighborhoods){
+        for(character in neighborhood["characters"]){
             document.getElementById("char_"+character).onclick=function(){talk_character(neighborhood["characters"][character])}
         }
         document.getElementById("Retour").onclick = function(){
             print_neighborhoods(current_position, marker, popup)
+            marker.closePopup();
+            marker.openPopup();
         }
     },1000)
     
