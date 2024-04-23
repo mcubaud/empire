@@ -6,20 +6,20 @@
                 "flavour_text":"Le soleil se lève sur Dragonoville, baignant ses rues de lumière dorée. Les marchands s'activent déjà sur les places, déballant leurs marchandises colorées. Les cloches du magnifique temple de Dragono retentissent, appelant les fidèles à la prière. Mais sous cette apparence de tranquillité, des murmures s'élèvent dans les coins sombres de la ville, des rumeurs d'un complot qui circulent parmi les habitants.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
                             "Un commerçant de Dragonoville",
-                            ""
+                            "Grand maître de la guilde des artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des temples de Dragonoville est un endroit sacré où règne une atmosphère de sérénité et de recueillement. Des rues pavées mènent à de magnifiques édifices religieux en pierre noire ornés de sculptures complexes et de décorations élaborées. Le temple principal dédié au dieu Dragono se dresse majestueusement au centre, ses colonnes imposantes atteignant vers le ciel. Des prêtres vêtus de robes ornées déambulent entre les fidèles, offrant des bénédictions et des prières.",
                         "characters":[
                             "Grand prêtre de Dragono"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
                         "Seigneur de Dragonoville"
                         ]

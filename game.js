@@ -87,7 +87,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
-                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(){show_characters(neighborhoods[neighborhood])}
+                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(){show_characters(popup, marker, neighborhoods[neighborhood])}
                 }
             },1000)
         }
@@ -101,6 +101,24 @@ function update_time(current_day){
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
 }
 
-function show_characters(neighborhood){
-    console.log(neighborhood)
+function show_characters(popup, marker, neighborhood){
+    console.log(neighborhood);
+    current_day+=1/24;
+    update_time(current_day);
+    popup_content = popup.getContent()
+    if(popup.getContent().includes("div_neighborhood")){
+        popup_content = popup.getContent()
+        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
+        popup.setContent(popup_content)
+    }
+    popup_content += `<div class='div_quartier'>
+    <i>${neighborhood["description"]}</i>
+    <p>Les personnages suivants sont présents :</p>
+    `
+    for(character in neighborhood["characters"]){
+        popup_content += `<button id=${character.replaceAll(" ", "_")}>${character}</button>`
+    }
+    popup_content += `<button id="Retour">Retour</button>`
+    popup_content += "</div>"
+    popup.setContent(popup_content)
 }
