@@ -48,6 +48,55 @@
                     "Marché":[]
                 }
             }
+        },
+        "1":
+            {
+            "Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Quartier du Marché":[
+                        "Un commerçant de Dragonoville",
+                        ""
+                    ]
+                    ,
+                    "Quartier des Temples":[
+                        "Grand prêtre de Dragono"
+                    ]
+                    ,
+                    "Forteresse":[
+                        "Seigneur de Dragonoville"
+                    ]
+                }
+            },
+            "Alaris":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[]
+                }
+            },
+            "Pontcastel":{
+                "flavour_text":"",
+                "neighborhoods":{
+                "Forteresse":[],
+                "Marché":[]
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[],
+                    "Port":[]
+                }
+            },
+            "Chiotchioville":{
+                "flavour_text":"",
+                "neighborhoods":{
+                    "Forteresse":[],
+                    "Marché":[]
+                }
+            }
         }
     }
 }
