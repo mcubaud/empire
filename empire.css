@@ -158,11 +158,16 @@ button:hover, button:focus {
     margin-left: 20px;
     font-size: 1.5em;
     font-weight: bold;
+    
 }
 
 .leaflet-popup-content a:hover{
     color: darkred;
     text-emphasis: show;
+}
+
+.leaflet-popup-content{
+    width: 500px;
 }
 /*
 .leaflet-popup-content-wrapper{
