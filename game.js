@@ -89,22 +89,22 @@ function get_travel_time(current_position, location_name){
 function remove_existing_content(popup){
     popup_content = popup.getContent()
     if(popup_content.includes("button_go")){
-        popup_content = popup_content.split("<button class='button_go'")[0]
+        popup_content = popup_content.split("<button class='button_go")[0]
         popup.setContent(popup_content)
     }
     if(popup.getContent().includes("div_neighborhood")){
         popup_content = popup.getContent()
-        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
+        popup_content = popup_content.split("<div class='div_neighborhood")[0]
         popup.setContent(popup_content)
     }
     if(popup.getContent().includes("div_quartier")){
         popup_content = popup.getContent()
-        popup_content = popup_content.split("<div class='div_quartier'")[0]
+        popup_content = popup_content.split("<div class='div_quartier")[0]
         popup.setContent(popup_content)
     }
     if(popup.getContent().includes("div_character")){
         popup_content = popup.getContent()
-        popup_content = popup_content.split("<div class='div_character'")[0]
+        popup_content = popup_content.split("<div class='div_character")[0]
         popup.setContent(popup_content)
     }
     return popup
