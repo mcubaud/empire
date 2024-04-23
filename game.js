@@ -3,6 +3,7 @@ current_day = 0
 current_position = "Dragonoville"
 npcs_positions={}
 npcs_dialogues={}
+travel_times={}
 unlocked_subjects={"":true}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
 var request3 = new XMLHttpRequest();
@@ -23,6 +24,14 @@ request4.send();
 request4.onload = function() {
     npcs_dialogues=request4.response;
 }
+var request5 = new XMLHttpRequest();
+requestURL5 = "game/travel_times.json"
+request5.open('GET', requestURL5);
+request5.responseType = 'json';
+request5.send();
+request5.onload = function() {
+    travel_times=request5.response;
+}
 
 function set_popups_using_daily_position(positions_day, current_day){
     for(location_name in positions_day){
@@ -37,7 +46,7 @@ function set_popups_using_daily_position(positions_day, current_day){
                     if(!(popup.getContent().includes("button_go"))){
 
                         popup.setContent(
-                            popup.getContent()+ "<button class='button_go'>S'y rendre</button>"
+                            popup.getContent()+ `<button class='button_go'>S'y rendre (${get_travel_time(current_position, location_name)} heures)</button>`
                         )
                         marker.on(
                             "popupopen",
@@ -58,7 +67,7 @@ function set_popups_using_daily_position(positions_day, current_day){
 function go_location(marker){
     location_name = marker.name;
     console.log(location_name);
-    travel_time = get_travel_time(current_position, location_name);
+    travel_time = get_travel_time(current_position, location_name)/24;
     current_day += travel_time;
     current_position = location_name;
     update_time(current_day);
@@ -69,7 +78,12 @@ function go_location(marker){
 }
 
 function get_travel_time(current_position, location_name){
-    return 0.5
+    if(current_position in travel_times){
+        if(location_name in travel_times[current_position]){
+            return travel_times[current_position][location_name]
+        }
+    }
+    return 12
 }
 
 function remove_existing_content(popup){
