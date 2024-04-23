@@ -149,6 +149,7 @@ button:hover, button:focus {
 
 .leaflet-popup-content-wrapper{
     max-height: 500px;
+    width: 500px;
     overflow: auto;
 }
 
@@ -167,7 +168,7 @@ button:hover, button:focus {
 }
 
 .leaflet-popup-content{
-    width: 500px;
+    width: 100%;
 }
 /*
 .leaflet-popup-content-wrapper{
