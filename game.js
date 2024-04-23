@@ -87,7 +87,7 @@ function print_neighborhoods(location_name, marker, popup){
         function(e){
             setTimeout(function(){
                 for(neighborhood in neighborhoods){
-                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=show_characters(neighborhoods[neighborhood])
+                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(){show_characters(neighborhoods[neighborhood])}
                 }
             },1000)
         }
