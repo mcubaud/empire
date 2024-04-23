@@ -101,7 +101,7 @@ function print_neighborhoods(marker, popup){
     neighborhoods = positions_day[current_position]["neighborhoods"]
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
-    popup_content += `<div class='div_neighborhood'>
+    popup_content += `<div class='div_neighborhood' class='popup_content'>
     <i>${flavour_text}</i>
     <p>Vous pouvez accéder aux quartiers suivants :</p>
     `
@@ -138,7 +138,7 @@ function show_characters(e, popup, marker, neighborhoods){
     update_time(current_day);
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
-    popup_content += `<div class='div_quartier'>
+    popup_content += `<div class='div_quartier' class='popup_content'>
     <i>${neighborhood["description"]}</i>
     <p>Les personnages suivants sont présents :</p>
     `
@@ -170,7 +170,7 @@ function talk_character(e, popup, marker, characters){
 
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
-    popup_content += `<div class='div_character'>
+    popup_content += `<div class='div_character' class='popup_content'>
     <i>${character_information["description"]}</i>
     <div class='popup_content' id='list_dialogs'>
     `
