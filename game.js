@@ -165,15 +165,17 @@ function talk_character(e, popup, marker, characters){
     char_id = e.target.id;
     character_name = characters[char_id.replaceAll("char_", "")]
     console.log(character_name)
-    character_dialogs = npcs_dialogues[character_name]
+    character_information = npcs_dialogues[character_name]
+    character_dialogs = character_information["dialogues"]
+
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
     popup_content += `<div class='div_character'>
-    <i>${character_dialogs["description"]}</i>
+    <i>${character_information["description"]}</i>
     <div class='popup_content' id='list_dialogs'>
     `
-    for(i_dialog in character_dialogs["dialogues"]){
-        dialog=character_dialogs["dialogues"][i_dialog]
+    for(i_dialog in character_dialogs){
+        dialog=character_dialogs[i_dialog]
         if(unlocked_subjects[dialog["need"]]){
             popup_content += `<button id=${"dialog_"+i_dialog}>${dialog["question"]}</button>`
         }
@@ -188,19 +190,20 @@ function talk_character(e, popup, marker, characters){
             marker.closePopup();
             marker.openPopup();
         }
-        for(i_dialog in character_dialogs["dialogues"]){
-            dialog=character_dialogs["dialogues"][i_dialog]
+        for(i_dialog in character_dialogs){
+            dialog=character_dialogs[i_dialog]
             if(unlocked_subjects[dialog["need"]]){
                 document.getElementById("dialog_"+i_dialog).onclick=function(e){
-                    add_answer(e, dialog, character_dialogs["dialogues"])
+                    add_answer(e, character_dialogs)
                 }
             }
         }
     },1000)
 }
-function add_answer(e, dialog, character_dialogs){
+function add_answer(e, character_dialogs){
     i_dialog = e.target.id.replaceAll("dialog_");
     dialog = character_dialogs[i_dialog];
+    console.log(dialog);
     answer = document.createElement("p");
     answer.innerHTML = dialog["answer"];
     e.target.insertAdjacentElement("afterend", answer);
@@ -216,7 +219,7 @@ function add_answer(e, dialog, character_dialogs){
                 new_button.id="dialog_"+i_dialog
                 document.getElementById('list_dialogs').appendChild(new_button)
                 document.getElementById("dialog_"+i_dialog).onclick=function(e){
-                    add_answer(e, new_dialog, character_dialogs["dialogues"])
+                    add_answer(e, character_dialogs)
                 }
             }
         }
