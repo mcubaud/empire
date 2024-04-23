@@ -152,6 +152,10 @@ function update_time(current_day){
     remaining_days = 7 - Math.ceil(current_day);
     remaining_hours = Math.round(Math.ceil(current_day)*24 - current_day*24);
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
+    if(current_day>=3.5){//arrival of cesar
+        unlocked_subjects["before_cesar"]=false;
+        unlocked_subjects["after_cesar"]=true;
+    }
 }
 
 function show_characters(e, popup, marker, neighborhoods){
@@ -247,6 +251,5 @@ function add_answer(e, character_dialogs){
                 }
             }
         }
-        
     }
 }

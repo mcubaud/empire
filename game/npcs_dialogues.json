@@ -14,7 +14,7 @@
             },
             {
                 "question":"Est-ce que tout est fait pour assurer la protection de l'Empereur pendant son séjour à Dragonoville ?",
-                "answer":"Oui, la garde de la ville sera renforcée par les chevaliers barbares, et César sera accompagné par sa garde prétorienne. César séjournera ici, à la forteresse. Durant le festival, toute personne cherchant à acceder à l'esplanade des Temples ou à la forteresse sera fouillée.",
+                "answer":"Oui, la garde de la ville sera renforcée par les chevaliers barbares, et César sera accompagné par sa garde prétorienne. César séjournera ici, à la forteresse. Durant le festival, toute personne cherchant à accéder à l'esplanade des Temples ou à la forteresse sera fouillée.",
                 "need":"emperor_arrival",
                 "unlock":""
             }
@@ -42,5 +42,40 @@
                 "unlock":""
             }
         ]
+    },
+    "Haut Prêtre de Dragono": {
+        "description": "Le joueur demande audience avec le Haut Prêtre de Dragono, le gardien du temple dédié au dieu Dragono.",
+        "dialogues": [
+          {
+            "question": "Peut-on en savoir plus sur les visions dont vous avez parlé lors de votre dernier sermon ?",
+            "answer": "Les visions que j'ai reçues sont des avertissements des dieux sur le destin de l'Empire. Ils sont mécontents de notre état actuel et nous avertissent de leur colère imminente. Nous devons nous assurer d'être en bons termes avec les Divins pour éviter leur terrible châtiment.",
+            "need": "",
+            "unlock": ""
+          },
+          {
+            "question": "Avez-vous des informations sur une quelconque conspiration contre l'Empereur ou la ville de Dragonoville ?",
+            "answer": "Non, je n'ai pas de telles informations. Mais je vous exhorte à rester vigilant. Les forces du mal sont toujours à l'œuvre, cherchant à semer la discorde et le chaos. Restez en prière et les dieux veilleront sur nous.",
+            "need": "",
+            "unlock": ""
+          }
+        ]
+    },
+      "Seigneur d'Alaris": {
+        "description": "Le joueur cherche audience avec Guildebard VI, le Seigneur d'Alaris, un personnage influent de la région.",
+        "dialogues": [
+          {
+            "question": "Pourquoi y a-t-il une augmentation de l'activité militaire à Alaris ?",
+            "answer": "L'augmentation de l'activité militaire à Alaris est due à des opérations de routine pour lutter contre les bandits et assurer la sécurité de nos frontières. Rien à craindre, citoyen.",
+            "need": "military_activity_in_alaris",
+            "unlock": ""
+          },
+          {
+            "question": "Avez-vous entendu parler d'une conspiration ou de quelque chose de suspect se déroulant dans la région ?",
+            "answer": "Non, je n'ai aucune information sur une quelconque conspiration. Alaris est une ville pacifique et prospère, loin des intrigues politiques de Dragonoville.",
+            "need": "",
+            "unlock": ""
+          }
+        ]
     }
+    
 }
