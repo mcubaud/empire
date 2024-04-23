@@ -3,10 +3,10 @@
         "description":"",
         "dialogues":[
             {
-                "question":"",
-                "answer":"",
+                "question":"Bonjour",
+                "answer":"Bonjour",
                 "need":"",
-                "unlock":""
+                "unlock":"test"
             }
         ]
     }

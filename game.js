@@ -3,6 +3,7 @@ current_day = 0
 current_position = "Dragonoville"
 npcs_positions={}
 npcs_dialogues={}
+unlocked_subjects={"":true}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
@@ -32,21 +33,7 @@ function set_popups_using_daily_position(positions_day, current_day){
                 if(current_position == location_name){
                     print_neighborhoods(marker, popup)
                 }else{
-                    if(popup.getContent().includes("div_neighborhood")){
-                        popup_content = popup.getContent()
-                        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
-                        popup.setContent(popup_content)
-                    }
-                    if(popup.getContent().includes("div_quartier")){
-                        popup_content = popup.getContent()
-                        popup_content = popup_content.split("<div class='div_quartier'")[0]
-                        popup.setContent(popup_content)
-                    }
-                    if(popup.getContent().includes("div_character")){
-                        popup_content = popup.getContent()
-                        popup_content = popup_content.split("<div class='div_character'")[0]
-                        popup.setContent(popup_content)
-                    }
+                    popup = remove_existing_content(popup)
                     if(!(popup.getContent().includes("button_go"))){
 
                         popup.setContent(
@@ -84,12 +71,15 @@ function get_travel_time(current_position, location_name){
     return 0.5
 }
 
-function print_neighborhoods(marker, popup){
-    flavour_text = positions_day[current_position]["flavour_text"]
-    neighborhoods = positions_day[current_position]["neighborhoods"]
+function remove_existing_content(popup){
     popup_content = popup.getContent()
     if(popup_content.includes("button_go")){
         popup_content = popup_content.split("<button class='button_go'")[0]
+        popup.setContent(popup_content)
+    }
+    if(popup.getContent().includes("div_neighborhood")){
+        popup_content = popup.getContent()
+        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
         popup.setContent(popup_content)
     }
     if(popup.getContent().includes("div_quartier")){
@@ -102,6 +92,14 @@ function print_neighborhoods(marker, popup){
         popup_content = popup_content.split("<div class='div_character'")[0]
         popup.setContent(popup_content)
     }
+    return popup
+}
+
+function print_neighborhoods(marker, popup){
+    flavour_text = positions_day[current_position]["flavour_text"]
+    neighborhoods = positions_day[current_position]["neighborhoods"]
+    popup = remove_existing_content(popup)
+    popup_content = popup.getContent()
     popup_content += `<div class='div_neighborhood'>
     <i>${flavour_text}</i>
     <p>Vous pouvez accéder aux quartiers suivants :</p>
@@ -137,12 +135,8 @@ function show_characters(e, popup, marker, neighborhoods){
     console.log(neighborhood);
     current_day+=1/24;
     update_time(current_day);
+    popup = remove_existing_content(popup)
     popup_content = popup.getContent()
-    if(popup.getContent().includes("div_neighborhood")){
-        popup_content = popup.getContent()
-        popup_content = popup_content.split("<div class='div_neighborhood'")[0]
-        popup.setContent(popup_content)
-    }
     popup_content += `<div class='div_quartier'>
     <i>${neighborhood["description"]}</i>
     <p>Les personnages suivants sont présents :</p>
@@ -155,7 +149,7 @@ function show_characters(e, popup, marker, neighborhoods){
     popup.setContent(popup_content)
     setTimeout(function(){
         for(character in neighborhood["characters"]){
-            document.getElementById("char_"+character).onclick=function(e){talk_character(e, neighborhood["characters"])}
+            document.getElementById("char_"+character).onclick=function(e){talk_character(e, popup, marker, neighborhood["characters"])}
         }
         document.getElementById("Retour").onclick = function(){
             print_neighborhoods(marker, popup)
@@ -166,8 +160,31 @@ function show_characters(e, popup, marker, neighborhoods){
     
 }
 
-function talk_character(e, characters){
+function talk_character(e, popup, marker, characters){
     char_id = e.target.id;
-    character = characters[char_id.replaceAll("char_", "")]
-    console.log(character)
+    character_name = characters[char_id.replaceAll("char_", "")]
+    console.log(character_name)
+    character_dialogs = npcs_dialogues[character_name]
+    popup = remove_existing_content(popup)
+    popup_content = popup.getContent()
+    popup_content += `<div class='div_character'>
+    <i>${character_dialogs["description"]}</i>
+    `
+    for(i_dialog in character_dialogs["dialogues"]){
+        dialog=character_dialogs["dialogues"][i_dialog]
+        if(unlocked_subjects(dialog["need"])){
+            popup_content += `<button id=${"dialog_"+i_dialog}>${dialog["question"]}</button>`
+        }
+        
+    }
+    popup_content += `<button id="Retour">Retour</button>`
+    popup_content += "</div>"
+    popup.setContent(popup_content)
+    setTimeout(function(){
+        document.getElementById("Retour").onclick = function(){
+            print_neighborhoods(marker, popup)
+            marker.closePopup();
+            marker.openPopup();
+        }
+    },1000)
 }
