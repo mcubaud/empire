@@ -201,7 +201,7 @@ function talk_character(e, popup, marker, characters){
     },1000)
 }
 function add_answer(e, character_dialogs){
-    i_dialog = e.target.id.replaceAll("dialog_");
+    i_dialog = e.target.id.replaceAll("dialog_", "");
     dialog = character_dialogs[i_dialog];
     console.log(dialog);
     answer = document.createElement("p");
