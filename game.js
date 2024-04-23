@@ -1,4 +1,4 @@
-mymap.flyTo({"lat":14.203151, "lng":-54.283447},10)
+mymap.flyTo({"lat":14.203151, "lng":-54.283447},9)
 current_day = 0
 current_position = "Dragonoville"
 npcs_positions={}
@@ -26,6 +26,16 @@ function set_popups_using_daily_position(positions_day, current_day){
                     if(popup.getContent().includes("div_neighborhood")){
                         popup_content = popup.getContent()
                         popup_content = popup_content.split("<div class='div_neighborhood'")[0]
+                        popup.setContent(popup_content)
+                    }
+                    if(popup.getContent().includes("div_quartier")){
+                        popup_content = popup.getContent()
+                        popup_content = popup_content.split("<div class='div_quartier'")[0]
+                        popup.setContent(popup_content)
+                    }
+                    if(popup.getContent().includes("div_character")){
+                        popup_content = popup.getContent()
+                        popup_content = popup_content.split("<div class='div_character'")[0]
                         popup.setContent(popup_content)
                     }
                     if(!(popup.getContent().includes("button_go"))){
@@ -73,6 +83,16 @@ function print_neighborhoods(location_name, marker, popup){
         popup_content = popup_content.split("<button class='button_go'")[0]
         popup.setContent(popup_content)
     }
+    if(popup.getContent().includes("div_quartier")){
+        popup_content = popup.getContent()
+        popup_content = popup_content.split("<div class='div_quartier'")[0]
+        popup.setContent(popup_content)
+    }
+    if(popup.getContent().includes("div_character")){
+        popup_content = popup.getContent()
+        popup_content = popup_content.split("<div class='div_character'")[0]
+        popup.setContent(popup_content)
+    }
     popup_content += `<div class='div_neighborhood'>
     <i>${flavour_text}</i>
     <p>Vous pouvez accéder aux quartiers suivants :</p>
@@ -97,7 +117,7 @@ function print_neighborhoods(location_name, marker, popup){
 function update_time(current_day){
     positions_day = npcs_positions["days"][Math.floor(current_day)]
     remaining_days = 7 - Math.ceil(current_day);
-    remaining_hours = (Math.ceil(current_day)*24 - current_day*24)%24;
+    remaining_hours = Math.round(Math.ceil(current_day)*24 - current_day*24);
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
 }
 
@@ -116,9 +136,22 @@ function show_characters(popup, marker, neighborhood){
     <p>Les personnages suivants sont présents :</p>
     `
     for(character in neighborhood["characters"]){
-        popup_content += `<button id=${character.replaceAll(" ", "_")}>${character}</button>`
+        popup_content += `<button id=${"char_"+character}>${neighborhood["characters"][character]}</button>`
     }
     popup_content += `<button id="Retour">Retour</button>`
     popup_content += "</div>"
     popup.setContent(popup_content)
+    setTimeout(function(){
+        for(neighborhood in neighborhoods){
+            document.getElementById("char_"+character).onclick=function(){talk_character(neighborhood["characters"][character])}
+        }
+        document.getElementById("Retour").onclick = function(){
+            print_neighborhoods(current_position, marker, popup)
+        }
+    },1000)
+    
+}
+
+function talk_character(character){
+    console.log(character)
 }
