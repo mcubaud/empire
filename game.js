@@ -62,8 +62,9 @@ function go_location(marker){
     current_day += travel_time;
     current_position = location_name;
     update_time(current_day);
-    set_popups_using_daily_position(positions_day, current_day)
-    marker.openPopup()
+    set_popups_using_daily_position(positions_day, current_day);
+    marker.closePopup();
+    marker.openPopup();
 
 }
 
@@ -172,7 +173,7 @@ function talk_character(e, popup, marker, characters){
     `
     for(i_dialog in character_dialogs["dialogues"]){
         dialog=character_dialogs["dialogues"][i_dialog]
-        if(unlocked_subjects(dialog["need"])){
+        if(unlocked_subjects[dialog["need"]]){
             popup_content += `<button id=${"dialog_"+i_dialog}>${dialog["question"]}</button>`
         }
         
