@@ -9,7 +9,8 @@
                         "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
                             "Un commerçant de Dragonoville",
-                            "Grand maître de la guilde des artisans"
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
@@ -32,11 +33,13 @@
                     "Forteresse":{
                         "description":"",
                         "characters":[
+                            "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
                         "description":"",
                         "characters":[
+                            "Un commerçant d'Alaris"
                         ]
                     }
                 }
@@ -47,6 +50,7 @@
                 "Forteresse":{
                     "description":"",
                     "characters":[
+                        "Seigneur de Pontcastel"
                     ]
                 },
                 "Marché":{
@@ -62,6 +66,7 @@
                     "Forteresse":{
                         "description":"",
                         "characters":[
+                            "Seigneur du Port de Dragonoville"
                         ]
                     },
                     "Marché":{

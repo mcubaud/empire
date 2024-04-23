@@ -76,6 +76,69 @@
             "unlock": ""
           }
         ]
+    },
+    "Grand Maître de la Guilde des Artisans":{
+        "description":"Le joueur cherche à obtenir des informations auprès du Grand Maître de la Guilde des Artisans de Dragonoville, une figure influente dans la vie économique de la ville.",
+        "dialogues":[
+            {
+            "question":"Quelle est la situation économique actuelle de Dragonoville ?",
+            "answer":"Dragonoville prospère grâce à son industrie sidérurgique florissante, qui tire parti de la chaleur volcanique pour produire de l'acier de haute qualité. Le commerce est également dynamique, avec une demande soutenue pour nos produits artisanaux.",
+            "need":"",
+            "unlock":""
+            },
+            {
+            "question":"Avez-vous entendu parler de rumeurs concernant une conspiration contre l'Empereur ?",
+            "answer":"Oui, j'ai entendu parler de rumeurs selon lesquelles des forces malveillantes pourraient chercher à perturber le festival. Mais tant que nos gardes restent vigilants et que nous nous tenons unis en tant que communauté, je suis sûr que nous surmonterons tout défi qui se présentera à nous.",
+            "need":"",
+            "unlock":""
+            }
+        ]
+    },
+    "Un marchand ambulant":{
+        "description":"Le joueur croise un marchand ambulant originaire d'Alaris, une ville voisine de Dragonoville. Il est en train de déballer ses marchandises sur la place du marché.",
+        "dialogues":[
+            {
+            "question":"Qu'avez-vous à vendre ?",
+            "answer":"Je vends des poteries produites à Alaris. La qualité n'est pas terrible, mais elles sont très peu chères. Regardez par vous-même.",
+            "need":"",
+            "unlock":""
+            },
+            {
+            "question":"Avez-vous remarqué quelque chose d'inhabituel à Alaris ces derniers temps ?",
+            "answer":"Oui, il y a eu beaucoup de mouvement militaire récemment. Les troupes se sont rassemblées et ont quitté la ville il y a quelques jours. On dit qu'elles sont parties vers le sud, mais personne ne sait exactement pourquoi.",
+            "need":"",
+            "unlock":"military_activity_in_alaris"
+            },
+            {
+            "question":"Comment trouvez-vous Dragonoville par rapport à Alaris ?",
+            "answer":"Dragonoville est une ville impressionnante, bien différente d'Alaris. Les palais en pierre noire et les fortifications imposantes sont vraiment magnifiques. Mais je préfère le calme de notre petite ville d'Alaris.",
+            "need":"",
+            "unlock":""
+            }
+        ]
+    },
+    "Seigneur du Port de Dragonoville": {
+        "description": "Le joueur demande audience devant le Seigneur du Port de Dragonoville, chargé de superviser les activités maritimes et le commerce de la ville.",
+        "dialogues": [
+            {
+            "question": "Quelles sont les nouvelles concernant le trafic maritime récent ?",
+            "answer": "Le trafic maritime est fluide ces derniers temps. Les navires marchands et les flottes de pêche rentrent régulièrement au port, et aucun incident majeur n'a été signalé.",
+            "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "Y a-t-il une recrudescence de piraterie ?",
+            "answer": "Pas particulièrement. Nous lançons régulièrement des expéditions avec notre flotte militaire pour éradiquer ces rats, mais ils reviennent toujours !",
+            "need": "pirates",
+            "unlock": ""
+            },
+            {
+            "question": "Avez-vous remarqué une activité suspecte autour du port récemment ?",
+            "answer": "Rien d'inhabituel à signaler. Les douaniers font leur travail pour assurer la sécurité du port et de ses environs. Nous n'avons pas remarqué d'activités suspectes ou de présence de navires pirates dans les parages.",
+            "need": "",
+            "unlock": "pirates"
+            }
+            
+        ]
     }
-    
 }

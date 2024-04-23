@@ -170,6 +170,7 @@ function show_characters(e, popup, marker, neighborhoods){
     <i>${neighborhood["description"]}</i>
     <p>Les personnages suivants sont présents :</p>
     `
+    //TODO changer le texte s'il n'y a personne
     for(character in neighborhood["characters"]){
         popup_content += `<button id=${"char_"+character}>${neighborhood["characters"][character]}</button>`
     }
