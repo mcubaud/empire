@@ -17,7 +17,7 @@ request3.responseType = 'json';
 request3.send();
 request3.onload = function() {
     npcs_positions=request3.response;
-    positions_day = npcs_positions["days"][current_day]
+    positions_day = npcs_positions["days"][Math.floor(current_day)]
     set_popups_using_daily_position(positions_day, current_day)
 }
 var request4 = new XMLHttpRequest();
