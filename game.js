@@ -126,7 +126,7 @@ function print_neighborhoods(marker, popup){
     for(neighborhood in neighborhoods){
         popup_content += `<button id=${neighborhood.replaceAll(" ", "_")}>${neighborhood}</button>`
     }
-    popup_content += `<p>Vous pouvez également vous reposer dans une taverne</p>
+    popup_content += `<p>Vous pouvez également vous reposer dans une taverne :</p>
     <button id="Repos">Se reposer dans une taverne (8h)</button>
     `
     popup_content += "</div>"
@@ -185,12 +185,16 @@ function show_characters(e, popup, marker, neighborhoods){
     popup_content = popup.getContent()
     popup_content += `<div class='div_quartier popup_content'>
     <i>${neighborhood["description"]}</i>
-    <p>Les personnages suivants sont présents :</p>
     `
-    //TODO changer le texte s'il n'y a personne
-    for(character in neighborhood["characters"]){
-        popup_content += `<button id=${"char_"+character}>${neighborhood["characters"][character]}</button>`
+    if(neighborhood["characters"].length==0){
+        popup_content += "<p>Le joueur ne rencontra aucun personnage intéressant ici.</p>"
+    }else{
+        popup_content += "<p>Les personnages suivants sont présents :</p>"
+        for(character in neighborhood["characters"]){
+            popup_content += `<button id=${"char_"+character}>${neighborhood["characters"][character]}</button>`
     }
+    }
+    
     popup_content += `<button id="Retour">Retour</button>`
     popup_content += "</div>"
     popup.setContent(popup_content)
