@@ -88,7 +88,7 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         alert('Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés. Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"')
     }
-    if(Math.random()>0.1){
+    if(Math.random()<0.1){
         current_day+=1/8;
         alert(`Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups. Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`)
         unlocked_subjects["loups"]=true;
@@ -242,7 +242,7 @@ function show_characters(e, popup, marker, neighborhoods){
 
 function night_events(city_name, neighborhood_name){
     if((neighborhood_name=="Quartier du Marché") | (neighborhood_name=="Quartier du Marché")){
-        if(Math.random>0.1){
+        if(Math.random()<0.1){
             alert("Une bagarre éclata dans une auberge et déborda jusqu'à la rue. Le joueur fut pris à parti. Après s'être vaillament défendu contre les attaques d'ivrognes, le joueur préféra s'éloigner.")
         }
     }
