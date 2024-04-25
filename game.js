@@ -9,7 +9,7 @@ npcs_dialogues={}
 travel_times={}
 unlocked_subjects={"":true, "before_cesar":true}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
-setTimeout(x=>alert("AUBE DU PREMIER JOUR"), 1000);
+setTimeout(x=>alert("AUBE DU PREMIER JOUR !"), 1000);
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
 request3.open('GET', requestURL3);
@@ -174,7 +174,7 @@ function update_time(current_day){
     //New day
     if(current_day - today>=1){
         today = Math.floor(current_day)+0.25
-        alert(`AUBE DU ${Math.floor(current_day+1)}ᵉ JOUR`)
+        alert(`AUBE DU ${Math.floor(current_day+1)}ᵉ JOUR !`)
     }
     //night system
     if( (((current_day*24)%24)>19) | (((current_day*24)%24)<6) ){//night
@@ -183,10 +183,14 @@ function update_time(current_day){
         document.getElementById("overlay").style.display = "none";
     }
     
-    
+    //Timed events
     if(current_day>=3.5){//arrival of cesar
         unlocked_subjects["before_cesar"]=false;
         unlocked_subjects["after_cesar"]=true;
+    }
+    if(initial_remaining_time < current_day){
+        alert("Le joueur a échoué à identifier les conspirateurs durant le temps imparti ! L'Empereur est assassiné durant le festival, sans que le joueur, impuissant, ne puisse faire quoi que ce soit !")
+        window.location="";
     }
 }
 
