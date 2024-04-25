@@ -71,6 +71,7 @@ function set_popups_using_daily_position(positions_day, current_day){
 function go_location(marker){
     location_name = marker.name;
     console.log(location_name);
+    move_events(current_position, location_name);
     travel_time = get_travel_time(current_position, location_name)/24;
     current_day += travel_time;
     current_position = location_name;
@@ -79,6 +80,19 @@ function go_location(marker){
     marker.closePopup();
     marker.openPopup();
 
+}
+
+function move_events(current_position, location_name){
+    if((current_position=="Alaris") & (unlocked_subjects["explication_louche"]) & !(unlocked_subjects["embuscade"])){
+        unlocked_subjects["embuscade"]=true;
+        current_day+=1/12;
+        alert('Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés. Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"')
+    }
+    if(Math.random()>0.1){
+        current_day+=1/8;
+        alert(`Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups. Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`)
+        unlocked_subjects["loups"]=true;
+    }
 }
 
 function get_travel_time(current_position, location_name){
@@ -186,7 +200,10 @@ function show_characters(e, popup, marker, neighborhoods){
     popup_content += `<div class='div_quartier popup_content'>
     <i>${neighborhood["description"]}</i>
     `
-    if(neighborhood["characters"].length==0){
+    if(
+        (neighborhood["characters"].length==0) |//if there is nobody here
+         (((current_day*24)%24)>19) | (((current_day*24)%24)<6)// or if it is the night
+        ){
         popup_content += "<p>Le joueur ne rencontra aucun personnage intéressant ici.</p>"
     }else{
         popup_content += "<p>Les personnages suivants sont présents :</p>"

@@ -85,7 +85,7 @@
             "question": "Pouvez-vous me donner plus de détails sur cette expéditions contre les bandits ?",
             "answer": "Euh, oui, c'est un groupe local de bandits... ils sont connus sous le nom de... les sales voleurs... Leur repaire est... hmmm... quelque part dans la forêt... Ils ont déjà fait quelques raids dans les villages voisins... Nous voulons faire un exemple pour les autres bandits...",
             "need": "expedition_alaris",
-            "unlock": ""
+            "unlock": "explication_louche"
           },
           {
             "question": "Avez-vous entendu parler d'une conspiration ou de quelque chose de suspect se déroulant dans la région ?",
