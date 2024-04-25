@@ -169,7 +169,7 @@ function update_time(current_day){
     positions_day = npcs_positions["days"][Math.floor(current_day)]
     remaining_days = Math.floor(initial_remaining_time - current_day);
     remaining_hours = Math.floor((initial_remaining_time - current_day)*24)%24;
-    document.getElementById("hours").innerHTML="Il est "+(current_day*24)%24+"h00.";
+    document.getElementById("hours").innerHTML="Il est "+Math.round((current_day*24)%24)+"h00.";
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
     //New day
     if(current_day - today>=1){
@@ -226,8 +226,10 @@ function show_characters(e, popup, marker, neighborhoods){
     popup_content += "</div>"
     popup.setContent(popup_content)
     setTimeout(function(){
-        for(character in neighborhood["characters"]){
-            document.getElementById("char_"+character).onclick=function(e){talk_character(e, popup, marker, neighborhood["characters"])}
+        if(!is_night){
+            for(character in neighborhood["characters"]){
+                document.getElementById("char_"+character).onclick=function(e){talk_character(e, popup, marker, neighborhood["characters"])}
+            }
         }
         document.getElementById("Retour").onclick = function(){
             print_neighborhoods(marker, popup)
