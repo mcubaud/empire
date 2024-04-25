@@ -372,6 +372,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
         enemyDiv.classList.add('enemy');
         enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="width: 100px; height: auto;">`;
         enemyDiv.innerHTML += `<p>${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
+        enemyDiv.attack = enemy.attack;
         enemiesDiv.appendChild(enemyDiv);
     });
     battlefieldDiv.appendChild(enemiesDiv);
@@ -387,6 +388,27 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     attack1Button.addEventListener('click', () => {
         // Logic for heavy attack
         // Player chooses target enemy
+        enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+        enemyDivs.forEach(enemyDiv => {
+            enemyDiv.onclick = function(){
+                //We remove the event listeners
+                enemyDivs.forEach(enemyDiv2 => {
+                    enemyDiv2.onclick="";
+                })
+                //we applie the damages
+                playerDamage = 25 + Math.floor(Math.random()*25);
+                const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
+                const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
+                enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+                if (newEnemyHealth === 0) {
+                    // Enemy defeated
+                    enemyDiv.style.display = 'none';
+                }
+            }
+            
+        });
+        enemy_attacks(enemies);
+
     });
     attackButtonsDiv.appendChild(attack1Button);
 
@@ -394,6 +416,18 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     attack2Button.textContent = 'Light Attack (All Enemies)';
     attack2Button.addEventListener('click', () => {
         // Logic for light attack
+        playerDamage = 10 + Math.ceil(10 * Math.random());
+        enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+        enemyDivs.forEach(enemyDiv => {
+            const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
+            const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
+            enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+            if (newEnemyHealth === 0) {
+                // Enemy defeated
+                enemyDiv.style.display = 'none';
+            }
+        });
+        enemy_attacks(enemies)
     });
     attackButtonsDiv.appendChild(attack2Button);
 
@@ -402,6 +436,18 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     // Function to handle player attacks
 
     // Function to check victory conditions
+}
+
+function enemy_attacks(enemies){
+    const playerHealth = document.getElementById('playerDiv').querySelector('p').textContent.split(': ')[1];
+    enemies.forEach(enemy => {
+        enemyDamage = Math.floor(Math.random()/2 * enemy.attack ) + enemy.attack/2;
+        const newPlayerHealth = Math.max(0, playerHealth - enemyDamage);
+    document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newPlayerHealth}`;
+    if (newPlayerHealth === 0) {
+        // Player defeated
+        handleDefeat();
+    }
 }
 
 /*
