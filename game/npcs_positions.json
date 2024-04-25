@@ -125,11 +125,13 @@
                     "Forteresse":{
                         "description":"",
                         "characters":[
+                            "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
                         "description":"",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
@@ -213,11 +215,13 @@
                     "Forteresse":{
                         "description":"",
                         "characters":[
+                            "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
                         "description":"",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }

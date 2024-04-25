@@ -167,8 +167,9 @@ function print_neighborhoods(marker, popup){
 
 function update_time(current_day){
     positions_day = npcs_positions["days"][Math.floor(current_day)]
-    remaining_days = Math.floor(initial_remaining_time - current_day)
-    remaining_hours = Math.floor((initial_remaining_time - current_day)*24)%24
+    remaining_days = Math.floor(initial_remaining_time - current_day);
+    remaining_hours = Math.floor((initial_remaining_time - current_day)*24)%24;
+    document.getElementById("hours").innerHTML="Il est "+(current_day*24)%24+"h00.";
     document.getElementById("remaining_time").innerHTML="Temps restant avant le festival : "+ remaining_days + " jours et "+remaining_hours+" heures";
     //New day
     if(current_day - today>=1){
@@ -195,14 +196,23 @@ function show_characters(e, popup, marker, neighborhoods){
     console.log(neighborhood);
     current_day+=1/24;
     update_time(current_day);
+    is_night = (((current_day*24)%24)>19) | (((current_day*24)%24)<6);
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
     popup_content += `<div class='div_quartier popup_content'>
     <i>${neighborhood["description"]}</i>
     `
+    if(is_night){
+        if((marker.name=="Dragonoville") & unlocked_subjects["after_cesar"]){
+            popup_content += "<i>Il fait nuit, mais vous entendez des bruits de fêtes dans certaines habitations.</i>"
+        }else{
+            popup_content += "<i>Il fait nuit, et le quartier est presque désert.</i>"
+        }
+        night_events(marker.name, neighborhood_name)
+    }
     if(
         (neighborhood["characters"].length==0) |//if there is nobody here
-         (((current_day*24)%24)>19) | (((current_day*24)%24)<6)// or if it is the night
+        is_night// or if it is the night
         ){
         popup_content += "<p>Le joueur ne rencontra aucun personnage intéressant ici.</p>"
     }else{
@@ -226,6 +236,14 @@ function show_characters(e, popup, marker, neighborhoods){
         }
     },1000)
     
+}
+
+function night_events(city_name, neighborhood_name){
+    if((neighborhood_name=="Quartier du Marché") | (neighborhood_name=="Quartier du Marché")){
+        if(Math.random>0.1){
+            alert("Une bagarre éclata dans une auberge et déborda jusqu'à la rue. Le joueur fut pris à parti. Après s'être vaillament défendu contre les attaques d'ivrognes, le joueur préféra s'éloigner.")
+        }
+    }
 }
 
 function talk_character(e, popup, marker, characters){
