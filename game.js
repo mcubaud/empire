@@ -1,4 +1,5 @@
 mymap.flyTo({"lat":14.203151, "lng":-54.283447},9)
+document.getElementById("overlay").style.display = "none";
 current_day = 0.25
 today = 0.25
 initial_remaining_time = 6.75
@@ -8,7 +9,7 @@ npcs_dialogues={}
 travel_times={}
 unlocked_subjects={"":true, "before_cesar":true}
 alert("Vous êtes envoyé par l'Empereur dans la ville de Dragonoville pour enquêter secrètement sur un éventuel complot contre l'Empire. Tout le monde est suspect : les conspirateurs peuvent être le seigneur des Barbares, ou le Grand Prêtre de Dragono, ou le Grand Maître des guildes de Marchands, d'Artisans ou de Guerriers. Il peut également s'agir du seigneur d'une autre ville de Dragonoland, comme le seigneur guerrier d'Alaris, ou les seigneurs de Pontcastel, du port de Dragonoville ou de Chiot-chiotville. Des espions étrangers peuvent également faire partie de l'intrigue. Toutes ces personnes seront présentes à Dragonoville pour le festival de Dragono qui aura lieu dans une semaine. Vous arrivez à Dragonoville. Quelle est la première chose que vous ferez ?")
-alert("AUBE DU PREMIER JOUR")
+setTimeout(x=>alert("AUBE DU PREMIER JOUR"), 1000);
 var request3 = new XMLHttpRequest();
 requestURL3 = "game/npcs_positions.json"
 request3.open('GET', requestURL3);
