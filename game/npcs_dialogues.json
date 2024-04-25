@@ -17,6 +17,12 @@
                 "answer":"Oui, la garde de la ville sera renforcée par les chevaliers barbares, et César sera accompagné par sa garde prétorienne. César séjournera ici, à la forteresse. Durant le festival, toute personne cherchant à accéder à l'esplanade des Temples ou à la forteresse sera fouillée.",
                 "need":"emperor_arrival",
                 "unlock":""
+            },
+            {
+                "question":"Qu'est-ce que vous faites par rapport aux attaques de pirates ?",
+                "answer":"Nous prenons cette affaire très au sérieux. Ils sont une plaie pour le commerce de la ville ! J'envoie régulièrement des troupes et des fonds au port de Dragonoville, afin d'organiser des expéditions contre l'archipel Méga Blocks.",
+                "need":"pirates",
+                "unlock":""
             }
         ]
     },
@@ -67,6 +73,18 @@
             "question": "Pourquoi y a-t-il une augmentation de l'activité militaire à Alaris ?",
             "answer": "L'augmentation de l'activité militaire à Alaris est due à des opérations de routine pour lutter contre les bandits et assurer la sécurité de nos frontières. Rien à craindre, citoyen.",
             "need": "military_activity_in_alaris",
+            "unlock": "bandits"
+          },
+          {
+            "question": "Mais où sont passés tous les gardes de la ville ?",
+            "answer": "Hmmm, il n'y a pas de quoi s'inquiéter. Je les ai juste envoyés combattre une bande de bandits de la Grande Forêt Noire.",
+            "need": "",
+            "unlock": "expedition_alaris"
+          },
+          {
+            "question": "Pouvez-vous me donner plus de détails sur cette expéditions contre les bandits ?",
+            "answer": "Euh, oui, c'est un groupe local de bandits... ils sont connus sous le nom de... les sales voleurs... Leur repaire est... hmmm... quelque part dans la forêt... Ils ont déjà fait quelques raids dans les villages voisins... Nous voulons faire un exemple pour les autres bandits...",
+            "need": "expedition_alaris",
             "unlock": ""
           },
           {
@@ -105,7 +123,7 @@
             },
             {
             "question":"Avez-vous remarqué quelque chose d'inhabituel à Alaris ces derniers temps ?",
-            "answer":"Oui, il y a eu beaucoup de mouvement militaire récemment. Les troupes se sont rassemblées et ont quitté la ville il y a quelques jours. On dit qu'elles sont parties vers le sud, mais personne ne sait exactement pourquoi.",
+            "answer":"Oui, j'ai été très étonné la dernière fois que je m'y suis rendu, je n'y avais jamais vu autant de gardes !",
             "need":"",
             "unlock":"military_activity_in_alaris"
             },
@@ -113,6 +131,26 @@
             "question":"Comment trouvez-vous Dragonoville par rapport à Alaris ?",
             "answer":"Dragonoville est une ville impressionnante, bien différente d'Alaris. Les palais en pierre noire et les fortifications imposantes sont vraiment magnifiques. Mais je préfère le calme de notre petite ville d'Alaris.",
             "need":"",
+            "unlock":""
+            }
+        ]
+    },
+    "Un tavernier d'Alaris":{
+        "description":"Le joueur entre dans une taverne, afin de receuillir discrétement des informations sur Alaris. La taverne est bien remplie, et l'ambiance est animée. Le joueur interroge le tavernier.",
+        "dialogues":[
+            {"question":"Est-ce qu'il y a beau",
+            "answer":"Oui, il y a eu beaucoup de mouvement militaire récemment. Les troupes se sont rassemblées et ont quitté la ville il y a quelques jours. On dit qu'elles sont parties vers le sud, mais personne ne sait exactement pourquoi.",
+            "need":"military_activity_in_alaris",
+            "unlock":""
+            },
+            {"question":"Avez-vous remarqué une activité militaire inhabituelle à Alaris ces derniers temps ?",
+            "answer":"Oui, il y a eu beaucoup de mouvement militaire récemment. Les troupes se sont rassemblées et ont quitté la ville il y a quelques jours. On dit qu'elles sont parties vers le sud, mais personne ne sait exactement pourquoi.",
+            "need":"military_activity_in_alaris",
+            "unlock":""
+            },
+            {"question":"Y a-t-il beaucoup de bandits dans la région ?",
+            "answer":"Oui, malheureusement, beaucoup trouvent refuge dans la Grande Forêt Noire, et attaquent les voyageurs ou font des raids sur les villages.",
+            "need":"bandits",
             "unlock":""
             }
         ]
