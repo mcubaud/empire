@@ -88,10 +88,22 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         alert('Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés. Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"')
     }
-    if(Math.random()<0.1){
+    //random events in any road
+    if((Math.random()<0.1) & !unlocked_subjects["loups"]){
         current_day+=1/8;
         alert(`Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups. Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`)
         unlocked_subjects["loups"]=true;
+    }else if((Math.random()<0.1) & !unlocked_subjects["pelerins"] ){
+        alert(`Sur la route de ${location_name}, le joueur rencontra un groupe de pélerins. Ceux-ci se rendaient à Dragonoville pour participer aux célébrations en l'honneur du dieu.`)
+        unlocked_subjects["pelerins"]=true;
+    }else if((Math.random()<0.05) & !unlocked_subjects["tempete"]){
+        current_day+=1/6;
+        alert(`Pendant que le joueur voyageait vers ${location_name}, une violente tempête éclata. Le joueur fut forcé de s'abriter pendant plusieurs heures avant de pouvoir reprendre sa route.`)
+        unlocked_subjects["tempete"]=true;
+    }else if(Math.random() < 0.1 && !unlocked_subjects["rencontre_marchand"]){
+        current_day += 1/12;
+        alert(`Sur la route entre ${current_position} et ${location_name}, le joueur rencontra un marchand ambulant. Il proposait une variété d'objets rares, mais aucun ne s'avéra utile.`);
+        unlocked_subjects["rencontre_marchand"] = true;
     }
 }
 
@@ -141,7 +153,7 @@ function print_neighborhoods(marker, popup){
         popup_content += `<button id=${neighborhood.replaceAll(" ", "_")}>${neighborhood}</button>`
     }
     popup_content += `<p>Vous pouvez également vous reposer dans une taverne :</p>
-    <button id="Repos">Se reposer dans une taverne (8h)</button>
+    <button id="Repos">Se reposer dans une taverne (6h)</button>
     `
     popup_content += "</div>"
     popup.setContent(popup_content)
@@ -154,7 +166,7 @@ function print_neighborhoods(marker, popup){
                     document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)}
                 }
                 document.getElementById("Repos").onclick=function(e){
-                    current_day+=8/24;
+                    current_day+=6/24;
                     update_time(current_day);
                     set_popups_using_daily_position(positions_day, current_day);
                     marker.closePopup();
@@ -316,3 +328,90 @@ function add_answer(e, character_dialogs){
         }
     }
 }
+
+function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage) {
+    alert(begginingMessage);
+    const combatDiv = document.createElement('div');
+    combatDiv.id = 'combatDiv';
+    combatDiv.style.position = 'absolute';
+    combatDiv.style.top = '0';
+    combatDiv.style.left = '0';
+    combatDiv.style.width = '100%';
+    combatDiv.style.height = '100%';
+    combatDiv.style.backgroundImage = `url('${backgroundImage}')`;
+    combatDiv.style.backgroundSize = 'cover';
+    combatDiv.style.display = 'flex';
+    combatDiv.style.flexDirection = 'column';
+    combatDiv.style.alignItems = 'center';
+    combatDiv.style.justifyContent = 'space-between';
+    combatDiv.style.backgroundColor= 'beige';
+    document.body.appendChild(combatDiv);
+
+    const battlefieldDiv = document.createElement('div');
+    battlefieldDiv.id = 'battlefieldDiv';
+    battlefieldDiv.style.display = 'flex';
+    battlefieldDiv.style.flexDirection = 'column-reverse';
+    battlefieldDiv.style.alignItems = 'center';
+    battlefieldDiv.style.width = '100%';
+    battlefieldDiv.style.height = '100%';
+    battlefieldDiv.style.justifyContent = 'space-between';
+    combatDiv.appendChild(battlefieldDiv);
+
+    const playerDiv = document.createElement('div');
+    playerDiv.id = 'playerDiv';
+    playerDiv.innerHTML = `<img src="player_image.jpg" alt="Player" style="width: 100px; height: auto;">`;
+    playerDiv.innerHTML += `<p>Player Health: 100</p>`;
+    battlefieldDiv.appendChild(playerDiv);
+
+    const enemiesDiv = document.createElement('div');
+    enemiesDiv.id = 'enemiesDiv';
+    enemiesDiv.style.display = 'flex';
+    enemiesDiv.style.flexDirection = 'row-reverse';
+    enemies.forEach(enemy => {
+        const enemyDiv = document.createElement('div');
+        enemyDiv.classList.add('enemy');
+        enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="width: 100px; height: auto;">`;
+        enemyDiv.innerHTML += `<p>${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
+        enemiesDiv.appendChild(enemyDiv);
+    });
+    battlefieldDiv.appendChild(enemiesDiv);
+
+    const attackButtonsDiv = document.createElement('div');
+    attackButtonsDiv.id = 'attackButtonsDiv';
+    attackButtonsDiv.style.display = 'flex';
+    attackButtonsDiv.style.justifyContent = 'center';
+    combatDiv.appendChild(attackButtonsDiv);
+
+    const attack1Button = document.createElement('button');
+    attack1Button.textContent = 'Heavy Attack (Single Enemy)';
+    attack1Button.addEventListener('click', () => {
+        // Logic for heavy attack
+        // Player chooses target enemy
+    });
+    attackButtonsDiv.appendChild(attack1Button);
+
+    const attack2Button = document.createElement('button');
+    attack2Button.textContent = 'Light Attack (All Enemies)';
+    attack2Button.addEventListener('click', () => {
+        // Logic for light attack
+    });
+    attackButtonsDiv.appendChild(attack2Button);
+
+    // Function to handle enemy attacks
+
+    // Function to handle player attacks
+
+    // Function to check victory conditions
+}
+
+/*
+// Example usage:
+const begginingMessage = 'Prepare for battle!';
+const enemies = [
+    { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Enemy 1', ennemy_image: 'enemy1_image.jpg' },
+    { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Enemy 2', ennemy_image: 'enemy2_image.jpg' }
+];
+const backgroundImage = 'battle_background.jpg';
+const victoryMessage = 'Victory! The enemies have been defeated!';
+startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+*/

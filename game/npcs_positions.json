@@ -28,16 +28,16 @@
                 }
             },
             "Alaris":{
-                "flavour_text":"Vous arrivez ",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
                     "Forteresse":{
-                        "description":"",
+                        "description":"La forteresse est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                             "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
                             "Un tavernier d'Alaris"
                         ]
