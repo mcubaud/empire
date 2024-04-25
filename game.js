@@ -159,7 +159,7 @@ function update_time(current_day){
     //New day
     if(current_day - today>=1){
         today = Math.floor(current_day)+0.25
-        alert(`AUBE DU ${Math.floor(current_day+1)}e JOUR`)
+        alert(`AUBE DU ${Math.floor(current_day+1)}ᵉ JOUR`)
     }
     //night system
     if( (((current_day*24)%24)>19) | (((current_day*24)%24)<6) ){//night
