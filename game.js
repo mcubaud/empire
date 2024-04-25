@@ -443,7 +443,8 @@ function enemy_attacks(enemies){
     enemies.forEach(enemy => {
         enemyDamage = Math.floor(Math.random()/2 * enemy.attack ) + enemy.attack/2;
         const newPlayerHealth = Math.max(0, playerHealth - enemyDamage);
-    document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newPlayerHealth}`;
+        document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newPlayerHealth}`;
+    });
     if (newPlayerHealth === 0) {
         // Player defeated
         handleDefeat();
