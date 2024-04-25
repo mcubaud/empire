@@ -28,7 +28,7 @@
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Vous arrivez ",
                 "neighborhoods":{
                     "Forteresse":{
                         "description":"",
@@ -243,6 +243,7 @@
                     "Forteresse":{
                         "description":"",
                         "characters":[
+                            "L'Empereur"
                         ]
                     },
                     "Marché":{

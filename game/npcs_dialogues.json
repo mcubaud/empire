@@ -138,9 +138,14 @@
     "Un tavernier d'Alaris":{
         "description":"Le joueur entre dans une taverne, afin de receuillir discrétement des informations sur Alaris. La taverne est bien remplie, et l'ambiance est animée. Le joueur interroge le tavernier.",
         "dialogues":[
-            {"question":"Est-ce qu'il y a beau",
-            "answer":"Oui, il y a eu beaucoup de mouvement militaire récemment. Les troupes se sont rassemblées et ont quitté la ville il y a quelques jours. On dit qu'elles sont parties vers le sud, mais personne ne sait exactement pourquoi.",
-            "need":"military_activity_in_alaris",
+            {"question":"Est-ce que beaucoup de voyageurs viennent à Alaris ?",
+            "answer":"Oui, Alaris est située sur la route qui mène de Petit-chienville à Dragonoville. Elle est très fréquentée, en particulier à l'aproche du festival.",
+            "need":"",
+            "unlock":"route_petitchienville"
+            },
+            {"question":"Est-ce que l'Empereur va passer par ici pour venir à Dragonoville ?",
+            "answer":"Non, il va arriver par bateau, par le port de Dragonoville.",
+            "need":"route_petitchienville",
             "unlock":""
             },
             {"question":"Avez-vous remarqué une activité militaire inhabituelle à Alaris ces derniers temps ?",
