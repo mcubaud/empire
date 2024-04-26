@@ -483,5 +483,32 @@
         "zoom_min":7,
         "zoom_max":12,
         "descr":"Hippoport est la plus grande ville de Buratie."
+        },
+    {
+        "titre":"Nécropole",
+        "lat":14.187606,
+        "long":-55.239258,
+        "class":"lieu",
+        "zoom_min":10,
+        "zoom_max":14,
+        "descr":"L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux."
+        },
+    {
+        "titre":"Ruines d'Ashin-Vaat",
+        "lat":15.605083,
+        "long":-54.438629,
+        "class":"lieu",
+        "zoom_min":10,
+        "zoom_max":14,
+        "descr":"Ruines d'un ancien temple édifié par les papos et dédié au dieu du mal."
+        },
+    {
+        "titre":"Temple du Dragon Vert",
+        "lat":16.354604, 
+        "long":-52.580566,
+        "class":"lieu",
+        "zoom_min":10,
+        "zoom_max":14,
+        "descr":"Temple et quartier général des chevalier du Dragon Vert."
         }
 ]
