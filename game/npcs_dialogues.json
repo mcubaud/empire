@@ -191,5 +191,33 @@
     "Marin":{
         "description":"",
         "dialogues":[]
+    },
+    "Grand Maître de la Guilde des Guerriers":{
+        "description":"",
+        "dialogues":[]
+    },
+    "L'Empereur":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Capitaine de la Garde Prétorienne":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Seigneur de Pontcastel":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Seigneur de Chiotchiotville":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Grand Maître de la guilde des Gladiateurs":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Garde de la ville":{
+        "description":"",
+        "dialogues":[]
     }
 }
