@@ -160,8 +160,8 @@
             }
         ]
     },
-    "Seigneur du Port de Dragonoville": {
-        "description": "Le joueur demande audience devant le Seigneur du Port de Dragonoville, chargé de superviser les activités maritimes et le commerce de la ville.",
+    "Gouverneur du Port de Dragonoville": {
+        "description": "Le joueur demande audience devant le Gouverneur du Port de Dragonoville, chargé de superviser les activités maritimes et le commerce de la ville.",
         "dialogues": [
             {
             "question": "Quelles sont les nouvelles concernant le trafic maritime récent ?",
@@ -183,5 +183,13 @@
             }
             
         ]
+    },
+    "Moine":{
+        "description":"",
+        "dialogues":[]
+    },
+    "Marin":{
+        "description":"",
+        "dialogues":[]
     }
 }

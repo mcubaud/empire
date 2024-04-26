@@ -16,11 +16,12 @@
                     "Quartier des Temples":{
                         "description":"Le quartier des temples de Dragonoville est un endroit sacré où règne une atmosphère de sérénité et de recueillement. Des rues pavées mènent à de magnifiques édifices religieux en pierre noire ornés de sculptures complexes et de décorations élaborées. Le temple principal dédié au dieu Dragono se dresse majestueusement au centre, ses colonnes imposantes atteignant vers le ciel. Des prêtres vêtus de robes ornées déambulent entre les fidèles, offrant des bénédictions et des prières.",
                         "characters":[
-                            "Haut Prêtre de Dragono"
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"La forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
+                        "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
                         "Seigneur de Dragonoville"
                         ]
@@ -30,8 +31,8 @@
             "Alaris":{
                 "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"La forteresse est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                             "Seigneur d'Alaris"
                         ]
@@ -45,53 +46,52 @@
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                        "Seigneur de Pontcastel"
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
-                            "Seigneur du Port de Dragonoville"
+                            "Seigneur de Pontcastel"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -103,33 +103,39 @@
                 "flavour_text":"Dragonoville s'éveille à une nouvelle journée animée. Les artisans forgent l'acier dans leurs ateliers, exploitant la chaleur du volcan des Dieux pour alimenter leurs forges. Les rues résonnent du brouhaha des commerçants et des cris des enfants qui jouent dans les parcs. Pourtant, l'ombre du complot plane toujours, et l'Empereur doit arriver d'ici 2 jours, pressant le joueur de chercher des réponses avant qu'il ne soit trop tard.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des temples de Dragonoville est un endroit sacré où règne une atmosphère de sérénité et de recueillement. Des rues pavées mènent à de magnifiques édifices religieux en pierre noire ornés de sculptures complexes et de décorations élaborées. Le temple principal dédié au dieu Dragono se dresse majestueusement au centre, ses colonnes imposantes atteignant vers le ciel. Des prêtres vêtus de robes ornées déambulent entre les fidèles, offrant des bénédictions et des prières.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
+                        "Seigneur de Dragonoville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                             "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
                             "Un tavernier d'Alaris"
                         ]
@@ -137,51 +143,52 @@
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
+                            "Seigneur de Pontcastel"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -193,33 +200,39 @@
                 "flavour_text":"La tension monte dans les rues de Dragonoville. Les habitants chuchotent nerveusement entre eux, se demandant ce que l'avenir leur réserve. Les gardes patrouillent avec une vigilance accrue, leurs regards scrutateurs balayant chaque recoin de la ville. Le joueur sent le poids du temps qui lui échappe, car l'Empereur arrive demain, le pressant de redoubler d'efforts dans sa quête pour déjouer le complot qui se trame.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des temples de Dragonoville est un endroit sacré où règne une atmosphère de sérénité et de recueillement. Des rues pavées mènent à de magnifiques édifices religieux en pierre noire ornés de sculptures complexes et de décorations élaborées. Le temple principal dédié au dieu Dragono se dresse majestueusement au centre, ses colonnes imposantes atteignant vers le ciel. Des prêtres vêtus de robes ornées déambulent entre les fidèles, offrant des bénédictions et des prières.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
+                        "Seigneur de Dragonoville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                             "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
                             "Un tavernier d'Alaris"
                         ]
@@ -227,52 +240,52 @@
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
-                            "L'Empereur"
+                            "Seigneur de Pontcastel"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -284,83 +297,94 @@
                 "flavour_text":"L'excitation est à son comble alors que Dragonoville se prépare à accueillir l'empereur. Les rues sont décorées de bannières festives, et une foule enthousiaste se rassemble le long du parcours du cortège impérial. Pour le joueur, c'est un moment crucial, car l'arrivée de l'empereur signifie qu'il doit être prêt à agir. Les rumeurs de complot sont devenues plus pressantes, le poussant à accélérer ses recherches.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des Temples est complétement métamorphosé par la proximité du festival. Des banderoles, des sculptures de dragon et des braséros ornementés décorent l'esplanades. De nombreux prêtres vétus de robes vertes s'affairent de toute part.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
+                            "Seigneur de Dragonoville",
+                            "L'Empereur",
+                            "Capitaine de la Garde Prétorienne"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
+                            "Seigneur d'Alaris"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
+                            "Seigneur de Pontcastel"
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -372,83 +396,95 @@
                 "flavour_text":"Dragonoville déborde de vie alors que les festivités battent leur plein. Les rues résonnent de musique et de rires, et les marchés regorgent de délices culinaires et d'objets artisanaux. Pourtant, le joueur sait que derrière cette façade de célébration, le danger rôde toujours. Il se hâte de rassembler les dernières pièces du puzzle, conscient que le temps presse.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des Temples est complétement métamorphosé par la proximité du festival. Des banderoles, des sculptures de dragon et des braséros ornementés décorent l'esplanades. De nombreux prêtres vétus de robes vertes s'affairent de toute part.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
+                            "Seigneur de Dragonoville",
+                            "L'Empereur",
+                            "Capitaine de la Garde Prétorienne",
+                            "Seigneur d'Alaris",
+                            "Seigneur de Pontcastel",
+                            "Seigneur de Chiotchiotville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -460,83 +496,95 @@
                 "flavour_text":"La ville est plongée dans une atmosphère électrique alors que la nuit tombe sur Dragonoville. Les feux d'artifice illuminent le ciel nocturne, éclairant les visages souriants des habitants. Mais pour le joueur, c'est un moment d'urgence. Les pièces du complot commencent à se mettre en place, et il doit agir rapidement pour les arrêter avant qu'il ne soit trop tard.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des Temples est complétement métamorphosé par la proximité du festival. Des banderoles, des sculptures de dragon et des braséros ornementés décorent l'esplanades. De nombreux prêtres vétus de robes vertes s'affairent de toute part.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
+                            "Seigneur de Dragonoville",
+                            "L'Empereur",
+                            "Capitaine de la Garde Prétorienne",
+                            "Seigneur d'Alaris",
+                            "Seigneur de Pontcastel",
+                            "Seigneur de Chiotchiotville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
             },
+            
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -548,83 +596,95 @@
                 "flavour_text":"C'est le grand jour de la fête de Dragono à Dragonoville. La ville est en ébullition, alors que les citoyens se pressent vers le magnifique temple dédié au dieu Dragono. Le joueur se tient prêt, conscient que le moment de la vérité est arrivé. Alors que l'empereur et les nobles entrent dans le temple, il sait que c'est maintenant ou jamais.",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des Temples est complétement métamorphosé par la proximité du festival. Des banderoles, des sculptures de dragon et des braséros ornementés décorent l'esplanades. De nombreux prêtres vétus de robes vertes s'affairent de toute part.",
                         "characters":[
+                            "Haut Prêtre de Dragono",
+                            "Moine",
+                            "Seigneur de Dragonoville",
+                            "L'Empereur",
+                            "Capitaine de la Garde Prétorienne",
+                            "Seigneur d'Alaris",
+                            "Seigneur de Pontcastel",
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
+                            "Garde de la ville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
@@ -636,83 +696,94 @@
                 "flavour_text":"",
                 "neighborhoods":{
                     "Quartier du Marché":{
-                        "description":"",
+                        "description":"Le quartier du marché de Dragonoville est un lieu vibrant d'activité et de couleur. Les rues étroites sont bordées de boutiques et d'étals débordant de marchandises. Les marchands crient leurs offres et marchandent avec les clients, créant un joyeux brouhaha qui remplit l'air. Des tentes colorées abritent des stands de fruits frais, de légumes colorés et d'épices exotiques importés de tout l'empire, tandis que les forgerons martèlent l'acier dans leurs échoppes, remplissant l'air de l'odeur métallique du travail.",
                         "characters":[
+                            "Un commerçant de Dragonoville",
+                            "Un marchand ambulant",
+                            "Grand Maître de la Guilde des Artisans"
                         ]
                     },
                     "Quartier des Temples":{
-                        "description":"",
+                        "description":"Le quartier des Temples est complétement métamorphosé par la proximité du festival. Des banderoles, des sculptures de dragon et des braséros ornementés décorent l'esplanades. De nombreux prêtres vétus de robes vertes s'affairent de toute part.",
                         "characters":[
+                            "Moine"
                         ]
                     },
                     "Forteresse":{
-                        "description":"",
+                        "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
+                            "Seigneur de Dragonoville",
+                            "L'Empereur",
+                            "Capitaine de la Garde Prétorienne",
+                            "Seigneur d'Alaris",
+                            "Seigneur de Pontcastel",
+                            "Seigneur de Chiotchiotville"
                         ]
                     }
                 }
             },
             "Alaris":{
-                "flavour_text":"",
+                "flavour_text":"Le joueur arrive dans la ville d'Alaris, perchée sur sa falaise au bord de la rivière écarlate. Malgré les imposantes fortifications, il est étonné de ne pas croiser de garde à la porte, ni durant ses premières pérégrinations dans la ville.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Citadelle":{
+                        "description":"La Citadelle est située à l'extrémité de la falaise, dominant de sa masse la rivière et les campagnes environnantes. À l'ouest, la Grande Forêt Noire forme une tache sombre se détachant devant les montagnes.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Le marché est situé près de la porte principale, sur une grande place ronde agrémentée de fontaines.",
                         "characters":[
+                            "Un tavernier d'Alaris"
                         ]
                     }
                 }
             },
             "Pontcastel":{
-                "flavour_text":"",
+                "flavour_text":"Alors que vous vous approchez de Pontcastel, la silhouette imposante d'un pont se dessine à l'horizon. Ses arcs majestueux s'étendent sur le fleuve, reliant les deux rives avec une élégance saisissante. À chaque extrémité du pont se dressent deux grandes tours, témoins silencieux des nombreux échanges et des péripéties qui ont façonné cette ville au fil des siècles.",
                 "neighborhoods":{
-                "Forteresse":{
-                    "description":"",
-                    "characters":[
-                    ]
-                },
-                "Marché":{
-                    "description":"",
-                    "characters":[
-                    ]
-                }
-                }
-            },
-            "Port de Dragonoville":{
-                "flavour_text":"",
-                "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Donjon":{
+                        "description":"En franchissant le pont, vous êtes accueilli par l'imposant donjon qui domine l'horizon. Sa silhouette sombre et imposante contraste avec l'agitation paisible des rues pavées en contrebas.",
                         "characters":[
                         ]
                     },
                     "Marché":{
-                        "description":"",
+                        "description":"Les étals colorés des marchands bordent les rues animées, tandis que les navires chargés de marchandises naviguent paisiblement sur le fleuve.",
                         "characters":[
+                            "Grand Maître de la Guilde des Guerries"
+                        ]
+                    }
+                }
+            },
+            "Port de Dragonoville":{
+                "flavour_text":"En arrivant au Port de Dragonoville, vous êtes immédiatement frappé par l'effervescence du commerce maritime qui anime ses quais. Les navires déchargent et chargent des marchandises en un ballet incessant, témoignant de l'importance stratégique de ce port dans l'économie impériale.",
+                "neighborhoods":{
+                    "Fort":{
+                        "description":"Alors que vous approchez du fort du Port de Dragonoville, une imposante structure de pierre se dresse fièrement, surveillant l'estuaire avec vigilance. Des soldats patrouillent sur les remparts, prêts à repousser toute menace venant des mers tumultueuses.",
+                        "characters":[
+                            "Gouverneur du Port de Dragonoville"
                         ]
                     },
-                    "Port":{
-                        "description":"",
+                    "Port Commercial":{
+                        "description":"Le joueur est accueilli par l'animation frénétique des quais, où les navires déchargent et chargent leurs précieuses cargaisons. Les cris des marchands et le va-et-vient des marins créent une atmosphère électrique, tandis que les entrepôts débordent de marchandises venant des quatre coins de l'empire.",
                         "characters":[
+                            "Marin"
                         ]
                     }
                 }
             },
             "Chiotchioville":{
-                "flavour_text":"",
+                "flavour_text":"En arrivant à Chiotchiotville, le joueur est accueilli par une atmosphère vibrante et dynamique, où les influences de Dragonoland et Petit-chienland se mélangent harmonieusement. La ville respire l'excellence académique grâce à son université renommée, tout en étant animée par l'effervescence des sports, notamment les tournois de gladiateurs. Les quartiers dédiés aux gymnases et aux arènes témoignent de l'importance du sport dans la vie des habitants. Bien que moins prospère que d'autres cités, Chiotchiotville offre une abondance assurée par la richesse de ses terres environnantes.",
                 "neighborhoods":{
-                    "Forteresse":{
-                        "description":"",
+                    "Château":{
+                        "description":"Le château de Chiotchiotville domine majestueusement la ville, perché sur une colline. Ses hautes tours crénelées surveillent les environs, tandis que ses murailles massives témoignent de sa solidité imprenable. À l'intérieur, ses salles richement décorées reflètent le prestige et l'autorité de ses seigneurs.",
                         "characters":[
+                            "Seigneur de Chiotchiotville"
                         ]
                     },
-                    "Marché":{
-                        "description":"",
+                    "Arènes":{
+                        "description":"Les arènes de Chiot-chiotville se dressent imposantes, au cœur de la ville, accueillant des compétitions de gladiateurs palpitantes. Leurs gradins imposants offrent une vue imprenable sur les combats épiques, tandis que l'atmosphère électrique enflamme les spectateurs passionnés.",
                         "characters":[
+                            "Grand Maître de la guilde des Gladiateurs"
                         ]
                     }
                 }
