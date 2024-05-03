@@ -109,6 +109,12 @@
             "answer":"Oui, j'ai entendu parler de rumeurs selon lesquelles des forces malveillantes pourraient chercher à perturber le festival. Mais tant que nos gardes restent vigilants et que nous nous tenons unis en tant que communauté, je suis sûr que nous surmonterons tout défi qui se présentera à nous.",
             "need":"",
             "unlock":""
+            },
+            {
+            "question":"Quelle sont les principales guildes à Dragonoland ?",
+            "answer":"Il y en a de nombreuses, et elles sont toutes très influentes. La plus riche est la Guilde des Marchands, elle fait pression sur les seigneurs pour baisser les taxes, et sur nous pour les prix. Il y a également la guilde des Guerriers à Pontcastel, ou celle des Gladiateurs à Chiotchiotville",
+            "need":"",
+            "unlock":"pression_marchands"
             }
         ]
     },
@@ -231,9 +237,32 @@
         ]
     },
     "Marin":{
-        "description":"",
-        "dialogues":[
-            
+        "description": "Le joueur s'entretient avec un marin expérimenté du port de Dragonoville, qui pourrait avoir des informations précieuses sur les activités maritimes et les événements récents en mer.",
+        "dialogues": [
+            {
+            "question": "Quel est l'état général des navires et des équipages ces jours-ci ?",
+            "answer": "Eh bien, vous savez, la vie en mer est toujours imprévisible. Mais dans l'ensemble, nos navires sont en bon état et nos équipages sont prêts à affronter les vents et les vagues. Il y a toujours quelques écumeurs parmi eux, mais rien que nous ne puissions gérer.",
+            "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "Avez-vous remarqué des changements dans les routes maritimes ou des rencontres inhabituelles en mer récemment ?",
+            "answer": "Hmm, pas vraiment de changements majeurs dans les routes maritimes, mais nous avons repéré quelques navires étranges naviguant près de nos côtes. Pas de quoi s'inquiéter, mais ça vaut peut-être la peine de jeter un œil de plus près.",
+            "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "Quelle est votre opinion sur les récentes mesures prises par les autorités portuaires pour renforcer la sécurité maritime ?",
+            "answer": "Eh bien, je dois dire que c'est une bonne chose. Plus de patrouilles signifie moins de chances pour ces maudits pirates de s'en sortir. J'espère juste que cela suffira à dissuader ces vauriens de venir nous embêter.",
+            "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "Avez-vous entendu parler de quelque chose d'inhabituel ou de suspect se passant dans les tavernes ou parmi les marins récemment ?",
+            "answer": "Oh, vous savez comment c'est dans les tavernes. Beaucoup de ragots et de rumeurs qui volent à propos de trésors perdus et de monstres marins. Rien de sérieux, je le crains. Mais je peux toujours vous parler des dernières nouvelles si vous le souhaitez.",
+            "need": "",
+            "unlock": ""
+            }
         ]
     },
     "Grand Maître de la Guilde des Guerriers":{
