@@ -184,13 +184,57 @@
             
         ]
     },
+    "Érudit":{
+        "description":"Au détour de couloirs de la forteresse, vous arrivez dans la grande bibliothèque. Dans ce lieu immense aux allures de cathédrale, on peut trouver certains des plus anciens manuscripts jamais écrits. Assis à une table, un érudit griffonne sur un parchemin.",
+        "dialogues":[
+            {
+                "question": "Pouvez-vous m'en dire plus sur l'histoire de Dragonoville ?",
+                "answer": "Ah, l'histoire de Dragonoville est riche et fascinante ! Elle remonte à des millénaires, lorsque les compagnons de Dragonvir ont trouvé refuge au pied du volcan face aux oppresseurs Papos. Les premiers habitants vivaient dans des constructions troglodytes, ici, au niveau de la Forteresse. Un important réseau de tunnels date de cette époque. Enfin, la plupart ont été construits après... Bref, au début de l'Empire, Dragonoville est devenue l'une des 2 capitales de l'empire, et a grandement prospéré.",
+                "need": "",
+                "unlock": "Dragonvir"
+            },
+            {
+                "question": "Qui était Dragonvir ?",
+                "answer": "Quoi, vous ne connaissez pas Dragonvir ? L'un des libérateurs du joug des Papos, le fondateur de cette ville, élu par Dragono, et accessoirement l'un des fondateurs de l'Empire ? Décidément, la jeunesse ne sait plus rien de nos jours !",
+                "need": "Dragonvir",
+                "unlock": ""
+            },
+            {
+                "question": "Pouvez-vous me parler des Papos ? Quelle est leur influence sur l'Empire et son histoire ?",
+                "answer": "Nos plus anciennes archives datent d'une période où nous étions sous domination Papo, où ils nous utilisaient comme esclaves ou pour nous sacrifier au dieu du Mal. Depuis notre libération par les fondateurs de l'Empire, nous avons été en guerre de très nombreuses fois. Nous ne savons somme toute pas grand chose de leur royaume, si ce n'est qu'il est très vaste, composé de terres inhospitalières, de déserts, de jungles... Un gros volcan, antithèse de celui de Dragonoville, est situé au centre de leurs terres. L'esprit du Dieu du Mal y serait prisonnier.",
+                "need": "Papos",
+                "unlock": "Dieu du Mal"
+            },
+            {
+                "question": "J'ai entendu dire que l'Empereur possédait un pendantif magique ?",
+                "answer": "Oui, c'est un artefact très ancien et puissant, transmis d'Empereur à Empereur. Il a été conçu par le Dieu Petit-Chien lui-même. Il est constitué de deux parties qui s'assemblent: si l'une est brisée, le détenteur de l'autre moitié est renvoyé 7 jours dans le passé.",
+                "need": "Pendantif Impérial",
+                "unlock":""
+            }
+        ]
+    },
     "Moine":{
-        "description":"",
-        "dialogues":[]
+        "description":"Le joueur s'adresse à un moine dédié au culte de Dragono, le dieu principal de l'empire, pour obtenir des informations sur les croyances religieuses et les pratiques théologiques.",
+        "dialogues":[
+            {
+            "question": "Quel est le rôle de Dragono dans la religion de l'empire ?",
+            "answer": "Dragono règne avec le dieu Petit-Chien sur le monde. Il est l'un des dieux les plus appréciés et vénéré dans notre empire. Il est représenté sous la forme d'un grand dragon vert. Il est le puissant Dieu du Feu.",
+            "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "Pouvez-vous m'en dire plus sur le festival de Dragono ?",
+            "answer": "Il a lieu tous les 33 ans. Sa date exacte est déterminée par des astrologues à partir du feu des étoiles. Des milliers de fidèles viennent de toutes les provinces pour se réunnir à Dragonoville, autour du Temple de Dragono.",
+            "need": "",
+            "unlock": ""
+            }
+        ]
     },
     "Marin":{
         "description":"",
-        "dialogues":[]
+        "dialogues":[
+            
+        ]
     },
     "Grand Maître de la Guilde des Guerriers":{
         "description":"",

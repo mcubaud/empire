@@ -23,7 +23,8 @@
                     "Forteresse":{
                         "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
-                        "Seigneur de Dragonoville"
+                        "Seigneur de Dragonoville",
+                        "Érudit"
                         ]
                     }
                 }
@@ -120,7 +121,8 @@
                     "Forteresse":{
                         "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
-                        "Seigneur de Dragonoville"
+                        "Seigneur de Dragonoville",
+                        "Érudit"
                         ]
                     }
                 }
@@ -217,7 +219,8 @@
                     "Forteresse":{
                         "description":"La Forteresse de Dragonoville domine la ville depuis le sommet d'une colline escarpée, ses murs massifs et ses tours imposantes témoignant de sa puissance militaire. Les remparts de pierre noire semblent impénétrables, renforcés par des tours de guet et des créneaux défensifs. À l'intérieur, des cours spacieuses abritent des casernes, des écuries et des arsenaux, où les soldats s'entraînent et se préparent à défendre la ville contre toute menace. Au sommet de la forteresse, la résidence du seigneur de Dragonoville surplombe la ville, offrant une vue imprenable sur les terres environnantes.",
                         "characters":[
-                        "Seigneur de Dragonoville"
+                        "Seigneur de Dragonoville",
+                        "Érudit"
                         ]
                     }
                 }
@@ -315,6 +318,7 @@
                         "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
                             "Seigneur de Dragonoville",
+                            "Érudit",
                             "L'Empereur",
                             "Capitaine de la Garde Prétorienne"
                         ]
@@ -414,6 +418,7 @@
                         "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
                             "Seigneur de Dragonoville",
+                            "Érudit",
                             "L'Empereur",
                             "Capitaine de la Garde Prétorienne",
                             "Seigneur d'Alaris",
@@ -514,6 +519,7 @@
                         "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
                             "Seigneur de Dragonoville",
+                            "Érudit",
                             "L'Empereur",
                             "Capitaine de la Garde Prétorienne",
                             "Seigneur d'Alaris",
@@ -619,7 +625,8 @@
                     "Forteresse":{
                         "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
-                            "Garde de la ville"
+                            "Garde de la ville",
+                            "Érudit"
                         ]
                     }
                 }
@@ -713,6 +720,7 @@
                         "description":"La Forteresse de Dragonoville, imposante et majestueuse, domine la ville depuis son promontoire. Ses murs de pierre noire, érigés avec la force des anciens, abritent les salles richement ornées où réside toute la noblesse impériale lors du festival. Des tours de guet surveillent attentivement l'horizon, tandis que ses portes massives accueillent les invités avec solennité.",
                         "characters":[
                             "Seigneur de Dragonoville",
+                            "Érudit",
                             "L'Empereur",
                             "Capitaine de la Garde Prétorienne",
                             "Seigneur d'Alaris",
