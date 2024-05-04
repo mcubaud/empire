@@ -3,6 +3,11 @@ document.getElementById("overlay").style.display = "none";
 current_day = 0.25
 today = 0.25
 initial_remaining_time = 6.75
+player_health = 200
+max_player_health = 200
+player_attack_1_strenght = 50;
+player_attack_2_strenght = 30;
+
 current_position = "Dragonoville"
 npcs_positions={}
 npcs_dialogues={}
@@ -86,7 +91,15 @@ function move_events(current_position, location_name){
     if((current_position=="Alaris") & (unlocked_subjects["explication_louche"]) & !(unlocked_subjects["embuscade"])){
         unlocked_subjects["embuscade"]=true;
         current_day+=1/12;
-        alert('Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés. Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"')
+        begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
+        enemies = [
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' },
+            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png' },
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' }
+        ];
+        backgroundImage = 'game/images/une-voie-romaine.jpg';
+        victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
+        startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }
     //random events in any road
     if((Math.random()<0.1) & !unlocked_subjects["loups"]){
@@ -169,6 +182,7 @@ function print_neighborhoods(marker, popup){
                     current_day+=6/24;
                     update_time(current_day);
                     set_popups_using_daily_position(positions_day, current_day);
+                    player_health= max_player_health;
                     marker.closePopup();
                     marker.openPopup();
                 }
@@ -345,6 +359,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     combatDiv.style.alignItems = 'center';
     combatDiv.style.justifyContent = 'space-between';
     combatDiv.style.backgroundColor= 'beige';
+    combatDiv.style.zIndex = '10000000000000000';
     document.body.appendChild(combatDiv);
 
     const battlefieldDiv = document.createElement('div');
@@ -359,21 +374,23 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
 
     const playerDiv = document.createElement('div');
     playerDiv.id = 'playerDiv';
-    playerDiv.innerHTML = `<img src="player_image.jpg" alt="Player" style="width: 100px; height: auto;">`;
-    playerDiv.innerHTML += `<p>Player Health: 100</p>`;
+    playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="width: 100px; height: auto;">`;
+    playerDiv.innerHTML += `<p>Player Health: ${player_health}</p>`;
     battlefieldDiv.appendChild(playerDiv);
 
     const enemiesDiv = document.createElement('div');
     enemiesDiv.id = 'enemiesDiv';
     enemiesDiv.style.display = 'flex';
     enemiesDiv.style.flexDirection = 'row-reverse';
+    enemiesDiv.style.justifyContent = 'end';
+    enemiesDiv.style.width = '50%'
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
         enemyDiv.classList.add('enemy');
         enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="width: 100px; height: auto;">`;
         enemyDiv.innerHTML += `<p>${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
-        enemyDiv.attack = enemy.attack;
         enemiesDiv.appendChild(enemyDiv);
+        enemyDiv.attack = enemy.ennemy_attack;
     });
     battlefieldDiv.appendChild(enemiesDiv);
 
@@ -395,19 +412,27 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
                 enemyDivs.forEach(enemyDiv2 => {
                     enemyDiv2.onclick="";
                 })
-                //we applie the damages
-                playerDamage = 25 + Math.floor(Math.random()*25);
+                //we apply the damages
+                playerDamage = Math.ceil( player_attack_1_strenght + Math.random()*player_attack_1_strenght);
+                playerAttacks()
                 const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
                 const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
-                enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+                let delay= 1000
+                setTimeout(()=>{
+                    enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+                    enemyTakesDamage(enemyDiv);
+                    }, 500
+                )
                 if (newEnemyHealth === 0) {
                     // Enemy defeated
-                    enemyDiv.style.display = 'none';
+                    delay+=1000
+                    setTimeout(()=>{enemyDiv.remove()}, 1000);
                 }
+                setTimeout(()=>{test_victory(victoryMessage)},delay);
             }
             
         });
-        enemy_attacks(enemies);
+        
 
     });
     attackButtonsDiv.appendChild(attack1Button);
@@ -416,49 +441,114 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     attack2Button.textContent = 'Light Attack (All Enemies)';
     attack2Button.addEventListener('click', () => {
         // Logic for light attack
-        playerDamage = 10 + Math.ceil(10 * Math.random());
+        playerDamage = Math.ceil(player_attack_2_strenght/2 + player_attack_2_strenght/2 * Math.random());
+        playerAttacks()
         enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+        let delay = 500
         enemyDivs.forEach(enemyDiv => {
             const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
             const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
-            enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+            delay+=500
+            setTimeout(()=>{
+                enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+                enemyTakesDamage(enemyDiv);
+                }, 500
+            )
             if (newEnemyHealth === 0) {
                 // Enemy defeated
-                enemyDiv.style.display = 'none';
+                delay+=1000
+                setTimeout(()=>{enemyDiv.remove()}, 1000);
             }
         });
-        enemy_attacks(enemies)
+        setTimeout(()=>{test_victory(victoryMessage)},delay);
     });
     attackButtonsDiv.appendChild(attack2Button);
 
-    // Function to handle enemy attacks
-
-    // Function to handle player attacks
-
-    // Function to check victory conditions
 }
 
-function enemy_attacks(enemies){
-    const playerHealth = document.getElementById('playerDiv').querySelector('p').textContent.split(': ')[1];
+function enemies_attacks(enemies){
+    let delay= 1000
     enemies.forEach(enemy => {
-        enemyDamage = Math.floor(Math.random()/2 * enemy.attack ) + enemy.attack/2;
-        const newPlayerHealth = Math.max(0, playerHealth - enemyDamage);
-        document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newPlayerHealth}`;
+        enemyDamage = Math.floor(Math.random()/2 * enemy.attack + enemy.attack/2);
+        let newplayer_health = Math.max(0, player_health - enemyDamage);
+        setTimeout(()=>{
+            enemyAttacks(enemy)
+            setTimeout(
+                ()=>{
+                    document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newplayer_health}`;
+                    playerTakesDamage();
+                },100
+            )
+            
+        },delay
+        )
+        delay+=1000
+        player_health = newplayer_health;
     });
-    if (newPlayerHealth === 0) {
+    if (player_health === 0) {
         // Player defeated
+        setTimeout(()=>{
         handleDefeat();
+        },1000)
     }
 }
 
-/*
-// Example usage:
-const begginingMessage = 'Prepare for battle!';
-const enemies = [
-    { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Enemy 1', ennemy_image: 'enemy1_image.jpg' },
-    { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Enemy 2', ennemy_image: 'enemy2_image.jpg' }
-];
-const backgroundImage = 'battle_background.jpg';
-const victoryMessage = 'Victory! The enemies have been defeated!';
-startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
-*/
+function test_victory(victoryMessage){
+    enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+    if(enemyDivs.length==0){
+        alert(victoryMessage)
+        document.getElementById('combatDiv').remove();
+    }else{
+        enemies_attacks(enemyDivs);
+    }
+}
+function handleDefeat(){
+    alert("Defeat !")
+}
+
+function playerTakesDamage() {
+    const playerDiv = document.getElementById('playerDiv');
+    playerDiv.classList.add('damage-animation');
+    setTimeout(() => {
+        playerDiv.classList.remove('damage-animation');
+    }, 500);
+}
+
+function playerAttacks() {
+    const playerDiv = document.getElementById('playerDiv');
+    playerDiv.classList.add('attack-animation');
+    setTimeout(() => {
+        playerDiv.classList.remove('attack-animation');
+    }, 300);
+}
+
+function enemyTakesDamage(enemyDiv) {
+    enemyDiv.classList.add('damage-animation');
+    setTimeout(() => {
+        enemyDiv.classList.remove('damage-animation');
+    }, 500);
+}
+
+function enemyAttacks(enemyDiv) {
+    enemyDiv.classList.add('attack-animation');
+    setTimeout(() => {
+        enemyDiv.classList.remove('attack-animation');
+    }, 300);
+}
+
+
+
+function test_battle(){
+    // Example usage:
+    current_day+=1/12;
+    begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
+    enemies = [
+        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' },
+        { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png' },
+        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' }
+    ];
+    backgroundImage = 'game/images/une-voie-romaine.jpg';
+    victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
+    startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+}
+test_battle()
