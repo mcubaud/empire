@@ -49,7 +49,7 @@
     {
         "nom":"papo_sud.png",
         "imageBounds" : [[27.524105, -62.363205], [18.671617, -42.295303]],
-        "zoom" :7
+        "zoom" :5
     },
     {
         "nom":"dragonoland.png",
