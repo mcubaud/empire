@@ -7,7 +7,7 @@ player_health = 200
 max_player_health = 200
 player_attack_1_strenght = 100;
 player_attack_2_strenght = 40;
-random_proportion = 0.7;
+random_proportion = 0.3;
 
 current_position = "Dragonoville"
 npcs_positions={}
@@ -414,7 +414,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
 
     const attack1Button = document.createElement('button');
     attack1Button.textContent = 'Heavy Attack (Single Enemy)';
-    attack1Button.title = `Power: ${player_attack_1_strenght * (1-random_proportion)} - ${player_attack_1_strenght}`
+    attack1Button.title = `Power: ${Math.floor(player_attack_1_strenght * (1-random_proportion))} - ${player_attack_1_strenght}`
     attack1Button.addEventListener('click', () => {
         // Logic for heavy attack
         // Player chooses target enemy
@@ -452,7 +452,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
 
     const attack2Button = document.createElement('button');
     attack2Button.textContent = 'Light Attack (All Enemies)';
-    attack2Button.title = `Power: ${player_attack_2_strenght * (1-random_proportion)} - ${player_attack_2_strenght}, decreasing`
+    attack2Button.title = `Power: ${Math.floor(player_attack_2_strenght * (1-random_proportion))} - ${player_attack_2_strenght}, decreasing`
     attack2Button.addEventListener('click', () => {
         // Logic for light attack
         playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
