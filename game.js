@@ -93,9 +93,9 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
         enemies = [
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' },
-            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png' },
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' }
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 },
+            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 400 },
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 }
         ];
         backgroundImage = 'game/images/une-voie-romaine.jpg';
         victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
@@ -365,17 +365,17 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     const battlefieldDiv = document.createElement('div');
     battlefieldDiv.id = 'battlefieldDiv';
     battlefieldDiv.style.display = 'flex';
-    battlefieldDiv.style.flexDirection = 'column-reverse';
-    battlefieldDiv.style.alignItems = 'center';
+    battlefieldDiv.style.flexDirection = 'row';
+    battlefieldDiv.style.alignItems = 'end';
     battlefieldDiv.style.width = '100%';
     battlefieldDiv.style.height = '100%';
-    battlefieldDiv.style.justifyContent = 'space-between';
+    battlefieldDiv.style.justifyContent = 'center';
     combatDiv.appendChild(battlefieldDiv);
 
     const playerDiv = document.createElement('div');
     playerDiv.id = 'playerDiv';
-    playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="width: 100px; height: auto;">`;
-    playerDiv.innerHTML += `<p>Player Health: ${player_health}</p>`;
+    playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="height: 400px;">`;
+    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;">Player Health: ${player_health}</p>`;
     battlefieldDiv.appendChild(playerDiv);
 
     const enemiesDiv = document.createElement('div');
@@ -387,8 +387,8 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
         enemyDiv.classList.add('enemy');
-        enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="width: 100px; height: auto;">`;
-        enemyDiv.innerHTML += `<p>${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
+        enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="height: ${enemy.ennemy_height}px;">`;
+        enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;">${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
         enemiesDiv.appendChild(enemyDiv);
         enemyDiv.attack = enemy.ennemy_attack;
     });
@@ -543,9 +543,9 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' },
-        { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png' },
-        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png' }
+        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400},
+        { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 400 },
+        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 }
     ];
     backgroundImage = 'game/images/une-voie-romaine.jpg';
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
