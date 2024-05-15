@@ -93,9 +93,9 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
         enemies = [
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 },
-            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 400 },
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 }
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 },
+            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 },
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 }
         ];
         backgroundImage = 'game/images/une-voie-romaine.jpg';
         victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
@@ -104,8 +104,18 @@ function move_events(current_position, location_name){
     //random events in any road
     if((Math.random()<0.1) & !unlocked_subjects["loups"]){
         current_day+=1/8;
-        alert(`Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups. Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`)
-        unlocked_subjects["loups"]=true;
+        current_day+=1/12;
+        begginingMessage = `Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups.`;
+        enemies = [
+            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 }
+        ];
+        backgroundImage = 'game/images/une-voie-romaine.jpg';
+        victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
+        startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }else if((Math.random()<0.1) & !unlocked_subjects["pelerins"] ){
         alert(`Sur la route de ${location_name}, le joueur rencontra un groupe de pélerins. Ceux-ci se rendaient à Dragonoville pour participer aux célébrations en l'honneur du dieu.`)
         unlocked_subjects["pelerins"]=true;
@@ -375,7 +385,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     const playerDiv = document.createElement('div');
     playerDiv.id = 'playerDiv';
     playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="height: 400px;">`;
-    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;">Player Health: ${player_health}</p>`;
+    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: green;text-align: center;color: wheat;">Player Health: ${player_health}</p>`;
     battlefieldDiv.appendChild(playerDiv);
 
     const enemiesDiv = document.createElement('div');
@@ -388,7 +398,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
         const enemyDiv = document.createElement('div');
         enemyDiv.classList.add('enemy');
         enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="height: ${enemy.ennemy_height}px;">`;
-        enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;">${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
+        enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: red;text-align: center;color: wheat;">${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
         enemiesDiv.appendChild(enemyDiv);
         enemyDiv.attack = enemy.ennemy_attack;
     });
@@ -543,9 +553,11 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400},
-        { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 400 },
-        { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 400 }
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 }
     ];
     backgroundImage = 'game/images/une-voie-romaine.jpg';
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
