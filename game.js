@@ -5,8 +5,9 @@ today = 0.25
 initial_remaining_time = 6.75
 player_health = 200
 max_player_health = 200
-player_attack_1_strenght = 50;
+player_attack_1_strenght = 100;
 player_attack_2_strenght = 40;
+random_proportion = 0.7;
 
 current_position = "Dragonoville"
 npcs_positions={}
@@ -413,6 +414,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
 
     const attack1Button = document.createElement('button');
     attack1Button.textContent = 'Heavy Attack (Single Enemy)';
+    attack1Button.title = `Power: ${player_attack_1_strenght * (1-random_proportion)} - ${player_attack_1_strenght}`
     attack1Button.addEventListener('click', () => {
         // Logic for heavy attack
         // Player chooses target enemy
@@ -424,7 +426,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
                     enemyDiv2.onclick="";
                 })
                 //we apply the damages
-                playerDamage = Math.ceil( player_attack_1_strenght + Math.random()*player_attack_1_strenght);
+                playerDamage = Math.ceil( player_attack_1_strenght * (1-random_proportion) + Math.random() * player_attack_1_strenght * random_proportion);
                 playerAttacks()
                 const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
                 const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
@@ -450,9 +452,10 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
 
     const attack2Button = document.createElement('button');
     attack2Button.textContent = 'Light Attack (All Enemies)';
+    attack2Button.title = `Power: ${player_attack_2_strenght * (1-random_proportion)} - ${player_attack_2_strenght}, decreasing`
     attack2Button.addEventListener('click', () => {
         // Logic for light attack
-        playerDamage = Math.ceil(player_attack_2_strenght/2 + player_attack_2_strenght/2 * Math.random());
+        playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
         playerAttacks()
         enemyDivs = enemiesDiv.querySelectorAll('.enemy');
         let delay = 500
@@ -556,7 +559,6 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
