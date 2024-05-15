@@ -6,7 +6,7 @@ initial_remaining_time = 6.75
 player_health = 200
 max_player_health = 200
 player_attack_1_strenght = 50;
-player_attack_2_strenght = 30;
+player_attack_2_strenght = 40;
 
 current_position = "Dragonoville"
 npcs_positions={}
@@ -391,8 +391,8 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     const enemiesDiv = document.createElement('div');
     enemiesDiv.id = 'enemiesDiv';
     enemiesDiv.style.display = 'flex';
-    enemiesDiv.style.flexDirection = 'row-reverse';
-    enemiesDiv.style.justifyContent = 'end';
+    enemiesDiv.style.flexDirection = 'row';
+    //enemiesDiv.style.justifyContent = 'end';
     enemiesDiv.style.width = '50%'
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
@@ -455,10 +455,12 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
         playerAttacks()
         enemyDivs = enemiesDiv.querySelectorAll('.enemy');
         let delay = 500
+        let i_enemy = 1
         enemyDivs.forEach(enemyDiv => {
             const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
-            const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
+            const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i));
             delay+=500
+            i_enemy+=1
             setTimeout(()=>{
                 enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
                 enemyTakesDamage(enemyDiv);
@@ -553,6 +555,8 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
+        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
         { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
