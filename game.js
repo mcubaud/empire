@@ -370,6 +370,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     combatDiv.style.justifyContent = 'space-between';
     combatDiv.style.backgroundColor= 'beige';
     combatDiv.style.zIndex = '10000000000000000';
+    combatDiv.style.overflow = 'clip';
     document.body.appendChild(combatDiv);
 
     const battlefieldDiv = document.createElement('div');
@@ -458,7 +459,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
         let i_enemy = 1
         enemyDivs.forEach(enemyDiv => {
             const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
-            const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i));
+            const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i_enemy));
             delay+=500
             i_enemy+=1
             setTimeout(()=>{
