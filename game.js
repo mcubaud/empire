@@ -415,7 +415,10 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     const attack1Button = document.createElement('button');
     attack1Button.textContent = 'Heavy Attack (Single Enemy)';
     attack1Button.title = `Power: ${Math.floor(player_attack_1_strenght * (1-random_proportion))} - ${player_attack_1_strenght}`
-    attack1Button.addEventListener('click', () => {
+
+    function attack1(){
+        attack1Button.removeEventListener("click");
+        attack2Button.removeEventListener("click");
         // Logic for heavy attack
         // Player chooses target enemy
         enemyDivs = enemiesDiv.querySelectorAll('.enemy');
@@ -445,15 +448,17 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
             }
             
         });
-        
+    }
 
-    });
+    attack1Button.addEventListener('click', attack1);
     attackButtonsDiv.appendChild(attack1Button);
 
     const attack2Button = document.createElement('button');
     attack2Button.textContent = 'Light Attack (All Enemies)';
     attack2Button.title = `Power: ${Math.floor(player_attack_2_strenght * (1-random_proportion))} - ${player_attack_2_strenght}, decreasing`
-    attack2Button.addEventListener('click', () => {
+    function attack2(){
+        attack1Button.removeEventListener("click");
+        attack2Button.removeEventListener("click");
         // Logic for light attack
         playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
         playerAttacks()
@@ -477,7 +482,9 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
             }
         });
         setTimeout(()=>{test_victory(victoryMessage)},delay);
-    });
+                       
+    }
+    attack2Button.addEventListener('click', attack2);
     attackButtonsDiv.appendChild(attack2Button);
 
 }
@@ -516,6 +523,8 @@ function test_victory(victoryMessage){
         document.getElementById('combatDiv').remove();
     }else{
         enemies_attacks(enemyDivs);
+        attack1Button.addEventListener('click', attack1);
+        attack2Button.addEventListener('click', attack2);
     }
 }
 function handleDefeat(){
