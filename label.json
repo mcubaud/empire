@@ -485,6 +485,123 @@
         "descr":"Hippoport est la plus grande ville de Buratie."
         },
     {
+        "titre":"Ashor-Garoth",
+        "lat":23.281719, 
+        "long":-50.526123,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":": La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres."
+        },
+    {
+        "titre":"Zarak-Dum",
+        "lat":21.012727,
+        "long": -53.239746,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon."
+        },
+    {
+        "titre":"Jurak'Tor",
+        "lat":19.352611, 
+        "long":-46.307373,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement."
+        },
+    {
+        "titre":"Razan'Rah",
+        "lat":22.66471,
+        "long": -44.978027,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières."
+        },
+    {
+        "titre":"Pirazarn",
+        "lat":24.337087, 
+        "long":-60.963135,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir."
+        },
+    {
+        "titre":"Thar-Valor",
+        "lat":20.694462,
+        "long": -57.381592,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre."
+        },
+    {
+        "titre":"Gor'Zhul",
+        "lat":25.185059, 
+        "long":-59.315186,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos"
+        },
+    {
+        "titre":"Vak-Norr",
+        "lat":23.049407, 
+        "long":-59.864502,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique."
+        },
+    {
+        "titre":"Karnath",
+        "lat":25.601902,
+        "long": -53.701172,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante."
+        },
+    {
+        "titre":"Vuldaroth",
+        "lat":27.57646,
+        "long": -55.371094,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles."
+        },
+    {
+        "titre":"Nyrr'Karr",
+        "lat":31.306715,
+        "long": -55.788574,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos"
+        },
+    {
+        "titre":"Zarn-Gol",
+        "lat":26.667096,
+        "long": -45.351562,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements."
+        },
+    {
+        "titre":"Drak'Morr",
+        "lat":28.304381,
+        "long": -47.746582,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat."
+        },
+    {
         "titre":"Nécropole",
         "lat":14.187606,
         "long":-55.239258,
