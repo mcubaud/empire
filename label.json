@@ -684,8 +684,8 @@
         },
     {
         "titre":"Château Valor",
-        "lat":11.23514,
-        "long":  -36.782227,
+        "lat":17.225865,
+        "long":   -34.420166,
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
@@ -695,6 +695,33 @@
         "titre":"Portail du feu",
         "lat":19.703432, 
         "long":  -33.442383,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Portail du feu",
+        "lat":18.370166, 
+        "long":   -30.800171,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Tour des Pillards",
+        "lat":12.63606, 
+        "long":   -39.342041,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Port Ferroch",
+        "lat":15.669889, 
+        "long": -36.496582,
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
