@@ -63,7 +63,7 @@
         },
     {
         "titre":"Buratie",
-        "lat":17.409423,
+        "lat":15.638092,
         "long":-43.196088,
         "class":"textes_provinces",
         "zoom_min":5,
@@ -116,7 +116,7 @@
         "descr":"<a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p>"
         },
     {
-        "titre":"Royaumes des Papos",
+        "titre":"Royaume des Papos",
         "lat":23.371669,
         "long":-52.558488,
         "class":"royaumes_ennemis",
@@ -157,11 +157,56 @@
         "long":-33.178711,
         "class":"royaumes_ennemis",
         "zoom_min":4,
+        "zoom_max":6,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume Norvagen",
+        "lat":12.376362,
+        "long":-36.44165,
+        "class":"royaumes_ennemis",
+        "zoom_min":7,
         "zoom_max":9,
         "descr":""
         },
     {   
-        "titre":"Royaume Keenway",
+        "titre":"Royaume Draigar",
+        "lat":14.490727,
+        "long":-35.518799,
+        "class":"royaumes_ennemis",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume Valtheran",
+        "lat":17.196219,
+        "long":-34.716797,
+        "class":"royaumes_ennemis",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume Fyren",
+        "lat":19.778392,
+        "long":-33.706055,
+        "class":"royaumes_ennemis",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Tribus Vorgans",
+        "lat":17.667612,
+        "long":-31.530762,
+        "class":"royaumes_ennemis",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Royaume Petits Soldats",
         "lat":25.520476,
         "long":-31.376953,
         "class":"royaumes_ennemis",

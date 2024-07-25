@@ -61,7 +61,11 @@
         "imageBounds" : [[19.52, -58.75], [11.46, -50.8]],
         "zoom" :5
     },
-
+    {
+        "nom":"papa_echelle_2.png",
+        "imageBounds" : [[39.091365, -72.597656], [5.933045, -15.292969]],
+        "zoom" :5
+    },
     {
         "nom":"dragonoland_scale_3.png",
         "imageBounds" : [[19.52, -58.75], [11.46, -50.8]],
@@ -84,11 +88,6 @@
         "nom":"rempart.png",
         "imageBounds" : [[15.924454, -53.405228], [15.907296, -53.386002]],
         "zoom" :10
-    },
-    {
-        "nom":"papa_echelle_2.png",
-        "imageBounds" : [[39.091365, -72.597656], [5.933045, -15.292969]],
-        "zoom" :5
     }
 
 ]
