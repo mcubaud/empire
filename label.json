@@ -157,7 +157,7 @@
         "long":-33.178711,
         "class":"royaumes_ennemis",
         "zoom_min":4,
-        "zoom_max":6,
+        "zoom_max":5,
         "descr":""
         },
     {   
@@ -165,7 +165,7 @@
         "lat":12.376362,
         "long":-36.44165,
         "class":"royaumes_ennemis",
-        "zoom_min":7,
+        "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },
@@ -174,7 +174,7 @@
         "lat":14.490727,
         "long":-35.518799,
         "class":"royaumes_ennemis",
-        "zoom_min":7,
+        "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },
@@ -183,7 +183,7 @@
         "lat":17.196219,
         "long":-34.716797,
         "class":"royaumes_ennemis",
-        "zoom_min":7,
+        "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },
@@ -192,7 +192,7 @@
         "lat":19.778392,
         "long":-33.706055,
         "class":"royaumes_ennemis",
-        "zoom_min":7,
+        "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },
@@ -201,7 +201,7 @@
         "lat":17.667612,
         "long":-31.530762,
         "class":"royaumes_ennemis",
-        "zoom_min":7,
+        "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },
@@ -645,6 +645,60 @@
         "zoom_min":7,
         "zoom_max":12,
         "descr":"Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat."
+        },
+    {
+        "titre":"Falaise des Maraudeurs",
+        "lat":13.262856,
+        "long": -35.755005,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Havrenor",
+        "lat":11.23514,
+        "long":  -36.782227,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Château Draigar",
+        "lat":15.210411,
+        "long":  -32.991943,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Croc Guerrier",
+        "lat":14.127004,
+        "long":  -34.991455,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Château Valor",
+        "lat":11.23514,
+        "long":  -36.782227,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Portail du feu",
+        "lat":19.703432, 
+        "long":  -33.442383,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
         },
     {
         "titre":"Nécropole",
