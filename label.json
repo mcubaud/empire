@@ -701,7 +701,7 @@
         "descr":""
         },
     {
-        "titre":"Portail du feu",
+        "titre":"Forteresse Vorgan",
         "lat":18.370166, 
         "long":   -30.800171,
         "class":"ville",
@@ -722,6 +722,33 @@
         "titre":"Port Ferroch",
         "lat":15.669889, 
         "long": -36.496582,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Arcalia",
+        "lat":16.850356, 
+        "long": -43.533325,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Antris",
+        "lat":13.896192, 
+        "long":  -43.390503,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Affremer",
+        "lat":15.755249, 
+        "long":  -42.1875,
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
