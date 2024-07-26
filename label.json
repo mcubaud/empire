@@ -473,7 +473,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/petit-chienville'>Petit-Chienville :</a><img src='Blasons/petitchienvilleProvisoire.png' width=250px></img><b>563478 habitants</b><p>Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César.</p></div>"
         },
     {
         "titre":"Coyote Town",
@@ -482,7 +482,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":" Coyote Town est une ville qui se trouve au nord ouest de Petit-Chienland, proche de la source du fleuve Arlant et du désert. Son nom lui vient du Dieu Coyote, le dieu de la ruse. Elle abrite la grande garnison de Tuniques bleues, sa population est surtout composées de cow-boys, chercheurs d'or et d'aventuriers."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/article-sans-titre'>Coyote Town :</a><b>20000 habitants</b><p>Coyote Town est une ville qui se trouve au nord ouest de Petit-Chienland, proche de la source du fleuve Arlant et du désert. Son nom lui vient du Dieu Coyote, le dieu de la ruse. Elle abrite la grande garnison de Tuniques bleues, sa population est surtout composées de cow-boys, chercheurs d'or et d'aventuriers.</p></div>"
         },
     {
         "titre":"Port César",
@@ -491,7 +491,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Port-César est le plus important port de Petit-Chienland, de sa position stratégique à l'embouchure du fleuve Arlant elle tient la voie commerciale en direction de la capitale."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-petit-chienland-et-carte'>Port César :</a><img src='Blasons/portCesar.png' width=250px></img><b>100000 habitants</b><p>Port-César est le plus important port de Petit-Chienland, de sa position stratégique à l'embouchure du fleuve Arlant elle tient la voie commerciale en direction de la capitale.</p></div>"
         },
     {
         "titre":"Wulf",
@@ -500,7 +500,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Grises et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/wulf'>Wulf :</a><img src='Blasons/wulf_provisoire.png' width=250px></img><b>60000 habitants</b><p>La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Grises et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers.</p></div>"
         },
     {
         "titre":"Fort Tigrou",
@@ -509,7 +509,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou>Fort Tigrou :</a><img src='Blasons/fort_tigrou.jfif' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
         },
     {
         "titre":"La Forteresse Rouge",
@@ -518,7 +518,7 @@
         "class":"ville",
         "zoom_min":8,
         "zoom_max":12,
-        "descr":"La forteresse Rouge est un puissant bastion se trouvant dans la forêt de Bruma non loin de Petit-Chienville."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/la-forteresse-rouge'>La Forteresse Rouge :</a><img src='Blasons/blason_dragon_rouge.png' width=250px></img><b>8000 habitants</b><p>La forteresse Rouge est un puissant bastion se trouvant dans la forêt de Bruma non loin de Petit-Chienville.</p></div>"
         },
     {
         "titre":"Hippoport",
@@ -527,7 +527,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Hippoport est la plus grande ville de Buratie."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-petit-chienland-et-carte'>Hippoport :</a><img src='Blasons/hippoport.png' width=250px></img><b>25000 habitants</b><p>Hippoport est la capitale et la plus grande ville de Buratie.</p></div>"
         },
     {
         "titre":"Ashor-Garoth",
