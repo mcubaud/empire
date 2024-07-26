@@ -176,7 +176,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Draigar</h2><img src='Blasons/draigar.png' width=250px></div>"
+        "descr":"<div class='popup_content'><h2>Royaume Draigar</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revetus d'armures de bronze.</div>"
         },
     {   
         "titre":"Royaume Valteran",
@@ -185,7 +185,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Valteran</h2><img src='Blasons/valteran.png' width=250px></div>"
+        "descr":"<div class='popup_content'><h2>Royaume Valteran</h2><img src='Blasons/valteran.png' width=200px>Les Valterans forment le plus noble des royaumes Mega-Blocks. Ils vouent une haine farrouche aux Playmobils, car leur royaume a le plus souffert lors de la croisade contre les Méga-Blocks. Leurs chevaliers portent des armures d'argent.</div>"
         },
     {   
         "titre":"Royaume Fyren",
@@ -194,7 +194,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Fyren</h2><img src='Blasons/fyren.png' width=250px></div>"
+        "descr":"<div class='popup_content'><h2>Royaume Fyren</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren controllent la magie du feu.</div>"
         },
     {   
         "titre":"Tribus Vorgans",
@@ -203,7 +203,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Tribus Vorgans</h2><img src='Blasons/vorgans.png' width=250px></div>"
+        "descr":"<div class='popup_content'><h2>Tribus Vorgans</h2><img src='Blasons/vorgans.png' width=200px>Les Vorgans sont des Méga-Blocks monstrueux, brutaux et indisciplinés. De nombreuses tribus belliqueuses se partagent le territoire. Dans les montagnes, un sorcier a corrompu des Vorgans et les a transformé en Vorgans des glaces.</div>"
         },
     {   
         "titre":"Territoires Petits Soldats",
@@ -698,7 +698,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg/revision/latest?cb=20110821144912' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img><div>"
         },
     {
         "titre":"Croc Guerrier",
@@ -707,7 +707,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg/revision/latest?cb=20190320161756' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img><div>"
         },
     {
         "titre":"Château Valor",
@@ -734,7 +734,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/8/87/51MAGBVYA8L._SL500_.jpg/revision/latest?cb=20120809050236' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img><div>"
         },
     {
         "titre":"Tour des Pillards",
