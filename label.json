@@ -59,7 +59,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p></div>"
         },
     {
         "titre":"Buratie",
@@ -68,7 +68,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p></div>"
         },  
     {
         "titre":"Surcantardie",
@@ -77,7 +77,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p></div>"
         },
     {
         "titre":"Rohanor",
@@ -86,7 +86,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p></div>"
         },
     {
         "titre":"Territoires Inexplorés",
@@ -95,7 +95,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p></div>"
         },
     {
         "titre":"Territoires Orientaux",
@@ -104,7 +104,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'></div>"
         },
     {
         "titre":"Empire de l'Aigle",
@@ -113,7 +113,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p></div>"
         },
     {
         "titre":"Royaume des Papos",
@@ -206,8 +206,8 @@
         "descr":""
         },
     {   
-        "titre":"Royaume Petits Soldats",
-        "lat":25.520476,
+        "titre":"Territoires Petits Soldats",
+        "lat":24.340424,
         "long":-31.376953,
         "class":"royaumes_ennemis",
         "zoom_min":4,
@@ -473,12 +473,12 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/petit-chienville'>Petit-Chienville :</a><img src='Blasons/petitchienvilleProvisoire.png' width=250px></img><b>563478 habitants</b><p>Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/petit-chienville'>Petit-Chienville :</a><img src='Blasons/petichienvilleProvisoire.png' width=250px></img><b>563478 habitants</b><p>Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César.</p></div>"
         },
     {
         "titre":"Coyote Town",
-        "lat":17.391591,
-        "long":-50.372532,
+        "lat":17.65889,
+        "long":-50.344849,
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
@@ -495,7 +495,7 @@
         },
     {
         "titre":"Wulf",
-        "lat":16.804637,
+        "lat":17.01432,
         "long":-47.026434,
         "class":"ville",
         "zoom_min":7,
@@ -509,7 +509,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou>Fort Tigrou :</a><img src='Blasons/fort_tigrou.jfif' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou'>Fort Tigrou :</a><img src='Blasons/fort_tigrou.jfif' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
         },
     {
         "titre":"La Forteresse Rouge",
@@ -527,7 +527,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-petit-chienland-et-carte'>Hippoport :</a><img src='Blasons/hippoport.png' width=250px></img><b>25000 habitants</b><p>Hippoport est la capitale et la plus grande ville de Buratie.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Hippoport :</a><img src='Blasons/hippoport.png' width=250px></img><b>25000 habitants</b><p>Hippoport est la capitale et la plus grande ville de Buratie.</p></div>"
         },
     {
         "titre":"Ashor-Garoth",
