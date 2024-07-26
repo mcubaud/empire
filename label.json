@@ -140,7 +140,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"Les Méga-Blocks sont un peuple de pirates qui attaquent et pillent les convois impériaux."
+        "descr":"<div class='popup_content'>L'archipel Méga-Blocks sert de refuge à des pirates qui attaquent et pillent les convois impériaux.</div>"
         },
     {   
         "titre":"Terre des Morts",
@@ -311,7 +311,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire."
+        "descr":"<div class='popup_content'>Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire.</div>"
         },
     {
         "titre":"Bouquetinbourg",
@@ -320,7 +320,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Bouquetinbourg est la seconde plus grande ville de Surcantardie."
+        "descr":"<div class='popup_content'>Bouquetinbourg est la seconde plus grande ville de Surcantardie.</div>"
         },
     {
         "titre":"Piou-Piouta",
@@ -329,7 +329,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou."
+        "descr":"<div class='popup_content'>Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou.</div>"
         },
     {
         "titre":"Elfonport",
@@ -338,7 +338,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe."
+        "descr":"<div class='popup_content'>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
         },
     {
         "titre":"Néléfantarah",
@@ -347,7 +347,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor."
+        "descr":"<div class='popup_content'>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
         },
     {
         "titre":"Gla-gla-Gorath",
@@ -365,7 +365,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer."
+        "descr":"<div class='popup_content'>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer.</div>"
         },
     {
         "titre":"Sirva",
@@ -374,7 +374,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire."
+        "descr":"<div class='popup_content'>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
         },
     {
         "titre":"Lunanera",
@@ -383,7 +383,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"La petite ville de Lunanera , au bord de la mer, est une ville commerçante au rythme effréné."
+        "descr":"<div class='popup_content'>La petite ville de Lunanera , au bord de la mer, est une ville commerçante au rythme effréné.</div>"
         },
     {
         "titre":"Oustitipolis",
@@ -536,7 +536,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres."
+        "descr":"<div class='popup_content'>La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres.</div>"
         },
     {
         "titre":"Zarak-Dum",
@@ -545,7 +545,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon."
+        "descr":"<div class='popup_content'>Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon.</div>"
         },
     {
         "titre":"Jurak'Tor",
@@ -554,7 +554,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement."
+        "descr":"<div class='popup_content'>Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement.</div>"
         },
     {
         "titre":"Razan'Rah",
@@ -563,7 +563,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières."
+        "descr":"<div class='popup_content'>Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières.</div>"
         },
     {
         "titre":"Pirazarn",
@@ -572,7 +572,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir."
+        "descr":"<div class='popup_content'>Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir.</div>"
         },
     {
         "titre":"Thar-Valor",
@@ -581,7 +581,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre."
+        "descr":"<div class='popup_content'>L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre.</div>"
         },
     {
         "titre":"Gor'Zhul",
@@ -590,7 +590,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos"
+        "descr":"<div class='popup_content'>Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos.</div>"
         },
     {
         "titre":"Vak-Norr",
@@ -599,7 +599,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique."
+        "descr":"<div class='popup_content'>Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique.</div>"
         },
     {
         "titre":"Karnath",
@@ -608,7 +608,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante."
+        "descr":"<div class='popup_content'>Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante.</div>"
         },
     {
         "titre":"Vuldaroth",
@@ -617,7 +617,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles."
+        "descr":"<div class='popup_content'>Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles.</div>"
         },
     {
         "titre":"Nyrr'Karr",
@@ -626,7 +626,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos"
+        "descr":"<div class='popup_content'>Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos.</div>"
         },
     {
         "titre":"Zarn-Gol",
@@ -635,7 +635,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements."
+        "descr":"<div class='popup_content'>Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements.</div>"
         },
     {
         "titre":"Drak'Morr",
@@ -644,7 +644,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat."
+        "descr":"<div class='popup_content'>Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat.</div>"
         },
     {
         "titre":"Falaise des Maraudeurs",
@@ -761,7 +761,7 @@
         "class":"lieu",
         "zoom_min":10,
         "zoom_max":14,
-        "descr":"L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux."
+        "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
         },
     {
         "titre":"Ruines d'Ashin-Vaat",
@@ -770,7 +770,7 @@
         "class":"lieu",
         "zoom_min":10,
         "zoom_max":14,
-        "descr":"Ruines d'un ancien temple édifié par les papos et dédié au dieu du mal."
+        "descr":"<div class='popup_content'>Ruines d'un ancien temple édifié par les papos et dédié au dieu du mal.</div>"
         },
     {
         "titre":"Temple du Dragon Vert",
@@ -779,6 +779,6 @@
         "class":"lieu",
         "zoom_min":10,
         "zoom_max":14,
-        "descr":"Temple et quartier général des chevalier du Dragon Vert."
+        "descr":"<div class='popup_content'>Temple et quartier général des chevalier du Dragon Vert.</div>"
         }
 ]
