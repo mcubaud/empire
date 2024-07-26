@@ -176,12 +176,12 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Draigar</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revetus d'armures de bronze.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Draigar</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revêtus d'armures de bronze.</div>"
         },
     {   
         "titre":"Royaume Valteran",
-        "lat":17.840145,
-        "long":-33.640137,
+        "lat":16.572768,
+        "long": -34.255371,
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
@@ -194,7 +194,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Fyren</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren controllent la magie du feu.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Fyren</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren contrôlent la magie du feu.</div>"
         },
     {   
         "titre":"Tribus Vorgans",
