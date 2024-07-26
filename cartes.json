@@ -37,31 +37,6 @@
     },
 
     {
-        "nom":"Petit-Chienland2_fat.png",
-        "imageBounds" : [[19.041842, -51.637115], [13.19737,  -44.34494]],
-        "zoom" :5
-    },
-    {
-        "nom":"Petit-Chienland2_fat.png",
-        "imageBounds" : [[19.041842, -51.637115], [13.19737,  -44.34494]],
-        "zoom" :5
-    },
-    {
-        "nom":"papo_sud.png",
-        "imageBounds" : [[27.524105, -62.363205], [18.671617, -42.295303]],
-        "zoom" :5
-    },
-    {
-        "nom":"papo_nord.png",
-        "imageBounds" : [[34.4510518249, -62.363205], [27.524105, -42.295303]],
-        "zoom" :5
-    },
-    {
-        "nom":"dragonoland.png",
-        "imageBounds" : [[19.52, -58.75], [11.46, -50.8]],
-        "zoom" :5
-    },
-    {
         "nom":"papa_echelle_2.png",
         "imageBounds" : [[39.091365, -72.597656], [5.933045, -15.292969]],
         "zoom" :5
