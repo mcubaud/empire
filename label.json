@@ -180,8 +180,8 @@
         },
     {   
         "titre":"Royaume Valtheran",
-        "lat":17.196219,
-        "long":-34.716797,
+        "lat":17.840145,
+        "long":-33.640137,
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
@@ -189,8 +189,8 @@
         },
     {   
         "titre":"Royaume Fyren",
-        "lat":19.778392,
-        "long":-33.706055,
+        "lat":19.235044,
+        "long": -33.519287,
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
