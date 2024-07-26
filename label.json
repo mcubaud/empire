@@ -207,8 +207,8 @@
         },
     {   
         "titre":"Territoires Petits Soldats",
-        "lat":23.328021,
-        "long":-31.376953,
+        "lat":24,
+        "long":-34.376953,
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
@@ -305,6 +305,15 @@
         "descr":""
         },
     {
+        "titre":"Amaris",
+        "lat":-20.087054,
+        "long":-72.279053,
+        "class":"geographie",
+        "zoom_min":7,
+        "zoom_max":9,
+        "descr":""
+        },
+    {
         "titre":"Timinouville",
         "lat":-15.661983,
         "long":-74.039537,
@@ -356,7 +365,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'>Gla-gla-Gorath</div>"
         },
     {
         "titre":"Cité de Sam",
@@ -383,16 +392,16 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La petite ville de Lunanera , au bord de la mer, est une ville commerçante au rythme effréné.</div>"
+        "descr":"<div class='popup_content'>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
         },
     {
-        "titre":"Oustitipolis",
+        "titre":"Ouistitipolis",
         "lat":-19.620341,
         "long":-72.391385,
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
         },
     {
         "titre":"Magnilor",
@@ -401,7 +410,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
         },
     {
         "titre":"Dragonoville",
