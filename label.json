@@ -23,7 +23,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p><div>"
         },
     {
         "titre":"DUCHMIE",
@@ -104,7 +104,7 @@
         "class":"textes_provinces",
         "zoom_min":5,
         "zoom_max":9,
-        "descr":"<div class='popup_content'></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/territoires-orientaux-playmobil-buratie'>Territoires Orientaux :</a><p>Les Territoires Orientaux sont une bande de terre située au-delà de la mer de Buratie. Elle a été conquise lors de la croisade contre les Méga-Blocks.</p></div>"
         },
     {
         "titre":"Empire de l'Aigle",
@@ -122,7 +122,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":"Les Papos sont les ennemis héréditaires des Playmobils, et la guerre entre ces peuples fait rage depuis des temps immémoriaux."
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>Royaume des Papos :</a><p>Les Papos sont les ennemis héréditaires des Playmobils, et la guerre entre ces peuples fait rage depuis des temps immémoriaux.</p></div>"
         },
     {
         "titre":"L'Empire Playmobil",
