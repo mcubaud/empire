@@ -44,7 +44,7 @@
         "descr":""
         },
     {
-        "titre":"ÎLE DE GORM",
+        "titre":"Île de Gorm",
         "lat":2.811371, 
         "long":-50.625,
         "class":"textes_continents",
@@ -144,7 +144,7 @@
         },        
     {
         "titre":"Peuple de la Forêt",
-        "lat":3.425692,
+        "lat":2.425692,
         "long":-51.503906,
         "class":"royaumes_ennemis",
         "zoom_min":6,
@@ -862,5 +862,203 @@
         "zoom_min":10,
         "zoom_max":14,
         "descr":"<div class='popup_content'>Temple et quartier général des chevalier du Dragon Vert.</div>"
-        }
+    },
+    {
+        "titre":"Mer de Lehandre",
+        "lat":1.208486,
+        "long": -48.537598,
+        "class":"mers",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
+        "titre":"Golfe de l'Opale Noire",
+        "lat":4.515677,
+        "long": -50.509644,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Falaise du Grand Sacrifice",
+        "lat":3.809075,
+        "long":  -53.009033,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Golfe des Anciens Guerriers",
+        "lat":1.184254, 
+        "long": -45.494385,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Récifs des Larmes",
+        "lat":-1.033502,
+        "long":  -44.25293,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Rocher du démon de feu",
+        "lat":2.783653,
+        "long":  -41.462402,
+        "class":"geographie",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Roc du pacte sacré",
+        "lat":5.338463,
+        "long":  -46.065674,
+        "class":"geographie",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Baie obscure des anciennes origines",
+        "lat":0.340368, 
+        "long": -42.132568,
+        "class":"mers",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
+        "titre":"Pic de l'Aigle", 
+        "lat":5.123772,
+        "long":-47.625732,
+        "class":"Ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Repaire de la Murène", 
+        "lat":-0.51635,
+        "long": -49.482422,
+        "class":"Ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Plaine d'Astreg", 
+        "lat":3.074695, 
+        "long":-48.977051,
+        "class":"Ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Le Volcan", 
+        "lat":3.425692,
+        "long": -45,
+        "class":"Ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
+        "titre":"Puit de Régénération Magmatique", 
+        "lat":2.582825,
+        "long":  -43.769531,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Gorge du desespoir", 
+        "lat":1.946504,
+        "long":  -44.25293,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Le Grand Massif", 
+        "lat":0.892792, 
+        "long": -43.330078,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Caverne de Rosamar", 
+        "lat":0.223067,
+        "long":  -44.857178,
+        "class":"lieu",
+        "zoom_min":9,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"La Forêt Silencieuse", 
+        "lat":3.591477,
+        "long":  -49.790039,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Autel sacré de la Vie", 
+        "lat":2.341495,
+        "long":  -51.602783,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Pic du premier vol", 
+        "lat":4.270883, 
+        "long": -49.493408,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Plage de l'évasion solitaire", 
+        "lat":1.742446,  
+        "long": -48.773804,
+        "class":"lieu",
+        "zoom_min":9,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Récif de l'ancien retour", 
+        "lat":-0.67829,  
+        "long":  -45.939331,
+        "class":"lieu",
+        "zoom_min":9,
+        "zoom_max":14,
+        "descr":""
+        },
+    {
+        "titre":"Refuge de la Forêt",
+        "lat":1.425692,
+        "long":-51.503906,
+        "class":"Ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        }     
 ]
