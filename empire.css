@@ -231,6 +231,7 @@ button:hover, button:focus {
     font-size: 1.3em;
     margin-left: -120%;
     padding-left: 10%;
+    width: 150px;
 }
 
 @keyframes shake {

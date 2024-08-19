@@ -48,7 +48,7 @@
         "lat":2.811371, 
         "long":-50.625,
         "class":"textes_continents",
-        "zoom_min":0,
+        "zoom_min":1,
         "zoom_max":3,
         "descr":""
         },        

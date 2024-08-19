@@ -45,6 +45,11 @@
         "zoom" :5
     },
     {
+        "nom":"gorm_echelle_2.png",
+        "imageBounds" : [[7.362467, -54.813979], [-3.162456, -38.912439]],
+        "zoom" :5
+    },
+    {
         "nom":"dragonoland_scale_3.png",
         "imageBounds" : [[20.0, -58.75], [11.26, -50.8]],
         "zoom" :7
