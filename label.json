@@ -927,6 +927,15 @@
         "descr":""
         },
     {   
+        "titre":"Fosse des Esprits",
+        "lat":0.514856,
+        "long": -46.691895,
+        "class":"mers",
+        "zoom_min":9,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
         "titre":"Baie obscure des anciennes origines",
         "lat":0.340368, 
         "long": -42.132568,
