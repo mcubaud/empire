@@ -936,6 +936,15 @@
         "descr":""
         },
     {   
+        "titre":"Détroit de Gorm",
+        "lat": 3.378681,
+        "long": -46.488647,
+        "class":"mers",
+        "zoom_min":10,
+        "zoom_max":14,
+        "descr":""
+        },
+    {   
         "titre":"Baie obscure des anciennes origines",
         "lat":0.340368, 
         "long": -42.132568,
