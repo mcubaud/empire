@@ -44,6 +44,15 @@
         "descr":""
         },
     {
+        "titre":"ÎLE DE GORM",
+        "lat":2.811371, 
+        "long":-50.625,
+        "class":"textes_continents",
+        "zoom_min":0,
+        "zoom_max":3,
+        "descr":""
+        },        
+    {
         "titre":"Dragonoland",
         "lat":16.254635,
         "long":-53.614133,
@@ -124,6 +133,69 @@
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>Royaume des Papos :</a><p>Les Papos sont les ennemis héréditaires des Playmobils, et la guerre entre ces peuples fait rage depuis des temps immémoriaux.</p></div>"
         },
+    {
+        "titre":"Gormitis",
+        "lat":2.811371, 
+        "long":-50.625,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":5,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple de la Forêt",
+        "lat":3.425692,
+        "long":-51.503906,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple de la Terre",
+        "lat":2.723583,
+        "long": -48.80127,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple de l'Air",
+        "lat":4.401183,
+        "long": -47.713623,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple de l'Eau",
+        "lat":0.032959, 
+        "long":-49.504395,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple de la Lave",
+        "lat":0.812961, 
+        "long": -44.362793,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },        
+    {
+        "titre":"Peuple du Magma",
+        "lat":2.943041,
+        "long": -44.769287,
+        "class":"royaumes_ennemis",
+        "zoom_min":6,
+        "zoom_max":9,
+        "descr":""
+        },          
     {
         "titre":"L'Empire Playmobil",
         "lat":16.628691,
