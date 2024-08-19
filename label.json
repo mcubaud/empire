@@ -910,7 +910,7 @@
         },
     {   
         "titre":"Rocher du démon de feu",
-        "lat":2.783653,
+        "lat":3,
         "long":  -41.462402,
         "class":"geographie",
         "zoom_min":8,
@@ -991,7 +991,7 @@
         },
     {
         "titre":"Puit de Régénération Magmatique", 
-        "lat":2.582825,
+        "lat":2.82825,
         "long":  -43.769531,
         "class":"lieu",
         "zoom_min":8,
@@ -1000,7 +1000,7 @@
         },
     {
         "titre":"Gorge du desespoir", 
-        "lat":1.946504,
+        "lat":2.15,
         "long":  -44.25293,
         "class":"lieu",
         "zoom_min":8,
@@ -1021,7 +1021,7 @@
         "lat":0.223067,
         "long":  -44.857178,
         "class":"lieu",
-        "zoom_min":9,
+        "zoom_min":8,
         "zoom_max":14,
         "descr":""
         },
@@ -1057,7 +1057,7 @@
         "lat":1.742446,  
         "long": -48.773804,
         "class":"lieu",
-        "zoom_min":9,
+        "zoom_min":8,
         "zoom_max":14,
         "descr":""
         },
@@ -1066,13 +1066,13 @@
         "lat":-0.67829,  
         "long":  -45.939331,
         "class":"lieu",
-        "zoom_min":9,
+        "zoom_min":8,
         "zoom_max":14,
         "descr":""
         },
     {
         "titre":"Refuge de la Forêt",
-        "lat":1.425692,
+        "lat":3.675989,
         "long":-51.503906,
         "class":"Ville",
         "zoom_min":7,
