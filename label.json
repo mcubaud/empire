@@ -931,7 +931,7 @@
         "lat":0.514856,
         "long": -46.691895,
         "class":"mers",
-        "zoom_min":9,
+        "zoom_min":8,
         "zoom_max":14,
         "descr":""
         },
@@ -940,7 +940,7 @@
         "lat": 3.378681,
         "long": -46.488647,
         "class":"mers",
-        "zoom_min":10,
+        "zoom_min":9,
         "zoom_max":14,
         "descr":""
         },
