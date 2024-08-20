@@ -837,6 +837,24 @@
         },
 
     {
+        "titre":"Dumgrift",
+        "lat":18.833515,
+        "long":  -42.572021,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'>Citadelle hantée de Dumgrift, où eu lieu en 1488 une bataille décisive au cours de laquelle l'empereur Arklaf le Grand perdit la vie.<div>"
+        },
+    {
+        "titre":"Zucritch",
+        "lat":20.411569, 
+        "long":  -39.094849,
+        "class":"ville",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":""
+        },
+    {
         "titre":"Nécropole",
         "lat":14.187606,
         "long":-55.239258,
