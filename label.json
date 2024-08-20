@@ -617,7 +617,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Arcalia :</a><img src='Blasons/Arcallia.png' width=250px></img><b>8000 habitants</b><p>Arcalia est construite sur les ruines d'une ville d'une ancienne civilisation oubliée.</p></div>"
         },
     {
         "titre":"Antris",
@@ -852,7 +852,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
         },
     {
         "titre":"Nécropole",
