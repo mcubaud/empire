@@ -305,6 +305,15 @@
         "descr":""
         },
     {   
+        "titre":"Mer des Cascades",
+        "lat":8.667918, 
+        "long":-53.261719,
+        "class":"mers",
+        "zoom_min":3,
+        "zoom_max":9,
+        "descr":""
+        },
+    {   
         "titre":"Baie du Loup",
         "lat":16.063424,
         "long":-46.008697,
