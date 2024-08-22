@@ -306,8 +306,8 @@
         },
     {   
         "titre":"Mer des Cascades",
-        "lat":8.667918, 
-        "long":-53.261719,
+        "lat":11.436955, 
+        "long": -51.152344,
         "class":"mers",
         "zoom_min":3,
         "zoom_max":9,
