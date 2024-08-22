@@ -864,6 +864,24 @@
         "descr":"<div class='popup_content'>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
         },
     {
+        "titre":"Grande Forêt Noire",
+        "lat":14.187606,
+        "long":-55.239258,
+        "class":"lieu",
+        "zoom_min":8,
+        "zoom_max":10,
+        "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
+        },
+    {
+        "titre":"Forêt d'Ophalie",
+        "lat":14.187606,
+        "long":-55.239258,
+        "class":"lieu",
+        "zoom_min":9,
+        "zoom_max":11,
+        "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
+        },
+    {
         "titre":"Nécropole",
         "lat":14.187606,
         "long":-55.239258,
