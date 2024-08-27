@@ -865,21 +865,21 @@
         },
     {
         "titre":"Grande Forêt Noire",
-        "lat":14.187606,
-        "long":-55.239258,
+        "lat":16.465777,
+        "long": -54.885864,
         "class":"lieu",
         "zoom_min":8,
         "zoom_max":10,
-        "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
+        "descr":"<div class='popup_content'>Cette immense forêt est situé sur les contreforts des montagnes du bord du monde. Elle est fortement imprégnée de magie maléfique car on y trouve de nombreux temples dédiés au Dieu du Mal datant de l'époque de la domination des Papos. Ce bois est traversée par la vieille route de la Forêt. Elle est le lieu de nombreuses légendes.</div>"
         },
     {
         "titre":"Forêt d'Ophalie",
-        "lat":14.187606,
-        "long":-55.239258,
+        "lat":15.155839,
+        "long": -51.732788,
         "class":"lieu",
         "zoom_min":9,
         "zoom_max":11,
-        "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
+        "descr":"<div class='popup_content'>Forêt située au nord de Chiot-Chiotville.</div>"
         },
     {
         "titre":"Nécropole",
