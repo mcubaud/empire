@@ -5,7 +5,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Heurachnon</h2><p>L'Heurachnon est le 2ème continent le plus développé de l'Empire, sur lequel il a un contrôle presque sans partage depuis des siècles.</p></div>"
         },
     {
         "titre":"MENTHIS",
@@ -14,7 +14,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Mentis</h2></div>"
         },
     {
         "titre":"VAISMIE",
@@ -23,7 +23,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p><div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p></div>"
         },
     {
         "titre":"DUCHMIE",
@@ -32,7 +32,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Duchmie</h2><p>La Duchmie est un archipel situé au nord est de la Vaismie.</p></div>"
         },
     {
         "titre":"LARIUM",
@@ -41,7 +41,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Larium</h2><p>Le Larium est le continent d'origine des Playmobils, où se trouvent les plus grandes et plus anciennes cités de l'Empire, mais l'expansion de celui-ci y est difficile, à cause de la présence d'autres puissants royaumes.</p></div>"
         },
     {
         "titre":"Île de Gorm",
@@ -50,7 +50,7 @@
         "class":"textes_continents",
         "zoom_min":1,
         "zoom_max":3,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Larium</h2><p>L'île de Gorm est la terre d'origine des Gormitis.</p></div>"
         },        
     {
         "titre":"Dragonoland",
@@ -120,7 +120,7 @@
         "lat":-21.831279,
         "long":-74.840046,
         "class":"royaumes_ennemis",
-        "zoom_min":5,
+        "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p></div>"
         },
@@ -338,7 +338,7 @@
         "class":"mers",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":"Il a fallu plusieurs siècles aux intrépides marins Playmobil pour trouver les passages sûrs à travers la mer des Cascades, ce qui a permis une expansion de l'Empire sans précédent."
+        "descr":"<div class='popup_content'>Il a fallu plusieurs siècles aux intrépides marins Playmobil pour trouver les passages sûrs à travers la mer des Cascades, ce qui a permis une expansion de l'Empire sans précédent.</div>"
         },
     {   
         "titre":"Baie du Loup",
@@ -347,7 +347,7 @@
         "class":"mers",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"La Baie du Loup se situe entre Petit-Chienland et la Buratie. Ces principaux ports sont Wulf et Hippoport."
+        "descr":"<div class='popup_content'>La Baie du Loup se situe entre Petit-Chienland et la Buratie. Ces principaux ports sont Wulf et Hippoport.</div>"
         },
     {   
         "titre":"Mer de Buratie",
@@ -356,7 +356,7 @@
         "class":"mers",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'>La mer de Buratie se situe entre la Buratie à l'Ouest, la Terre des Morts au Nord et les Territoires Orientaux à l'Est.</div>"
         },
     {   
         "titre":"Baie d'Arkhan",
@@ -365,7 +365,7 @@
         "class":"mers",
         "zoom_min":8,
         "zoom_max":20,
-        "descr":"La Baie d'Arkhan se situe au sud du Volcan des Dieux."
+        "descr":"<div class='popup_content'>La Baie d'Arkhan se situe au sud du Volcan des Dieux.</div>"
         },
     {   
         "titre":"Cap d'Asserez",
@@ -374,7 +374,7 @@
         "class":"mers",
         "zoom_min":8,
         "zoom_max":20,
-        "descr":"Le cap d'Asserez est la pointe sud de Dragonoland et la fin des Montagnes du Bord du Monde."
+        "descr":"<div class='popup_content'>Le cap d'Asserez est la pointe sud de Dragonoland et la fin des Montagnes du Bord du Monde.</div>"
         },
     {   
         "titre":"Golfe d'Ephèse",
@@ -383,7 +383,7 @@
         "class":"mers",
         "zoom_min":7,
         "zoom_max":20,
-        "descr":""
+        "descr":"<div class='popup_content'>Le golfe d'Ephèse est situé au nord ouest de Dragonoland, et au sud du Royaume Papo. Une haute falaise le sépare du désert de Navajo, et il est surplombé au nord par la chaîne des montagnes papos.</div>"
         },
     {
         "titre":"Toble",
@@ -797,7 +797,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img></div>"
         },
     {
         "titre":"Havrenor",
@@ -815,7 +815,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img></div>"
         },
     {
         "titre":"Croc Guerrier",
@@ -824,7 +824,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img></div>"
         },
     {
         "titre":"Château Valor",
@@ -833,7 +833,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9435_main.jpg?1297738800' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9435_main.jpg?1297738800' width=250px></img></div>"
         },
     {
         "titre":"Portail du feu",
@@ -842,7 +842,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://st.bricker.ru/images/store/thumbs/large/album1/1c1bc_590713.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://st.bricker.ru/images/store/thumbs/large/album1/1c1bc_590713.jpg' width=250px></img></div>"
         },
     {
         "titre":"Forteresse Vorgan",
@@ -851,7 +851,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img></div>"
         },
     {
         "titre":"Tour des Pillards",
@@ -860,7 +860,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img></div>"
         },
     {
         "titre":"Port Ferroch",
@@ -869,7 +869,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img><div>"
+        "descr":"<div class='popup_content'><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img></div>"
         },
 
     {
