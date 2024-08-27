@@ -170,6 +170,7 @@ button:hover, button:focus {
     margin-left: 20px;
     font-size: 1.5em;
     font-weight: bold;
+    width: 100%;
     
 }
 
@@ -179,7 +180,7 @@ button:hover, button:focus {
     margin-left: 20px;
     font-size: 1.5em;
     font-weight: bold;
-    
+    width: 100%;
 }
 
 .leaflet-popup-content a:hover{

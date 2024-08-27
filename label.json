@@ -5,7 +5,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<div class='popup_content'><h2>Heurachnon</h2><p>L'Heurachnon est le 2ème continent le plus développé de l'Empire, sur lequel il a un contrôle presque sans partage depuis des siècles.</p></div>"
+        "descr":"<div class='popup_content'><h2>Heurachnon :</h2><p>L'Heurachnon est le 2ème continent le plus développé de l'Empire, sur lequel il a un contrôle presque sans partage depuis des siècles.</p></div>"
         },
     {
         "titre":"MENTHIS",
@@ -14,7 +14,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<div class='popup_content'><h2>Mentis</h2></div>"
+        "descr":"<div class='popup_content'><h2>Menthis</h2></div>"
         },
     {
         "titre":"VAISMIE",
@@ -32,7 +32,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<div class='popup_content'><h2>Duchmie</h2><p>La Duchmie est un archipel situé au nord est de la Vaismie.</p></div>"
+        "descr":"<div class='popup_content'><h2>Duchmie :</h2><p>La Duchmie est un archipel situé au nord est de la Vaismie.</p></div>"
         },
     {
         "titre":"LARIUM",
@@ -41,7 +41,7 @@
         "class":"textes_continents",
         "zoom_min":0,
         "zoom_max":6,
-        "descr":"<div class='popup_content'><h2>Larium</h2><p>Le Larium est le continent d'origine des Playmobils, où se trouvent les plus grandes et plus anciennes cités de l'Empire, mais l'expansion de celui-ci y est difficile, à cause de la présence d'autres puissants royaumes.</p></div>"
+        "descr":"<div class='popup_content'><h2>Larium :</h2><p>Le Larium est le continent d'origine des Playmobils, où se trouvent les plus grandes et plus anciennes cités de l'Empire, mais l'expansion de celui-ci y est difficile, à cause de la présence d'autres puissants royaumes.</p></div>"
         },
     {
         "titre":"Île de Gorm",
@@ -50,7 +50,7 @@
         "class":"textes_continents",
         "zoom_min":1,
         "zoom_max":3,
-        "descr":"<div class='popup_content'><h2>Larium</h2><p>L'île de Gorm est la terre d'origine des Gormitis.</p></div>"
+        "descr":"<div class='popup_content'><h2>Île de Gorm :</h2><p>L'île de Gorm est la terre d'origine des Gormitis.</p></div>"
         },        
     {
         "titre":"Dragonoland",
@@ -207,7 +207,7 @@
         },
     {   
         "titre":"L'Empire Playmobil",
-        "lat":-12.747307,
+        "lat":-12,
         "long": -73.916016,
         "class":"royaumes_ennemis",
         "zoom_min":4,
@@ -248,7 +248,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Terre des Morts</h2>Sur ces terres prospérait autrefois une ancienne civilisation Playmobil, qui fut anéantie au cours d'un cataclysme inconnu. Des vampires nécromanciens en profitèrent pour s'y installer et se constituer des armées de cadavres réanimés.</div>"
+        "descr":"<div class='popup_content'><h2>Terre des Morts :</h2>Sur ces terres prospérait autrefois une ancienne civilisation Playmobil, qui fut anéantie au cours d'un cataclysme inconnu. Des vampires nécromanciens en profitèrent pour s'y installer et se constituer des armées de cadavres réanimés.</div>"
         },
     {   
         "titre":"Royaumes Méga-Blocks",
@@ -257,7 +257,16 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":5,
-        "descr":"<div class='popup_content'><h2>Royaumes Méga-Blocks</h2>Cinq principaux royaumes constituent les royaumes Méga-Blocks.</div>"
+        "descr":"<div class='popup_content'><h2>Royaumes Méga-Blocks :</h2>Cinq principaux royaumes constituent les royaumes Méga-Blocks.</div>"
+        },
+    {   
+        "titre":"Soldats de Plomb",
+        "lat":35.245879,
+        "long": 56.25,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":5,
+        "descr":"<div class='popup_content'><h2>Soldats de Plomb</h2></div>"
         },
     {   
         "titre":"Royaume Norvagen",
@@ -266,7 +275,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Norvagen</h2><img src='Blasons/norvagen.png' width=250px>Ce royaume est situé sur l'île de Norvagia. Les Norvagens sont un peuple de marins et de pillards. Leurs chevaliers portent des armures cyans.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Norvagen :</h2><img src='Blasons/norvagen.png' width=250px>Ce royaume est situé sur l'île de Norvagia. Les Norvagens sont un peuple de marins et de pillards. Leurs chevaliers portent des armures cyans.</div>"
         },
     {   
         "titre":"Royaume Draigar",
@@ -275,7 +284,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Draigar</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revêtus d'armures de bronze.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Draigar :</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revêtus d'armures de bronze.</div>"
         },
     {   
         "titre":"Royaume Valteran",
@@ -284,7 +293,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Valteran</h2><img src='Blasons/valteran.png' width=200px>Les Valterans forment le plus noble des royaumes Mega-Blocks. Ils vouent une haine farrouche aux Playmobils, car leur royaume a le plus souffert lors de la croisade contre les Méga-Blocks. Leurs chevaliers portent des armures d'argent.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Valteran :</h2><img src='Blasons/valteran.png' width=200px>Les Valterans forment le plus noble des royaumes Mega-Blocks. Ils vouent une haine farrouche aux Playmobils, car leur royaume a le plus souffert lors de la croisade contre les Méga-Blocks. Leurs chevaliers portent des armures d'argent.</div>"
         },
     {   
         "titre":"Royaume Fyren",
@@ -293,7 +302,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume Fyren</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren contrôlent la magie du feu.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume Fyren :</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren contrôlent la magie du feu.</div>"
         },
     {   
         "titre":"Tribus Vorgans",
@@ -302,7 +311,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Tribus Vorgans</h2><img src='Blasons/vorgans.png' width=200px>Les Vorgans sont des Méga-Blocks monstrueux, brutaux et indisciplinés. De nombreuses tribus belliqueuses se partagent le territoire. Dans les montagnes, un sorcier a corrompu des Vorgans et les a transformé en Vorgans des glaces.</div>"
+        "descr":"<div class='popup_content'><h2>Tribus Vorgans :</h2><img src='Blasons/vorgans.png' width=200px>Les Vorgans sont des Méga-Blocks monstrueux, brutaux et indisciplinés. De nombreuses tribus belliqueuses se partagent le territoire. Dans les montagnes, un sorcier a corrompu des Vorgans et les a transformé en Vorgans des glaces.</div>"
         },
     {   
         "titre":"Territoires Petits Soldats",
@@ -311,7 +320,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Territoires Petits Soldats</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
+        "descr":"<div class='popup_content'><h2>Territoires Petits Soldats :</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
         },
     {   
         "titre":"Terre des Géants",
@@ -329,7 +338,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":"<div class='popup_content'><h2>Royaume des Actions-Man</h2>Les Actions-Man sont des adversaires titanesques, à la force physique redoutable, et accompagnés de bêtes colossales.</div>"
+        "descr":"<div class='popup_content'><h2>Royaume des Actions-Man :</h2>Les Actions-Man sont des adversaires titanesques, à la force physique redoutable, et accompagnés de bêtes colossales.</div>"
         },
     {   
         "titre":"Mer des Cascades",
@@ -428,7 +437,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire.</div>"
+        "descr":"<div class='popup_content'><h2>Timinouville :</h2><img src='Blasons/Timinouville.png' width=250px></img>Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire.</div>"
         },
     {
         "titre":"Bouquetinbourg",
@@ -437,7 +446,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Bouquetinbourg est la seconde plus grande ville de Surcantardie.</div>"
+        "descr":"<div class='popup_content'><h2>Bouquetinbourg :</h2><img src='Blasons/armoiriesBouquetinbourg.png' width=250px></img>Bouquetinbourg est la seconde plus grande ville de Surcantardie.</div>"
         },
     {
         "titre":"Piou-Piouta",
@@ -446,7 +455,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou.</div>"
+        "descr":"<div class='popup_content'><h2>Piou-piouta :</h2><img src='Blasons/piou-piouta.png' width=250px></img>Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou.</div>"
         },
     {
         "titre":"Elfonport",
@@ -455,7 +464,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
+        "descr":"<div class='popup_content'><h2>Elfonport :</h2><img src='Blasons/elfonport.jpg' width=250px></img>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
         },
     {
         "titre":"Néléfantarah",
@@ -464,7 +473,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
+        "descr":"<div class='popup_content'><h2>Nélefentharah :</h2>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
         },
     {
         "titre":"Gla-gla-Gorath",
@@ -473,7 +482,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Gla-gla-Gorath</div>"
+        "descr":"<div class='popup_content'><h2>Gla-gla-Gorath :</h2>Gla-gla-Gorath est une ville du Rohanor</div>"
         },
     {
         "titre":"Cité de Sam",
@@ -482,7 +491,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer.</div>"
+        "descr":"<div class='popup_content'><h2>Cité de Sam :</h2>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer.</div>"
         },
     {
         "titre":"Sirva",
@@ -491,7 +500,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
+        "descr":"<div class='popup_content'><h2>Sirva :</h2>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
         },
     {
         "titre":"Lunanera",
@@ -500,7 +509,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
+        "descr":"<div class='popup_content'><h2>Lunanera :</h2>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
         },
     {
         "titre":"Ouistitipolis",
@@ -509,7 +518,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
+        "descr":"<div class='popup_content'><h2>Ouistitipolis :</h2>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
         },
     {
         "titre":"Magnilor",
@@ -518,7 +527,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
+        "descr":"<div class='popup_content'><h2>Magnilor :</h2>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
         },
     {
         "titre":"Dragonoville",
@@ -581,7 +590,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href=''>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 100000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/carouacas-1'>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 100000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
         },
     {
         "titre":"Petit-Chienville",
@@ -662,7 +671,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Antris :</h2><p>Le port d'Antris contrôle stratégiquement le passage par le détroit du même nom, qui réduit considérablement les trajets entre la baie du Loup et la mer de Buratie."
         },
     {
         "titre":"Affremer",
@@ -680,7 +689,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres.</div>"
+        "descr":"<div class='popup_content'><h2>Ashor-Garoth :</h2>La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres.</div>"
         },
     {
         "titre":"Zarak-Dum",
@@ -689,7 +698,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon.</div>"
+        "descr":"<div class='popup_content'><h2>Zarak-Dum :</h2>Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon.</div>"
         },
     {
         "titre":"Jurak'Tor",
@@ -698,7 +707,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement.</div>"
+        "descr":"<div class='popup_content'><h2>Jurak'Tor :</h2>Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement.</div>"
         },
     {
         "titre":"Razan'Rah",
@@ -707,7 +716,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières.</div>"
+        "descr":"<div class='popup_content'><h2>Razan'Rah :</h2>Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières.</div>"
         },
     {
         "titre":"Pirazarn",
@@ -716,7 +725,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir.</div>"
+        "descr":"<div class='popup_content'><h2>Pirazarn :</h2>Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir.</div>"
         },
     {
         "titre":"Thar-Valor",
@@ -725,7 +734,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre.</div>"
+        "descr":"<div class='popup_content'><h2>Thar-Valor :</h2>L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre.</div>"
         },
     {
         "titre":"Gor'Zhul",
@@ -734,7 +743,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos.</div>"
+        "descr":"<div class='popup_content'><h2>Gor'Zhul :</h2>Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos.</div>"
         },
     {
         "titre":"Vak-Norr",
@@ -743,7 +752,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique.</div>"
+        "descr":"<div class='popup_content'><h2>Vak-Norr :</h2>Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique.</div>"
         },
     {
         "titre":"Karnath",
@@ -752,7 +761,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante.</div>"
+        "descr":"<div class='popup_content'><h2>Karnath :</h2>Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante.</div>"
         },
     {
         "titre":"Vuldaroth",
@@ -761,7 +770,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles.</div>"
+        "descr":"<div class='popup_content'><h2>Vuldaroth :</h2>Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles.</div>"
         },
     {
         "titre":"Nyrr'Karr",
@@ -770,7 +779,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos.</div>"
+        "descr":"<div class='popup_content'><h2>Nyrr'Karr :</h2>Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos.</div>"
         },
     {
         "titre":"Zarn-Gol",
@@ -779,7 +788,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements.</div>"
+        "descr":"<div class='popup_content'><h2>Zarn-Gol :</h2>Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements.</div>"
         },
     {
         "titre":"Drak'Morr",
@@ -788,7 +797,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat.</div>"
+        "descr":"<div class='popup_content'><h2>Drak'Morr :</h2>Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat.</div>"
         },
     {
         "titre":"Falaise des Maraudeurs",
@@ -797,7 +806,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Falaise des Maraudeurs :</h2><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img></div>"
         },
     {
         "titre":"Havrenor",
@@ -806,7 +815,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Havrenor</h2></div>"
         },
     {
         "titre":"Château Draigar",
@@ -815,7 +824,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Château Draigar :</h2><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img></div>"
         },
     {
         "titre":"Croc Guerrier",
@@ -824,7 +833,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Croc Guerrier :</h2><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img></div>"
         },
     {
         "titre":"Château Valor",
@@ -833,7 +842,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://bricker.info/images/sets/MEGABLOKS/9435_main.jpg?1297738800' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Château Valor :</h2><img src='https://bricker.info/images/sets/MEGABLOKS/9435_main.jpg?1297738800' width=250px></img></div>"
         },
     {
         "titre":"Portail du feu",
@@ -842,7 +851,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://st.bricker.ru/images/store/thumbs/large/album1/1c1bc_590713.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Portail du feu :</h2><img src='https://st.bricker.ru/images/store/thumbs/large/album1/1c1bc_590713.jpg' width=250px></img></div>"
         },
     {
         "titre":"Forteresse Vorgan",
@@ -851,7 +860,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Forteresse Vorgan :</h2><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img></div>"
         },
     {
         "titre":"Tour des Pillards",
@@ -860,7 +869,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Tour des Pillards :</h2><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img></div>"
         },
     {
         "titre":"Port Ferroch",
@@ -869,7 +878,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Port Ferroch :</h2><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img></div>"
         },
 
     {
@@ -879,7 +888,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>Citadelle hantée de Dumgrift, où eu lieu en 1488 une bataille décisive au cours de laquelle l'empereur Arklaf le Grand perdit la vie.<div>"
+        "descr":"<div class='popup_content'><h2>Dumgrift :</h2>Citadelle hantée de Dumgrift, où eu lieu en 1488 une bataille décisive au cours de laquelle l'empereur Arklaf le Grand perdit la vie.<div>"
         },
     {
         "titre":"Zucritch",
@@ -888,7 +897,7 @@
         "class":"ville",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
+        "descr":"<div class='popup_content'><h2>Zucritch :</h2>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
         },
     {
         "titre":"Grande Forêt Noire",
