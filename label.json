@@ -3,6 +3,7 @@
         "lat":-15.29643,
         "long":-74.179688,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":0,
         "zoom_max":6,
         "descr":"<div class='popup_content'><h2>Heurachnon :</h2><p>L'Heurachnon est le 2ème continent le plus développé de l'Empire, sur lequel il a un contrôle presque sans partage depuis des siècles.</p></div>"
@@ -12,6 +13,7 @@
         "lat":-29.284583,
         "long":-60.820313,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":0,
         "zoom_max":6,
         "descr":"<div class='popup_content'><h2>Menthis</h2></div>"
@@ -21,6 +23,7 @@
         "lat":-7.235479,
         "long":24.785156,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":0,
         "zoom_max":6,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/vaismie'>Vaismie :</a><p>La Vaismie est un grand continent à l'est de l'Empire. Des tensions géopolitiques y ont lieu, car cette province est stratégique vis-à-vis de l'approvisionnement en certaines ressources pour l'Empire, mais sa domination est contestée par des rebelles qui se cachent dans les hauteurs des grands plateaux du continent.</p></div>"
@@ -30,6 +33,7 @@
         "lat":27.974329,
         "long":60.292969,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":0,
         "zoom_max":6,
         "descr":"<div class='popup_content'><h2>Duchmie :</h2><p>La Duchmie est un archipel situé au nord est de la Vaismie.</p></div>"
@@ -39,6 +43,7 @@
         "lat":26.18351,
         "long":-44.296875,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":0,
         "zoom_max":6,
         "descr":"<div class='popup_content'><h2>Larium :</h2><p>Le Larium est le continent d'origine des Playmobils, où se trouvent les plus grandes et plus anciennes cités de l'Empire, mais l'expansion de celui-ci y est difficile, à cause de la présence d'autres puissants royaumes.</p></div>"
@@ -48,6 +53,7 @@
         "lat":2.811371, 
         "long":-50.625,
         "class":"textes_continents",
+        "parent":"",
         "zoom_min":1,
         "zoom_max":3,
         "descr":"<div class='popup_content'><h2>Île de Gorm :</h2><p>L'île de Gorm est la terre d'origine des Gormitis.</p></div>"
@@ -57,6 +63,7 @@
         "lat":16.254635,
         "long":-53.614133,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_larium",
         "zoom_min":5,
         "zoom_max":8,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/dragonoland'>Dragonoland :</a><b>4 301 560 habitants</b><p>Dragonoland est une des plus anciennes et importantes provinces de l'Empire.</p></div>"
@@ -66,6 +73,7 @@
         "lat":16.6,
         "long":-48.910749,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_larium",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/petitchien-ville'>Petit-Chienland :</a><p>Petit-Chienland est une des plus anciennes et importantes provinces de l'Empire.</p></div>"
@@ -75,6 +83,7 @@
         "lat":15.638092,
         "long":-43.196088,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_larium",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Buratie :</a><p>La Buratie est une province aride et peu peuplée à l'est de Petit-Chienland.</p></div>"
@@ -84,6 +93,7 @@
         "lat":-16.317737,
         "long":-74.949641,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_eurachnon",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/surcantardie'>Surcantardie :</a><p>La Surcantardie est une province de l'Empire située en Eurachnon.</p></div>"
@@ -93,6 +103,7 @@
         "lat":-16.517631,
         "long":-71.367453,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_eurachnon",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/centre-of-the-world'>Rohanor :</a><p>Le Rohanor est une province de l'Empire située en Eurachnon.</p></div>"
@@ -102,6 +113,7 @@
         "lat":-12.044665,
         "long":-75.301593,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_eurachnon",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/territoires-inexplores'>Territoires Inexplorés :</a><p>Terrible jungle sur laquelle l'Empire n'a un contrôle que théorique.</p></div>"
@@ -111,6 +123,7 @@
         "lat":15.320684,
         "long":-37.331543,
         "class":"textes_provinces",
+        "parent":"Empire_playmobil_larium",
         "zoom_min":5,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/articles/territoires-orientaux-playmobil-buratie'>Territoires Orientaux :</a><p>Les Territoires Orientaux sont une bande de terre située au-delà de la mer de Buratie. Elle a été conquise lors de la croisade contre les Méga-Blocks.</p></div>"
@@ -120,6 +133,7 @@
         "lat":-21.831279,
         "long":-74.840046,
         "class":"royaumes_ennemis",
+        "parent":"",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/l-empire-de-l-aigle'>L'Empire de l'Aigle :</a><p>Rival de l'Empire, ce peuple hétérogène domine des îles au sud de l'Heurachnon.</p></div>"
@@ -129,6 +143,7 @@
         "lat":23.371669,
         "long":-52.558488,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>Royaume des Papos :</a><p>Les Papos sont les ennemis héréditaires des Playmobils, et la guerre entre ces peuples fait rage depuis des temps immémoriaux.</p></div>"
@@ -138,6 +153,7 @@
         "lat":2.811371, 
         "long":-50.625,
         "class":"royaumes_ennemis",
+        "parent":"",
         "zoom_min":4,
         "zoom_max":5,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/les-gormitis'>Gormitis :</a>Les Gormitis sont des créatures monstrueuses et très agressives. Ils ont été créés par un grand sorcier, mais ses créations se sont retournées contre lui et l'ont enfermé dans un volcan. Ils sont constitués de plusieurs tribus basées sur les éléments de la Terre, de l'Air, de l'Eau, de la Forêt, du Feu, de la Lumière et de l'Obscurité.</div>"
@@ -147,6 +163,7 @@
         "lat":2.425692,
         "long":-51.503906,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
@@ -156,6 +173,7 @@
         "lat":2.723583,
         "long": -48.80127,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
@@ -165,6 +183,7 @@
         "lat":4.401183,
         "long": -47.713623,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
@@ -174,6 +193,7 @@
         "lat":0.032959, 
         "long":-49.504395,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
@@ -183,6 +203,7 @@
         "lat":0.812961, 
         "long": -44.362793,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
@@ -192,42 +213,51 @@
         "lat":2.943041,
         "long": -44.769287,
         "class":"royaumes_ennemis",
+        "parent":"Gormitis",
         "zoom_min":6,
         "zoom_max":9,
         "descr":""
         },          
     {
         "titre":"L'Empire Playmobil",
+        "id":"Empire_playmobil_larium",
         "lat":16.628691,
         "long":-50.44714,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":4,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
         },
     {   
         "titre":"L'Empire Playmobil",
+        "id":"Empire_playmobil_eurachnon",
         "lat":-12,
         "long": -73.916016,
         "class":"royaumes_ennemis",
+        "parent":"EURACHNON",
         "zoom_min":4,
         "zoom_max":4,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
         },
     {  
         "titre":"L'Empire Playmobil",
+        "id":"Empire_playmobil_menthis",
         "lat":-28.291142,
         "long": -68.818359,
         "class":"royaumes_ennemis",
+        "parent":"MENTHIS",
         "zoom_min":4,
         "zoom_max":4,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
         },
     {
         "titre":"L'Empire Playmobil",
+        "id":"Empire_playmobil_vaismie",
         "lat":0.190656,
         "long":  1.054688,
         "class":"royaumes_ennemis",
+        "parent":"VAISMIE",
         "zoom_min":4,
         "zoom_max":4,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
@@ -237,6 +267,7 @@
         "lat":13.250219,
         "long":-53.570266,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'>L'archipel Méga-Blocks sert de refuge à des pirates qui attaquent et pillent les convois impériaux.</div>"
@@ -246,6 +277,7 @@
         "lat":21.979502,
         "long":-39.594727,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Terre des Morts :</h2>Sur ces terres prospérait autrefois une ancienne civilisation Playmobil, qui fut anéantie au cours d'un cataclysme inconnu. Des vampires nécromanciens en profitèrent pour s'y installer et se constituer des armées de cadavres réanimés.</div>"
@@ -255,6 +287,7 @@
         "lat":16.712812,
         "long":-33.178711,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":5,
         "descr":"<div class='popup_content'><h2>Royaumes Méga-Blocks :</h2>Cinq principaux royaumes constituent les royaumes Méga-Blocks.</div>"
@@ -264,6 +297,7 @@
         "lat":35.245879,
         "long": 56.25,
         "class":"royaumes_ennemis",
+        "parent":"DUCHMIE",
         "zoom_min":4,
         "zoom_max":5,
         "descr":"<div class='popup_content'><h2>Soldats de Plomb</h2></div>"
@@ -273,6 +307,7 @@
         "lat":12.376362,
         "long":-36.44165,
         "class":"royaumes_ennemis",
+        "parent":"Royaumes Méga-Blocks",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Royaume Norvagen :</h2><img src='Blasons/norvagen.png' width=250px>Ce royaume est situé sur l'île de Norvagia. Les Norvagens sont un peuple de marins et de pillards. Leurs chevaliers portent des armures cyans.</div>"
@@ -282,6 +317,7 @@
         "lat":14.490727,
         "long":-35.518799,
         "class":"royaumes_ennemis",
+        "parent":"Royaumes Méga-Blocks",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Royaume Draigar :</h2><img src='Blasons/draigar.png' width=250px>Les Draigars sont de féroces guerriers revêtus d'armures de bronze.</div>"
@@ -291,6 +327,7 @@
         "lat":16.572768,
         "long": -34.255371,
         "class":"royaumes_ennemis",
+        "parent":"Royaumes Méga-Blocks",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Royaume Valteran :</h2><img src='Blasons/valteran.png' width=200px>Les Valterans forment le plus noble des royaumes Mega-Blocks. Ils vouent une haine farrouche aux Playmobils, car leur royaume a le plus souffert lors de la croisade contre les Méga-Blocks. Leurs chevaliers portent des armures d'argent.</div>"
@@ -300,6 +337,7 @@
         "lat":19.235044,
         "long": -33.519287,
         "class":"royaumes_ennemis",
+        "parent":"Royaumes Méga-Blocks",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Royaume Fyren :</h2><img src='Blasons/fyren.png' width=200px>Les dangereux chevaliers rouges du royaume Fyren contrôlent la magie du feu.</div>"
@@ -309,24 +347,29 @@
         "lat":17.667612,
         "long":-31.530762,
         "class":"royaumes_ennemis",
+        "parent":"Royaumes Méga-Blocks",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Tribus Vorgans :</h2><img src='Blasons/vorgans.png' width=200px>Les Vorgans sont des Méga-Blocks monstrueux, brutaux et indisciplinés. De nombreuses tribus belliqueuses se partagent le territoire. Dans les montagnes, un sorcier a corrompu des Vorgans et les a transformé en Vorgans des glaces.</div>"
         },
     {   
         "titre":"Territoires Petits Soldats",
+        "id":"petits_soldats_larium",
         "lat":24,
         "long":-34.376953,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Territoires Petits Soldats :</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
         },
     {   
         "titre":"Territoires Petits Soldats",
+        "id":"petits_soldats_duchmie",
         "lat":26.299981,
         "long": 66.005859,
         "class":"royaumes_ennemis",
+        "parent":"DUCHMIE",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Territoires Petits Soldats :</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
@@ -336,6 +379,7 @@
         "lat":28.497299,
         "long":-39.375,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Terre des Géants</h2></div>"
@@ -345,6 +389,7 @@
         "lat":32.326126,
         "long":-44.384766,
         "class":"royaumes_ennemis",
+        "parent":"LARIUM",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'><h2>Royaume des Actions-Man :</h2>Les Actions-Man sont des adversaires titanesques, à la force physique redoutable, et accompagnés de bêtes colossales.</div>"
@@ -354,6 +399,7 @@
         "lat":11.436955, 
         "long": -51.152344,
         "class":"mers",
+        "parent":"",
         "zoom_min":4,
         "zoom_max":9,
         "descr":"<div class='popup_content'>Il a fallu plusieurs siècles aux intrépides marins Playmobil pour trouver les passages sûrs à travers la mer des Cascades, ce qui a permis une expansion de l'Empire sans précédent.</div>"
@@ -363,6 +409,7 @@
         "lat":16.063424,
         "long":-46.008697,
         "class":"mers",
+        "parent":"",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'>La Baie du Loup se situe entre Petit-Chienland et la Buratie. Ces principaux ports sont Wulf et Hippoport.</div>"
@@ -372,6 +419,7 @@
         "lat":16.190145,
         "long":-39.305275,
         "class":"mers",
+        "parent":"",
         "zoom_min":6,
         "zoom_max":9,
         "descr":"<div class='popup_content'>La mer de Buratie se situe entre la Buratie à l'Ouest, la Terre des Morts au Nord et les Territoires Orientaux à l'Est.</div>"
@@ -381,6 +429,7 @@
         "lat":13.771102,
         "long":-55.008545,
         "class":"mers",
+        "parent":"",
         "zoom_min":8,
         "zoom_max":20,
         "descr":"<div class='popup_content'>La Baie d'Arkhan se situe au sud du Volcan des Dieux.</div>"
@@ -390,6 +439,7 @@
         "lat":12.723709,
         "long":-56.37085,
         "class":"mers",
+        "parent":"",
         "zoom_min":8,
         "zoom_max":20,
         "descr":"<div class='popup_content'>Le cap d'Asserez est la pointe sud de Dragonoland et la fin des Montagnes du Bord du Monde.</div>"
@@ -399,6 +449,7 @@
         "lat":17.587451,
         "long":-56.447754,
         "class":"mers",
+        "parent":"",
         "zoom_min":7,
         "zoom_max":20,
         "descr":"<div class='popup_content'>Le golfe d'Ephèse est situé au nord ouest de Dragonoland, et au sud du Royaume Papo. Une haute falaise le sépare du désert de Navajo, et il est surplombé au nord par la chaîne des montagnes papos.</div>"
@@ -408,6 +459,7 @@
         "lat":-22.893574,
         "long":-75.962976,
         "class":"geographie",
+        "parent":"",
         "zoom_min":7,
         "zoom_max":9,
         "descr":""
@@ -417,6 +469,7 @@
         "lat":-20.853456,
         "long":-76.149793,
         "class":"geographie",
+        "parent":"",
         "zoom_min":7,
         "zoom_max":9,
         "descr":""
@@ -426,6 +479,7 @@
         "lat":-21.68321,
         "long":-72.138729,
         "class":"geographie",
+        "parent":"",
         "zoom_min":7,
         "zoom_max":9,
         "descr":""
@@ -435,6 +489,7 @@
         "lat":-20.087054,
         "long":-72.279053,
         "class":"geographie",
+        "parent":"",
         "zoom_min":7,
         "zoom_max":9,
         "descr":""
@@ -444,6 +499,7 @@
         "lat":-15.661983,
         "long":-74.039537,
         "class":"ville",
+        "parent":"Surcantardie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Timinouville :</h2><img src='Blasons/Timinouville.png' width=250px></img>Timinouville est la ville la plus importante de Surcantardie et c'est aussi une des villes les plus développée technologiquement de l'Empire.</div>"
@@ -453,6 +509,7 @@
         "lat":-15.049823,
         "long":-75.523081,
         "class":"ville",
+        "parent":"Surcantardie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Bouquetinbourg :</h2><img src='Blasons/armoiriesBouquetinbourg.png' width=250px></img>Bouquetinbourg est la seconde plus grande ville de Surcantardie.</div>"
@@ -462,6 +519,7 @@
         "lat":-16.859716,
         "long":-73.860962,
         "class":"ville",
+        "parent":"Surcantardie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Piou-piouta :</h2><img src='Blasons/piou-piouta.png' width=250px></img>Piou-piouta est une ville petite mais prospère du centre de la Surcantardie, où l'on trouve nottamment le temple de Piou-Piou.</div>"
@@ -471,6 +529,7 @@
         "lat":-18.052523,
         "long":-74.910432,
         "class":"ville",
+        "parent":"Surcantardie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Elfonport :</h2><img src='Blasons/elfonport.jpg' width=250px></img>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
@@ -480,6 +539,7 @@
         "lat":-14.440484,
         "long":-71.599492,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Nélefentharah :</h2>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
@@ -489,6 +549,7 @@
         "lat":-15.94419,
         "long":-69.904406,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Gla-gla-Gorath :</h2>Gla-gla-Gorath est une ville du Rohanor</div>"
@@ -498,6 +559,7 @@
         "lat":-18.75585,
         "long":-70.607716,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Cité de Sam :</h2>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer.</div>"
@@ -507,6 +569,7 @@
         "lat":-13.026709,
         "long":-77.623139,
         "class":"ville",
+        "parent":"Territoires Inexplorés",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Sirva :</h2>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
@@ -516,6 +579,7 @@
         "lat":-18.396563,
         "long": -71.844671,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Lunanera :</h2>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
@@ -525,6 +589,7 @@
         "lat":-19.620341,
         "long":-72.391385,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Ouistitipolis :</h2>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
@@ -534,6 +599,7 @@
         "lat":-15.913487,
         "long":-71.781345,
         "class":"ville",
+        "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Magnilor :</h2>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
@@ -543,6 +609,7 @@
         "lat":14.590074,
         "long":-54.360621,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":7,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville :</a><img src='Blasons/Dragonoville.png' width=250px></img><b>499523 habitants</b><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
@@ -552,6 +619,7 @@
         "lat":14.230074,
         "long":-54.280701,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":8,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/dragonoville'>Dragonoville :</a><img src='Blasons/Dragonoville.png' width=250px></img><b>499523 habitants</b><p>Dragonoville est une des 2 capitales de l'Empire (l'autre étant Petit-chienville). Elle est située sur le flanc Est du volcan des dieux.</p></div>"
@@ -561,6 +629,7 @@
         "lat":15.657027,
         "long":-52.641033,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/pontcastel'>Pontcastel :</a><img src='Blasons/pontcastel.png' width=250px></img><b>104294 habitants</b><p>Pontcastel est la seconde plus grande ville de Dragonoland. Elle tient son nom de son pont, le plus large du pays, sur lequel est bâti un donjon.</p></div>"
@@ -570,6 +639,7 @@
         "lat":14.281352,
         "long":-52.844307,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/port-de-dragonoville-1'>Port de Dragonoville :</a><img src='Blasons/portDeDragonoville.png' width=250px></img><b>75253 habitants</b><p>Le port de Dragonoville, le principal de la province de Dragonoland, est l'une des plaques tournantes du commerce impérial.</p></div>"
@@ -579,6 +649,7 @@
         "lat":15.284159,
         "long":-53.435669,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/la-ville-de-dragonoland-a-l-est-de-la-grande-foret-noire'>Alaris :</a><img src='Blasons/blason.png' width=250px></img><b>37670 habitants</b><p>Alaris est une ville de la province de Dragonoland. Elle est située sur le sommet d'une colline, dont la falaise sert de défense naturelle.</p></div>"
@@ -588,6 +659,7 @@
         "lat":14.536225,
         "long":-51.573049,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/chiot-chiotville-1'>Chiot-chiotville</a><img src='Blasons/blason-chiot-chiotville.png' width=250px></img><b>32553 habitants</b><p>Chiot-chiotville est une ville de Dragonoland. C'est la ville la plus proche de Petit-chienland, et on y ressent le mélange des cultures des 2 provinces.</p></div>"
@@ -597,6 +669,7 @@
         "lat":17.822149,
         "long":-54.122314,
         "class":"ville",
+        "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/carouacas-1'>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 100000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
@@ -606,6 +679,7 @@
         "lat":15.811482, 
         "long":-48.977083,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/petit-chienville'>Petit-Chienville :</a><img src='Blasons/petichienvilleProvisoire.png' width=250px></img><b>563478 habitants</b><p>Capitale de Petit-Chienland et co-capitale de l'empire, Petit-Chienville le centre administratif de tout l'empire et le lieu de résidence de César.</p></div>"
@@ -615,6 +689,7 @@
         "lat":17.65889,
         "long":-50.344849,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/article-sans-titre'>Coyote Town :</a><b>20000 habitants</b><p>Coyote Town est une ville qui se trouve au nord ouest de Petit-Chienland, proche de la source du fleuve Arlant et du désert. Son nom lui vient du Dieu Coyote, le dieu de la ruse. Elle abrite la grande garnison de Tuniques bleues, sa population est surtout composées de cow-boys, chercheurs d'or et d'aventuriers.</p></div>"
@@ -624,6 +699,7 @@
         "lat":14.667393,
         "long":-48.795003,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-petit-chienland-et-carte'>Port César :</a><img src='Blasons/portCesar.png' width=250px></img><b>100000 habitants</b><p>Port-César est le plus important port de Petit-Chienland, de sa position stratégique à l'embouchure du fleuve Arlant elle tient la voie commerciale en direction de la capitale.</p></div>"
@@ -633,6 +709,7 @@
         "lat":17.01432,
         "long":-47.026434,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/wulf'>Wulf :</a><img src='Blasons/wulf_provisoire.png' width=250px></img><b>60000 habitants</b><p>La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Grises et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers.</p></div>"
@@ -642,6 +719,7 @@
         "lat":14.265665,
         "long":-46.325963,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou'>Fort Tigrou :</a><img src='Blasons/fort_tigrou.jfif' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
@@ -651,6 +729,7 @@
         "lat":15.718697,
         "long":-49.966579,
         "class":"ville",
+        "parent":"Petit-Chienland",
         "zoom_min":8,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/la-forteresse-rouge'>La Forteresse Rouge :</a><img src='Blasons/blason_dragon_rouge.png' width=250px></img><b>8000 habitants</b><p>La forteresse Rouge est un puissant bastion se trouvant dans la forêt de Bruma non loin de Petit-Chienville.</p></div>"
@@ -660,6 +739,7 @@
         "lat":16.064396,
         "long":-45.060425,
         "class":"ville",
+        "parent":"Buratie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Hippoport :</a><img src='Blasons/hippoport.png' width=250px></img><b>25000 habitants</b><p>Hippoport est la capitale et la plus grande ville de Buratie.</p></div>"
@@ -669,6 +749,7 @@
         "lat":16.850356, 
         "long": -43.533325,
         "class":"ville",
+        "parent":"Buratie",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/geographie-generale-de-la-buratie-carte'>Arcalia :</a><img src='Blasons/Arcallia.png' width=250px></img><b>8000 habitants</b><p>Arcalia est construite sur les ruines d'une ville d'une ancienne civilisation oubliée.</p></div>"
@@ -678,24 +759,27 @@
         "lat":13.896192, 
         "long":  -43.390503,
         "class":"ville",
+        "parent":"Buratie",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Antris :</h2><p>Le port d'Antris contrôle stratégiquement le passage par le détroit du même nom, qui réduit considérablement les trajets entre la baie du Loup et la mer de Buratie."
+        "descr":"<div class='popup_content'><h2>Antris :</h2><p>Le port d'Antris contrôle stratégiquement le passage par le détroit du même nom, qui réduit considérablement les trajets entre la baie du Loup et la mer de Buratie.</p></div>"
         },
     {
         "titre":"Affremer",
         "lat":15.755249, 
         "long":  -42.1875,
         "class":"ville",
+        "parent":"Buratie",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Affremer :</h2><p>Le port d'Affremer a beaucoup souffert lors de la guerre contre les morts-vivants et les Méga-Blocks, et a été le théâtre de plusieurs batailles en 1463, 1474 et 1489. Il n'est aujourd'hui plus que l'ombre de sa gloire passée.</p></div>"
         },
     {
         "titre":"Ashor-Garoth",
         "lat":23.815662, 
         "long":-50.526123,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Ashor-Garoth :</h2>La capitale du Royaume Papo, située au pied de l'immense volcan connu sous le nom de Montagne de l’Effroi. Cette ville est le centre du culte du Dieu du Mal, où d'innombrables esclaves sont sacrifiés dans les profondeurs du volcan. L'atmosphère est perpétuellement enveloppée de cendres et de fumée, et la ville est un complexe tentaculaire de temples et de forteresses sombres.</div>"
@@ -705,6 +789,7 @@
         "lat":21.488852,
         "long": -53.239746,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Zarak-Dum :</h2>Située au cœur du désert, cette ville est dirigée par un puissant vizir qui transforme les esclaves en hybrides monstrueux pour les combats de gladiateurs. La ville est un imposant ensemble de palais et d'arènes en grès, dont la tour du vizir domine la ligne d'horizon.</div>"
@@ -714,6 +799,7 @@
         "lat":19.834827, 
         "long":-46.290894,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Jurak'Tor :</h2>Située à l'extrémité d'une chaîne de montagnes dans une jungle dense, cette ville est spécialisée dans le dressage de dinosaures et d'autres bêtes féroces pour la guerre. La ville est construite autour d'enclos à bêtes colossales et de terrains d'entraînement.</div>"
@@ -723,6 +809,7 @@
         "lat":23.155583,
         "long": -44.928589,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Razan'Rah :</h2>Située au confluent de deux rivières dans la jungle, cette ville dompte également les bêtes de guerre, mais elle est surtout connue pour ses créatures amphibies. La ville est un mélange de plates-formes en bois et de structures en pierre, reliées par des ponts au-dessus des rivières.</div>"
@@ -732,6 +819,7 @@
         "lat":24.860467, 
         "long":-60.935669,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Pirazarn :</h2>Le bastion des pirates Papo, situé sur une île. La ville est fortifiée et connue pour l'animation de ses quais et de ses repaires, où les bateaux pirates ne cessent d'arriver et de repartir.</div>"
@@ -741,6 +829,7 @@
         "lat":21.137579,
         "long": -57.414551,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Thar-Valor :</h2>L'une des villes des plaines occidentales, connue pour sa cavalerie. La ville est entourée de vastes prairies et fortifiée par de hauts murs de pierre.</div>"
@@ -750,6 +839,7 @@
         "lat":25.730516, 
         "long":-59.348145,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Gor'Zhul :</h2>Une autre ville des plaines occidentales, remarquable pour ses grandes places de marché et ses forgerons qualifiés. Elle possède un important marché aux esclaves et constitue une plaque tournante pour le commerce au sein des territoires papos.</div>"
@@ -759,6 +849,7 @@
         "lat":23.516984, 
         "long":-59.848022,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Vak-Norr :</h2>Troisième ville des plaines occidentales, elle se caractérise par son imposante forteresse et ses vastes terrains d'entraînement pour l'infanterie Papo. La ville est un avant-poste militaire stratégique.</div>"
@@ -768,6 +859,7 @@
         "lat":26.227732,
         "long": -53.684692,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Karnath :</h2>Située au sommet d'un plateau, cette ville dispose de défenses naturelles et est connue pour ses alchimistes et ses fabricants de potions. La hauteur du plateau offre une vue imprenable sur la région environnante.</div>"
@@ -777,15 +869,17 @@
         "lat":28.18663,
         "long": -55.38208,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Vuldaroth :</h2>Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles.</div>"
+        "descr":"<div class='popup_content'><h2>Vuldaroth :</h2>Au bout du plus grand fleuve du continent, entre plaines enneigées et marécages. La ville est une plaque tournante du commerce et un centre de production d'armes et d'armures, les voies d'eau faisant office de défenses naturelles. C'est la ville d'origine des mousquetaires Papos.</div>"
         },
     {
         "titre":"Nyrr'Karr",
         "lat":31.763981,
         "long": -55.772095,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Nyrr'Karr :</h2>Située sur les îles de glace, cette ville construite en glace et en pierre est connue pour sa formidable flotte navale et ses forteresses de glace. Le climat froid y est rude et la survie de la ville témoigne de la résilience des Papos.</div>"
@@ -795,6 +889,7 @@
         "lat":27.288808,
         "long": -45.324097,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Zarn-Gol :</h2>Située à la limite entre les plaines du Nord et les plaines des Os, cette ville est connue pour ses nécromanciens et sa magie noire. Le paysage est parsemé d'anciens cimetières et de champs d'ossements.</div>"
@@ -804,6 +899,7 @@
         "lat":28.95368,
         "long": -47.730103,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Drak'Morr :</h2>Également située près des plaines du Nord et des Plaines des Os, cette ville est lourdement fortifiée et sert d'avant-poste militaire majeur. C'est une ville sombre où règne une atmosphère de vigilance constante et de préparation au combat.</div>"
@@ -813,6 +909,7 @@
         "lat":13.262856,
         "long": -35.755005,
         "class":"ville",
+        "parent":"Royaume des Papos",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Falaise des Maraudeurs :</h2><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img></div>"
