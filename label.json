@@ -140,7 +140,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":5,
-        "descr":""
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/les-gormitis'>Gormitis :</a>Les Gormitis sont des créatures monstrueuses et très agressives. Ils ont été créés par un grand sorcier, mais ses créations se sont retournées contre lui et l'ont enfermé dans un volcan. Ils sont constitués de plusieurs tribus basées sur les éléments de la Terre, de l'Air, de l'Eau, de la Forêt, du Feu, de la Lumière et de l'Obscurité.</div>"
         },        
     {
         "titre":"Peuple de la Forêt",
@@ -203,7 +203,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":4,
-        "descr":""
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
         },
     {   
         "titre":"Archipel Méga-Block",
@@ -221,7 +221,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Terre des Morts</h2>Sur ces terres prospérait autrefois une ancienne civilisation Playmobil, qui fut anéantie au cours d'un cataclysme inconnu. Des vampires nécromanciens en profitèrent pour s'y installer et se constituer des armées de cadavres réanimés.</div>"
         },
     {   
         "titre":"Royaumes Méga-Blocks",
@@ -284,7 +284,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Territoires Petits Soldats</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
         },
     {   
         "titre":"Terre des Géants",
@@ -293,7 +293,7 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Terre des Géants</h2></div>"
         },
     {   
         "titre":"Royaume des Actions-Man",
@@ -302,16 +302,16 @@
         "class":"royaumes_ennemis",
         "zoom_min":4,
         "zoom_max":9,
-        "descr":""
+        "descr":"<div class='popup_content'><h2>Royaume des Actions-Man</h2>Les Actions-Man sont des adversaires titanesques, à la force physique redoutable, et accompagnés de bêtes colossales.</div>"
         },
     {   
         "titre":"Mer des Cascades",
         "lat":11.436955, 
         "long": -51.152344,
         "class":"mers",
-        "zoom_min":3,
+        "zoom_min":4,
         "zoom_max":9,
-        "descr":""
+        "descr":"Il a fallu plusieurs siècles aux intrépides marins Playmobil pour trouver les passages sûrs à travers la mer des Cascades, ce qui a permis une expansion de l'Empire sans précédent."
         },
     {   
         "titre":"Baie du Loup",
@@ -320,7 +320,7 @@
         "class":"mers",
         "zoom_min":6,
         "zoom_max":9,
-        "descr":""
+        "descr":"La Baie du Loup se situe entre Petit-Chienland et la Buratie. Ces principaux ports sont Wulf et Hippoport."
         },
     {   
         "titre":"Mer de Buratie",
@@ -338,7 +338,7 @@
         "class":"mers",
         "zoom_min":8,
         "zoom_max":20,
-        "descr":""
+        "descr":"La Baie d'Arkhan se situe au sud du Volcan des Dieux."
         },
     {   
         "titre":"Cap d'Asserez",
@@ -347,7 +347,7 @@
         "class":"mers",
         "zoom_min":8,
         "zoom_max":20,
-        "descr":""
+        "descr":"Le cap d'Asserez est la pointe sud de Dragonoland et la fin des Montagnes du Bord du Monde."
         },
     {   
         "titre":"Golfe d'Ephèse",
