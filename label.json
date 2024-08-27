@@ -323,6 +323,15 @@
         "descr":"<div class='popup_content'><h2>Territoires Petits Soldats :</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
         },
     {   
+        "titre":"Territoires Petits Soldats",
+        "lat":26.299981,
+        "long": 66.005859,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":9,
+        "descr":"<div class='popup_content'><h2>Territoires Petits Soldats :</h2>Il existe plusieurs types de petits soldats : les petits soldats et les tout petits soldats. Les petits soldats de Larium avaient initialement une tradition martiale médiévale axée sur l'arme blanche, mais les petits soldats de Duchmie ont réalisé d'importantes avancées technologiques leur donnant accès à un arsenal d'armes de tir meurtrières. Ces derniers ont donc pris l'ascendant dans la hiérarchie militaire stricte de ce peuple. La volonté expansionniste des petits soldats en fait des adversaires récurrents de l'Empire, avec lesquels ils luttent sur tous les continents.</div>"
+        },
+    {   
         "titre":"Terre des Géants",
         "lat":28.497299,
         "long":-39.375,
