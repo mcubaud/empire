@@ -206,6 +206,33 @@
         "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
         },
     {   
+        "titre":"L'Empire Playmobil",
+        "lat":-13.747307,
+        "long": -73.916016,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":4,
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
+        },
+    {  
+        "titre":"L'Empire Playmobil",
+        "lat":-28.291142,
+        "long": -68.818359,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":4,
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
+        },
+    {
+        "titre":"L'Empire Playmobil",
+        "lat":0.190656,
+        "long":  1.054688,
+        "class":"royaumes_ennemis",
+        "zoom_min":4,
+        "zoom_max":4,
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/'>L'Empire Playmobil :</a><p>L'Empire est une vaste et puissante civilisation centralisée autour de ses deux capitales, Dragonoville et Petit-Chienville, unifiée par une administration rigoureuse, une armée redoutable, et un réseau de commerce florissant. Réputé pour ses imposantes réalisations architecturales et ses conquêtes militaires, l'Empire est une force dominante qui s'étend sur plusieurs continents, tout en faisant face à des menaces internes et externes constantes.</p></div>"
+        },
+    {  
         "titre":"Archipel Méga-Block",
         "lat":13.250219,
         "long":-53.570266,
