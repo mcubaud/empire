@@ -22,6 +22,11 @@ var imageUrl = 'test.jpg',
 L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
 */
 
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
+}
 
 
 var listeCartes=[];
@@ -33,6 +38,9 @@ request.send();
 request.onload = function() {
     listeCartes=request.response;
     console.log(request)
+    listeCartes.forEach(function(objet){
+        preloadImage(objet.nom)
+    })
     mettre_a_jour_carte();
 }
 
