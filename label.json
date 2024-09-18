@@ -909,7 +909,7 @@
         "lat":13.262856,
         "long": -35.755005,
         "class":"ville",
-        "parent":"Royaume des Papos",
+        "parent":"Royaume Norvagen",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Falaise des Maraudeurs :</h2><img src='https://bricker.info/images/sets/MEGABLOKS/9885_main.jpg' width=250px></img></div>"
@@ -919,6 +919,7 @@
         "lat":11.23514,
         "long":  -36.782227,
         "class":"ville",
+        "parent":"Royaume Norvagen",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Havrenor</h2></div>"
@@ -928,6 +929,7 @@
         "lat":15.210411,
         "long":  -32.991943,
         "class":"ville",
+        "parent":"Royaume Draigar",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Château Draigar :</h2><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/36/Mega_bloks_dragons_draigar_castle_1.jpg' width=250px></img></div>"
@@ -937,6 +939,7 @@
         "lat":14.127004,
         "long":  -34.991455,
         "class":"ville",
+        "parent":"Royaume Draigar",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Croc Guerrier :</h2><img src='https://static.wikia.nocookie.net/dragonsuniverse/images/3/3b/9890_box_art.jpg' width=250px></img></div>"
@@ -946,6 +949,7 @@
         "lat":17.225865,
         "long":   -34.420166,
         "class":"ville",
+        "parent":"Royaume Valteran",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Château Valor :</h2><img src='https://bricker.info/images/sets/MEGABLOKS/9435_main.jpg?1297738800' width=250px></img></div>"
@@ -955,15 +959,27 @@
         "lat":19.703432, 
         "long":  -33.442383,
         "class":"ville",
+        "parent":"Royaume Fyren",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Portail du feu :</h2><img src='https://st.bricker.ru/images/store/thumbs/large/album1/1c1bc_590713.jpg' width=250px></img></div>"
+        },
+    {
+        "titre":"Ryousan",
+        "lat":18.91668, 
+        "long":  -34.920044 ,
+        "class":"ville",
+        "parent":"Royaume Fyren",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Portail du feu :</h2><img src='https://www.idealgiftbox.com/contents/media/mega-bloks-9813.jpg' width=250px></img></div>"
         },
     {
         "titre":"Forteresse Vorgan",
         "lat":18.370166, 
         "long":   -30.800171,
         "class":"ville",
+        "parent":"Tribus Draigar",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Forteresse Vorgan :</h2><img src='https://lh5.ggpht.com/_FcqpDR2ICTo/Tdpswyo3ctI/AAAAAAAAOV8/yo2qR6mT3-4/s1024/51MAGBVYA8L._SL500_.jpg' width=250px></img></div>"
@@ -973,18 +989,20 @@
         "lat":12.63606, 
         "long":   -39.342041,
         "class":"ville",
+        "parent":"Territoires Orientaux",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Tour des Pillards :</h2><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Tour des Pillards :</h2><img src='https://img.leboncoin.fr/api/v1/lbcpb1/images/04/6f/93/046f93a5ed7b8ec86726e7e871f23a09d788ea74.jpg?rule=ad-large' width=250px></img><p>Forteresse conquise lors de la croisade contre les Méga Blocks</p></div>"
         },
     {
         "titre":"Port Ferroch",
         "lat":15.669889, 
         "long": -36.496582,
         "class":"ville",
+        "parent":"Territoires Orientaux",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Port Ferroch :</h2><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img></div>"
+        "descr":"<div class='popup_content'><h2>Port Ferroch :</h2><img src='https://lh4.ggpht.com/_FcqpDR2ICTo/TdpuI_PWhrI/AAAAAAAAOWI/ihOxVDAq5Xk/s1024/MEGA-BLOKS-DRAGONS-CASTLE-ATTACK-9414__34018626_0.jpg' width=250px></img><p>Forteresse conquise lors de la croisade contre les Méga Blocks au dépends du royaume Valteran.</p></div>"
         },
 
     {
@@ -992,6 +1010,7 @@
         "lat":18.833515,
         "long":  -42.572021,
         "class":"ville",
+        "parent":"Terre des Morts",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Dumgrift :</h2>Citadelle hantée de Dumgrift, où eu lieu en 1488 une bataille décisive au cours de laquelle l'empereur Arklaf le Grand perdit la vie.<div>"
@@ -1001,6 +1020,7 @@
         "lat":20.411569, 
         "long":  -39.094849,
         "class":"ville",
+        "parent":"Terre des Morts",
         "zoom_min":7,
         "zoom_max":12,
         "descr":"<div class='popup_content'><h2>Zucritch :</h2>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
@@ -1010,6 +1030,7 @@
         "lat":16.465777,
         "long": -54.885864,
         "class":"lieu",
+        "parent":"Dragonoland",
         "zoom_min":8,
         "zoom_max":10,
         "descr":"<div class='popup_content'>Cette immense forêt est situé sur les contreforts des montagnes du bord du monde. Elle est fortement imprégnée de magie maléfique car on y trouve de nombreux temples dédiés au Dieu du Mal datant de l'époque de la domination des Papos. Ce bois est traversée par la vieille route de la Forêt. Elle est le lieu de nombreuses légendes.</div>"
@@ -1019,6 +1040,7 @@
         "lat":15.155839,
         "long": -51.732788,
         "class":"lieu",
+        "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":11,
         "descr":"<div class='popup_content'>Forêt située au nord de Chiot-Chiotville.</div>"
@@ -1028,6 +1050,7 @@
         "lat":14.187606,
         "long":-55.239258,
         "class":"lieu",
+        "parent":"Dragonoland",
         "zoom_min":10,
         "zoom_max":14,
         "descr":"<div class='popup_content'>L'ancienne nécropole de Dragonoville est située à l'Ouest du Volcan des Dieux.</div>"
@@ -1037,6 +1060,7 @@
         "lat":15.770681,
         "long":-54.454651,
         "class":"lieu",
+        "parent":"Grande Forêt Noire",
         "zoom_min":10,
         "zoom_max":14,
         "descr":"<div class='popup_content'>Ruines d'un ancien temple édifié par les papos et dédié au dieu du mal.</div>"
@@ -1046,6 +1070,7 @@
         "lat":16.354604, 
         "long":-52.580566,
         "class":"lieu",
+        "parent":"Dragonoland",
         "zoom_min":10,
         "zoom_max":14,
         "descr":"<div class='popup_content'>Temple et quartier général des chevalier du Dragon Vert.</div>"
