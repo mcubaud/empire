@@ -1170,6 +1170,7 @@
         "lat":5.123772,
         "long":-47.625732,
         "class":"Ville",
+        "parent":"Peuple de l'Air",
         "zoom_min":7,
         "zoom_max":12,
         "descr":""
@@ -1179,6 +1180,7 @@
         "lat":-0.51635,
         "long": -49.482422,
         "class":"Ville",
+        "parent":"Peuple de l'Eau",
         "zoom_min":7,
         "zoom_max":12,
         "descr":""
@@ -1188,6 +1190,7 @@
         "lat":3.074695, 
         "long":-48.977051,
         "class":"Ville",
+        "parent":"Peuple de la Terre",
         "zoom_min":7,
         "zoom_max":12,
         "descr":""
@@ -1197,6 +1200,7 @@
         "lat":3.425692,
         "long": -45,
         "class":"Ville",
+        "parent":"Peuple de la Lave",
         "zoom_min":7,
         "zoom_max":12,
         "descr":""
@@ -1287,6 +1291,7 @@
         "lat":3.675989,
         "long":-51.503906,
         "class":"Ville",
+        "parent":"Peuple de la Forêt",
         "zoom_min":7,
         "zoom_max":12,
         "descr":""
