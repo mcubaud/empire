@@ -9,6 +9,15 @@ player_attack_1_strenght = 100;
 player_attack_2_strenght = 40;
 random_proportion = 0.3;
 
+player_marker = L.marker(
+    [14.346887, -54.272461],
+    {icon:L.icon({
+        iconUrl: 'game/images/player.png',
+        iconSize: [20, 37],
+        iconAnchor: [10, 37]
+    })
+})
+
 current_position = "Dragonoville"
 npcs_positions={}
 npcs_dialogues={}
