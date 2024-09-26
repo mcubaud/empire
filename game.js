@@ -95,7 +95,7 @@ function go_location(marker){
         update_time(current_day);
         var lat = cur_latlng[0] + (i/travel_time) * (obj_latlng[0] - cur_latlng[0])
         var lng = cur_latlng[1] + (i/travel_time) * (obj_latlng[1] - cur_latlng[1])
-        player_marker.setLatLng(lat, lng)
+        player_marker.setLatLng((lat, lng))
         setTimeout(function(){i++}, 300);
     }
     move_events(current_position, location_name);
