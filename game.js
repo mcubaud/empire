@@ -92,6 +92,7 @@ function go_location(marker){
     current_position = location_name;
     update_time(current_day);
     set_popups_using_daily_position(positions_day, current_day);
+    
     marker.closePopup();
     marker.openPopup();
 
