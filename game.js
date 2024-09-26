@@ -89,13 +89,14 @@ function go_location(marker){
     var cur_latlng = player_marker.getLatLng()
     var obj_latlng = marker.getLatLng()
     travel_time = get_travel_time(current_position, location_name);
-    var i=0
+    var i=1;
     while(i<travel_time){
         current_day += 1/24;
         update_time(current_day);
-        var lat = cur_latlng[0] + (i/travel_time) * (obj_latlng[0] - cur_latlng[0])
-        var lng = cur_latlng[1] + (i/travel_time) * (obj_latlng[1] - cur_latlng[1])
-        player_marker.setLatLng((lat, lng))
+        var lat = cur_latlng["lat"] + (i/travel_time) * (obj_latlng["lat"] - cur_latlng["lat"])
+        var lng = cur_latlng["lng"] + (i/travel_time) * (obj_latlng["lng"] - cur_latlng["lng"])
+        console.log(i, lat, lng)
+        player_marker.setLatLng((lat, lng));
         setTimeout(function(){i++}, 300);
     }
     move_events(current_position, location_name);
