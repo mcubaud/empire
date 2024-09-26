@@ -16,7 +16,7 @@ player_marker = L.marker(
         iconSize: [20, 37],
         iconAnchor: [10, 37]
     })
-})
+}).addTo(mymap)
 
 current_position = "Dragonoville"
 npcs_positions={}
