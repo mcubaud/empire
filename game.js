@@ -579,4 +579,3 @@ function test_battle(){
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
     startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
 }
-test_battle()
