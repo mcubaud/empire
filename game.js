@@ -86,12 +86,23 @@ function set_popups_using_daily_position(positions_day, current_day){
 function go_location(marker){
     location_name = marker.name;
     console.log(location_name);
+    var cur_latlng = player_marker.getLatLng()
+    var obj_latlng = marker.getLatLng()
+    travel_time = get_travel_time(current_position, location_name);
+    var i=0
+    while(i<travel_time){
+        current_day += 1/24;
+        update_time(current_day);
+        var lat = cur_latlng[0] + (i/travel_time) * (obj_latlng[0] - cur_latlng[0])
+        var lng = cur_latlng[1] + (i/travel_time) * (obj_latlng[1] - cur_latlng[1])
+        player_marker.setLatLng(lat, lng)
+        setTimeout(function(){i++}, 300);
+    }
     move_events(current_position, location_name);
-    travel_time = get_travel_time(current_position, location_name)/24;
-    current_day += travel_time;
     current_position = location_name;
-    update_time(current_day);
+    
     set_popups_using_daily_position(positions_day, current_day);
+    player_marker.setLatLng(marker.getLatLng())
     marker.closePopup();
     marker.openPopup();
 
