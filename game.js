@@ -251,8 +251,7 @@ function update_time(current_day){
         unlocked_subjects["after_cesar"]=true;
     }
     if(initial_remaining_time < current_day){
-        alert("Le joueur a échoué à identifier les conspirateurs durant le temps imparti ! L'Empereur est assassiné durant le festival, sans que le joueur, impuissant, ne puisse faire quoi que ce soit !")
-        window.location="";
+        handleDefeat("Vous avez échoué à identifier les conspirateurs durant le temps imparti ! L'Empereur est assassiné durant le festival, sans que le joueur, impuissant, ne puisse faire quoi que ce soit ! Plus rien ne peut empêcher l'Empire de sombrer désormais...")
     }
 }
 
@@ -535,13 +534,13 @@ function enemies_attacks(enemies){
         )
         delay+=1000
         player_health = newplayer_health;
+        if (player_health === 0) {
+            // Player defeated
+            setTimeout(()=>{
+            handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+            },1000)
+        }
     });
-    if (player_health === 0) {
-        // Player defeated
-        setTimeout(()=>{
-        handleDefeat();
-        },1000)
-    }
 }
 
 function test_victory(victoryMessage){
@@ -555,9 +554,73 @@ function test_victory(victoryMessage){
         attack2Button.addEventListener('click', attack2);
     }
 }
-function handleDefeat(){
-    alert("Defeat !")
+function handleDefeat(message){
+    // Créer la div principale qui couvre tout l'écran
+    const defeatScreen = document.createElement('div');
+        
+    // Ajouter du style à la div pour qu'elle couvre tout l'écran
+    defeatScreen.style.position = 'fixed';
+    defeatScreen.style.top = '0';
+    defeatScreen.style.left = '0';
+    defeatScreen.style.width = '100%';
+    defeatScreen.style.height = '100%';
+    defeatScreen.style.zIndex = '100000000000000'; // Z-index très élevé pour être au-dessus de tout
+    defeatScreen.style.display = 'flex';
+    defeatScreen.style.flexDirection = 'column';
+    defeatScreen.style.alignItems = 'center';
+    defeatScreen.style.justifyContent = 'space-evenly';
+    defeatScreen.style.textAlign = 'center';
+    defeatScreen.style.fontFamily = 'Arial, sans-serif';
+
+    // Ajouter une image d'arrière-plan avec transparence
+    defeatScreen.style.backgroundImage = "url('game/images/defeat.jpg')"; // Remplacez par votre URL d'image
+    defeatScreen.style.backgroundSize = 'cover'; // Pour couvrir tout l'écran
+    defeatScreen.style.backgroundPosition = 'bottom'; // Pour aligner l'image avec le bas de l'écran
+    defeatScreen.style.backgroundRepeat = 'no-repeat';
+
+    // Texte principal
+    const defeatMessage = document.createElement('h1');
+    defeatMessage.textContent = message;
+    defeatMessage.style.fontSize = '2em';
+    defeatMessage.style.marginBottom = '20px';
+    defeatMessage.style.color = 'red';
+
+
+    // Bouton rejouer
+    const replayButton = document.createElement('button');
+    replayButton.textContent = 'Rejouer';
+    replayButton.style.padding = '10px 20px';
+    replayButton.style.fontSize = '1.5em';
+    replayButton.style.backgroundColor = '#ff4b4b';
+    replayButton.style.color = 'white';
+    replayButton.style.border = 'none';
+    replayButton.style.borderRadius = '5px';
+    replayButton.style.cursor = 'pointer';
+    replayButton.style.transition = 'background-color 0.3s ease';
+
+    // Ajouter un hover effect au bouton
+    replayButton.onmouseover = function() {
+        replayButton.style.backgroundColor = '#e63939';
+    };
+
+    replayButton.onmouseout = function() {
+        replayButton.style.backgroundColor = '#ff4b4b';
+    };
+
+    // Fonctionnalité du bouton pour recharger la page
+    replayButton.onclick = function() {
+        location.reload();
+    };
+
+    // Ajouter tous les éléments à la div principale
+    defeatScreen.appendChild(defeatMessage);
+    defeatScreen.appendChild(skullImage);
+    defeatScreen.appendChild(replayButton);
+
+    // Ajouter la div principale au body de la page
+    document.body.appendChild(defeatScreen);
 }
+
 
 function playerTakesDamage() {
     const playerDiv = document.getElementById('playerDiv');
