@@ -614,7 +614,6 @@ function handleDefeat(message){
 
     // Ajouter tous les éléments à la div principale
     defeatScreen.appendChild(defeatMessage);
-    defeatScreen.appendChild(skullImage);
     defeatScreen.appendChild(replayButton);
 
     // Ajouter la div principale au body de la page
