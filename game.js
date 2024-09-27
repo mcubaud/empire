@@ -431,70 +431,76 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     });
     battlefieldDiv.appendChild(enemiesDiv);
 
-    const attackButtonsDiv = document.createElement('div');
+    attackButtonsDiv = document.createElement('div');
     attackButtonsDiv.id = 'attackButtonsDiv';
     attackButtonsDiv.style.display = 'flex';
     attackButtonsDiv.style.justifyContent = 'center';
     combatDiv.appendChild(attackButtonsDiv);
 
-    const attack1Button = document.createElement('button');
+    attack1Button = document.createElement('button');
     attack1Button.textContent = 'Heavy Attack (Single Enemy)';
     attack1Button.title = `Power: ${Math.floor(player_attack_1_strenght * (1-random_proportion))} - ${player_attack_1_strenght}`
 
-    function attack1(){
-        attack1Button.removeEventListener("click");
-        attack2Button.removeEventListener("click");
-        // Logic for heavy attack
-        // Player chooses target enemy
-        enemyDivs = enemiesDiv.querySelectorAll('.enemy');
-        enemyDivs.forEach(enemyDiv => {
-            enemyDiv.onclick = function(){
-                //We remove the event listeners
-                enemyDivs.forEach(enemyDiv2 => {
-                    enemyDiv2.onclick="";
-                })
-                //we apply the damages
-                playerDamage = Math.ceil( player_attack_1_strenght * (1-random_proportion) + Math.random() * player_attack_1_strenght * random_proportion);
-                playerAttacks()
-                const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
-                const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
-                let delay= 1000
-                setTimeout(()=>{
-                    enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
-                    enemyTakesDamage(enemyDiv);
-                    }, 500
-                )
-                if (newEnemyHealth === 0) {
-                    // Enemy defeated
-                    delay+=1000
-                    setTimeout(()=>{enemyDiv.remove()}, 1000);
-                }
-                setTimeout(()=>{test_victory(victoryMessage)},delay);
-            }
-            
-        });
-    }
+    
 
     attack1Button.addEventListener('click', attack1);
     attackButtonsDiv.appendChild(attack1Button);
 
-    const attack2Button = document.createElement('button');
+    attack2Button = document.createElement('button');
     attack2Button.textContent = 'Light Attack (All Enemies)';
     attack2Button.title = `Power: ${Math.floor(player_attack_2_strenght * (1-random_proportion))} - ${player_attack_2_strenght}, decreasing`
-    function attack2(){
-        attack1Button.removeEventListener("click");
-        attack2Button.removeEventListener("click");
-        // Logic for light attack
-        playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
-        playerAttacks()
-        enemyDivs = enemiesDiv.querySelectorAll('.enemy');
-        let delay = 500
-        let i_enemy = 1
-        enemyDivs.forEach(enemyDiv => {
+    attack2Button.addEventListener('click', attack2);
+    attackButtonsDiv.appendChild(attack2Button);
+
+}
+
+function attack2(){
+    attack1Button.removeEventListener("click", attack1);
+    attack2Button.removeEventListener("click", attack2);
+    // Logic for light attack
+    playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
+    playerAttacks()
+    enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+    let delay = 500
+    let i_enemy = 1
+    enemyDivs.forEach(enemyDiv => {
+        const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
+        const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i_enemy));
+        delay+=500
+        i_enemy+=1
+        setTimeout(()=>{
+            enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+            enemyTakesDamage(enemyDiv);
+            }, 500
+        )
+        if (newEnemyHealth === 0) {
+            // Enemy defeated
+            delay+=1000
+            setTimeout(()=>{enemyDiv.remove()}, 1000);
+        }
+    });
+    setTimeout(()=>{test_victory(victoryMessage)},delay);
+                   
+}
+
+function attack1(){
+    attack1Button.removeEventListener("click", attack1);
+    attack2Button.removeEventListener("click", attack2);
+    // Logic for heavy attack
+    // Player chooses target enemy
+    enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+    enemyDivs.forEach(enemyDiv => {
+        enemyDiv.onclick = function(){
+            //We remove the event listeners
+            enemyDivs.forEach(enemyDiv2 => {
+                enemyDiv2.onclick="";
+            })
+            //we apply the damages
+            playerDamage = Math.ceil( player_attack_1_strenght * (1-random_proportion) + Math.random() * player_attack_1_strenght * random_proportion);
+            playerAttacks()
             const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
-            const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i_enemy));
-            delay+=500
-            i_enemy+=1
+            const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
+            let delay= 1000
             setTimeout(()=>{
                 enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
                 enemyTakesDamage(enemyDiv);
@@ -505,13 +511,10 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
                 delay+=1000
                 setTimeout(()=>{enemyDiv.remove()}, 1000);
             }
-        });
-        setTimeout(()=>{test_victory(victoryMessage)},delay);
-                       
-    }
-    attack2Button.addEventListener('click', attack2);
-    attackButtonsDiv.appendChild(attack2Button);
-
+            setTimeout(()=>{test_victory(victoryMessage)},delay);
+        }
+        
+    });
 }
 
 function enemies_attacks(enemies){
