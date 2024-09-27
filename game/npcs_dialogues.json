@@ -266,28 +266,130 @@
         ]
     },
     "Grand Maître de la Guilde des Guerriers":{
-        "description":"",
-        "dialogues":[]
+        "description": "Le joueur rencontre le Grand Maître de la Guilde des Guerriers à Pontcastel, une figure puissante et respectée dans le domaine militaire.",
+        "dialogues": [
+            {
+                "question": "Quel est le rôle de la Guilde des Guerriers dans la défense de l'Empire ?",
+                "answer": "Notre guilde est responsable de former les meilleurs combattants de l'Empire. Nous assurons la protection des villes, escortons les convois, et participons aux campagnes militaires lorsque l'Empereur fait appel à nous.",
+                "need": "",
+                "unlock": ""
+            },
+            {
+                "question": "Avez-vous entendu parler d'une menace imminente contre l'Empire ?",
+                "answer": "Il y a toujours des menaces contre l'Empire, qu'il s'agisse de bandits, de rebelles ou d'ennemis étrangers. Mais si une menace plus grande se profile, nous serons prêts à nous battre.",
+                "need": "",
+                "unlock": ""
+            },
+            {
+                "question": "Quels sont les plus grands défis auxquels la guilde fait face en ce moment ?",
+                "answer": "Le plus grand défi est le recrutement. De moins en moins de jeunes sont intéressés par la vie de guerrier. Nous avons besoin de nouveaux talents pour renforcer nos rangs.",
+                "need": "",
+                "unlock": "recrutement"
+            }
+        ]
     },
     "L'Empereur":{
-        "description":"",
-        "dialogues":[]
+        "description": "Le joueur demande audience devant l'Empereur lui-même, maître absolu de l'Empire.",
+        "dialogues": [
+            {
+                "question": "Votre Majesté, quels sont vos projets pour renforcer l'Empire dans les années à venir ?",
+                "answer": "Je travaille sur une série de réformes pour stabiliser nos provinces et renforcer notre influence sur les territoires voisins. L'Empire doit rester puissant et unifié pour résister aux menaces extérieures. Divisés, nos redoutables ennemis pourraient aisément nous écraser !",
+                "need": "",
+                "unlock": ""
+            },
+            {
+                "question": "Quelles mesures prenez-vous pour assurer votre sécurité durant le Festival de Dragono ?",
+                "answer": "Ma garde prétorienne est l'élite des forces de l'Empire, et elle veillera à ma sécurité. De plus, les seigneurs locaux se sont engagés à renforcer la sécurité durant l'événement.",
+                "need": "",
+                "unlock": ""
+            },
+            {
+                "question": "Quels sont vos liens avec les grandes guildes de l'Empire ?",
+                "answer": "Les guildes sont des piliers de notre société. Elles soutiennent l'économie et la stabilité de l'Empire. J'entretiens une relation étroite avec leurs chefs pour m'assurer que leurs intérêts convergent avec ceux de l'Empire.",
+                "need": "",
+                "unlock": ""
+            }
+        ]
     },
     "Capitaine de la Garde Prétorienne":{
         "description":"",
         "dialogues":[]
     },
     "Seigneur de Pontcastel":{
-        "description":"",
-        "dialogues":[]
+        "description": "Le joueur demande audience devant le Seigneur de Pontcastel, un noble influent de la région et allié de Dragonoville.",
+        "dialogues": [
+            {
+                "question": "Pourquoi y a-t-il une telle activité militaire à Pontcastel récemment ?",
+                "answer": "Nous renforçons simplement nos défenses en prévision du Festival de Dragono. C'est une précaution nécessaire pour garantir la sécurité de tous les visiteurs, y compris l'Empereur.",
+                "need": "",
+                "unlock": "protection_festival"
+            },
+            {
+                "question": "Comment se porte la ville de Pontcastel ?",
+                "answer": "Pontcastel prospère grâce sa position stratégique sur la route commerciale entre les 2 capitales Dragonoville et Petit-chienville. Cette position avantageuse a toujours attiré la convoitise des seigneurs voisins.",
+                "need": "",
+                "unlock": "convoitise_pontcastel"
+            },
+            {
+                "question": "La ville a-t-elle déjà été attaquée par les seigneurs voisins ?",
+                "answer": "Plusieurs fois au cours de notre longue histoire tourmantée. En particulier, la rivalité avec Alaris est de longue date et est régulièrement attisée. Par exemple, il y a 30 ans, le seigneur d'Alaris a tenté de prendre la ville, mais grâce à l'aide du seigneur de Dragonoville, nous l'avons repoussé. Depuis, il nous deteste, Drakan et moi ! Hahahaha !",
+                "need": "convoitise_pontcastel",
+                "unlock": "attaque_de_pontcastel"
+            },
+            {
+                "question": "Quelle est la position de Pontcastel face aux récentes rumeurs de rébellion ?",
+                "answer": "Les rumeurs de rébellion ne sont que cela, des rumeurs. Pontcastel est loyale à l'Empereur et nous ferons tout pour maintenir la paix dans nos terres.",
+                "need": "",
+                "unlock": ""
+            }
+        ]
     },
     "Seigneur de Chiotchiotville":{
-        "description":"",
-        "dialogues":[]
+        "description": "Le joueur rencontre le Seigneur de Chiotchiotville.",
+        "dialogues": [
+            {
+                "question": "Pouvez-vous nous parler de l'importance de l'arène dans la vie de Chiotchiotville ?",
+                "answer": "L'arène est le cœur battant de Chiotchiotville. Elle attire des foules de tout l'Empire pour voir nos gladiateurs s'affronter. C'est également une source de revenus considérable pour la ville.",
+                "need": "",
+                "unlock": ""
+            },
+            {
+                "question": "Y a-t-il des événements spéciaux prévus dans l'arène prochainement ?",
+                "answer": "Oui, lors du Festival de Dragono, nous organiserons une série de combats spectaculaires pour célébrer l'événement. Les meilleurs gladiateurs de l'Empire s'affronteront pour le titre de Champion.",
+                "need": "",
+                "unlock": "festival_arene"
+            },
+            {
+                "question": "J'aimerais bien participer aux combats de l'arène.",
+                "answer": "Vous m'avez l'air d'être un valeureux guerrier. Je vais vous recommander auprès du maître de la guilde des gladiateurs.",
+                "need": "festival_arene",
+                "unlock": "combatre_dans_l_arene"
+            },
+            {
+                "question": "Quelle est la relation de Chiotchiotville avec les autres grandes villes de l'Empire ?",
+                "answer": "Nous entretenons de bonnes relations avec Dragonoville et Pontcastel, mais notre indépendance est importante pour nous. Chiotchiotville a toujours su se démarquer par sa force et sa résilience.",
+                "need": "",
+                "unlock": ""
+            }
+        ]
     },
     "Grand Maître de la guilde des Gladiateurs":{
-        "description":"",
-        "dialogues":[]
+        "description":"Le joueur se rend dans la guilde des gladiateurs, qui borde l'arène de Chiotchiotville.",
+        "dialogues":[
+            {
+                "question": "Y a-t-il des événements spéciaux prévus dans l'arène prochainement ?",
+                "answer": "Oui, lors du Festival de Dragono, nous organiserons une série de combats spectaculaires pour célébrer l'événement. Les meilleurs gladiateurs de l'Empire s'affronteront pour le titre de Champion.",
+                "need": "",
+                "unlock": "festival_arene"
+            },
+            {
+                "question": "J'aimerais participer aux combats de l'arène.",
+                "answer": "Je ne peux pas vous inscrire comme ça malheureusement. Si vous aviez une recommandation du seigneur de la ville, je vous ferais volontier participer.",
+                "need": "festival_arene",
+                "unlock": ""
+            }
+
+        ]
     },
     "Garde de la ville":{
         "description":"",

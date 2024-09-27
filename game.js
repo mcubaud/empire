@@ -139,7 +139,7 @@ function move_events(current_position, location_name){
             { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
             { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 }
         ];
-        backgroundImage = 'game/images/une-voie-romaine.jpg';
+        backgroundImage = 'game/images/foret.jpg';
         victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }else if((Math.random()<0.1) & !unlocked_subjects["pelerins"] ){
