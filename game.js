@@ -57,7 +57,8 @@ function set_popups_using_daily_position(positions_day, current_day){
         for(i_marker in listeMarkers){
             var marker = listeMarkers[i_marker];
             if(marker.name==location_name){
-                popup = marker.getPopup();
+                var popup = marker.getPopup();
+                marker.removeEventListener("popupopen")
                 if(current_position == location_name){
                     print_neighborhoods(marker, popup)
                 }else{
@@ -71,7 +72,9 @@ function set_popups_using_daily_position(positions_day, current_day){
                             "popupopen",
                             function(e){
                                 setTimeout(function(){
-                            	    document.getElementsByClassName("button_go")[0].onclick=function(){go_location(e.target)}
+                                    if(document.getElementsByClassName("button_go").length>0 & current_position != marker.name){
+                                        document.getElementsByClassName("button_go")[0].onclick=function(){go_location(e.target)}
+                                    }
                                 },1000)
                             }
                         )
@@ -89,24 +92,25 @@ function go_location(marker){
     var cur_latlng = player_marker.getLatLng()
     var obj_latlng = marker.getLatLng()
     travel_time = get_travel_time(current_position, location_name);
-    var i=1;
-    while(i<travel_time){
-        current_day += 1/24;
-        update_time(current_day);
-        var lat = cur_latlng["lat"] + (i/travel_time) * (obj_latlng["lat"] - cur_latlng["lat"])
-        var lng = cur_latlng["lng"] + (i/travel_time) * (obj_latlng["lng"] - cur_latlng["lng"])
-        console.log(i, lat, lng)
-        player_marker.setLatLng((lat, lng));
-        setTimeout(function(){i++}, 300);
-    }
-    move_events(current_position, location_name);
     current_position = location_name;
-    
-    set_popups_using_daily_position(positions_day, current_day);
-    player_marker.setLatLng(marker.getLatLng())
     marker.closePopup();
-    marker.openPopup();
-
+    function move_player(i){
+        if(i < 2*travel_time){
+            current_day += 1/24/2;
+            update_time(current_day);
+            var lat = cur_latlng["lat"] + (i/travel_time/2) * (obj_latlng["lat"] - cur_latlng["lat"])
+            var lng = cur_latlng["lng"] + (i/travel_time/2) * (obj_latlng["lng"] - cur_latlng["lng"])
+            console.log(i, lat, lng)
+            player_marker.setLatLng({"lat":lat, "lng":lng});
+            setTimeout(move_player, 200, i+1);
+        }else{
+            move_events(current_position, location_name);
+            set_popups_using_daily_position(positions_day, current_day);
+            player_marker.setLatLng(marker.getLatLng())
+            marker.openPopup();
+        }
+    }
+    move_player(1);
 }
 
 function move_events(current_position, location_name){
