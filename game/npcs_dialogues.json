@@ -112,7 +112,7 @@
             },
             {
             "question":"Quelle sont les principales guildes à Dragonoland ?",
-            "answer":"Il y en a de nombreuses, et elles sont toutes très influentes. La plus riche est la Guilde des Marchands, elle fait pression sur les seigneurs pour baisser les taxes, et sur nous pour les prix. Il y a également la guilde des Guerriers à Pontcastel, ou celle des Gladiateurs à Chiotchiotville",
+            "answer":"Il y en a de nombreuses, et elles sont toutes très influentes. La plus riche est la Guilde des Marchands, elle fait pression sur les seigneurs pour baisser les taxes, et sur nous pour les prix. Il y a également la guilde des Guerriers à Pontcastel, ou celle des Gladiateurs à Chiotchiotville.",
             "need":"",
             "unlock":"pression_marchands"
             }
@@ -203,7 +203,7 @@
                 "question": "Qui était Dragonvir ?",
                 "answer": "Quoi, vous ne connaissez pas Dragonvir ? L'un des libérateurs du joug des Papos, le fondateur de cette ville, élu par Dragono, et accessoirement l'un des fondateurs de l'Empire ? Décidément, la jeunesse ne sait plus rien de nos jours !",
                 "need": "Dragonvir",
-                "unlock": ""
+                "unlock": "Papos"
             },
             {
                 "question": "Pouvez-vous me parler des Papos ? Quelle est leur influence sur l'Empire et son histoire ?",
@@ -233,6 +233,12 @@
             "answer": "Il a lieu tous les 33 ans. Sa date exacte est déterminée par des astrologues à partir du feu des étoiles. Des milliers de fidèles viennent de toutes les provinces pour se réunnir à Dragonoville, autour du Temple de Dragono.",
             "need": "",
             "unlock": ""
+            },
+            {
+            "question": "Que pensez-vous du Grand Prêtre de Dragono ?",
+            "answer": "Ne le répétez pas, mais de vous à moi, il représente tout ce qui ne va pas avec le clergé de Dragono actuel, avec sa corruption et son goût de l'opulence et du pouvoir. Il prétend avoir des visions du Dieu, mais celles-ci semblent bien l'arranger !",
+            "need": "",
+            "unlock": ""
             }
         ]
     },
@@ -255,7 +261,7 @@
             "question": "Quelle est votre opinion sur les récentes mesures prises par les autorités portuaires pour renforcer la sécurité maritime ?",
             "answer": "Eh bien, je dois dire que c'est une bonne chose. Plus de patrouilles signifie moins de chances pour ces maudits pirates de s'en sortir. J'espère juste que cela suffira à dissuader ces vauriens de venir nous embêter.",
             "need": "",
-            "unlock": ""
+            "unlock": "pirates"
             },
             {
             "question": "Avez-vous entendu parler de quelque chose d'inhabituel ou de suspect se passant dans les tavernes ou parmi les marins récemment ?",
@@ -319,12 +325,6 @@
         "description": "Le joueur demande audience devant le Seigneur de Pontcastel, un noble influent de la région et allié de Dragonoville.",
         "dialogues": [
             {
-                "question": "Pourquoi y a-t-il une telle activité militaire à Pontcastel récemment ?",
-                "answer": "Nous renforçons simplement nos défenses en prévision du Festival de Dragono. C'est une précaution nécessaire pour garantir la sécurité de tous les visiteurs, y compris l'Empereur.",
-                "need": "",
-                "unlock": "protection_festival"
-            },
-            {
                 "question": "Comment se porte la ville de Pontcastel ?",
                 "answer": "Pontcastel prospère grâce sa position stratégique sur la route commerciale entre les 2 capitales Dragonoville et Petit-chienville. Cette position avantageuse a toujours attiré la convoitise des seigneurs voisins.",
                 "need": "",
@@ -344,12 +344,12 @@
             }
         ]
     },
-    "Seigneur de Chiotchiotville":{
-        "description": "Le joueur rencontre le Seigneur de Chiotchiotville.",
+    "Seigneur de Chiot-chiotville":{
+        "description": "Le joueur rencontre le Seigneur de Chiot-chiotville.",
         "dialogues": [
             {
-                "question": "Pouvez-vous nous parler de l'importance de l'arène dans la vie de Chiotchiotville ?",
-                "answer": "L'arène est le cœur battant de Chiotchiotville. Elle attire des foules de tout l'Empire pour voir nos gladiateurs s'affronter. C'est également une source de revenus considérable pour la ville.",
+                "question": "Pouvez-vous nous parler de l'importance de l'arène dans la vie de Chiot-chiotville ?",
+                "answer": "L'arène est le cœur battant de Chiot-chiotville. Elle attire des foules de tout l'Empire pour voir nos gladiateurs s'affronter. C'est également une source de revenus considérable pour la ville.",
                 "need": "",
                 "unlock": ""
             },
@@ -366,15 +366,15 @@
                 "unlock": "combatre_dans_l_arene"
             },
             {
-                "question": "Quelle est la relation de Chiotchiotville avec les autres grandes villes de l'Empire ?",
-                "answer": "Nous entretenons de bonnes relations avec Dragonoville et Pontcastel, mais notre indépendance est importante pour nous. Chiotchiotville a toujours su se démarquer par sa force et sa résilience.",
+                "question": "Quelle est la relation de Chiot-chiotville avec les autres grandes villes de l'Empire ?",
+                "answer": "Nous entretenons de bonnes relations avec les autres villes. Nous sommes proches de la frontière avec la province de Petit-chienland, et le mélange des cultures des deux provinces est un grand atout pour notre ville.",
                 "need": "",
                 "unlock": ""
             }
         ]
     },
     "Grand Maître de la guilde des Gladiateurs":{
-        "description":"Le joueur se rend dans la guilde des gladiateurs, qui borde l'arène de Chiotchiotville.",
+        "description":"Le joueur se rend dans la guilde des gladiateurs, qui borde l'arène de Chiot-chiotville.",
         "dialogues":[
             {
                 "question": "Y a-t-il des événements spéciaux prévus dans l'arène prochainement ?",
@@ -384,7 +384,7 @@
             },
             {
                 "question": "J'aimerais participer aux combats de l'arène.",
-                "answer": "Je ne peux pas vous inscrire comme ça malheureusement. Si vous aviez une recommandation du seigneur de la ville, je vous ferais volontier participer.",
+                "answer": "Je ne peux pas vous inscrire comme ça malheureusement. Si vous aviez une recommandation du seigneur de la ville, je vous ferais volontiers participer.",
                 "need": "festival_arene",
                 "unlock": ""
             }
