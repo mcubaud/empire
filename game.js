@@ -52,6 +52,20 @@ request5.onload = function() {
     travel_times=request5.response;
 }
 
+function add_marker(lat, long, titre, zoom_min, zoom_max, descr){
+    var marker=L.marker([lat, long],{icon:L.divIcon({className: "lieu" ,html:"<h3>"+titre+"</h3>"})})
+    marker.name = titre;
+    marker.zoom_min=zoom_min;
+    marker.zoom_max=zoom_max;
+    if(descr){
+        marker.bindPopup(descr);
+    }
+    setTimeout(function(){
+        listeMarkers.push(marker);
+    }, 1000);
+}
+
+
 function set_popups_using_daily_position(positions_day, current_day){
     for(location_name in positions_day){
         for(i_marker in listeMarkers){
