@@ -209,20 +209,22 @@ function print_neighborhoods(marker, popup){
     marker.on(
         "popupopen",
         function(e){
-            setTimeout(function(){
-                for(neighborhood in neighborhoods){
-                    console.log(neighborhood.replaceAll(" ", "_"))
-                    document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)}
-                }
-                document.getElementById("Repos").onclick=function(e){
-                    current_day+=6/24;
-                    update_time(current_day);
-                    set_popups_using_daily_position(positions_day, current_day);
-                    player_health= max_player_health;
-                    marker.closePopup();
-                    marker.openPopup();
-                }
-            },1000)
+            if(document.getElementById("Repos")){
+                setTimeout(function(){
+                    for(neighborhood in neighborhoods){
+                        console.log(neighborhood.replaceAll(" ", "_"));
+                        document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)};
+                    }
+                    document.getElementById("Repos").onclick=function(e){
+                        current_day+=6/24;
+                        update_time(current_day);
+                        set_popups_using_daily_position(positions_day, current_day);
+                        player_health= max_player_health;
+                        marker.closePopup();
+                        marker.openPopup();
+                    }
+                },1000)
+            }
         }
     )
 }
@@ -315,7 +317,7 @@ function night_events(city_name, neighborhood_name){
             { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 },
             { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 }
         ];
-        backgroundImage = 'game/images/une-voie-romaine.jpg';
+        backgroundImage = 'game/images/BackAlley.webp';
         victoryMessage = 'Le combat fut difficile, mais le joueur triompha de ces adversaires. En fouillant les corps, il trouva une note sur laquelle il est écrit : "Cette fois-ci, ne le manquez pas !"';
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }
