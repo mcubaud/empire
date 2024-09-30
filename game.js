@@ -218,7 +218,8 @@ function print_neighborhoods(marker, popup){
                         current_day+=6/24;
                         update_time(current_day);
                         set_popups_using_daily_position(positions_day, current_day);
-                        player_health= max_player_health;
+                        player_health = max_player_health;
+                        night_events(current_position, "");
                         marker.closePopup();
                         marker.openPopup();
                     }
