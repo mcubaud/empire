@@ -306,8 +306,21 @@ function show_characters(e, popup, marker, neighborhoods){
 }
 
 function night_events(city_name, neighborhood_name){
-    if((neighborhood_name=="Quartier du Marché") | (neighborhood_name=="Quartier du Marché")){
-        if(Math.random()<0.1){
+    if((city_name=="Dragonoville") & (unlocked_subjects["embuscade_2"]) & !(unlocked_subjects["embuscade_3"])){
+        unlocked_subjects["embuscade_3"]=true;
+        current_day+=1/24;
+        begginingMessage = 'Alors qu\'il marchait dans les ruelles sombres de Dragonoville, le joueur est pris en embuscade !';
+        enemies = [
+            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 },
+            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 },
+            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 }
+        ];
+        backgroundImage = 'game/images/une-voie-romaine.jpg';
+        victoryMessage = 'Le combat fut difficile, mais le joueur triompha de ces adversaires. En fouillant les corps, il trouva une note sur laquelle il est écrit : "Cette fois-ci, ne le manquez pas !"';
+        startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+    }
+    if((neighborhood_name=="Quartier du Marché") | (neighborhood_name=="Marché") | (neighborhood_name=="Port")){
+        if(Math.random()<0.3){
             alert("Une bagarre éclata dans une auberge et déborda jusqu'à la rue. Le joueur fut pris à parti. Après s'être vaillament défendu contre les attaques d'ivrognes, le joueur préféra s'éloigner.")
         }
     }

@@ -31,9 +31,9 @@
         "dialogues":[
             {
                 "question":"Qu'est-ce que vous vendez ?",
-                "answer":"J'importe des denrées rares depuis nos colonies lointaines, elles s'arrachent à prix d'or à Dragonoville !",
+                "answer":"J'importe des denrées rares depuis nos colonies lointaines, elles s'arrachent à prix d'or à Dragonoville ! Récemment, j'ai reçu une commande du Haut Prêtre de Dragono lui-même ! Plusieurs centaines de bures vertes et noires, cousues de fils d'or, importées de loin ! Une vraie petite fortune ! Il aurait de quoi vêtir une armée, hahaha !",
                 "need":"",
-                "unlock":""
+                "unlock":"bures"
             },
             {
                 "question":"Comment se porte le commerce ?",
@@ -62,6 +62,18 @@
             "question": "Avez-vous des informations sur une quelconque conspiration contre l'Empereur ou la ville de Dragonoville ?",
             "answer": "Non, je n'ai pas de telles informations. Mais je vous exhorte à rester vigilant. Les forces du mal sont toujours à l'œuvre, cherchant à semer la discorde et le chaos. Restez en prière et les dieux veilleront sur nous.",
             "need": "",
+            "unlock": ""
+          },
+          {
+            "question": "J'ai entendu dire que vous aviez passé une importante commande de bures ?",
+            "answer": "Ah, cela ? C'est pour la grande procession du festival. Nous devons habiller nos moines de façon digne pour honorer le Dragon.",
+            "need": "bures",
+            "unlock": "bures_2"
+          },
+          {
+            "question": "Avec quel argent avez vous fait une telle commande ?",
+            "answer": "Les dons des fidèles, bien sûr. Le culte du Dragon est très soutenu dans tout l'Empire.",
+            "need": "bures_2",
             "unlock": ""
           }
         ]
@@ -92,6 +104,12 @@
             "answer": "Non, je n'ai aucune information sur une quelconque conspiration. Alaris est une ville pacifique et prospère, loin des intrigues politiques de Dragonoville.",
             "need": "",
             "unlock": ""
+          },
+          {
+            "question": "En quittant Alaris, j'ai été attaqué. Mes agresseurs portaient une lettre signée 'G'. Avez-vous une idée de qui il s'agit ?",
+            "answer": "Une lettre signée 'G' ? Cela pourrait très bien être une manipulation. Je n'ai rien à voir avec cette attaque, et je ne connais aucun individu qui porterait une telle initiale en dehors de mes conseillers. Cependant, je suis au courant de tensions croissantes dans notre région. Il n'est pas rare que des ennemis se servent de faux témoins ou de faux documents pour créer des doutes et des discordes. Je vous conseille de ne pas tirer de conclusions hâtives. Assurez-vous de mener une enquête approfondie avant d'accuser quiconque. La loyauté d'Alaris envers l'Empire ne doit pas être mise en doute sans preuves tangibles.",
+            "need": "embuscade",
+            "unlock": "embuscade_2"
           }
         ]
     },
@@ -138,7 +156,14 @@
             "answer":"Dragonoville est une ville impressionnante, bien différente d'Alaris. Les palais en pierre noire et les fortifications imposantes sont vraiment magnifiques. Mais je préfère le calme de notre petite ville d'Alaris.",
             "need":"",
             "unlock":""
+            },
+            {
+              "question": "En quittant Alaris, j'ai été attaqué. Mes agresseurs portaient une lettre signée 'G'. Avez-vous une idée de qui il s'agit ?",
+              "answer": "‘G’... ça pourrait bien être le Seigneur Guildebard VI. Il utilise souvent des initiales pour ses affaires sensibles. Mais je n'aurais jamais cru qu'il irait jusqu'à organiser des attaques. Cela me dépasse...",
+              "need": "embuscade",
+              "unlock": "embuscade_2"
             }
+            
         ]
     },
     "Un tavernier d'Alaris":{
@@ -163,7 +188,14 @@
             "answer":"Oui, malheureusement, beaucoup trouvent refuge dans la Grande Forêt Noire, et attaquent les voyageurs ou font des raids sur les villages.",
             "need":"bandits",
             "unlock":""
+            },
+            {
+              "question": "En quittant Alaris, j'ai été attaqué. Mes agresseurs portaient une lettre signée 'G'. Avez-vous une idée de qui il s'agit ?",
+              "answer": "‘G’... ça pourrait bien être le Seigneur Guildebard VI. Il utilise souvent des initiales pour ses affaires sensibles. Mais je n'aurais jamais cru qu'il irait jusqu'à organiser des attaques. Cela me dépasse...",
+              "need": "embuscade",
+              "unlock": "embuscade_2"
             }
+            
         ]
     },
     "Gouverneur du Port de Dragonoville": {
@@ -238,6 +270,12 @@
             "question": "Que pensez-vous du Grand Prêtre de Dragono ?",
             "answer": "Ne le répétez pas, mais de vous à moi, il représente tout ce qui ne va pas avec le clergé de Dragono actuel, avec sa corruption et son goût de l'opulence et du pouvoir. Il prétend avoir des visions du Dieu, mais celles-ci semblent bien l'arranger !",
             "need": "",
+            "unlock": ""
+            },
+            {
+            "question": "J'ai entendu dire que le Haut Prêtre passé une importante commande de bures ?",
+            "answer": "Ah... oui, c'est vrai. Il a dit que c'était pour le festival, mais je trouve ça étrange. Nous n'avons jamais eu besoin d'autant de bures par le passé.",
+            "need": "bures",
             "unlock": ""
             }
         ]
@@ -332,7 +370,7 @@
             },
             {
                 "question": "La ville a-t-elle déjà été attaquée par les seigneurs voisins ?",
-                "answer": "Plusieurs fois au cours de notre longue histoire tourmantée. En particulier, la rivalité avec Alaris est de longue date et est régulièrement attisée. Par exemple, il y a 30 ans, le seigneur d'Alaris a tenté de prendre la ville, mais grâce à l'aide du seigneur de Dragonoville, nous l'avons repoussé. Depuis, il nous deteste, Drakan et moi ! Hahahaha !",
+                "answer": "Plusieurs fois au cours de notre longue histoire tourmantée. En particulier, la rivalité avec Alaris est de longue date et est régulièrement attisée. Par exemple, il y a 30 ans, le seigneur d'Alaris a tenté de prendre la ville, mais grâce à l'aide du seigneur de Dragonoville, nous l'avons repoussé. Depuis, il nous déteste, Drakan et moi ! Hahahaha !",
                 "need": "convoitise_pontcastel",
                 "unlock": "attaque_de_pontcastel"
             },
@@ -361,7 +399,7 @@
             },
             {
                 "question": "J'aimerais bien participer aux combats de l'arène.",
-                "answer": "Vous m'avez l'air d'être un valeureux guerrier. Je vais vous recommander auprès du maître de la guilde des gladiateurs.",
+                "answer": "Je pense que vous avez autre chose à faire",
                 "need": "festival_arene",
                 "unlock": "combatre_dans_l_arene"
             },
