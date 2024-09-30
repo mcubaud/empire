@@ -404,6 +404,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     combatDiv.style.height = '100%';
     combatDiv.style.backgroundImage = `url('${backgroundImage}')`;
     combatDiv.style.backgroundSize = 'cover';
+    combatDiv.style.backgroundPosition = 'bottom';
     combatDiv.style.display = 'flex';
     combatDiv.style.flexDirection = 'column';
     combatDiv.style.alignItems = 'center';
