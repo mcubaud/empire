@@ -17,6 +17,7 @@ shield_active = false;
 healing_potions = 3; // New: Number of healing potions the player has
 healing_amount = 50; // New: Amount healed by one potion
 player_gold = 0;
+after_function = null;
 
 goldDisplay = document.getElementById("goldDisplay");
 
@@ -153,7 +154,7 @@ function move_events(current_position, location_name){
     }
     //random events in any road
     if((Math.random()<0.1) & !unlocked_subjects["loups"]){
-        current_day+=1/8;
+        unlocked_subjects["loups"] = true
         current_day+=1/12;
         begginingMessage = `Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups.`;
         enemies = [
@@ -177,6 +178,21 @@ function move_events(current_position, location_name){
         current_day += 1/12;
         alert(`Sur la route entre ${current_position} et ${location_name}, le joueur rencontra un marchand ambulant. Il proposait une variété d'objets rares, mais aucun ne s'avéra utile.`);
         unlocked_subjects["rencontre_marchand"] = true;
+    }else if((Math.random()<0.1) & !unlocked_subjects["troll"]){
+        current_day+=1/12;
+        begginingMessage = `Sur la route de ${location_name}, un troll attaqua le joueur.`;
+        enemies = [
+            { enemy_health: 200, enemy_attack: 40, enemy_name: 'troll', enemy_image: 'game/images/troll.png', enemy_height: 500 }
+        ];
+        backgroundImage = 'game/images/cave.jpg';
+        victoryMessage = `Après avoir vaincu le troll, le joueur fouilla sa caverne à proximité et trouva une armure et de l'or.`;
+        after_function = function(){
+            player_health+=30;
+            max_player_health+=30;
+            player_gold +=50;
+            goldDisplay.textContent = `Gold: ${player_gold}`;
+        }
+        startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }
 }
 
@@ -682,6 +698,10 @@ function test_victory(victoryMessage){
     if(enemyDivs.length==0){
         alert(victoryMessage)
         document.getElementById('combatDiv').remove();
+        if(after_function != null){
+            after_function();
+            after_function = null;
+        }
     }else{
         enemies_attacks(enemyDivs);
         attack1Button.addEventListener('click', attack1);
