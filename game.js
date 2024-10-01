@@ -617,11 +617,10 @@ function enemies_attacks(enemies) {
     let delay = 1000;
     
     enemies.forEach(enemy => {
-        enemyDamage = Math.floor((0.5 +Math.random() / 2) * (enemy.ennemy_attack));
-        enemyAttacks(enemy);
         delay += 1000;
-
         setTimeout(() => {
+            enemyDamage = Math.floor((0.5 +Math.random() / 2) * (enemy.ennemy_attack));
+            enemyAttacks(enemy);
             if (shield_active) {
                 shield_active = false; // Reset the shield after blocking
                 alert("You blocked the enemy's attack and regained stamina!");
