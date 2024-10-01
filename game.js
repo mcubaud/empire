@@ -8,7 +8,6 @@ max_player_health = 200
 player_attack_1_strenght = 100;
 player_attack_2_strenght = 40;
 random_proportion = 0.3;
-player_health = 100;
 player_stamina = 200; // New: Player's stamina
 max_stamina = 200;
 stamina_regen_on_block = 50; // Amount of stamina regained when blocking
@@ -451,8 +450,8 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     const playerDiv = document.createElement('div');
     playerDiv.id = 'playerDiv';
     playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="height: 400px;">`;
-    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: green;text-align: center;color: wheat;">Player Health: ${player_health}</p>`;
-    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: blue;text-align: center;color: wheat;">Player Stamina: ${player_stamina}</p>`;
+    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: green;text-align: center;color: wheat; margin: 0px;">Player Health: ${player_health}</p>`;
+    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: blue;text-align: center;color: wheat; margin: 0px;">Player Stamina: ${player_stamina}</p>`;
     battlefieldDiv.appendChild(playerDiv);
 
     const enemiesDiv = document.createElement('div');
@@ -605,7 +604,7 @@ function executeLightAttack() {
 function drinkPotion() {
     if (healing_potions > 0) {
         healing_potions -= 1; // Decrease the number of potions
-        player_health = Math.min(max_health, player_health + healing_amount); // Add health, not exceeding max health
+        player_health = Math.min(max_player_health, player_health + healing_amount); // Add health, not exceeding max health
         updatePlayerStats(); // Update the player's stats
         potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
     } else {
