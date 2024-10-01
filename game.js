@@ -8,6 +8,13 @@ max_player_health = 200
 player_attack_1_strenght = 100;
 player_attack_2_strenght = 40;
 random_proportion = 0.3;
+player_health = 100;
+player_stamina = 200; // New: Player's stamina
+max_stamina = 200;
+stamina_regen_on_block = 50; // Amount of stamina regained when blocking
+stamina_cost_attack1 = 30; // Stamina cost for Heavy Attack
+stamina_cost_attack2 = 20; // Stamina cost for Light Attack
+shield_active = false;
 
 player_marker = L.marker(
     [14.346887, -54.272461],
@@ -407,6 +414,7 @@ function add_answer(e, character_dialogs){
     }
 }
 
+
 function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage) {
     alert(begginingMessage);
     const combatDiv = document.createElement('div');
@@ -423,7 +431,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     combatDiv.style.flexDirection = 'column';
     combatDiv.style.alignItems = 'center';
     combatDiv.style.justifyContent = 'space-between';
-    combatDiv.style.backgroundColor= 'beige';
+    combatDiv.style.backgroundColor = 'beige';
     combatDiv.style.zIndex = '10000000000000000';
     combatDiv.style.overflow = 'clip';
     document.body.appendChild(combatDiv);
@@ -442,14 +450,14 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     playerDiv.id = 'playerDiv';
     playerDiv.innerHTML = `<img src="game/images/player.png" alt="Player" style="height: 400px;">`;
     playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: green;text-align: center;color: wheat;">Player Health: ${player_health}</p>`;
+    playerDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: blue;text-align: center;color: wheat;">Player Stamina: ${player_stamina}</p>`;
     battlefieldDiv.appendChild(playerDiv);
 
     const enemiesDiv = document.createElement('div');
     enemiesDiv.id = 'enemiesDiv';
     enemiesDiv.style.display = 'flex';
     enemiesDiv.style.flexDirection = 'row';
-    //enemiesDiv.style.justifyContent = 'end';
-    enemiesDiv.style.width = '50%'
+    enemiesDiv.style.width = '50%';
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
         enemyDiv.classList.add('enemy');
@@ -466,110 +474,153 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     attackButtonsDiv.style.justifyContent = 'center';
     combatDiv.appendChild(attackButtonsDiv);
 
+    // Heavy Attack Button
     attack1Button = document.createElement('button');
     attack1Button.textContent = 'Heavy Attack (Single Enemy)';
     attack1Button.title = `Power: ${Math.floor(player_attack_1_strenght * (1-random_proportion))} - ${player_attack_1_strenght}`
-
-    
-
     attack1Button.addEventListener('click', attack1);
     attackButtonsDiv.appendChild(attack1Button);
 
+    // Light Attack Button
     attack2Button = document.createElement('button');
     attack2Button.textContent = 'Light Attack (All Enemies)';
     attack2Button.title = `Power: ${Math.floor(player_attack_2_strenght * (1-random_proportion))} - ${player_attack_2_strenght}, decreasing`
     attack2Button.addEventListener('click', attack2);
     attackButtonsDiv.appendChild(attack2Button);
 
+    // Shield Button (New)
+    const shieldButton = document.createElement('button');
+    shieldButton.textContent = 'Shield (Block & Recover Stamina)';
+    shieldButton.title = 'Block the first enemy attack and recover stamina';
+    shieldButton.addEventListener('click', activateShield);
+    attackButtonsDiv.appendChild(shieldButton);
 }
 
-function attack2(){
+// Shield action
+function activateShield() {
+    shield_active = true;
+    player_stamina = Math.min(max_stamina, player_stamina + stamina_regen_on_block);
+    updatePlayerStats();
     attack1Button.removeEventListener("click", attack1);
     attack2Button.removeEventListener("click", attack2);
-    // Logic for light attack
-    playerDamage = Math.ceil(player_attack_2_strenght * (1-random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
-    playerAttacks()
-    enemyDivs = enemiesDiv.querySelectorAll('.enemy');
-    let delay = 500
-    let i_enemy = 1
-    enemyDivs.forEach(enemyDiv => {
-        const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
-        const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage/i_enemy));
-        delay+=500
-        i_enemy+=1
-        setTimeout(()=>{
-            enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
-            enemyTakesDamage(enemyDiv);
-            }, 500
-        )
-        if (newEnemyHealth === 0) {
-            // Enemy defeated
-            delay+=1000
-            setTimeout(()=>{enemyDiv.remove()}, 1000);
-        }
-    });
-    setTimeout(()=>{test_victory(victoryMessage)},delay);
-                   
 }
 
-function attack1(){
+// Heavy Attack
+function attack1() {
+    if (player_stamina >= stamina_cost_attack1) {
+        player_stamina -= stamina_cost_attack1; // Deduct stamina
+        updatePlayerStats();
+        executeHeavyAttack();
+    } else {
+        alert("Not enough stamina for Heavy Attack!");
+    }
+}
+
+// Light Attack
+function attack2() {
+    if (player_stamina >= stamina_cost_attack2) {
+        player_stamina -= stamina_cost_attack2; // Deduct stamina
+        updatePlayerStats();
+        executeLightAttack();
+    } else {
+        alert("Not enough stamina for Light Attack!");
+    }
+}
+
+// Update player stats (health and stamina)
+function updatePlayerStats() {
+    document.getElementById('playerDiv').querySelector('p:nth-child(3)').textContent = `Player Stamina: ${player_stamina}`;
+    document.getElementById('playerDiv').querySelector('p:nth-child(2)').textContent = `Player Health: ${player_health}`;
+}
+
+// Execute the heavy attack
+function executeHeavyAttack() {
     attack1Button.removeEventListener("click", attack1);
     attack2Button.removeEventListener("click", attack2);
-    // Logic for heavy attack
-    // Player chooses target enemy
+
     enemyDivs = enemiesDiv.querySelectorAll('.enemy');
     enemyDivs.forEach(enemyDiv => {
-        enemyDiv.onclick = function(){
-            //We remove the event listeners
+        enemyDiv.onclick = function () {
             enemyDivs.forEach(enemyDiv2 => {
-                enemyDiv2.onclick="";
-            })
-            //we apply the damages
-            playerDamage = Math.ceil( player_attack_1_strenght * (1-random_proportion) + Math.random() * player_attack_1_strenght * random_proportion);
-            playerAttacks()
+                enemyDiv2.onclick = "";
+            });
+
+            playerDamage = Math.ceil(player_attack_1_strenght * (1 - random_proportion) + Math.random() * player_attack_1_strenght * random_proportion);
+            playerAttacks();
             const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
             const newEnemyHealth = Math.max(0, enemyHealth - playerDamage);
-            let delay= 1000
-            setTimeout(()=>{
+            setTimeout(() => {
                 enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
                 enemyTakesDamage(enemyDiv);
-                }, 500
-            )
+            }, 500);
+
             if (newEnemyHealth === 0) {
-                // Enemy defeated
-                delay+=1000
-                setTimeout(()=>{enemyDiv.remove()}, 1000);
+                setTimeout(() => { enemyDiv.remove() }, 1000);
             }
-            setTimeout(()=>{test_victory(victoryMessage)},delay);
+            setTimeout(() => { test_victory(victoryMessage) }, 1000);
         }
-        
     });
 }
 
-function enemies_attacks(enemies){
-    let delay= 1000
-    enemies.forEach(enemy => {
-        enemyDamage = Math.floor(Math.random()/2 * enemy.attack + enemy.attack/2);
-        let newplayer_health = Math.max(0, player_health - enemyDamage);
-        setTimeout(()=>{
-            enemyAttacks(enemy)
-            setTimeout(
-                ()=>{
-                    document.getElementById('playerDiv').querySelector('p').textContent = `Player Health: ${newplayer_health}`;
-                    playerTakesDamage();
-                },100
-            )
-            
-        },delay
-        )
-        delay+=1000
-        player_health = newplayer_health;
-        if (player_health === 0) {
-            // Player defeated
-            setTimeout(()=>{
-            handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
-            },1000)
+// Execute the light attack
+function executeLightAttack() {
+    attack1Button.removeEventListener("click", attack1);
+    attack2Button.removeEventListener("click", attack2);
+
+    playerDamage = Math.ceil(player_attack_2_strenght * (1 - random_proportion) + player_attack_2_strenght * random_proportion * Math.random());
+    playerAttacks();
+    enemyDivs = enemiesDiv.querySelectorAll('.enemy');
+    let delay = 500;
+    let i_enemy = 1;
+
+    enemyDivs.forEach(enemyDiv => {
+        const enemyHealth = enemyDiv.querySelector('p').textContent.split(': ')[1];
+        const newEnemyHealth = Math.max(0, enemyHealth - Math.ceil(playerDamage / i_enemy));
+        delay += 500;
+        i_enemy += 1;
+
+        setTimeout(() => {
+            enemyDiv.querySelector('p').textContent = `Enemy Health: ${newEnemyHealth}`;
+            enemyTakesDamage(enemyDiv);
+        }, 500);
+
+        if (newEnemyHealth === 0) {
+            delay += 1000;
+            setTimeout(() => { enemyDiv.remove() }, 1000);
         }
+    });
+
+    setTimeout(() => { test_victory(victoryMessage) }, delay);
+}
+
+
+function enemies_attacks(enemies) {
+    let delay = 1000;
+    
+    enemies.forEach(enemy => {
+        enemyDamage = Math.floor(Math.random() / 2 * (enemy.ennemy_attack));
+        enemyAttacks(enemy);
+        delay += 1000;
+
+        setTimeout(() => {
+            if (shield_active) {
+                shield_active = false; // Reset the shield after blocking
+                alert("You blocked the enemy's attack and regained stamina!");
+            } else {
+                player_health = Math.max(0, player_health - enemyDamage);
+                setTimeout(
+                    ()=>{
+                        updatePlayerStats();
+                        playerTakesDamage();
+                    },100);
+                if (player_health <= 0) {
+                    // Player defeated
+                    setTimeout(()=>{
+                        handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+                        },1000);
+                }
+            }
+        }, delay);
     });
 }
 
