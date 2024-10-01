@@ -836,8 +836,8 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat1.png', enemy_height: 50 },
+        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat2.png', enemy_height: 50 },
         { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
         { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
         { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
