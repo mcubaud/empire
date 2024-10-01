@@ -496,11 +496,20 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     shieldButton.addEventListener('click', activateShield);
     attackButtonsDiv.appendChild(shieldButton);
 
+    // Create a shieldDiv for the shield animation
+    const shieldDiv = document.createElement('div');
+    shieldDiv.id = 'shieldDiv';
+    shieldDiv.innerHTML = `<img src="Blasons/blason_dragon_rouge.png" alt="Shield" class="shield">`;
+    combatDiv.appendChild(shieldDiv);
+
+
     potionButton = document.createElement('button');
     potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
     potionButton.title = 'Heal 50 HP, up to maximum health';
     potionButton.addEventListener('click', drinkPotion);
     attackButtonsDiv.appendChild(potionButton);
+
+
 }
 
 // Shield action
@@ -508,9 +517,19 @@ function activateShield() {
     shield_active = true;
     player_stamina = Math.min(max_stamina, player_stamina + stamina_regen_on_block);
     updatePlayerStats();
+    // Show and animate the shield zoom-in
+    const shieldElement = document.getElementById('shieldDiv');
+    shieldElement.style.display = 'block';
+    shieldElement.style.animation = 'shieldZoomIn 1s ease-out forwards';
+    // Disable attack buttons while shield is active
     attack1Button.removeEventListener("click", attack1);
     attack2Button.removeEventListener("click", attack2);
-    test_victory(victoryMessage);
+    // Hide shield after animation completes (after 1.5 seconds)
+    setTimeout(() => {
+        shieldElement.style.display = 'none';
+        test_victory(victoryMessage);
+    }, 1500);
+    
 }
 
 // Heavy Attack
@@ -623,7 +642,15 @@ function enemies_attacks(enemies) {
             enemyAttacks(enemy);
             if (shield_active) {
                 shield_active = false; // Reset the shield after blocking
-                alert("You blocked the enemy's attack and regained stamina!");
+                // Play the shield break animation
+                const shieldElement = document.getElementById('shieldDiv');
+                shieldElement.style.display = 'block';
+                shieldElement.style.animation = 'shieldBreak 1s ease-out forwards';
+
+                // Hide the broken shield after the animation
+                setTimeout(() => {
+                    shieldElement.style.display = 'none';
+                }, 1000);
             } else {
                 player_health = Math.max(0, player_health - enemyDamage);
                 setTimeout(

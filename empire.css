@@ -255,3 +255,50 @@ button:hover, button:focus {
     background: #1a2155;
     outline: 0;
 }
+
+/* Shield Zoom-In Animation */
+@keyframes shieldZoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Shield Break Animation */
+@keyframes shieldBreak {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+#shieldDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: none; /* Hidden by default */
+}
+
+.shield {
+    width: 200px;
+    height: 200px;
+}
+
