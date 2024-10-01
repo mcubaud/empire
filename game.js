@@ -143,9 +143,9 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
         enemies = [
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 },
-            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 },
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 }
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 },
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 },
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 }
         ];
         backgroundImage = 'game/images/une-voie-romaine.jpg';
         victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
@@ -157,11 +157,11 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = `Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups.`;
         enemies = [
-            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-            { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 }
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 }
         ];
         backgroundImage = 'game/images/paysage.jpg';
         victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
@@ -338,9 +338,9 @@ function night_events(city_name, neighborhood_name){
         current_day+=1/24;
         begginingMessage = 'Alors qu\'il marchait dans les ruelles sombres de Dragonoville, le joueur est pris en embuscade !';
         enemies = [
-            { ennemy_health: 100, ennemy_attack: 20, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand.png', ennemy_height: 380 },
-            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 },
-            { ennemy_health: 120, ennemy_attack: 25, ennemy_name: 'Bandit', ennemy_image: 'game/images/brigand2.png', ennemy_height: 380 }
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 },
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 },
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 }
         ];
         backgroundImage = 'game/images/BackAlley.webp';
         victoryMessage = 'Le combat fut difficile, mais le joueur triompha de ces adversaires. En fouillant les corps, il trouva une note sur laquelle il est écrit : "Cette fois-ci, ne le manquez pas !"';
@@ -465,10 +465,10 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     enemies.forEach(enemy => {
         const enemyDiv = document.createElement('div');
         enemyDiv.classList.add('enemy');
-        enemyDiv.innerHTML = `<img src="${enemy.ennemy_image}" alt="${enemy.ennemy_name}" style="height: ${enemy.ennemy_height}px;">`;
-        enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: red;text-align: center;color: wheat;">${enemy.ennemy_name} Health: ${enemy.ennemy_health}</p>`;
+        enemyDiv.innerHTML = `<img src="${enemy.enemy_image}" alt="${enemy.enemy_name}" style="height: ${enemy.enemy_height}px;">`;
+        enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: red;text-align: center;color: wheat;">${enemy.enemy_name} Health: ${enemy.enemy_health}</p>`;
         enemiesDiv.appendChild(enemyDiv);
-        enemyDiv.attack = enemy.ennemy_attack;
+        enemyDiv.attack = enemy.enemy_attack;
     });
     battlefieldDiv.appendChild(enemiesDiv);
 
@@ -587,6 +587,7 @@ function executeHeavyAttack() {
 
             if (newEnemyHealth === 0) {
                 dropLoot(enemyDiv);
+                enemyDiv.style.animation = 'shieldBreak 1s ease-out forwards';
                 setTimeout(() => { enemyDiv.remove() }, 1000);
             }
             setTimeout(() => { test_victory(victoryMessage) }, 1000);
@@ -619,7 +620,7 @@ function executeLightAttack() {
         if (newEnemyHealth === 0) {
             delay += 1000;
             dropLoot(enemyDiv);
-            ennemyDiv.style.animation = 'shieldBreak 1s ease-out forwards';
+            enemyDiv.style.animation = 'shieldBreak 1s ease-out forwards';
             setTimeout(() => { enemyDiv.remove() }, 1000);
         }
     });
@@ -835,12 +836,12 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 },
-        { ennemy_health: 50, ennemy_attack: 10, ennemy_name: 'loup', ennemy_image: 'game/images/loup.png', ennemy_height: 200 }
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 }
     ];
     backgroundImage = 'game/images/une-voie-romaine.jpg';
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
