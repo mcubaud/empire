@@ -807,8 +807,8 @@ function dropLoot(enemyDiv) {
     if (lootChance < 0.5) { // 50% chance to drop something
         const lootDiv = document.createElement('div');
         lootDiv.style.position = 'absolute';
-        lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left}px`;
-        lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top}px`;
+        lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left+ Math.floor(enemyDiv.clientWidth/2)}px`;
+        lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top + Math.floor(enemyDiv.clientHeight/2)}px`;
         lootDiv.style.zIndex = '100000000';
 
         if (lootChance < 0.25) { // 25% chance to drop a healing potion
