@@ -167,6 +167,22 @@ function move_events(current_position, location_name){
         backgroundImage = 'game/images/paysage.jpg';
         victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+    }else if((Math.random()<0.1) & !unlocked_subjects["thieves"]){
+        unlocked_subjects["thieves"]=true;
+        current_day+=1/12;
+        begginingMessage = `En traversant un col de montagne près de ${location_name}, un groupe de voleurs surgit des buissons pour attaquer le joueur.`;
+        enemies = [
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 },
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief2.png', enemy_height: 350 },
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 }
+        ];
+        backgroundImage = 'game/images/mountain_path.jpg';
+        victoryMessage = `Après une bataille intense, les voleurs s'enfuirent, laissant derrière eux une petite bourse remplie de pièces d'or.`;
+        startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+        after_function = function(){
+            player_gold +=50;
+            goldDisplay.textContent = `Gold: ${player_gold}`;
+        }
     }else if((Math.random()<0.1) & !unlocked_subjects["pelerins"] ){
         alert(`Sur la route de ${location_name}, le joueur rencontra un groupe de pélerins. Ceux-ci se rendaient à Dragonoville pour participer aux célébrations en l'honneur du dieu.`)
         unlocked_subjects["pelerins"]=true;
@@ -193,6 +209,20 @@ function move_events(current_position, location_name){
             goldDisplay.textContent = `Gold: ${player_gold}`;
         }
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+    }else if((Math.random()<0.05) & !unlocked_subjects["hermit"]){
+        current_day+=1/24;
+        alert(`Sur la route de ${location_name}, le joueur croisa un ermite étrange vivant dans une cabane isolée. Il offrit de bénir le joueur avec un mystérieux sort.`);
+        unlocked_subjects["hermit"]=true;
+        player_health += 20;
+        max_player_health += 20;
+        alert('Le joueur se sent étrangement revigoré après la rencontre.');
+    }else if((Math.random()<0.1) & !unlocked_subjects["ruins"]){
+        current_day+=1/12;
+        alert(`En se rapprochant de ${location_name}, le joueur découvrit des ruines antiques. En explorant brièvement, il trouva une arme ancienne ornée de runes.`);
+        unlocked_subjects["ruins"]=true;
+        player_attack_1_strenght += 10;
+        player_attack_2_strenght += 10;
+        alert('Le joueur reçoit une amélioration de ses capacités de combat grâce à l\'arme ancienne.');
     }
 }
 
