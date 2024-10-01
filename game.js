@@ -17,6 +17,8 @@ shield_active = false;
 healing_potions = 3; // New: Number of healing potions the player has
 healing_amount = 50; // New: Amount healed by one potion
 
+goldDisplay = document.getElementById("goldDisplay");
+
 player_marker = L.marker(
     [14.346887, -54.272461],
     {icon:L.icon({
@@ -582,6 +584,7 @@ function executeHeavyAttack() {
             }, 500);
 
             if (newEnemyHealth === 0) {
+                dropLoot(enemyDiv);
                 setTimeout(() => { enemyDiv.remove() }, 1000);
             }
             setTimeout(() => { test_victory(victoryMessage) }, 1000);
@@ -613,6 +616,7 @@ function executeLightAttack() {
 
         if (newEnemyHealth === 0) {
             delay += 1000;
+            dropLoot(enemyDiv);
             setTimeout(() => { enemyDiv.remove() }, 1000);
         }
     });
@@ -777,7 +781,51 @@ function enemyAttacks(enemyDiv) {
     }, 300);
 }
 
+// Function to animate loot (either potion or gold)
+function animateLoot(lootDiv, targetButton) {
+    const targetRect = targetButton.getBoundingClientRect();
+    const lootRect = lootDiv.getBoundingClientRect();
 
+    const deltaX = targetRect.left - lootRect.left;
+    const deltaY = targetRect.top - lootRect.top;
+
+    lootDiv.style.transition = 'transform 1s ease-out';
+    lootDiv.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+    setTimeout(() => {
+        lootDiv.remove(); // Remove the loot after the animation
+    }, 1000);
+}
+
+// Function to handle loot drop when an enemy dies
+function dropLoot(enemyDiv) {
+    const lootChance = Math.random();
+    if (lootChance < 0.5) { // 50% chance to drop something
+        const lootDiv = document.createElement('div');
+        lootDiv.style.position = 'absolute';
+        lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left}px`;
+        lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top}px`;
+        lootDiv.style.zIndex = '10000000000000000000';
+
+        if (lootChance < 0.25) { // 25% chance to drop a healing potion
+            lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
+            document.body.appendChild(lootDiv);
+
+            animateLoot(lootDiv, potionButton);
+
+            healing_potions += 1; // Increase the number of potions
+            potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
+        } else { // 25% chance to drop gold coins
+            lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
+            document.body.appendChild(lootDiv);
+
+            animateLoot(lootDiv, goldDisplay);
+
+            player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
+            goldDisplay.textContent = `Gold: ${player_gold}`;
+        }
+    }
+}
 
 function test_battle(){
     // Example usage:
