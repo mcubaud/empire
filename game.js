@@ -16,6 +16,7 @@ stamina_cost_attack2 = 20; // Stamina cost for Light Attack
 shield_active = false;
 healing_potions = 3; // New: Number of healing potions the player has
 healing_amount = 50; // New: Amount healed by one potion
+player_gold = 0;
 
 goldDisplay = document.getElementById("goldDisplay");
 
@@ -503,6 +504,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     shieldDiv.id = 'shieldDiv';
     shieldDiv.innerHTML = `<img src="Blasons/blason_dragon_rouge.png" alt="Shield" class="shield">`;
     combatDiv.appendChild(shieldDiv);
+    shieldDiv.style.left = Math.floor(playerDiv.clientLeft + playerDiv.clientWidth/2)+"px";
 
 
     potionButton = document.createElement('button');
@@ -617,6 +619,7 @@ function executeLightAttack() {
         if (newEnemyHealth === 0) {
             delay += 1000;
             dropLoot(enemyDiv);
+            ennemyDiv.style.animation = 'shieldBreak 1s ease-out forwards';
             setTimeout(() => { enemyDiv.remove() }, 1000);
         }
     });
