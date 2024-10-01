@@ -15,6 +15,8 @@ stamina_regen_on_block = 50; // Amount of stamina regained when blocking
 stamina_cost_attack1 = 30; // Stamina cost for Heavy Attack
 stamina_cost_attack2 = 20; // Stamina cost for Light Attack
 shield_active = false;
+healing_potions = 3; // New: Number of healing potions the player has
+healing_amount = 50; // New: Amount healed by one potion
 
 player_marker = L.marker(
     [14.346887, -54.272461],
@@ -489,11 +491,17 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     attackButtonsDiv.appendChild(attack2Button);
 
     // Shield Button (New)
-    const shieldButton = document.createElement('button');
+    shieldButton = document.createElement('button');
     shieldButton.textContent = 'Shield (Block & Recover Stamina)';
     shieldButton.title = 'Block the first enemy attack and recover stamina';
     shieldButton.addEventListener('click', activateShield);
     attackButtonsDiv.appendChild(shieldButton);
+
+    potionButton = document.createElement('button');
+    potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
+    potionButton.title = 'Heal 50 HP, up to maximum health';
+    potionButton.addEventListener('click', drinkPotion);
+    attackButtonsDiv.appendChild(potionButton);
 }
 
 // Shield action
@@ -593,6 +601,16 @@ function executeLightAttack() {
     setTimeout(() => { test_victory(victoryMessage) }, delay);
 }
 
+function drinkPotion() {
+    if (healing_potions > 0) {
+        healing_potions -= 1; // Decrease the number of potions
+        player_health = Math.min(max_health, player_health + healing_amount); // Add health, not exceeding max health
+        updatePlayerStats(); // Update the player's stats
+        potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
+    } else {
+        alert("No healing potions left!");
+    }
+}
 
 function enemies_attacks(enemies) {
     let delay = 1000;
