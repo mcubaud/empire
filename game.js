@@ -619,7 +619,8 @@ function enemies_attacks(enemies) {
     enemies.forEach(enemy => {
         delay += 1000;
         setTimeout(() => {
-            enemyDamage = Math.floor((0.5 +Math.random() / 2) * (enemy.ennemy_attack));
+            var enemyDamage = Math.floor(Math.random()/2 * enemy.attack + enemy.attack/2);
+            console.log(enemyDamage);
             enemyAttacks(enemy);
             if (shield_active) {
                 shield_active = false; // Reset the shield after blocking
@@ -635,7 +636,7 @@ function enemies_attacks(enemies) {
                     // Player defeated
                     setTimeout(()=>{
                         handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
-                        },1000);
+                        },100);
                 }
             }
         }, delay);
