@@ -435,7 +435,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     combatDiv.style.alignItems = 'center';
     combatDiv.style.justifyContent = 'space-between';
     combatDiv.style.backgroundColor = 'beige';
-    combatDiv.style.zIndex = '10000000000000000';
+    combatDiv.style.zIndex = '10000000';
     combatDiv.style.overflow = 'clip';
     document.body.appendChild(combatDiv);
 
@@ -694,7 +694,7 @@ function handleDefeat(message){
     defeatScreen.style.left = '0';
     defeatScreen.style.width = '100%';
     defeatScreen.style.height = '100%';
-    defeatScreen.style.zIndex = '100000000000000'; // Z-index très élevé pour être au-dessus de tout
+    defeatScreen.style.zIndex = '1000000000'; // Z-index très élevé pour être au-dessus de tout
     defeatScreen.style.display = 'flex';
     defeatScreen.style.flexDirection = 'column';
     defeatScreen.style.alignItems = 'center';
@@ -805,7 +805,7 @@ function dropLoot(enemyDiv) {
         lootDiv.style.position = 'absolute';
         lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left}px`;
         lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top}px`;
-        lootDiv.style.zIndex = '10000000000000000000';
+        lootDiv.style.zIndex = '100000000';
 
         if (lootChance < 0.25) { // 25% chance to drop a healing potion
             lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
