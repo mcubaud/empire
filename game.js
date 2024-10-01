@@ -511,6 +511,7 @@ function activateShield() {
     updatePlayerStats();
     attack1Button.removeEventListener("click", attack1);
     attack2Button.removeEventListener("click", attack2);
+    test_victory(victoryMessage);
 }
 
 // Heavy Attack
@@ -616,7 +617,7 @@ function enemies_attacks(enemies) {
     let delay = 1000;
     
     enemies.forEach(enemy => {
-        enemyDamage = Math.floor(Math.random() / 2 * (enemy.ennemy_attack));
+        enemyDamage = Math.floor((0.5 +Math.random() / 2) * (enemy.ennemy_attack));
         enemyAttacks(enemy);
         delay += 1000;
 
