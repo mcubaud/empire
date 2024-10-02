@@ -419,6 +419,10 @@ function talk_character(e, popup, marker, characters){
         }
         
     }
+    // Special case for l'Empereur
+    if(character_name === "l'Empereur"){
+        popup_content += `<button id='denounce_button'>Je pense avoir démasqué les conspirateurs !</button>`
+    }
     popup_content += `</div><button id="Retour">Retour</button>`
     popup_content += "</div>"
     popup.setContent(popup_content)
@@ -436,8 +440,70 @@ function talk_character(e, popup, marker, characters){
                 }
             }
         }
+        if(character_name === "l'Empereur"){
+            document.getElementById('denounce_button').onclick = function(){
+                show_accusation_form(popup, marker);
+            }
+        }
     },1000)
 }
+
+function show_accusation_form(popup, marker){
+    // Assume npcs_positions contains the list of all characters
+    var characters_list = Object.keys(npcs_dialogues);
+    popup = remove_existing_content(popup);
+
+    popup_content = popup.getContent();
+    popup_content += `<div class='div_accusation popup_content'>
+    <p>Sélectionnez les coupables parmi les personnages suivants :</p>
+    <form id="accusation_form">`;
+
+    characters_list.forEach(character => {
+        popup_content += `
+            <label>
+                <input type="checkbox" name="suspect" value="${character}"> ${character}
+            </label><br>`;
+    });
+
+    popup_content += `</form>
+    <button id="submit_accusation">Soumettre</button>
+    </div>`;
+
+    popup.setContent(popup_content);
+
+    setTimeout(function(){
+        document.getElementById('submit_accusation').onclick = function(){
+            process_accusation();
+        };
+    }, 1000);
+}
+
+function process_accusation(){
+    var form = document.getElementById('accusation_form');
+    var selected_suspects = [];
+    var checkboxes = form.querySelectorAll('input[name="suspect"]:checked');
+
+    checkboxes.forEach(checkbox => {
+        selected_suspects.push(checkbox.value);
+    });
+
+    // The real list of conspirators, this should be defined in the game
+    var real_conspirators = ["Character1", "Character2", "Character3"];
+
+    // Check if the player selected the correct conspirators and unlocked proof
+    if(selected_suspects.sort().toString() === real_conspirators.sort().toString() && unlocked_subjects["proof"]){
+        alert("Win !");
+        handleVictory();  // Function to handle victory
+    } else {
+        alert("Les personnages accusés ne sont pas les bons, ou vous n'avez pas encore trouvé les preuves.");
+    }
+}
+
+function handleVictory(){
+    // Logic to handle victory (e.g., ending the game, displaying a winning message, etc.)
+    console.log("The player has won the game!");
+}
+
 function add_answer(e, character_dialogs){
     i_dialog = e.target.id.replaceAll("dialog_", "");
     dialog = character_dialogs[i_dialog];
