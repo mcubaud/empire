@@ -420,7 +420,7 @@ function talk_character(e, popup, marker, characters){
         
     }
     // Special case for l'Empereur
-    if(character_name === "l'Empereur"){
+    if(character_name === "L'Empereur"){
         popup_content += `<button id='denounce_button'>Je pense avoir démasqué les conspirateurs !</button>`
     }
     popup_content += `</div><button id="Retour">Retour</button>`
@@ -440,7 +440,7 @@ function talk_character(e, popup, marker, characters){
                 }
             }
         }
-        if(character_name === "l'Empereur"){
+        if(character_name === "L'Empereur"){
             document.getElementById('denounce_button').onclick = function(){
                 show_accusation_form(popup, marker);
             }
@@ -451,7 +451,6 @@ function talk_character(e, popup, marker, characters){
 function show_accusation_form(popup, marker){
     // Assume npcs_positions contains the list of all characters
     var characters_list = Object.keys(npcs_dialogues);
-    popup = remove_existing_content(popup);
 
     popup_content = popup.getContent();
     popup_content += `<div class='div_accusation popup_content'>
@@ -488,7 +487,7 @@ function process_accusation(){
     });
 
     // The real list of conspirators, this should be defined in the game
-    var real_conspirators = ["Character1", "Character2", "Character3"];
+    var real_conspirators = ["Haut Prêtre de Dragono", "Seigneur d'Alaris"];
 
     // Check if the player selected the correct conspirators and unlocked proof
     if(selected_suspects.sort().toString() === real_conspirators.sort().toString() && unlocked_subjects["proof"]){
