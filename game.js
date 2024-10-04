@@ -144,9 +144,9 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
         enemies = [
-            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 },
-            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 },
-            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 }
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 , proba_gold: 0.5, proba_potion: 0.5},
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380  , proba_gold: 0.5, proba_potion: 0.5},
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 , proba_gold: 0.5, proba_potion: 0.5 }
         ];
         backgroundImage = 'game/images/une-voie-romaine.jpg';
         victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
@@ -158,11 +158,11 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = `Peu de temps avant d'arriver à ${location_name}, le joueur se retrouva nez à nez avec une meute de loups.`;
         enemies = [
-            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 }
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
+            { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 1 }
         ];
         backgroundImage = 'game/images/paysage.jpg';
         victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
@@ -172,9 +172,9 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = `En traversant un col de montagne près de ${location_name}, un groupe de voleurs surgit des buissons pour attaquer le joueur.`;
         enemies = [
-            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 },
-            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief2.png', enemy_height: 350 },
-            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 }
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+            { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 }
         ];
         backgroundImage = 'game/images/mountain_path.jpg';
         victoryMessage = `Après une bataille intense, les voleurs s'enfuirent, laissant derrière eux une petite bourse remplie de pièces d'or.`;
@@ -584,6 +584,8 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
         enemyDiv.innerHTML += `<p style="text-shadow: 1px 1px 5px white;background-color: red;text-align: center;color: wheat;">${enemy.enemy_name} Health: ${enemy.enemy_health}</p>`;
         enemiesDiv.appendChild(enemyDiv);
         enemyDiv.attack = enemy.enemy_attack;
+        enemyDiv.proba_gold = enemy.proba_gold;
+        enemyDiv.proba_potion = enemy.proba_potion;
     });
     battlefieldDiv.appendChild(enemiesDiv);
 
@@ -922,31 +924,35 @@ function animateLoot(lootDiv, targetButton) {
 
 // Function to handle loot drop when an enemy dies
 function dropLoot(enemyDiv) {
-    const lootChance = Math.random();
-    if (lootChance < 0.5) { // 50% chance to drop something
+    if(Math.random()<enemyDiv.proba_gold){
         const lootDiv = document.createElement('div');
         lootDiv.style.position = 'absolute';
         lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left+ Math.floor(enemyDiv.clientWidth/2)}px`;
         lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top + Math.floor(enemyDiv.clientHeight/2)}px`;
         lootDiv.style.zIndex = '100000000';
 
-        if (lootChance < 0.25) { // 25% chance to drop a healing potion
-            lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
-            document.body.appendChild(lootDiv);
+        lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
+        document.body.appendChild(lootDiv);
 
-            animateLoot(lootDiv, potionButton);
+        animateLoot(lootDiv, potionButton);
 
-            healing_potions += 1; // Increase the number of potions
-            potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
-        } else { // 25% chance to drop gold coins
-            lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
-            document.body.appendChild(lootDiv);
+        healing_potions += 1; // Increase the number of potions
+        potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
+    }
+    if(Math.random()<enemyDiv.proba_potion){
+        const lootDiv = document.createElement('div');
+        lootDiv.style.position = 'absolute';
+        lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left+ Math.floor(enemyDiv.clientWidth/2)}px`;
+        lootDiv.style.top = `${enemyDiv.getBoundingClientRect().top + Math.floor(enemyDiv.clientHeight/2)}px`;
+        lootDiv.style.zIndex = '100000000';
+        
+        lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
+        document.body.appendChild(lootDiv);
 
-            animateLoot(lootDiv, goldDisplay);
+        animateLoot(lootDiv, goldDisplay);
 
-            player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
-            goldDisplay.textContent = `Gold: ${player_gold}`;
-        }
+        player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
+        goldDisplay.textContent = `Gold: ${player_gold}`;
     }
 }
 
@@ -955,12 +961,12 @@ function test_battle(){
     current_day+=1/12;
     begginingMessage = 'Quelques heures après avoir quitté Alaris, le joueur est attaqué par 3 adversaires encapuchonnés !';
     enemies = [
-        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat1.png', enemy_height: 50 },
-        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat2.png', enemy_height: 50 },
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 },
-        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 }
+        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat1.png', enemy_height: 50 , proba_gold: 0.1, proba_potion: 0},
+        { enemy_health: 20, enemy_attack: 5, enemy_name: 'rat', enemy_image: 'game/images/rat2.png', enemy_height: 50, proba_gold: 1, proba_potion: 0 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 , proba_gold: 0.1, proba_potion: 0},
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 , proba_gold: 0.1, proba_potion: 0},
+        { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200 , proba_gold: 0.1, proba_potion: 1}
     ];
     backgroundImage = 'game/images/une-voie-romaine.jpg';
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
