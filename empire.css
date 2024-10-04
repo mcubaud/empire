@@ -292,7 +292,7 @@ button:hover, button:focus {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(50%, 50%);
     z-index: 10000;
     display: none; /* Hidden by default */
 }
@@ -300,5 +300,9 @@ button:hover, button:focus {
 .shield {
     width: 200px;
     height: 200px;
+}
+
+.enemy{
+    transition: left 2s;
 }
 

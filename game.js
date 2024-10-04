@@ -198,7 +198,7 @@ function move_events(current_position, location_name){
         current_day+=1/12;
         begginingMessage = `Sur la route de ${location_name}, un troll attaqua le joueur.`;
         enemies = [
-            { enemy_health: 200, enemy_attack: 40, enemy_name: 'troll', enemy_image: 'game/images/troll.png', enemy_height: 500 }
+            { enemy_health: 200, enemy_attack: 40, enemy_name: 'troll', enemy_image: 'game/images/troll.png', enemy_height: 400 }
         ];
         backgroundImage = 'game/images/cave.jpg';
         victoryMessage = `Après avoir vaincu le troll, le joueur fouilla sa caverne à proximité et trouva une armure et de l'or.`;
@@ -388,12 +388,12 @@ function night_events(city_name, neighborhood_name){
         current_day+=1/24;
         begginingMessage = 'Alors qu\'il marchait dans les ruelles sombres de Dragonoville, le joueur est pris en embuscade !';
         enemies = [
-            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380 },
-            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 },
-            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380 }
+            { enemy_health: 100, enemy_attack: 20, enemy_name: 'Bandit', enemy_image: 'game/images/brigand.png', enemy_height: 380, proba_gold: 0.5, proba_potion: 0.5 },
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380, proba_gold: 0.5, proba_potion: 0.5 },
+            { enemy_health: 120, enemy_attack: 25, enemy_name: 'Bandit', enemy_image: 'game/images/brigand2.png', enemy_height: 380, proba_gold: 0.5, proba_potion: 0.5 }
         ];
         backgroundImage = 'game/images/BackAlley.webp';
-        victoryMessage = 'Le combat fut difficile, mais le joueur triompha de ces adversaires. En fouillant les corps, il trouva une note sur laquelle il est écrit : "Cette fois-ci, ne le manquez pas !"';
+        victoryMessage = 'Le combat fut difficile, mais le joueur triompha de ces adversaires. En fouillant les corps, il trouva une note sur laquelle il était écrit : "Cette fois-ci, ne le manquez pas !"';
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }
     if((neighborhood_name=="Quartier du Marché") | (neighborhood_name=="Marché") | (neighborhood_name=="Port")){
