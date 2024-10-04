@@ -924,7 +924,7 @@ function animateLoot(lootDiv, targetButton) {
 
 // Function to handle loot drop when an enemy dies
 function dropLoot(enemyDiv) {
-    if(Math.random()<enemyDiv.proba_gold){
+    if(Math.random()<=enemyDiv.proba_potion){
         const lootDiv = document.createElement('div');
         lootDiv.style.position = 'absolute';
         lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left+ Math.floor(enemyDiv.clientWidth/2)}px`;
@@ -939,7 +939,7 @@ function dropLoot(enemyDiv) {
         healing_potions += 1; // Increase the number of potions
         potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
     }
-    if(Math.random()<enemyDiv.proba_potion){
+    if(Math.random()<=enemyDiv.proba_gold){
         const lootDiv = document.createElement('div');
         lootDiv.style.position = 'absolute';
         lootDiv.style.left = `${enemyDiv.getBoundingClientRect().left+ Math.floor(enemyDiv.clientWidth/2)}px`;
