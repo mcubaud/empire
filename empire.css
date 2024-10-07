@@ -324,6 +324,6 @@ button:hover, button:focus {
     display: block;
     margin: 0 auto;
     border: 2px solid #fff;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 }

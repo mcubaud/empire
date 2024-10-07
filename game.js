@@ -976,7 +976,7 @@ function test_battle(){
 function explore(){
     exploration_game = document.createElement("div");
     exploration_game.id = "exploration_game";
-    exploration_game.innerHTML = '<canvas id="gameCanvas" width="600" height="600"></canvas>';
+    exploration_game.innerHTML = '<canvas id="gameCanvas" width="500" height="500"></canvas>';
     document.querySelector("body").appendChild(exploration_game);
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
@@ -1044,6 +1044,7 @@ function explore(){
         if (explo_map[player.y][player.x] === 3) {
             alert("You found a chest !");
             healing_potions += 1;
+            explo_map[player.y][player.x] = 0;
         }
     }
 
