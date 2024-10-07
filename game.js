@@ -972,3 +972,110 @@ function test_battle(){
     victoryMessage = 'Après un rude combat, le joueur se débarrassa de ses attaquants. En fouillant les corps, le joueur trouva une note sur laquelle il est écrit : "Tuez le chien de l\'Empereur ! G"';
     startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
 }
+
+function explore(){
+    exploration_game = document.createElement("div");
+    exploration_game.id = "exploration_game";
+    exploration_game.innerHTML = '<canvas id="gameCanvas" width="600" height="600"></canvas>';
+    document.querySelector("body").appendChild(exploration_game);
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Game variables
+    const tileSize = 40; // Size of each tile
+    const rows = canvas.height / tileSize;
+    const cols = canvas.width / tileSize;
+
+    var explo_map = [
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+        [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0, 0, 1, 0, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+        [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+        [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1],
+        [1, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ];
+
+    const player = {
+        x: 1,
+        y: 1,
+        color: 'yellow'
+    };
+
+    // Movement control
+    document.addEventListener('keydown', movePlayer);
+
+    function movePlayer(e) {
+        switch (e.key) {
+            case 'ArrowUp':
+                if (explo_map[player.y - 1][player.x] !== 1) player.y -= 1;
+                break;
+            case 'ArrowDown':
+                if (explo_map[player.y + 1][player.x] !== 1) player.y += 1;
+                break;
+            case 'ArrowLeft':
+                if (explo_map[player.y][player.x - 1] !== 1) player.x -= 1;
+                break;
+            case 'ArrowRight':
+                if (explo_map[player.y][player.x + 1] !== 1) player.x += 1;
+                break;
+        }
+        checkGoal();
+        checkChest();
+        drawGame();
+    }
+
+    function checkGoal() {
+        if (explo_map[player.y][player.x] === 2) {
+            alert('You found the exit! Game over!');
+            document.getElementById("exploration_game").remove()
+        }
+    }
+
+    function checkChest(){
+        alert("You found a chest !");
+        healing_potions += 1;
+    }
+
+    function resetGame() {
+        player.x = 1;
+        player.y = 1;
+        drawGame();
+    }
+
+    function drawGame() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the map
+        for (let y = 0; y < rows; y++) {
+            for (let x = 0; x < cols; x++) {
+                if (explo_map[y][x] === 1) {
+                    ctx.fillStyle = 'gray'; // Wall
+                } else if (explo_map[y][x] === 2) {
+                    ctx.fillStyle = 'green'; // Exit
+                } else if (explo_map[y][x] === 0){
+                    ctx.fillStyle = 'black'; // Empty space
+                } else if (explo_map[y][x] === 3){
+                    ctx.fillStyle = 'brown'; // chest
+                }
+                ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+            }
+        }
+
+        // Draw the player
+        ctx.fillStyle = player.color;
+        ctx.fillRect(player.x * tileSize, player.y * tileSize, tileSize, tileSize);
+    }
+
+    // Start the game by drawing the initial state
+    drawGame();
+}
