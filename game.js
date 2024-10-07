@@ -1041,8 +1041,10 @@ function explore(){
     }
 
     function checkChest(){
-        alert("You found a chest !");
-        healing_potions += 1;
+        if (explo_map[player.y][player.x] === 3) {
+            alert("You found a chest !");
+            healing_potions += 1;
+        }
     }
 
     function resetGame() {
