@@ -1067,7 +1067,7 @@ function explore(){
                 } else if (explo_map[y][x] === 0){
                     ctx.fillStyle = 'black'; // Empty space
                 } else if (explo_map[y][x] === 3){
-                    ctx.fillStyle = 'brown'; // chest
+                    ctx.fillStyle = '#6f451f'; // chest
                 }
                 ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
             }
