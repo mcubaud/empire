@@ -562,7 +562,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Cité de Sam :</h2>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer.</div>"
+        "descr":"<div class='popup_content'><h2>Cité de Sam :</h2><img src='Blasons/cite_sam.png' width=250px></img>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer. La Cité de Sam est régie par un gouverneur élu parmi les 8 grandes familles de la ville tout les 5 ans. Le gouverneur est entouré des autres familles au Conseil et ils prennent ensemble les décisions importantes. La famille <b>De Gryff</b>, fondatrice de la colonie, dirige actuellement la ville. </div>"
         },
     {
         "titre":"Sirva",
