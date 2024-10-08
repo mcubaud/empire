@@ -60,11 +60,6 @@
         "zoom" :5
     },
     {
-        "nom":"Heurachnon_scale_3.png",
-        "imageBounds" : [[-8.579527, -81.750391], [-19.855782, -68.708496]],
-        "zoom" :7
-    },
-    {
         "nom":"dragonoland_scale_3.png",
         "imageBounds" : [[20.0, -58.75], [11.26, -50.8]],
         "zoom" :7
