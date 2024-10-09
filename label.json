@@ -532,7 +532,7 @@
         "parent":"Surcantardie",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Elfonport :</h2><img src='Blasons/elfonport.jpg' width=250px></img>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
+        "descr":"<div class='popup_content'><h2>Elfonport :</h2><img src='Blasons/elfonport.png' width=250px></img>C'est la troisième et la plus au Sud des villes de Surcantardie. Elfonport est une charmante petite bourgade portuaire, située dans un petit golfe.</div>"
         },
     {
         "titre":"Néléfantarah",
@@ -552,7 +552,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Gla-gla-Gorath :</h2>Gla-gla-Gorath est une ville du Rohanor</div>"
+        "descr":"<div class='popup_content'><h2>Gla-gla-Gorath :</h2><img src='Blasons/glaglagorath.png' width=250px></img>Gla-gla-Gorath est une ville du Rohanor, proche de la grande faille. Elle souffre d'un micro-climat très froid.</div>"
         },
     {
         "titre":"Cité de Sam",
@@ -562,7 +562,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Cité de Sam :</h2><img src='Blasons/cite_sam.png' width=250px></img>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer. La Cité de Sam est régie par un gouverneur élu parmi les 8 grandes familles de la ville tout les 5 ans. Le gouverneur est entouré des autres familles au Conseil et ils prennent ensemble les décisions importantes. La famille <b>De Gryff</b>, fondatrice de la colonie, dirige actuellement la ville. </div>"
+        "descr":"<div class='popup_content'><h2>Cité de Sam :</h2><img src='Blasons/cite_sam.png' width=250px></img>La Cité de Sam est la capitale du Rohanor, une cité état sous gouvernance de l'Empire, située au Sud Est dans un creux des falaises au bord de la mer. La Cité de Sam est régie par un gouverneur élu parmi les 8 grandes familles de la ville tout les 5 ans. Le gouverneur est entouré des autres familles au Conseil et ils prennent ensemble les décisions importantes. La famille De Gryff, fondatrice de la colonie, dirige actuellement la ville. </div>"
         },
     {
         "titre":"Sirva",
@@ -572,7 +572,7 @@
         "parent":"Territoires Inexplorés",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Sirva :</h2>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
+        "descr":"<div class='popup_content'><h2>Sirva :</h2><img src='Blasons/sirva.png' width=250px></img>Sirva est la seule enclave civilisé parmi les jungles des Territoires Inexplorés. Ce qui n'est rien d'autre qu'un grand village est rapidement devenu le premier exportateur de bois de tout l'Empire.</div>"
         },
     {
         "titre":"Lunanera",
@@ -722,7 +722,7 @@
         "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou'>Fort Tigrou :</a><img src='Blasons/fort_tigrou.jfif' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/blog/fort-tigrou'>Fort Tigrou :</a><img src='Blasons/fort_tigrou.png' width=250px></img><b>60000 habitants</b><p>Fort-Tigrou se trouve au sud est de Petit-Chienland, c'est une ville côtière avec un grand port de commerce mais aussi une place forte avec une partie de la flotte de l’Empire.</p></div>"
         },
     {
         "titre":"La Forteresse Rouge",
