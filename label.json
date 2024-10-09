@@ -542,7 +542,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Nélefentharah :</h2>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
+        "descr":"<div class='popup_content'><h2>Nélefentharah :</h2><img src='Blasons/nelefantarah.png' width=250px></img>Nélefentharah, surnomée la grande oasis du désert d'Egyptie, est une ville du Rohanor.</div>"
         },
     {
         "titre":"Gla-gla-Gorath",
@@ -582,7 +582,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Lunanera :</h2>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
+        "descr":"<div class='popup_content'><h2>Lunanera :</h2><img src='Blasons/lunanera.png' width=250px></img>La petite ville de Lunanera, au bord de la mer, est une ville commerçante au rythme effréné.</div>"
         },
     {
         "titre":"Ouistitipolis",
@@ -592,7 +592,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Ouistitipolis :</h2>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
+        "descr":"<div class='popup_content'><h2>Ouistitipolis :</h2><img src='Blasons/ouistitipolis.png' width=250px></img>La petite ville de Ouistitipolis est renommée pour ses mercenaires.</div>"
         },
     {
         "titre":"Magnilor",
@@ -602,7 +602,7 @@
         "parent":"Rohanor",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><h2>Magnilor :</h2>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
+        "descr":"<div class='popup_content'><h2>Magnilor :</h2><img src='Blasons/magnilor.png' width=250px></img>Magnilor est, grâce à sa situation centrale en Rohanor, une importante ville marchande.</div>"
         },
     {
         "titre":"Dragonoville",
