@@ -1083,12 +1083,9 @@ function explore(){
                 ];
             }else if(roll <= 0.6){
                 enemies = [
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
+                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
                 ];
             }else{
                 enemies = [
