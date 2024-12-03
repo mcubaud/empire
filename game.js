@@ -164,7 +164,7 @@ function move_events(current_position, location_name){
             { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 0 },
             { enemy_health: 50, enemy_attack: 10, enemy_name: 'loup', enemy_image: 'game/images/loup.png', enemy_height: 200, proba_gold: 0.1, proba_potion: 1 }
         ];
-        backgroundImage = 'game/images/paysage.jpg';
+        backgroundImage = 'game/images/foret_hantee.png';
         victoryMessage = `Le combat fut difficile. Les derniers loups s'enfuirent quand le joueur tua un grand loup blanc, qui devait probablement mener la meute.`;
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
     }else if((Math.random()<0.1) & !unlocked_subjects["thieves"]){
@@ -176,7 +176,7 @@ function move_events(current_position, location_name){
             { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
             { enemy_health: 80, enemy_attack: 15, enemy_name: 'Voleur', enemy_image: 'game/images/thief1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 }
         ];
-        backgroundImage = 'game/images/mountain_path.jpg';
+        backgroundImage = 'game/images/mountain_path_v2.png';
         victoryMessage = `Après une bataille intense, les voleurs s'enfuirent, laissant derrière eux une petite bourse remplie de pièces d'or.`;
         startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
         after_function = function(){
@@ -621,7 +621,7 @@ function startCombat(begginingMessage, enemies, backgroundImage, victoryMessage)
     shieldDiv.id = 'shieldDiv';
     shieldDiv.innerHTML = `<img src="Blasons/blason_dragon_rouge.png" alt="Shield" class="shield">`;
     combatDiv.appendChild(shieldDiv);
-    shieldDiv.style.left = Math.floor(playerDiv.clientLeft + playerDiv.clientWidth/2)+"px";
+    shieldDiv.style.left = Math.floor(playerDiv.clientLeft + playerDiv.clientWidth*1.5)+"px";
 
 
     potionButton = document.createElement('button');
@@ -976,10 +976,20 @@ function test_battle(){
 function explore(){
     exploration_game = document.createElement("div");
     exploration_game.id = "exploration_game";
-    exploration_game.innerHTML = '<canvas id="gameCanvas" width="500" height="500"></canvas>';
+    exploration_game.innerHTML = '<canvas id="gameCanvas" width="600" height="600"></canvas>';
     document.querySelector("body").appendChild(exploration_game);
-    const canvas = document.getElementById('gameCanvas');
+    canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
+
+    potion_div = document.createElement("div")
+    exploration_game.appendChild(potion_div);
+    potion_div.style = "position:absolute; top:50px; right:10px; background-color: magenta; padding: 5px; font-size: 20px; z-index: 100000000;"
+    potion_div.textContent = `Potions : ${healing_potions}`;
+
+    pv_div = document.createElement("div")
+    exploration_game.appendChild(pv_div);
+    pv_div.style = "position:absolute; top:90px; right:10px; background-color: red; padding: 5px; font-size: 20px; z-index: 100000000;"
+    pv_div.textContent = `PV : ${player_health}`;
 
     // Game variables
     const tileSize = 40; // Size of each tile
@@ -992,65 +1002,143 @@ function explore(){
         [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
         [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
         [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0, 0, 1, 0, 1],
+        [1, 0, 4, 0, 0, 0, 0, 3, 1, 0, 0, 0, 1, 5, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
         [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4, 0, 1],
         [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
-        [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+        [1, 0, 1, 0, 1, 0, 0, 0, 5, 0, 1, 0, 0, 4, 1],
         [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1],
-        [1, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 2, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
 
-    const player = {
+    var player_explo = {
         x: 1,
         y: 1,
         color: 'yellow'
     };
 
     // Movement control
-    document.addEventListener('keydown', movePlayer);
+    document.addEventListener('keydown', moveplayer_explo);
 
-    function movePlayer(e) {
+    function moveplayer_explo(e) {
         switch (e.key) {
             case 'ArrowUp':
-                if (explo_map[player.y - 1][player.x] !== 1) player.y -= 1;
+                if (explo_map[player_explo.y - 1][player_explo.x] !== 1) player_explo.y -= 1;
                 break;
             case 'ArrowDown':
-                if (explo_map[player.y + 1][player.x] !== 1) player.y += 1;
+                if (explo_map[player_explo.y + 1][player_explo.x] !== 1) player_explo.y += 1;
                 break;
             case 'ArrowLeft':
-                if (explo_map[player.y][player.x - 1] !== 1) player.x -= 1;
+                if (explo_map[player_explo.y][player_explo.x - 1] !== 1) player_explo.x -= 1;
                 break;
             case 'ArrowRight':
-                if (explo_map[player.y][player.x + 1] !== 1) player.x += 1;
+                if (explo_map[player_explo.y][player_explo.x + 1] !== 1) player_explo.x += 1;
                 break;
         }
         checkGoal();
+        checkTrap();
         checkChest();
+        checkEnemy();
         drawGame();
     }
 
     function checkGoal() {
-        if (explo_map[player.y][player.x] === 2) {
-            alert('You found the exit! Game over!');
+        if (explo_map[player_explo.y][player_explo.x] === 2) {
+            alert('You found the exit!');
+            document.removeEventListener('keydown', moveplayer_explo);
             document.getElementById("exploration_game").remove()
         }
     }
 
+    function checkTrap() {
+        if (explo_map[player_explo.y][player_explo.x] === 4) {
+            alert('You walked on a trap!');
+            player_health -=10;
+            pv_div.textContent = `PV : ${player_health}`;
+            explo_map[player_explo.y][player_explo.x] = 0;
+            if (player_health <= 0) {
+                // Player defeated
+                setTimeout(()=>{
+                    handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+                    },100);
+            }
+        }
+    }
+
+    function checkEnemy() {
+        if (explo_map[player_explo.y][player_explo.x] === 5) {
+            begginingMessage = `Vous êtes attaqué !`;
+            enemies = [
+                { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 50 , proba_gold: 0.8, proba_potion: 0.3},
+                { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 50 , proba_gold: 0.8, proba_potion: 0.3},
+                { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 50 , proba_gold: 0.8, proba_potion: 0.3 }
+            ];
+            backgroundImage = 'game/images/dungeon.jpg';
+            victoryMessage = `Victoire !`;
+            startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+            after_function = function(){
+                player_gold +=50;
+                goldDisplay.textContent = `Gold: ${player_gold}`;
+                explo_map[player_explo.y][player_explo.x] = 0;
+            }
+            
+        }
+    }
+
     function checkChest(){
-        if (explo_map[player.y][player.x] === 3) {
+        if (explo_map[player_explo.y][player_explo.x] === 3) {
             alert("You found a chest !");
-            healing_potions += 1;
-            explo_map[player.y][player.x] = 0;
+            if(Math.random()<=0.5){
+                const lootDiv = document.createElement('div');
+                lootDiv.style.position = 'absolute';
+                lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
+                lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
+                lootDiv.style.zIndex = '100000000';
+        
+                lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
+                document.body.appendChild(lootDiv);
+        
+                animateLoot(lootDiv, potion_div);
+        
+                healing_potions += 1; // Increase the number of potions
+                //potionButton.textContent = `Drink Healing Potion (${healing_potions} left)`;
+            }
+            else if(Math.random()<=0.5){
+                const lootDiv = document.createElement('div');
+                lootDiv.style.position = 'absolute';
+                lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
+                lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
+                lootDiv.style.zIndex = '100000000';
+                
+                lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
+                document.body.appendChild(lootDiv);
+        
+                animateLoot(lootDiv, goldDisplay);
+        
+                player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
+                goldDisplay.textContent = `Gold: ${player_gold}`;
+            }
+            else{
+                alert("The chest was trapped !");
+                player_health -=10;
+                pv_div.textContent = `PV : ${player_health}`;
+                if (player_health <= 0) {
+                    // Player defeated
+                    setTimeout(()=>{
+                        handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+                        },100);
+                }
+            }
+            explo_map[player_explo.y][player_explo.x] = 0;
         }
     }
 
     function resetGame() {
-        player.x = 1;
-        player.y = 1;
+        player_explo.x = 1;
+        player_explo.y = 1;
         drawGame();
     }
 
@@ -1069,14 +1157,19 @@ function explore(){
                     ctx.fillStyle = 'black'; // Empty space
                 } else if (explo_map[y][x] === 3){
                     ctx.fillStyle = '#6f451f'; // chest
+                } else if (explo_map[y][x] === 4){
+                    ctx.fillStyle = '#160000'; // trap
+                } else if (explo_map[y][x] === 5){
+                    ctx.fillStyle = 'red'; // enemy
                 }
+            
                 ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
             }
         }
 
-        // Draw the player
-        ctx.fillStyle = player.color;
-        ctx.fillRect(player.x * tileSize, player.y * tileSize, tileSize, tileSize);
+        // Draw the player_explo
+        ctx.fillStyle = player_explo.color;
+        ctx.fillRect(player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
     }
 
     // Start the game by drawing the initial state
