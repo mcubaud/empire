@@ -1169,8 +1169,8 @@ function explore(){
             empty: 'https://i.pinimg.com/564x/f3/35/31/f3353127757ef21594dddeea2fc32d0c.jpg',
             chest: 'https://www.1001hobbies.fr/1936391-large_default/wizkids-wzk89714-dungeons-and-dragons-onslaught-deluxe-treasure-chest.jpg',
             trap: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSls66euld4o7qI6eA80v5SWyE9u0x2krYzbA&s',
-            enemy: 'game/images/enemy.png',
-            player: 'game/images/squelette_1.png'
+            enemy: 'game/images/squelette_1.png',
+            player: 'game/images/player.png'
         };
 
         const promises = Object.keys(imagePaths).map((key) => {
