@@ -974,8 +974,10 @@ function test_battle(){
 }
 
 function explore(remaining_levels){
+    console.log(remaining_levels);
     if(remaining_levels<=0){
         //Boss fight !
+        alert("Boss fight !")
     }else{
         exploration_game = document.createElement("div");
         exploration_game.id = "exploration_game";
@@ -1143,7 +1145,7 @@ function explore(remaining_levels){
             if (explo_map[player_explo.y][player_explo.x] === 2) {
                 document.removeEventListener('keydown', moveplayer_explo);
                 document.getElementById("exploration_game").remove()
-                explore(remaining_levels-1);
+                explore( remaining_levels - 1);
             }
         }
 
