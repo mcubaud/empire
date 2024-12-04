@@ -973,182 +973,186 @@ function test_battle(){
     startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
 }
 
-function explore(){
-    exploration_game = document.createElement("div");
-    exploration_game.id = "exploration_game";
-    exploration_game.innerHTML = '<canvas id="gameCanvas" width="600" height="600"></canvas>';
-    document.querySelector("body").appendChild(exploration_game);
-    canvas = document.getElementById('gameCanvas');
-    const ctx = canvas.getContext('2d');
+function explore(remaining_levels){
+    if(remaining_levels<=0){
+        //Boss fight !
+    }else{
+        exploration_game = document.createElement("div");
+        exploration_game.id = "exploration_game";
+        exploration_game.innerHTML = '<canvas id="gameCanvas" width="600" height="600"></canvas>';
+        document.querySelector("body").appendChild(exploration_game);
+        canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
 
-    potion_div = document.createElement("div")
-    exploration_game.appendChild(potion_div);
-    potion_div.style = "position:absolute; top:50px; right:10px; background-color: magenta; padding: 5px; font-size: 20px; z-index: 100000000;"
-    potion_div.textContent = `Potions : ${healing_potions}`;
+        potion_div = document.createElement("div")
+        exploration_game.appendChild(potion_div);
+        potion_div.style = "position:absolute; top:50px; right:10px; background-color: magenta; padding: 5px; font-size: 20px; z-index: 100000000;"
+        potion_div.textContent = `Potions : ${healing_potions}`;
 
-    pv_div = document.createElement("div")
-    exploration_game.appendChild(pv_div);
-    pv_div.style = "position:absolute; top:90px; right:10px; background-color: red; padding: 5px; font-size: 20px; z-index: 100000000;"
-    pv_div.textContent = `PV : ${player_health}`;
+        pv_div = document.createElement("div")
+        exploration_game.appendChild(pv_div);
+        pv_div.style = "position:absolute; top:90px; right:10px; background-color: red; padding: 5px; font-size: 20px; z-index: 100000000;"
+        pv_div.textContent = `PV : ${player_health}`;
 
-    // Game variables
-    const tileSize = 40; // Size of each tile
-    const rows = canvas.height / tileSize;
-    const cols = canvas.width / tileSize;
+        // Game variables
+        var tileSize = 40; // Size of each tile
+        var rows = canvas.height / tileSize;
+        var cols = canvas.width / tileSize;
 
-    var explo_map = [
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
-        [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
-        [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
-        [1, 0, 4, 0, 0, 0, 0, 3, 1, 0, 0, 0, 1, 5, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-        [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4, 0, 1],
-        [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
-        [1, 0, 1, 0, 1, 0, 0, 0, 5, 0, 1, 0, 0, 4, 1],
-        [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 2, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-    ];
-
-    var player_explo = {
-        x: 1,
-        y: 1,
-        color: 'yellow'
-    };
-
-    // Movement control
-    document.addEventListener('keydown', moveplayer_explo);
-
-    function moveplayer_explo(e) {
-        switch (e.key) {
-            case 'ArrowUp':
-                if (explo_map[player_explo.y - 1][player_explo.x] !== 1) player_explo.y -= 1;
-                break;
-            case 'ArrowDown':
-                if (explo_map[player_explo.y + 1][player_explo.x] !== 1) player_explo.y += 1;
-                break;
-            case 'ArrowLeft':
-                if (explo_map[player_explo.y][player_explo.x - 1] !== 1) player_explo.x -= 1;
-                break;
-            case 'ArrowRight':
-                if (explo_map[player_explo.y][player_explo.x + 1] !== 1) player_explo.x += 1;
-                break;
-        }
-        checkGoal();
-        checkTrap();
-        checkChest();
-        checkEnemy();
-        drawGame();
-    }
-
-    function checkGoal() {
-        if (explo_map[player_explo.y][player_explo.x] === 2) {
-            alert('You found the exit!');
-            document.removeEventListener('keydown', moveplayer_explo);
-            document.getElementById("exploration_game").remove()
-        }
-    }
-
-    function checkTrap() {
-        if (explo_map[player_explo.y][player_explo.x] === 4) {
-            alert('You walked on a trap!');
-            player_health -=10;
-            pv_div.textContent = `PV : ${player_health}`;
-            explo_map[player_explo.y][player_explo.x] = 0;
-            if (player_health <= 0) {
-                // Player defeated
-                setTimeout(()=>{
-                    handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
-                    },100);
+        function generateDungeon() {
+            // Initialize map with walls
+            let dungeon = Array(rows).fill(null).map(() => Array(cols).fill(1));
+        
+            // Helper function to create a room
+            function createRoom(x, y, w, h) {
+                for (let i = y; i < y + h; i++) {
+                    for (let j = x; j < x + w; j++) {
+                        if (i >= 0 && i < rows && j >= 0 && j < cols) {
+                            dungeon[i][j] = 0; // Empty space
+                        }
+                    }
+                }
             }
-        }
-    }
-
-    function checkEnemy() {
-        if (explo_map[player_explo.y][player_explo.x] === 5) {
-            begginingMessage = `Vous êtes attaqué !`;
-            roll = Math.random()
-            if( roll <= 0.3){
-                enemies = [
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
-                ];
-            }else if(roll <= 0.6){
-                enemies = [
-                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 60, enemy_attack: 50, enemy_name: 'Squelette_2', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
-                ];
-            }else{
-                enemies = [
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
-                ];
+        
+            // Create rooms
+            const rooms = [];
+            const numRooms = Math.floor(Math.random() * 5) + 5; // Between 5 and 10 rooms
+        
+            for (let i = 0; i < numRooms; i++) {
+                const roomWidth = Math.floor(Math.random() * 3) + 2; // 3 to 7 tiles
+                const roomHeight = Math.floor(Math.random() * 3) + 2;
+                const roomX = Math.floor(Math.random() * (cols - roomWidth - 1)) + 1;
+                const roomY = Math.floor(Math.random() * (rows - roomHeight - 1)) + 1;
+        
+                createRoom(roomX, roomY, roomWidth, roomHeight);
+                rooms.push({ x: roomX, y: roomY, w: roomWidth, h: roomHeight });
+            }
+        
+            // Connect rooms with corridors
+            function createCorridor(x1, y1, x2, y2) {
+                let currentX = x1;
+                let currentY = y1;
+        
+                while (currentX !== x2 || currentY !== y2) {
+                    dungeon[currentY][currentX] = 0; // Empty space
+                    if(Math.random()>0.5){
+                        if (currentX < x2) currentX++;
+                        else if (currentX > x2) currentX--;
+                    }else{
+                        if (currentY < y2) currentY++;
+                        else if (currentY > y2) currentY--;
+                    }
+                }
             }
             
-            backgroundImage = 'game/images/dungeon.jpg';
-            victoryMessage = `Victoire !`;
-            startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
-            after_function = function(){
-                player_gold +=50;
-                goldDisplay.textContent = `Gold: ${player_gold}`;
-                explo_map[player_explo.y][player_explo.x] = 0;
-                potion_div.textContent = `Potions : ${healing_potions}`;
-                pv_div.textContent = `PV : ${player_health}`;
+            createCorridor(1, 1,rooms[0].x,  rooms[0].y)
+            createCorridor(rooms[numRooms-1].x,  rooms[numRooms-1].y, rows-2, cols-2)
+            for (let i = 0; i < rooms.length - 1; i++) {
+                const roomA = rooms[i];
+                const roomB = rooms[i + 1];
+                createCorridor(
+                    Math.floor(roomA.x + roomA.w / 2),
+                    Math.floor(roomA.y + roomA.h / 2),
+                    Math.floor(roomB.x + roomB.w / 2),
+                    Math.floor(roomB.y + roomB.h / 2)
+                );
             }
-            
+        
+            // Ensure start and exit positions are inside rooms or connected
+            dungeon[1][1] = 0; // Start position
+            dungeon[rows - 2][cols - 2] = 0; // Exit position
+        
+            // Place enemies, traps, and chests
+            function placeElement(element, count) {
+                while (count > 0) {
+                    const x = Math.floor(Math.random() * cols);
+                    const y = Math.floor(Math.random() * rows);
+        
+                    if (dungeon[y][x] === 0 && !(x === 1 && y === 1) && !(x === cols - 2 && y === rows - 2)) {
+                        dungeon[y][x] = element;
+                        count--;
+                    }
+                }
+            }
+        
+            const numEnemies = Math.floor(Math.random() * 5) + 2; // 5 to 15 enemies
+            const numTraps = Math.floor(Math.random() * 10) + 5; // 5 to 15 traps
+            const numChests = Math.floor(Math.random() * 4) + 1; // 3 to 8 chests
+        
+            placeElement(5, numEnemies); // Place enemies
+            placeElement(4, numTraps); // Place traps
+            placeElement(3, numChests); // Place chests
+        
+            // Mark exit
+            dungeon[rows - 2][cols - 2] = 2;
+        
+            return dungeon;
         }
-    }
 
-    function checkChest(){
-        if (explo_map[player_explo.y][player_explo.x] === 3) {
-            alert("You found a chest !");
-            if(Math.random()<=0.5){
-                const lootDiv = document.createElement('div');
-                lootDiv.style.position = 'absolute';
-                lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
-                lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
-                lootDiv.style.zIndex = '100000000';
-        
-                lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
-                document.body.appendChild(lootDiv);
-        
-                animateLoot(lootDiv, potion_div);
-        
-                healing_potions += 1; // Increase the number of potions
-                potion_div.textContent = `Potions : ${healing_potions}`;
+        var explo_map = [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
+            [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1],
+            [1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+            [1, 0, 4, 0, 0, 0, 0, 3, 1, 0, 0, 0, 1, 5, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+            [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4, 0, 1],
+            [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 0, 0, 5, 0, 1, 0, 0, 4, 1],
+            [1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        ];
+        explo_map = generateDungeon();
+
+        var player_explo = {
+            x: 1,
+            y: 1,
+            color: 'yellow'
+        };
+
+        // Movement control
+        document.addEventListener('keydown', moveplayer_explo);
+
+        function moveplayer_explo(e) {
+            switch (e.key) {
+                case 'ArrowUp':
+                    if (explo_map[player_explo.y - 1][player_explo.x] !== 1) player_explo.y -= 1;
+                    break;
+                case 'ArrowDown':
+                    if (explo_map[player_explo.y + 1][player_explo.x] !== 1) player_explo.y += 1;
+                    break;
+                case 'ArrowLeft':
+                    if (explo_map[player_explo.y][player_explo.x - 1] !== 1) player_explo.x -= 1;
+                    break;
+                case 'ArrowRight':
+                    if (explo_map[player_explo.y][player_explo.x + 1] !== 1) player_explo.x += 1;
+                    break;
             }
-            else if(Math.random()<=0.5){
-                const lootDiv = document.createElement('div');
-                lootDiv.style.position = 'absolute';
-                lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
-                lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
-                lootDiv.style.zIndex = '100000000';
-                
-                lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
-                document.body.appendChild(lootDiv);
-        
-                animateLoot(lootDiv, goldDisplay);
-        
-                player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
-                goldDisplay.textContent = `Gold: ${player_gold}`;
+            checkGoal();
+            checkTrap();
+            checkChest();
+            checkEnemy();
+            drawGame();
+        }
+
+        function checkGoal() {
+            if (explo_map[player_explo.y][player_explo.x] === 2) {
+                document.removeEventListener('keydown', moveplayer_explo);
+                document.getElementById("exploration_game").remove()
+                explore(remaining_levels-1);
             }
-            else{
-                alert("The chest was trapped !");
+        }
+
+        function checkTrap() {
+            if (explo_map[player_explo.y][player_explo.x] === 4) {
+                alert('You walked on a trap!');
                 player_health -=10;
                 pv_div.textContent = `PV : ${player_health}`;
+                explo_map[player_explo.y][player_explo.x] = 0;
                 if (player_health <= 0) {
                     // Player defeated
                     setTimeout(()=>{
@@ -1156,79 +1160,169 @@ function explore(){
                         },100);
                 }
             }
-            explo_map[player_explo.y][player_explo.x] = 0;
         }
-    }
 
-    // Preload textures for dungeon elements and player
-    const textures = {};
-    function preloadImages() {
-        const imagePaths = {
-            wall: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbhZvubZPlfaV3ZxJypMD2DaFxzlrzaLCiw&s',
-            exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
-            empty: 'https://i.pinimg.com/564x/f3/35/31/f3353127757ef21594dddeea2fc32d0c.jpg',
-            chest: 'https://www.1001hobbies.fr/1936391-large_default/wizkids-wzk89714-dungeons-and-dragons-onslaught-deluxe-treasure-chest.jpg',
-            trap: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSls66euld4o7qI6eA80v5SWyE9u0x2krYzbA&s',
-            enemy: 'game/images/squelette_1.png',
-            player: 'game/images/player.png'
-        };
-
-        const promises = Object.keys(imagePaths).map((key) => {
-            return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = imagePaths[key];
-                img.onload = () => {
-                    textures[key] = img;
-                    resolve();
-                };
-                img.onerror = reject;
-            });
-        });
-
-        return Promise.all(promises);
-    }
-
-    function drawGame() {
-        // Clear the canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-        // Draw the map
-        for (let y = 0; y < rows; y++) {
-            for (let x = 0; x < cols; x++) {
-                let tileTexture;
-    
-                // Determine the texture based on the map value
-                if (explo_map[y][x] === 1) {
-                    tileTexture = textures.wall; // Wall
-                } else if (explo_map[y][x] === 2) {
-                    tileTexture = textures.exit; // Exit
-                } else if (explo_map[y][x] === 0) {
-                    tileTexture = textures.empty; // Empty space
-                } else if (explo_map[y][x] === 3) {
-                    tileTexture = textures.chest; // Chest
-                } else if (explo_map[y][x] === 4) {
-                    tileTexture = textures.trap; // Trap
-                } else if (explo_map[y][x] === 5) {
-                    tileTexture = textures.enemy; // Enemy
+        function checkEnemy() {
+            if (explo_map[player_explo.y][player_explo.x] === 5) {
+                begginingMessage = `Vous êtes attaqué !`;
+                roll = Math.random()
+                if( roll <= 0.3){
+                    enemies = [
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
+                    ];
+                }else if(roll <= 0.6){
+                    enemies = [
+                        { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 60, enemy_attack: 50, enemy_name: 'Squelette_2', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
+                    ];
+                }else{
+                    enemies = [
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
+                        { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
+                    ];
                 }
-    
-                // Draw the tile texture
-                if (tileTexture) {
-                    ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
+                
+                backgroundImage = 'game/images/dungeon.jpg';
+                victoryMessage = `Victoire !`;
+                startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
+                after_function = function(){
+                    player_gold +=50;
+                    goldDisplay.textContent = `Gold: ${player_gold}`;
+                    explo_map[player_explo.y][player_explo.x] = 0;
+                    potion_div.textContent = `Potions : ${healing_potions}`;
+                    pv_div.textContent = `PV : ${player_health}`;
                 }
+                
             }
         }
-    
-        // Draw the player
-        ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
-    }
-    
-    // Start the game by drawing the initial state
-    preloadImages().then(() => {
-        // Once all images are loaded, start the game
-        drawGame();
-    }).catch((error) => {
-        console.error('Error loading images:', error);
-    });
-    
+
+        function checkChest(){
+            if (explo_map[player_explo.y][player_explo.x] === 3) {
+                alert("You found a chest !");
+                if(Math.random()<=0.5){
+                    const lootDiv = document.createElement('div');
+                    lootDiv.style.position = 'absolute';
+                    lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
+                    lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
+                    lootDiv.style.zIndex = '100000000';
+            
+                    lootDiv.innerHTML = `<img src="game/images/potion.png" style="width: 30px;">`;
+                    document.body.appendChild(lootDiv);
+            
+                    animateLoot(lootDiv, potion_div);
+            
+                    healing_potions += 1; // Increase the number of potions
+                    potion_div.textContent = `Potions : ${healing_potions}`;
+                }
+                else if(Math.random()<=0.5){
+                    const lootDiv = document.createElement('div');
+                    lootDiv.style.position = 'absolute';
+                    lootDiv.style.left = `${canvas.offsetLeft + 40*player_explo.x}px`;
+                    lootDiv.style.top = `${canvas.offsetTop + 40*player_explo.y}px`;
+                    lootDiv.style.zIndex = '100000000';
+                    
+                    lootDiv.innerHTML = `<img src="game/images/pieces.png" style="width: 50px;">`;
+                    document.body.appendChild(lootDiv);
+            
+                    animateLoot(lootDiv, goldDisplay);
+            
+                    player_gold += Math.floor(Math.random() * 50) + 10; // Random gold between 10 and 60
+                    goldDisplay.textContent = `Gold: ${player_gold}`;
+                }
+                else{
+                    alert("The chest was trapped !");
+                    player_health -=10;
+                    pv_div.textContent = `PV : ${player_health}`;
+                    if (player_health <= 0) {
+                        // Player defeated
+                        setTimeout(()=>{
+                            handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+                            },100);
+                    }
+                }
+                explo_map[player_explo.y][player_explo.x] = 0;
+            }
+        }
+
+        // Preload textures for dungeon elements and player
+        const textures = {};
+        function preloadImages() {
+            const imagePaths = {
+                wall: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbhZvubZPlfaV3ZxJypMD2DaFxzlrzaLCiw&s',
+                exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
+                empty: 'https://i.pinimg.com/564x/f3/35/31/f3353127757ef21594dddeea2fc32d0c.jpg',
+                chest: 'https://www.1001hobbies.fr/1936391-large_default/wizkids-wzk89714-dungeons-and-dragons-onslaught-deluxe-treasure-chest.jpg',
+                trap: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSls66euld4o7qI6eA80v5SWyE9u0x2krYzbA&s',
+                enemy: 'game/images/squelette_1.png',
+                player: 'game/images/player.png'
+            };
+
+            const promises = Object.keys(imagePaths).map((key) => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = imagePaths[key];
+                    img.onload = () => {
+                        textures[key] = img;
+                        resolve();
+                    };
+                    img.onerror = reject;
+                });
+            });
+
+            return Promise.all(promises);
+        }
+
+        function drawGame() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            // Draw the map
+            for (let y = 0; y < rows; y++) {
+                for (let x = 0; x < cols; x++) {
+                    let tileTexture;
+        
+                    // Determine the texture based on the map value
+                    if (explo_map[y][x] === 1) {
+                        tileTexture = textures.wall; // Wall
+                    } else if (explo_map[y][x] === 2) {
+                        tileTexture = textures.exit; // Exit
+                    } else if (explo_map[y][x] === 0) {
+                        tileTexture = textures.empty; // Empty space
+                    } else if (explo_map[y][x] === 3) {
+                        tileTexture = textures.chest; // Chest
+                    } else if (explo_map[y][x] === 4) {
+                        tileTexture = textures.trap; // Trap
+                    } else if (explo_map[y][x] === 5) {
+                        tileTexture = textures.enemy; // Enemy
+                    }
+        
+                    // Draw the tile texture
+                    if (tileTexture) {
+                        ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
+                    }
+                }
+            }
+        
+            // Draw the player
+            ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+        }
+        
+        // Start the game by drawing the initial state
+        preloadImages().then(() => {
+            // Once all images are loaded, start the game
+            drawGame();
+        }).catch((error) => {
+            console.error('Error loading images:', error);
+        });
+    }    
 }
