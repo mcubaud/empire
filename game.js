@@ -1085,7 +1085,7 @@ function explore(){
                 enemies = [
                     { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
                     { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                    { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
+                    { enemy_health: 60, enemy_attack: 50, enemy_name: 'Squelette_2', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
                 ];
             }else{
                 enemies = [
@@ -1160,42 +1160,75 @@ function explore(){
         }
     }
 
-    function resetGame() {
-        player_explo.x = 1;
-        player_explo.y = 1;
-        drawGame();
+    // Preload textures for dungeon elements and player
+    const textures = {};
+    function preloadImages() {
+        const imagePaths = {
+            wall: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbhZvubZPlfaV3ZxJypMD2DaFxzlrzaLCiw&s',
+            exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
+            empty: 'https://i.pinimg.com/564x/f3/35/31/f3353127757ef21594dddeea2fc32d0c.jpg',
+            chest: 'https://www.1001hobbies.fr/1936391-large_default/wizkids-wzk89714-dungeons-and-dragons-onslaught-deluxe-treasure-chest.jpg',
+            trap: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSls66euld4o7qI6eA80v5SWyE9u0x2krYzbA&s',
+            enemy: 'game/images/enemy.png',
+            player: 'game/images/squelette_1.png'
+        };
+
+        const promises = Object.keys(imagePaths).map((key) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = imagePaths[key];
+                img.onload = () => {
+                    textures[key] = img;
+                    resolve();
+                };
+                img.onerror = reject;
+            });
+        });
+
+        return Promise.all(promises);
     }
 
     function drawGame() {
         // Clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    
         // Draw the map
         for (let y = 0; y < rows; y++) {
             for (let x = 0; x < cols; x++) {
+                let tileTexture;
+    
+                // Determine the texture based on the map value
                 if (explo_map[y][x] === 1) {
-                    ctx.fillStyle = 'gray'; // Wall
+                    tileTexture = textures.wall; // Wall
                 } else if (explo_map[y][x] === 2) {
-                    ctx.fillStyle = 'green'; // Exit
-                } else if (explo_map[y][x] === 0){
-                    ctx.fillStyle = 'black'; // Empty space
-                } else if (explo_map[y][x] === 3){
-                    ctx.fillStyle = '#6f451f'; // chest
-                } else if (explo_map[y][x] === 4){
-                    ctx.fillStyle = '#160000'; // trap
-                } else if (explo_map[y][x] === 5){
-                    ctx.fillStyle = 'red'; // enemy
+                    tileTexture = textures.exit; // Exit
+                } else if (explo_map[y][x] === 0) {
+                    tileTexture = textures.empty; // Empty space
+                } else if (explo_map[y][x] === 3) {
+                    tileTexture = textures.chest; // Chest
+                } else if (explo_map[y][x] === 4) {
+                    tileTexture = textures.trap; // Trap
+                } else if (explo_map[y][x] === 5) {
+                    tileTexture = textures.enemy; // Enemy
                 }
-            
-                ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+    
+                // Draw the tile texture
+                if (tileTexture) {
+                    ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
+                }
             }
         }
-
-        // Draw the player_explo
-        ctx.fillStyle = player_explo.color;
-        ctx.fillRect(player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+    
+        // Draw the player
+        ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
     }
-
+    
     // Start the game by drawing the initial state
-    drawGame();
+    preloadImages().then(() => {
+        // Once all images are loaded, start the game
+        drawGame();
+    }).catch((error) => {
+        console.error('Error loading images:', error);
+    });
+    
 }
