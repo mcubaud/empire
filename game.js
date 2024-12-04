@@ -1296,26 +1296,31 @@ function explore(remaining_levels){
                     // Determine the texture based on the map value
                     if (explo_map[y][x] === 1) {
                         tileTexture = textures.wall; // Wall
+                        ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
                     } else if (explo_map[y][x] === 2) {
                         tileTexture = textures.exit; // Exit
+                        ctx.drawImage(textures.empty, x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
                     } else if (explo_map[y][x] === 0) {
-                        tileTexture = textures.empty; // Empty space
+                        ctx.drawImage(textures.empty, x * tileSize, y * tileSize, tileSize, tileSize); // Empty space
                     } else if (explo_map[y][x] === 3) {
                         tileTexture = textures.chest; // Chest
+                        ctx.drawImage(textures.empty, x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
                     } else if (explo_map[y][x] === 4) {
                         tileTexture = textures.trap; // Trap
+                        ctx.drawImage(textures.empty, x * tileSize, y * tileSize, tileSize, tileSize);
+                        ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
                     } else if (explo_map[y][x] === 5) {
                         tileTexture = textures.enemy; // Enemy
-                    }
-        
-                    // Draw the tile texture
-                    if (tileTexture) {
+                        ctx.drawImage(textures.empty, x * tileSize, y * tileSize, tileSize, tileSize);
                         ctx.drawImage(tileTexture, x * tileSize, y * tileSize, tileSize, tileSize);
                     }
                 }
             }
         
             // Draw the player
+            ctx.drawImage(textures.empty, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
             ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
         }
         
