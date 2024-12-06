@@ -1257,20 +1257,23 @@ function explore(remaining_levels){
                 }
                 else{
                     //alert("The chest was trapped !");
-                    pv_div.style.animation = "shake 0.5s ease-in-out";
-                    setTimeout(()=>{
-                        pv_div.style.animation = "";
-                        ctx.drawImage(textures.trap_activated, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
-                    }, 1000);
                     
-                    player_health -=10;
-                    pv_div.textContent = `PV : ${player_health}`;
-                    if (player_health <= 0) {
-                        // Player defeated
-                        setTimeout(()=>{
-                            handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
-                            },100);
-                    }
+                    setTimeout(()=>{
+                        ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+                        ctx.drawImage(textures.trap_activated, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+                        pv_div.style.animation = "shake 0.5s ease-in-out";
+                        player_health -=10;
+                        pv_div.textContent = `PV : ${player_health}`;
+                        if (player_health <= 0) {
+                            // Player defeated
+                            setTimeout(()=>{
+                                handleDefeat("Vous êtes mort ! Plus rien ne peut empêcher l'Empire de sombrer désormais...");
+                                },100);
+                        }
+                        setTimeout(()=>{pv_div.style.animation = "";}, 500);
+                    }, 4*interval);
+                    
+                    
                 }
                 explo_map[player_explo.y][player_explo.x] = 0;
             }
