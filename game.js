@@ -1184,7 +1184,7 @@ function explore(remaining_levels){
                     enemies = [
                         { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
                         { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                        { enemy_health: 60, enemy_attack: 50, enemy_name: 'Squelette_2', enemy_image: 'game/images/squelette_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
+                        { enemy_health: 60, enemy_attack: 50, enemy_name: 'Squelette', enemy_image: 'game/images/squelette_2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
                     ];
                 }else{
                     enemies = [
