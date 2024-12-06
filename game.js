@@ -1134,11 +1134,11 @@ function explore(remaining_levels){
                     if (explo_map[player_explo.y][player_explo.x + 1] !== 1) player_explo.x += 1;
                     break;
             }
+            drawGame();
             checkGoal();
             checkTrap();
             checkChest();
             checkEnemy();
-            drawGame();
         }
 
         function checkGoal() {
@@ -1151,9 +1151,12 @@ function explore(remaining_levels){
 
         function checkTrap() {
             if (explo_map[player_explo.y][player_explo.x] === 4) {
-                alert('You walked on a trap!');
+                //alert('You walked on a trap!');
+                ctx.drawImage(textures.trap_activated, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
                 player_health -=10;
                 pv_div.textContent = `PV : ${player_health}`;
+                pv_div.style.animation = "shake 0.5s ease-in-out";
+                setTimeout(()=>{pv_div.style.animation = "";}, 500);
                 explo_map[player_explo.y][player_explo.x] = 0;
                 if (player_health <= 0) {
                     // Player defeated
@@ -1257,14 +1260,15 @@ function explore(remaining_levels){
         }
 
         // Preload textures for dungeon elements and player
-        const textures = {};
+        var textures = {};
         function preloadImages() {
             const imagePaths = {
-                wall: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbhZvubZPlfaV3ZxJypMD2DaFxzlrzaLCiw&s',
+                wall: 'game/images/dungeon/walls.png',
                 exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
-                empty: 'https://i.pinimg.com/564x/f3/35/31/f3353127757ef21594dddeea2fc32d0c.jpg',
-                chest: 'https://www.1001hobbies.fr/1936391-large_default/wizkids-wzk89714-dungeons-and-dragons-onslaught-deluxe-treasure-chest.jpg',
-                trap: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSls66euld4o7qI6eA80v5SWyE9u0x2krYzbA&s',
+                empty: 'game/images/dungeon/floors.png',
+                chest: 'game/images/dungeon/tresor.png',
+                trap: 'game/images/dungeon/trap.png',
+                trap_activated: 'game/images/dungeon/trap_activated.png',
                 enemy: 'game/images/squelette_1.png',
                 player: 'game/images/player.png'
             };
@@ -1320,7 +1324,7 @@ function explore(remaining_levels){
             }
         
             // Draw the player
-            ctx.drawImage(textures.empty, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+            //ctx.drawImage(textures.empty, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
             ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
         }
         
