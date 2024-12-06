@@ -1213,7 +1213,8 @@ function explore(remaining_levels){
 
         function checkChest(){
             if (explo_map[player_explo.y][player_explo.x] === 3) {
-                alert("You found a chest !");
+                //alert("You found a chest !");
+                ctx.drawImage(textures.chest_open, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
                 if(Math.random()<=0.5){
                     const lootDiv = document.createElement('div');
                     lootDiv.style.position = 'absolute';
@@ -1245,7 +1246,13 @@ function explore(remaining_levels){
                     goldDisplay.textContent = `Gold: ${player_gold}`;
                 }
                 else{
-                    alert("The chest was trapped !");
+                    //alert("The chest was trapped !");
+                    pv_div.style.animation = "shake 0.5s ease-in-out";
+                    setTimeout(()=>{
+                        pv_div.style.animation = "";
+                        ctx.drawImage(textures.trap_activated, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+                    }, 1000);
+                    
                     player_health -=10;
                     pv_div.textContent = `PV : ${player_health}`;
                     if (player_health <= 0) {
@@ -1267,6 +1274,7 @@ function explore(remaining_levels){
                 exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
                 empty: 'game/images/dungeon/floors.png',
                 chest: 'game/images/dungeon/tresor.png',
+                chest_open: 'game/images/dungeon/tresor.gif',
                 trap: 'game/images/dungeon/trap.png',
                 trap_activated: 'game/images/dungeon/trap_activated.png',
                 enemy: 'game/images/squelette_1.png',
