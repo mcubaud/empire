@@ -1313,7 +1313,7 @@ function explore(remaining_levels){
         function preloadImages() {
             const imagePaths = {
                 wall: 'game/images/dungeon/walls.png',
-                exit: 'https://www.shutterstock.com/image-illustration/medieval-arch-wooden-closed-castle-600nw-2190794637.jpg',
+                exit: 'game/images/dungeon/exit.png',
                 empty: 'game/images/dungeon/floors.png',
                 chest: 'game/images/dungeon/tresor.png',
                 chest_1:'game/images/dungeon/tresor1.png',
@@ -1322,7 +1322,7 @@ function explore(remaining_levels){
                 trap: 'game/images/dungeon/trap.png',
                 trap_activated: 'game/images/dungeon/trap_activated.png',
                 enemy: 'game/images/squelette_1.png',
-                player: 'game/images/player.png'
+                player: 'game/images/dungeon/player.png'
             };
 
             const promises = Object.keys(imagePaths).map((key) => {
@@ -1405,19 +1405,22 @@ function explore(remaining_levels){
             for(let i=0; i<list_enemies.length; i++){
                 var enemy = list_enemies[i];
                 if(explo_map[enemy.y + enemy.dy][enemy.x + enemy.dx] === 0){//move the enemy only to empty cells
-                    move_ennemy(enemy)
+                    move_ennemy(enemy);
                 }else{//the enemy chose a new random direction
                     var rand1 = (Math.random()>0.5);
                     var rand2 = 2 * ((Math.random()>0.5) - 0.5);
                     enemy.dx = rand1 * rand2;
                     enemy.dy= (1-rand1) * rand2;
                     if(explo_map[enemy.y + enemy.dy][enemy.x + enemy.dx] === 0){//move the enemy only to empty cells
-                        move_ennemy(enemy)
+                        move_ennemy(enemy);
                     }
                 }
                 if(enemy.strategy == "chase"){
+                    
                     enemy.dx =  (enemy.x < player.x) - (enemy.x > player.x);//if player.x > enemy.x, go to the right
                     enemy.dy = (1-enemy.dx**2) * ((enemy.y < player.y) - (enemy.y > player.y));//moves in y only if doesn't move in x
+                    console.log(enemy.x,  player.x, enemy.dx);
+                    console.log(enemy.y,  player.y, enemy.dy);
                 }
             }
             checkEnemy();
