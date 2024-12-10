@@ -1219,6 +1219,11 @@ function explore(remaining_levels){
 
         function checkChest(){
             if (explo_map[player_explo.y][player_explo.x] === 3) {
+                //The player can't move while the chest opens
+                document.removeEventListener('keydown', moveplayer_explo);
+                setTimeout(()=>{
+                    document.addEventListener('keydown', moveplayer_explo);
+                }, 600);
                 //alert("You found a chest !");
                 ctx.drawImage(textures.chest, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
                 var interval = 200
@@ -1281,6 +1286,7 @@ function explore(remaining_levels){
                     
                     
                 }
+                
                 explo_map[player_explo.y][player_explo.x] = 0;
             }
         }
