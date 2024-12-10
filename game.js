@@ -1079,11 +1079,16 @@ function explore(remaining_levels){
                             //Enemies
                             var rand1 = (Math.random()>0.5)
                             var rand2 = 2 * ((Math.random()>0.5) - 0.5)
+                            var strategy = "random"
+                            if(Math.random()>0.8){
+                                strategy = "chase";
+                            }
                             var enemy={
                                 "x":x,
                                 "y":y,
                                 "dx": rand1 * rand2,
-                                "dy": (1-rand1) * rand2
+                                "dy": (1-rand1) * rand2,
+                                "strategy": strategy
                             }
                             list_enemies.push(enemy);
                         }
@@ -1389,19 +1394,30 @@ function explore(remaining_levels){
         });
 
         function move_enemies(){
+            function move_ennemy(enemy){
+                ctx.drawImage(textures.empty, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
+                enemy.x = enemy.x + enemy.dx;
+                enemy.y = enemy.y + enemy.dy;
+                ctx.drawImage(textures.empty, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
+                ctx.drawImage(textures.enemy, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
+            }
+
             for(let i=0; i<list_enemies.length; i++){
                 var enemy = list_enemies[i];
                 if(explo_map[enemy.y + enemy.dy][enemy.x + enemy.dx] === 0){//move the enemy only to empty cells
-                    ctx.drawImage(textures.empty, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
-                    enemy.x = enemy.x + enemy.dx;
-                    enemy.y = enemy.y + enemy.dy;
-                    ctx.drawImage(textures.empty, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
-                    ctx.drawImage(textures.enemy, enemy.x * tileSize, enemy.y * tileSize, tileSize, tileSize);
+                    move_ennemy(enemy)
                 }else{//the enemy chose a new random direction
                     var rand1 = (Math.random()>0.5);
                     var rand2 = 2 * ((Math.random()>0.5) - 0.5);
                     enemy.dx = rand1 * rand2;
                     enemy.dy= (1-rand1) * rand2;
+                    if(explo_map[enemy.y + enemy.dy][enemy.x + enemy.dx] === 0){//move the enemy only to empty cells
+                        move_ennemy(enemy)
+                    }
+                }
+                if(enemy.strategy == "chase"){
+                    enemy.dx =  (enemy.x < player.x) - (enemy.x > player.x);//if player.x > enemy.x, go to the right
+                    enemy.dy = (1-enemy.dx**2) * ((enemy.y < player.y) - (enemy.y > player.y));//moves in y only if doesn't move in x
                 }
             }
             checkEnemy();
