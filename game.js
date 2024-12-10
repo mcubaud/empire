@@ -1216,7 +1216,7 @@ function explore(remaining_levels){
                 }
             }
             if(enemies_to_fight.length>0){
-                clearInterval(move_enemies);
+                clearInterval(move_enemies_set_interval);
                 backgroundImage = 'game/images/dungeon.jpg';
                 victoryMessage = `Victoire !`;
                 startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
@@ -1228,7 +1228,7 @@ function explore(remaining_levels){
                     ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
                     potion_div.textContent = `Potions : ${healing_potions}`;
                     pv_div.textContent = `PV : ${player_health}`;
-                    setInterval(move_enemies, enemy_speed);
+                    move_enemies_set_interval = setInterval(move_enemies, enemy_speed);
                 }
             }
             list_enemies = new_list_enemies;
