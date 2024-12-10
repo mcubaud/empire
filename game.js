@@ -1001,7 +1001,7 @@ function explore(remaining_levels){
         var rows = canvas.height / tileSize;
         var cols = canvas.width / tileSize;
 
-        var list_enemies = [];
+        list_enemies = [];
 
         function generateDungeon() {
             // Initialize map with walls
