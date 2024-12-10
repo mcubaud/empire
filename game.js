@@ -1417,10 +1417,10 @@ function explore(remaining_levels){
                 }
                 if(enemy.strategy == "chase"){
                     
-                    enemy.dx =  (enemy.x < player.x) - (enemy.x > player.x);//if player.x > enemy.x, go to the right
-                    enemy.dy = (1-enemy.dx**2) * ((enemy.y < player.y) - (enemy.y > player.y));//moves in y only if doesn't move in x
-                    console.log(enemy.x,  player.x, enemy.dx);
-                    console.log(enemy.y,  player.y, enemy.dy);
+                    enemy.dx =  (enemy.x < player_explo.x) - (enemy.x > player_explo.x);//if player.x > enemy.x, go to the right
+                    enemy.dy = (1-enemy.dx**2) * ((enemy.y < player_explo.y) - (enemy.y > player_explo.y));//moves in y only if doesn't move in x
+                    console.log(enemy.x,  player_explo.x, enemy.dx);
+                    console.log(enemy.y,  player_explo.y, enemy.dy);
                 }
             }
             checkEnemy();
