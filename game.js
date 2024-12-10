@@ -1093,9 +1093,9 @@ function explore(remaining_levels){
                 }
             }
         
-            const numEnemies = Math.floor(Math.random() * 5) + 2; // 5 to 15 enemies
+            const numEnemies = Math.floor(Math.random() * 5) + 2; // 2 to 7 enemies
             const numTraps = Math.floor(Math.random() * 10) + 5; // 5 to 15 traps
-            const numChests = Math.floor(Math.random() * 4) + 1; // 3 to 8 chests
+            const numChests = Math.floor(Math.random() * 4) + 1; // 1 to 5 chests
         
             placeElement(5, numEnemies); // Place enemies
             placeElement(4, numTraps); // Place traps
@@ -1219,6 +1219,8 @@ function explore(remaining_levels){
                     player_gold +=50;
                     goldDisplay.textContent = `Gold: ${player_gold}`;
                     explo_map[player_explo.y][player_explo.x] = 0;
+                    ctx.drawImage(textures.empty, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
+                    ctx.drawImage(textures.player, player_explo.x * tileSize, player_explo.y * tileSize, tileSize, tileSize);
                     potion_div.textContent = `Potions : ${healing_potions}`;
                     pv_div.textContent = `PV : ${player_health}`;
                     setInterval(move_enemies, enemy_speed);
