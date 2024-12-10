@@ -1080,7 +1080,7 @@ function explore(remaining_levels){
                             var rand1 = (Math.random()>0.5)
                             var rand2 = 2 * ((Math.random()>0.5) - 0.5)
                             var strategy = "random"
-                            if(Math.random()>0.8){
+                            if(Math.random()>0.2){
                                 strategy = "chase";
                             }
                             var enemy={
