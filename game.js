@@ -1210,7 +1210,7 @@ function explore(remaining_levels){
                     new_list_enemies.push(enemy);
                 }
             }
-            if(length(enemies_to_fight)>0){
+            if(enemies_to_fight.length>0){
                 clearInterval(move_enemies);
                 backgroundImage = 'game/images/dungeon.jpg';
                 victoryMessage = `Victoire !`;
