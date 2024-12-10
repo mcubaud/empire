@@ -735,7 +735,7 @@ function executeLightAttack() {
         }, 500);
 
         if (newEnemyHealth === 0) {
-            delay += 1000;
+            delay += 100;
             dropLoot(enemyDiv);
             enemyDiv.style.animation = 'shieldBreak 1s ease-out forwards';
             setTimeout(() => { enemyDiv.remove() }, 1000);
