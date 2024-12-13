@@ -1217,7 +1217,7 @@ function explore(remaining_levels){
             }
             if(enemies_to_fight.length>0){
                 clearInterval(move_enemies_set_interval);
-                backgroundImage = 'game/images/dungeon.jpg';
+                backgroundImage = 'game/images/dungeon2.jpg';
                 victoryMessage = `Victoire !`;
                 startCombat(begginingMessage, enemies, backgroundImage, victoryMessage);
                 after_function = function(){
