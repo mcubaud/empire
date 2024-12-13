@@ -1182,13 +1182,14 @@ function explore(remaining_levels){
                     roll = Math.random()
                     if( roll <= 0.3){
                         enemies = [
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 },
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat2.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3 }
+                            { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat1.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3}
                         ];
+                        for(let j=0; j<8 ; j++){
+                            if(Math.random()<0.5){
+                                enemies.push(
+                                    { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat'+1+j%2+'.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3}
+                                )
+                            }
                         enemies_to_fight = enemies_to_fight.concat(enemies);
                     }else if(roll <= 0.4){
                         enemies = [
@@ -1200,7 +1201,7 @@ function explore(remaining_levels){
                     }else{
                         enemies = [
                             { enemy_health: 90, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort3.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                            { enemy_health: 60, enemy_attack: 30, enemy_name: 'Squelette', enemy_image: 'game/images/mort3.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
                             { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
                         ];
                         enemies_to_fight = enemies_to_fight.concat(enemies);
