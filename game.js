@@ -1199,9 +1199,9 @@ function explore(remaining_levels){
                         enemies_to_fight = enemies_to_fight.concat(enemies);
                     }else{
                         enemies = [
-                            { enemy_health: 90, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort_2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort_3.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
-                            { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort_1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
+                            { enemy_health: 90, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort2.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                            { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort3.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3},
+                            { enemy_health: 60, enemy_attack: 20, enemy_name: 'Squelette', enemy_image: 'game/images/mort1.png', enemy_height: 350 , proba_gold: 0.8, proba_potion: 0.3 },
                         ];
                         enemies_to_fight = enemies_to_fight.concat(enemies);
                     }
