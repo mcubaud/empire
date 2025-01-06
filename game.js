@@ -1190,6 +1190,7 @@ function explore(remaining_levels){
                                     { enemy_health: 10, enemy_attack: 5, enemy_name: 'Rat', enemy_image: 'game/images/rat'+1+j%2+'.png', enemy_height: 100 , proba_gold: 0.8, proba_potion: 0.3}
                                 )
                             }
+                        }
                         enemies_to_fight = enemies_to_fight.concat(enemies);
                     }else if(roll <= 0.4){
                         enemies = [
