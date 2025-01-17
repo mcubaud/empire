@@ -169,7 +169,7 @@ class Army {
         }),
       }).addTo(mymap); // Add marker to the mymap
       this.marker.army = this;
-      this.marker.onclick = show_available_mvmt;
+      this.marker.onclick = this.show_available_mvmt;
     } else {
       this.marker.setLatLng(position); // Update position
       this.marker.setIcon(
