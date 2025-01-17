@@ -65,6 +65,7 @@ request_strat.onload = function() {
   player1 = new Player("Alice", "blue");
   list_hexs = hex_group.getLayers()[0].getLayers()
   compute_neighbors()
+  create_cities()
   hex0 = list_hexs[0]
   army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
   player_turn = player1;
@@ -310,7 +311,7 @@ function create_cities(){
     if(layer.feature.properties.Ville==1){
       col = layer.feature.properties.col_index
       row = layer.feature.properties.row_index
-      var city = new City("", layer, col, row, layer.feature.properties.population);
+      var city = new City("", layer, col, row, layer.feature.properties.Population);
       list_cities.push(city);
     }
   })
