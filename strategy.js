@@ -1,4 +1,5 @@
 var geojsonDataUrl = '.strategy_game/grille.geojson';
+var geojsondata = {};
 var terrainColors = {
     "forêt": "#228B22", // Forest: Green
     "montagne": "#A9A9A9", // Mountain: Gray
@@ -40,6 +41,7 @@ var terrainColors = {
   fetch(geojsonDataUrl)
     .then(response => response.json())
     .then(data => {
+      geojsondata = data;
       L.geoJSON(data, {
         style: styleFeature,
         onEachFeature: onEachFeature
