@@ -10,10 +10,10 @@ var terrainColors = {
   // Style function for GeoJSON
   function styleFeature(feature) {
     return {
-      color: 'black', // Border color
-      weight: 1, // Border width
-      fillColor: terrainColors[feature.properties.type] || '#FFFFFF', // Default white if unknown
-      fillOpacity: 0.3 // Transparency
+      color: terrainColors[feature.properties.type] || '#FFFFFF', // Border color
+      weight: 1.1, // Border width
+      fillColor: white, // Default white if unknown
+      fillOpacity: 0 // Transparency
     };
   }
 
@@ -210,7 +210,7 @@ class City {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
-        <img src="city-icon.png" style="width: 32px; height: 32px;" />
+        <img src="Blasons/pontcastel.png" style="width: 32px; height: 32px;" />
         <div>${this.population}</div>
       </div>
     `;
@@ -257,13 +257,31 @@ class City {
 }
 
 list_hexs = hex_group.getLayers()[0].getLayers()
+function compute_neighbors(){
+  list_hexs.forEach(layer=>{
+    let col = layer.feature.properties.col_index;
+    let row = layer.feature.properties.row_index;
+    layer.neighbors = [];
+    list_hexs.forEach(layer2=>{
+      let col2 = layer2.feature.properties.col_index;
+      let row2 = layer2.feature.properties.row_index;
+      if( ((col2 == col) && (Math.abs(row2 - row) == 1)) || ((Math.abs(col2 - col) == 1) && (row2 == row) )  || ((Math.abs(col2 - col) == 1) && (row2 == row - 1 + 2*(col%2) ) )){
+        layer.neighbors.push(layer2)
+      }
+    });
+  })
+}
+compute_neighbors()
+
 function create_cities(){
+  list_cities = [];
   list_hexs.forEach(layer=>{
     //console.log(layer)
     if(layer.feature.properties.Ville==1){
       col = layer.feature.properties.col_index
       row = layer.feature.properties.row_index
-      new City("", layer, col, row, layer.feature.properties.population);
+      var city = new City("", layer, col, row, layer.feature.properties.population);
+      list_cities.push(city);
     }
   })
 }
