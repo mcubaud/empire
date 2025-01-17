@@ -149,7 +149,7 @@ class Army {
     this.hex = newhex;
     this.row = this.hex.feature.properties.row_index;
     this.col = this.hex.feature.properties.col_index;
-    this.exhaustion += move_cost(hex); // Increase exhaustion when moving
+    this.exhaustion += move_cost(this.hex); // Increase exhaustion when moving
     this.updateMarker(); // Move the marker to the new position
     if(! this.hex.army){
       this.hex.army = this;//simply move
@@ -200,11 +200,11 @@ class Army {
       this.hex.neighbors.forEach(neighbor=>{
         if(initial_mvmt - this.exhaustion > move_cost(neighbor)){
           neighbor.setStyle({fillColor:"#62c123", fillOpacity:0.7})
-          neighbor.removePopup();
-          neighbor.onclick = function(){
-            this.move(neighbor);
-            this.show_available_mvmt();
-          }
+          var this_army = this;
+          neighbor.addEventListener("click", function(){
+            this_army.move(neighbor);
+            this_army.show_available_mvmt();
+          });
         }
         
       })
@@ -333,6 +333,7 @@ function create_cities(){
 function reset_hexs(){
   list_hexs.forEach(hex=>{
     hex.onclick=function(){}//reset the function
+    hex.removeEventListener("click");
     hex.setStyle(styleFeature(hex.feature))//reset the style
     onEachFeature(hex.feature, hex)
   })
