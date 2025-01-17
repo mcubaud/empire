@@ -36,11 +36,11 @@ var terrainColors = {
     } else {
       popupContent += `<b>City:</b> No<br>`;
     }
-    layer.bindPopup(popupContent);
+    layer.bindTooltip(popupContent);
   }
 
 function move_cost(hex){
-  if(["forêt", "montagne"].includes(hex.properties.type)){
+  if(["forêt", "montagne"].includes(hex.feature.properties.type)){
     return 2
   }else{
     return 1
@@ -157,7 +157,7 @@ class Army {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
-        <img src="game/images/dungeon/player.png" style="width: 24px; height: 24px;" />
+        <img src="game/images/player.png" style="width: 100px; height: 100px;" />
         <div>${this.soldiers}</div>
       </div>
     `;
@@ -188,6 +188,7 @@ class Army {
       this.hex.neighbors.forEach(neighbor=>{
         if(initial_mvmt - this.exhaustion > move_cost(neighbor)){
           neighbor.setStyle({fillColor:"#62c123", fillOpacity:0.7})
+          neighbor.removePopup();
           neighbor.onclick = function(){
             this.move(neighbor);
             this.show_available_mvmt();
