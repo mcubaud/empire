@@ -38,12 +38,12 @@ var terrainColors = {
   }
 
 var requestURL = 'strategy_game/grille.geojson';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-  geojsondata=request.response;
+var request_strat = new XMLHttpRequest();
+request_strat.open('GET', requestURL);
+request_strat.responseType = 'json';
+request_strat.send();
+request_strat.onload = function() {
+  geojsondata=request_strat.response;
   L.geoJSON(geojsondata, {
     style: styleFeature,
     onEachFeature: onEachFeature
