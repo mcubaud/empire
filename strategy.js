@@ -13,7 +13,7 @@ var terrainColors = {
     return {
       color: terrainColors[feature.properties.type] || '#FFFFFF', // Border color
       weight: 1.1, // Border width
-      fillColor: white, // Default white if unknown
+      fillColor: '#FFFFFF', // Default white if unknown
       fillOpacity: 0 // Transparency
     };
   }
