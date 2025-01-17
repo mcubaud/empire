@@ -145,11 +145,23 @@ class Army {
 
   // Move the army to a new position
   move(newhex) {
+    this.hex.army = null;
     this.hex = newhex;
     this.row = this.hex.feature.properties.row_index;
     this.col = this.hex.feature.properties.col_index;
     this.exhaustion += move_cost(hex); // Increase exhaustion when moving
     this.updateMarker(); // Move the marker to the new position
+    if(! this.hex.army){
+      this.hex.army = this;//simply move
+    }else if(this.owner == this.hex.army.owner){
+      this.addSoldiers(this.hex.army.soldiers)
+      this.hex.army.owner.removeArmy(this.hex.army);
+      mymap.removeLayer(this.hex.army.marker);
+      //Merge armies
+    }else{
+      console.log("bataille");
+      //bataille
+    }
   }
 
   // Update the Leaflet marker for the army
