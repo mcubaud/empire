@@ -62,8 +62,12 @@ request_strat.onload = function() {
   // Adjust the mymap view to fit the data bounds
   var bounds = L.geoJSON(geojsondata).getBounds();
   mymap.fitBounds(bounds);
-  //group.clearLayers();
-  //mymap.removeEventListener("zoomend", mettre_a_jour_carte);
+  player1 = new Player("Alice", "blue");
+  list_hexs = hex_group.getLayers()[0].getLayers()
+  compute_neighbors()
+  hex0 = list_hexs[0]
+  army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
+  player_turn = player1;
 }
 
 // Class for Players
@@ -282,7 +286,7 @@ class City {
 
 }
 
-list_hexs = hex_group.getLayers()[0].getLayers()
+
 function compute_neighbors(){
   list_hexs.forEach(layer=>{
     let col = layer.feature.properties.col_index;
@@ -297,7 +301,7 @@ function compute_neighbors(){
     });
   })
 }
-compute_neighbors()
+
 
 function create_cities(){
   list_cities = [];
@@ -320,7 +324,3 @@ function reset_hexs(){
   })
 }
 
-player1 = new Player("Alice", "blue");
-hex0 = list_hexs[0]
-army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
-player_turn = player1;
