@@ -1,4 +1,5 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
+hex_group = L.featureGroup().addTo(mymap);
 var geojsondata = {};
 var terrainColors = {
     "forêt": "#228B22", // Forest: Green
@@ -47,7 +48,7 @@ request_strat.onload = function() {
   L.geoJSON(geojsondata, {
     style: styleFeature,
     onEachFeature: onEachFeature
-  }).addTo(mymap);
+  }).addTo(hex_group);
 
   // Adjust the mymap view to fit the data bounds
   var bounds = L.geoJSON(geojsondata).getBounds();
@@ -105,8 +106,9 @@ class Player {
 
 // Class for Armies
 class Army {
-  constructor(soldiers, row, col, owner = null) {
+  constructor(soldiers, hex, row, col, owner = null) {
     this.soldiers = soldiers; // Number of soldiers in the army
+    this.hex = hex;
     this.row = row; // Current row position on the grid
     this.col = col; // Current column position on the grid
     this.owner = owner; // Owner of the army
@@ -231,7 +233,7 @@ class City {
 
   // Produce soldiers based on population
   produceSoldiers() {
-    return 10 + Math.floor(this.population / 100); // Example: 1 soldier per 10 population
+    return 10 + Math.floor(this.population / 100);
   }
 
 
