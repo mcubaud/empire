@@ -123,6 +123,7 @@ class Army {
   constructor(soldiers, hex, row, col, owner = null) {
     this.soldiers = soldiers; // Number of soldiers in the army
     this.hex = hex;
+    this.hex.army = this;
     this.row = row; // Current row position on the grid
     this.col = col; // Current column position on the grid
     this.owner = owner; // Owner of the army
@@ -182,7 +183,7 @@ class Army {
         }),
       }).addTo(mymap); // Add marker to the mymap
       this.marker.army = this;
-      this.marker.onclick = this.show_available_mvmt;
+      this.marker.addEventListener("click", this.show_available_mvmt);
     } else {
       this.marker.setLatLng(position); // Update position
       this.marker.setIcon(
