@@ -140,7 +140,7 @@ class Army {
 
   // Update the Leaflet marker for the army
   updateMarker() {
-    const position = this.hex.getLatLng(); // Assuming grid coordinates match mymap lat/lng
+    const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
         <img src="army-icon.png" style="width: 24px; height: 24px;" />
@@ -207,7 +207,7 @@ class City {
 
   // Update the Leaflet marker for the city
   updateMarker() {
-    const position = this.hex.getLatLng(); // Assuming grid coordinates match mymap lat/lng
+    const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
         <img src="city-icon.png" style="width: 32px; height: 32px;" />
