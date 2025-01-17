@@ -60,7 +60,7 @@ request_strat.onload = function() {
 class Player {
   constructor(name, color) {
     this.name = name; // Name of the player
-    this.color = color; // Player's color (e.g., for map/army representation)
+    this.color = color; // Player's color (e.g., for mymap/army representation)
     this.cities = []; // List of cities controlled by the player
     this.armies = []; // List of armies controlled by the player
   }
@@ -137,7 +137,7 @@ class Army {
 
   // Update the Leaflet marker for the army
   updateMarker() {
-    const position = [this.row, this.col]; // Assuming grid coordinates match map lat/lng
+    const position = [this.row, this.col]; // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
         <img src="army-icon.png" style="width: 24px; height: 24px;" />
@@ -151,7 +151,7 @@ class Army {
           className: 'army-marker',
           html: htmlContent,
         }),
-      }).addTo(mymap); // Add marker to the map
+      }).addTo(mymap); // Add marker to the mymap
       this.marker.army = this;
     } else {
       this.marker.setLatLng(position); // Update position
@@ -177,7 +177,7 @@ class Army {
     this.updateMarker();
     if (this.soldiers === 0) {
       if (this.owner) this.owner.removeArmy(this);
-      mymap.removeLayer(this.marker); // Remove marker from map
+      mymap.removeLayer(this.marker); // Remove marker from mymap
     }
   }
 }
@@ -203,7 +203,7 @@ class City {
 
   // Update the Leaflet marker for the city
   updateMarker() {
-    const position = [this.row, this.col]; // Assuming grid coordinates match map lat/lng
+    const position = [this.row, this.col]; // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
         <img src="city-icon.png" style="width: 32px; height: 32px;" />
@@ -217,7 +217,7 @@ class City {
           className: 'city-marker',
           html: htmlContent,
         }),
-      }).addTo(map); // Add marker to the map
+      }).addTo(mymap); // Add marker to the mymap
     } else {
       this.marker.setLatLng(position); // Update position
       this.marker.setIcon(
