@@ -52,8 +52,8 @@ request.onload = function() {
   // Adjust the mymap view to fit the data bounds
   var bounds = L.geoJSON(geojsondata).getBounds();
   mymap.fitBounds(bounds);
-  group.clearLayers();
-  mymap.removeEventListener("zoomend");
+  //group.clearLayers();
+  //mymap.removeEventListener("zoomend", mettre_a_jour_carte);
 }
 
 // Class for Players
