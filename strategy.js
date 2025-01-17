@@ -147,6 +147,7 @@ class Army {
   // Move the army to a new position
   move(newhex) {
     this.hex.army = null;
+    this.hex.addEventListener("click");
     this.hex = newhex;
     this.row = this.hex.feature.properties.row_index;
     this.col = this.hex.feature.properties.col_index;
@@ -183,7 +184,7 @@ class Army {
         }),
       }).addTo(mymap); // Add marker to the mymap
       this.marker.army = this;
-      this.marker.addEventListener("click", this.show_available_mvmt);
+      this.hex.addEventListener("click", this.show_available_mvmt);
     } else {
       this.marker.setLatLng(position); // Update position
       this.marker.setIcon(
@@ -202,6 +203,7 @@ class Army {
         if(initial_mvmt - this.exhaustion > move_cost(neighbor)){
           neighbor.setStyle({fillColor:"#62c123", fillOpacity:0.7})
           var this_army = this;
+          neighbor.removeEventListener("click");
           neighbor.addEventListener("click", function(){
             this_army.move(neighbor);
             this_army.show_available_mvmt();
@@ -333,8 +335,14 @@ function create_cities(){
 
 function reset_hexs(){
   list_hexs.forEach(hex=>{
-    hex.onclick=function(){}//reset the function
-    hex.removeEventListener("click");
+    if(!hex.army){
+      hex.onclick=function(){}//reset the function
+      hex.removeEventListener("click");
+    }else{
+      hex.removeEventListener("click");
+      hex.addEventListener("click", hex.army.show_available_mvmt)
+    }
+    
     hex.setStyle(styleFeature(hex.feature))//reset the style
     onEachFeature(hex.feature, hex)
   })
