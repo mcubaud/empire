@@ -99,4 +99,4 @@ function onMapClick(e) {
 }
 mymap.on('click', onMapClick);
 
-mettre_a_jour_carte();
+//mettre_a_jour_carte();
