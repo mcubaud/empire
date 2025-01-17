@@ -1,6 +1,7 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
 hex_group = L.featureGroup().addTo(mymap);
 var geojsondata = {};
+var initial_mvmt = 5;
 var terrainColors = {
     "forêt": "#228B22", // Forest: Green
     "montagne": "#A9A9A9", // Mountain: Gray
@@ -37,6 +38,14 @@ var terrainColors = {
     }
     layer.bindPopup(popupContent);
   }
+
+function move_cost(hex){
+  if(["forêt", "montagne"].includes(hex.properties.type)){
+    return 2
+  }else{
+    return 1
+  }
+}
 
 var requestURL = 'strategy_game/grille.geojson';
 var request_strat = new XMLHttpRequest();
@@ -130,11 +139,11 @@ class Army {
   }
 
   // Move the army to a new position
-  move(newhex, newRow, newCol) {
+  move(newhex) {
     this.hex = newhex;
-    this.row = newRow;
-    this.col = newCol;
-    this.exhaustion += 1; // Increase exhaustion when moving
+    this.row = this.hex.feature.properties.row_index;
+    this.col = this.hex.feature.properties.col_index;
+    this.exhaustion += move_cost(hex); // Increase exhaustion when moving
     this.updateMarker(); // Move the marker to the new position
   }
 
@@ -156,6 +165,7 @@ class Army {
         }),
       }).addTo(mymap); // Add marker to the mymap
       this.marker.army = this;
+      this.marker.onclick = show_available_mvmt;
     } else {
       this.marker.setLatLng(position); // Update position
       this.marker.setIcon(
@@ -164,6 +174,22 @@ class Army {
           html: htmlContent,
         })
       );
+    }
+  }
+
+  show_available_mvmt(){
+    reset_hexs();
+    if(player_turn == this.owner){
+      this.hex.neighbors.forEach(neighbor=>{
+        if(initial_mvmt - this.exhaustion > move_cost(neighbor)){
+          neighbor.setStyle({fillColor:"#62c123", fillOpacity:0.7})
+          neighbor.onclick = function(){
+            this.move(neighbor);
+            this.show_available_mvmt();
+          }
+        }
+        
+      })
     }
   }
 
@@ -286,6 +312,15 @@ function create_cities(){
   })
 }
 
+function reset_hexs(){
+  list_hexs.forEach(hex=>{
+    hex.onclick=function(){}//reset the function
+    hex.setStyle(styleFeature(hex.feature))//reset the style
+    onEachFeature(hex.feature, hex)
+  })
+}
+
 player1 = new Player("Alice", "blue");
 hex0 = list_hexs[0]
 army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
+player_turn = player1;
