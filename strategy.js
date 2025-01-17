@@ -130,7 +130,8 @@ class Army {
   }
 
   // Move the army to a new position
-  move(newRow, newCol) {
+  move(newhex, newRow, newCol) {
+    this.hex = newhex;
     this.row = newRow;
     this.col = newCol;
     this.exhaustion += 1; // Increase exhaustion when moving
@@ -139,7 +140,7 @@ class Army {
 
   // Update the Leaflet marker for the army
   updateMarker() {
-    const position = [this.row, this.col]; // Assuming grid coordinates match mymap lat/lng
+    const position = this.hex.getLatLng(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
         <img src="army-icon.png" style="width: 24px; height: 24px;" />
@@ -186,8 +187,9 @@ class Army {
 
 // Class for Cities
 class City {
-  constructor(name, row, col, population, owner = null) {
+  constructor(name, hex, row, col, population, owner = null) {
     this.name = name; // Name of the city
+    this.hex = hex;
     this.row = row; // Row position on the grid
     this.col = col; // Column position on the grid
     this.population = population; // Population of the city (affects soldier production)
@@ -205,7 +207,7 @@ class City {
 
   // Update the Leaflet marker for the city
   updateMarker() {
-    const position = [this.row, this.col]; // Assuming grid coordinates match mymap lat/lng
+    const position = this.hex.getLatLng(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
         <img src="city-icon.png" style="width: 32px; height: 32px;" />
