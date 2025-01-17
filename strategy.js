@@ -255,3 +255,15 @@ class City {
   }
 
 }
+
+list_hexs = hex_group.getLayers()[0].getLayers()
+function create_cities(){
+  list_hexs.forEach(layer=>{
+    //console.log(layer)
+    if(layer.feature.properties.Ville==1){
+      col = layer.feature.properties.col_index
+      row = layer.feature.properties.row_index
+      new City("", layer, col, row, layer.feature.properties.population);
+    }
+  })
+}
