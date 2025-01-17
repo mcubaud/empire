@@ -143,7 +143,7 @@ class Army {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
-        <img src="army-icon.png" style="width: 24px; height: 24px;" />
+        <img src="game/images/dungeon/player.png" style="width: 24px; height: 24px;" />
         <div>${this.soldiers}</div>
       </div>
     `;
@@ -285,3 +285,7 @@ function create_cities(){
     }
   })
 }
+
+player1 = new Player("Alice", "blue");
+hex0 = list_hexs[0]
+army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
