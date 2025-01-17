@@ -1,4 +1,4 @@
-var geojsonDataUrl = '.strategy_game/grille.geojson';
+var geojsonDataUrl = 'strategy_game/grille.geojson';
 var geojsondata = {};
 var terrainColors = {
     "forêt": "#228B22", // Forest: Green
