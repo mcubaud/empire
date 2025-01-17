@@ -170,7 +170,7 @@ class Army {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
-        <img src="game/images/player.png" style="width: 100px; height: 100px;" />
+        <img src="game/images/player.png" style="width: 32px; height: 32px;" />
         <div>${this.soldiers}</div>
       </div>
     `;
