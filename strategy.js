@@ -29,7 +29,7 @@ var terrainColors = {
       popupContent += `
         <b>City:</b> Yes<br>
         <b>Population:</b> ${props.Population}<br>
-        <b>Owner:</b> ${props.propriétaire}<br>
+        <b>Owner:</b> ${props.owner}<br>
       `;
     } else {
       popupContent += `<b>City:</b> No<br>`;
@@ -39,8 +39,12 @@ var terrainColors = {
 
   // Load GeoJSON data
   fetch(geojsonDataUrl)
-    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      response.json()
+    })
     .then(data => {
+      console.log(data)
       geojsondata = data;
       L.geoJSON(data, {
         style: styleFeature,
