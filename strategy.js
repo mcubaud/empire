@@ -111,6 +111,9 @@ class Army {
     this.col = col; // Current column position on the grid
     this.owner = owner; // Owner of the army
     this.exhaustion = 0; // Exhaustion level (affects battle strength)
+    this.marker = null; // Leaflet marker for the army
+    this.city_stationed = null;
+    this.updateMarker(); // Initialize the marker
   }
 
   // Set the owner of the army
@@ -121,6 +124,7 @@ class Army {
   // Add soldiers to the army
   addSoldiers(count) {
     this.soldiers += count;
+    this.updateMarker(); // Update the marker content
   }
 
   // Move the army to a new position
@@ -128,6 +132,36 @@ class Army {
     this.row = newRow;
     this.col = newCol;
     this.exhaustion += 1; // Increase exhaustion when moving
+    this.updateMarker(); // Move the marker to the new position
+  }
+
+  // Update the Leaflet marker for the army
+  updateMarker() {
+    const position = [this.row, this.col]; // Assuming grid coordinates match map lat/lng
+    const htmlContent = `
+      <div style="text-align: center; color: ${this.owner.color};">
+        <img src="army-icon.png" style="width: 24px; height: 24px;" />
+        <div>${this.soldiers}</div>
+      </div>
+    `;
+
+    if (!this.marker) {
+      this.marker = L.marker(position, {
+        icon: L.divIcon({
+          className: 'army-marker',
+          html: htmlContent,
+        }),
+      }).addTo(mymap); // Add marker to the map
+      this.marker.army = this;
+    } else {
+      this.marker.setLatLng(position); // Update position
+      this.marker.setIcon(
+        L.divIcon({
+          className: 'army-marker',
+          html: htmlContent,
+        })
+      );
+    }
   }
 
   // Engage in battle and calculate strength
@@ -140,8 +174,10 @@ class Army {
   // Take casualties after a battle
   takeCasualties(losses) {
     this.soldiers = Math.max(0, this.soldiers - losses);
+    this.updateMarker();
     if (this.soldiers === 0) {
       if (this.owner) this.owner.removeArmy(this);
+      mymap.removeLayer(this.marker); // Remove marker from map
     }
   }
 }
@@ -155,27 +191,63 @@ class City {
     this.population = population; // Population of the city (affects soldier production)
     this.owner = owner; // Owner of the city
     this.army = null; // Army stationed in the city
+    this.marker = null; // Leaflet marker for the city
+    this.updateMarker(); // Initialize the marker
   }
 
   // Set the owner of the city
   setOwner(player) {
     this.owner = player;
+    this.updateMarker(); // Update the marker to reflect the new owner
+  }
+
+  // Update the Leaflet marker for the city
+  updateMarker() {
+    const position = [this.row, this.col]; // Assuming grid coordinates match map lat/lng
+    const htmlContent = `
+      <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
+        <img src="city-icon.png" style="width: 32px; height: 32px;" />
+        <div>${this.population}</div>
+      </div>
+    `;
+
+    if (!this.marker) {
+      this.marker = L.marker(position, {
+        icon: L.divIcon({
+          className: 'city-marker',
+          html: htmlContent,
+        }),
+      }).addTo(map); // Add marker to the map
+    } else {
+      this.marker.setLatLng(position); // Update position
+      this.marker.setIcon(
+        L.divIcon({
+          className: 'city-marker',
+          html: htmlContent,
+        })
+      );
+    }
   }
 
   // Produce soldiers based on population
   produceSoldiers() {
-    return Math.floor(this.population / 10); // Example: 1 soldier per 10 population
+    return 10 + Math.floor(this.population / 100); // Example: 1 soldier per 10 population
   }
+
 
   // Add an army to the city
   stationArmy(army) {
     this.army = army;
     army.row = this.row;
     army.col = this.col;
+    army.city_stationed = this;
+    this.updateMarker();
   }
 
   // Remove the stationed army
   removeArmy() {
+    this.army.city_stationed = null;
     this.army = null;
   }
+
 }

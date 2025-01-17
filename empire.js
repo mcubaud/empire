@@ -85,7 +85,10 @@ function mettre_a_jour_carte(){
         }
     })
 }
-mymap.addEventListener("zoomend", mettre_a_jour_carte);
+mymap.addEventListener("zoomend",function(e){
+    //Met à jour la carte en cas de zoom.
+    mettre_a_jour_carte();
+});
 
 function onMapClick(e) {
     var popup = L.popup();
