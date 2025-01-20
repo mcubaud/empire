@@ -32,7 +32,7 @@ var terrainColors = {
       popupContent += `
         <b>City:</b> Yes<br>
         <b>Population:</b> ${props.Population}<br>
-        <b>Owner:</b> ${props.owner}<br>
+        <b>Owner:</b> ${props.owner? props.owner: "No owner"}<br>
       `;
     } else {
       popupContent += `<b>City:</b> No<br>`;
@@ -227,7 +227,7 @@ class Army {
 
   // Engage in battle and calculate strength
   calculateStrength(isAttacking, defensiveBonus = 0) {
-    let strength = this.soldiers - this.exhaustion;
+    let strength = this.soldiers * (1 - this.exhaustion * 0.1);
     if (isAttacking) strength *= 1.1; // Attacking bonus
     return strength * (1+defensiveBonus);
   }
@@ -384,12 +384,23 @@ function end_turn(){
       city.population = Math.round(1.01 * city.population);//1% population growth per turn in unoccupied cities;
       onEachFeature(city.hex.feature, city.hex);//update the display
     }
-  })
+  })  
+  if(player_turn.armies.length==0){
+    alert(player_turn.name + " a été vaincu!");
+    turn_number --;//fix turn number so that the next turn remains the next player;
+    list_players = list_players.filter(a => a.name !== player_turn.name);
+    if(list_players.length==1){
+      alert("Victoire de " + list_players[0].name);
+      window.location = ""
+    }
+    end_turn();
+
+  }
 }
 document.getElementById("end_turn").onclick = end_turn;
 
 function update_turn_display(){
-  document.getElementById("current_player").innerHTML = `Tour ${Math.floor(turn_number/list_players.length)+1} de ${player_turn.name}`;
+  document.getElementById("current_player").innerHTML = `Tour de ${player_turn.name}`;
   document.getElementById("current_player").style.color = player_turn.color;
 }
 
@@ -413,4 +424,5 @@ function battle(attacking_army, defending_army){
     attacking_army.owner.removeArmy(attacking_army);
     mymap.removeLayer(attacking_army.marker);
   }
+  //TODO: display the results of the battle in a div
 }
