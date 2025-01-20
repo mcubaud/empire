@@ -155,7 +155,8 @@ class Army {
   // Move the army to a new position
   move(newhex) {
     this.hex.army = null;
-    this.hex.addEventListener("click");
+    if(this.city_stationed) this.city_stationed.removeArmy()
+    this.hex.removeEventListener("click");
     this.hex = newhex;
     this.row = this.hex.feature.properties.row_index;
     this.col = this.hex.feature.properties.col_index;
@@ -171,6 +172,7 @@ class Army {
     }else{
       console.log("bataille");
       //bataille
+      battle(this, this.hex.army);
     }
   }
 
@@ -226,7 +228,7 @@ class Army {
   calculateStrength(isAttacking, defensiveBonus = 0) {
     let strength = this.soldiers - this.exhaustion;
     if (isAttacking) strength *= 1.1; // Attacking bonus
-    return strength + defensiveBonus;
+    return strength * (1+defensiveBonus);
   }
 
   // Take casualties after a battle
@@ -335,7 +337,7 @@ function create_cities(){
     if(layer.feature.properties.Ville==1){
       col = layer.feature.properties.col_index
       row = layer.feature.properties.row_index
-      var city = new City("", layer, col, row, layer.feature.properties.Population);
+      var city = new City("", layer, col, row, layer.feature.properties.Population, layer.feature.owner);
       list_cities.push(city);
     }
   })
@@ -365,10 +367,38 @@ function end_turn(){
     army.exhaustion = Math.max(0, army.exhaustion-3);
   })
   reset_hexs();
+  list_cities.forEach(city=>
+    if(city.hex.army){
+      city.stationArmy(city.hex.army);
+      city.setOwner(city.hex.army.owner);
+    }
+  )
 }
 document.getElementById("end_turn").onclick = end_turn;
 
 function update_turn_display(){
   document.getElementById("current_player").innerHTML = `Tour ${Math.floor(turn_number/list_players.length)+1} de ${player_turn.name}`;
   document.getElementById("current_player").style.color = player_turn.color;
+}
+
+function battle(attacking_army, defending_army){
+  attacking_strength = attacking_army.calculateStrength(true, defensiveBonus = 0);
+  if(defending_army.city_stationed){
+    defending_strength = defending_army.calculateStrength(false, defensiveBonus=0.2)
+  }else{
+    defending_strength = defending_army.calculateStrength(false)
+  }
+  if(attacking_strength>defending_strength){
+    attacking_army.exhaustion+=3
+    attacking_army.takeCasualties(defending_strength);
+    defending_army.soldiers = 0;
+    defending_army.owner.removeArmy(defending_army);
+    mymap.removeLayer(defending_army.marker);
+  }else{
+    defending_army.exhaustion+=3
+    defending_army.takeCasualties(attacking_strength);
+    attacking_army.soldiers = 0;
+    attacking_army.owner.removeArmy(attacking_army);
+    mymap.removeLayer(attacking_army.marker);
+  }
 }
