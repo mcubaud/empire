@@ -65,7 +65,7 @@ request_strat.onload = function() {
   var bounds = L.geoJSON(geojsondata).getBounds();
   mymap.fitBounds(bounds);
   player1 = new Player("Alice", "blue");
-  player2 = new Player("Bob", "red");
+  player2 = new Player("Bob", "red", ai_controlled=true);
   list_players = [player1, player2]
   list_hexs = hex_group.getLayers()[0].getLayers()
   compute_neighbors()
@@ -81,9 +81,10 @@ request_strat.onload = function() {
 
 // Class for Players
 class Player {
-  constructor(name, color) {
+  constructor(name, color, ai_controlled=false) {
     this.name = name; // Name of the player
     this.color = color; // Player's color (e.g., for mymap/army representation)
+    this.ai_controlled = ai_controlled;
     this.cities = []; // List of cities controlled by the player
     this.armies = []; // List of armies controlled by the player
   }
@@ -399,7 +400,10 @@ function end_turn(){
     end_turn();
 
   }else{
-    mymap.flyTo(player_turn.armies[0].marker.getLatLng()) ;
+    mymap.flyTo(player_turn.armies[0].marker.getLatLng());
+    if(player_turn.ai_controlled){
+      ai_turn();
+    }
   }
 }
 document.getElementById("end_turn").onclick = end_turn;
@@ -527,3 +531,81 @@ function next_army(){
   
 }
 document.getElementById("next_army").onclick = next_army;
+
+function ai_turn() {
+  var i = 0
+  ai_armies = player_turn.armies.filter(x=>true)
+  let ai_army_Interval = setInterval(x=>{
+    if(i >= ai_armies.length){
+      clearInterval(ai_army_Interval)
+    }else{
+      var army = ai_armies[i];
+      i++;
+      mymap.panTo(army.marker.getLatLng());
+      // Step 1: Choose the closest city not controlled by player_turn
+      let targetCity = null;
+      let minDistance = Infinity;
+
+      list_cities.forEach(city => {
+        if (city.owner !== player_turn ){
+          var distance = mymap.distance(city.hex.getCenter(), army.hex.getCenter());//Math.abs(city.row - army.row) + Math.abs(city.col - army.col);
+          distance = (!city.army)? distance : ( (city.army.soldiers < army.soldiers)? distance : Infinity);
+          if (distance < minDistance) {
+            minDistance = distance;
+            targetCity = city;
+          }
+        }
+      });
+      console.log(targetCity);
+      // If no target city found, AI skips this army's turn
+      if (!targetCity) {
+        console.log("No target city available for AI.");
+        return;
+      }
+
+      // Step 2: Move toward the target city
+      let currentHex = army.hex;
+
+      let myInterval = setInterval( x=>{
+        let validNeighbors = currentHex.neighbors.filter(neighbor => {
+          return initial_mvmt - army.exhaustion > move_cost(neighbor);
+        });
+        console.log(currentHex.neighbors, army.exhaustion, validNeighbors);
+        // If no valid moves, stop the turn for this army
+        if (validNeighbors.length === 0) {
+          console.log(`AI army ${army.soldiers} is exhausted or blocked.`);
+          clearInterval(myInterval);
+        }
+
+        // Find the neighbor closest to the target city
+        let nextHex = null;
+        let minNeighborDistance = Infinity;
+
+        validNeighbors.forEach(neighbor => {
+          const distance = mymap.distance(neighbor.getCenter(), targetCity.hex.getCenter());
+          if (distance < minNeighborDistance) {
+            minNeighborDistance = distance;
+            nextHex = neighbor;
+          }
+        });
+
+        // Move the army to the next hex
+        if (nextHex) {
+          army.move(nextHex);
+          currentHex = nextHex;
+        } else {
+          // No valid move found; stop the turn
+          clearInterval(myInterval);
+        }
+
+        // Check if the army has reached the target city
+        if (currentHex === targetCity.hex) {
+          console.log(`AI army ${army.soldiers} reached target city.`);
+          clearInterval(myInterval); 
+        }
+
+      }, 500);
+    }
+  }, 500);
+  
+}
