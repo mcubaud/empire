@@ -403,6 +403,9 @@ function end_turn(){
     mymap.flyTo(player_turn.armies[0].marker.getLatLng());
     if(player_turn.ai_controlled){
       ai_turn();
+      document.getElementById("end_turn").onclick = "";
+    }else{
+      document.getElementById("end_turn").onclick = end_turn;
     }
   }
 }
@@ -607,6 +610,6 @@ function ai_turn() {
 
       }, 500);
     }
-  }, 500);
+  }, 1700);
   
 }
