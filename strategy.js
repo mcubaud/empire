@@ -123,6 +123,7 @@ class Army {
   constructor(soldiers, hex, row, col, owner = null) {
     this.soldiers = soldiers; // Number of soldiers in the army
     this.hex = hex;
+    this.army = this;
     this.hex.army = this;
     this.row = row; // Current row position on the grid
     this.col = col; // Current column position on the grid
@@ -197,12 +198,12 @@ class Army {
   }
 
   show_available_mvmt(){
+    var this_army = this.army;
     reset_hexs();
-    if(player_turn == this.owner){
-      this.hex.neighbors.forEach(neighbor=>{
-        if(initial_mvmt - this.exhaustion > move_cost(neighbor)){
+    if(player_turn == this_army.owner){
+      this_army.hex.neighbors.forEach(neighbor=>{
+        if(initial_mvmt - this_army.exhaustion > move_cost(neighbor)){
           neighbor.setStyle({fillColor:"#62c123", fillOpacity:0.7})
-          var this_army = this;
           neighbor.removeEventListener("click");
           neighbor.addEventListener("click", function(){
             this_army.move(neighbor);
