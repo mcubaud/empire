@@ -144,7 +144,6 @@ class Army {
 
   // Set the owner of the army
   setOwner(player) {
-    this.owner.removeArmy(this);
     this.owner = player;
   }
 
