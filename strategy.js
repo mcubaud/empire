@@ -425,18 +425,18 @@ function battle(attacking_army, defending_army){
   }
   if(attacking_strength>defending_strength){
     attacking_army.exhaustion+=3
-    attacking_army.takeCasualties(defending_strength);
+    attacking_army.takeCasualties(Math.floor(defending_strength));
     defending_army.soldiers = 0;
     defending_army.owner.removeArmy(defending_army);
     mymap.removeLayer(defending_army.marker);
-    displayBattleResults(attacking_army, defending_army, attacking_army, defending_army, defending_strength, attacking_strength);
+    displayBattleResults(attacking_army, defending_army, attacking_army, defending_army, Math.floor(defending_strength), Math.floor(attacking_strength));
   }else{
     defending_army.exhaustion+=3
-    defending_army.takeCasualties(attacking_strength);
+    defending_army.takeCasualties(Math.floor(attacking_strength));
     attacking_army.soldiers = 0;
     attacking_army.owner.removeArmy(attacking_army);
     mymap.removeLayer(attacking_army.marker);
-    displayBattleResults(attacking_army, defending_army, defending_army, attacking_army, attacking_strength, defending_strength);
+    displayBattleResults(attacking_army, defending_army, defending_army, attacking_army, Math.floor(attacking_strength), Math.floor(defending_strength));
   }
 }
 
