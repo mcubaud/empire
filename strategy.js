@@ -367,12 +367,12 @@ function end_turn(){
     army.exhaustion = Math.max(0, army.exhaustion-3);
   })
   reset_hexs();
-  list_cities.forEach(city=>
+  list_cities.forEach(city=>{
     if(city.hex.army){
       city.stationArmy(city.hex.army);
       city.setOwner(city.hex.army.owner);
     }
-  )
+  })
 }
 document.getElementById("end_turn").onclick = end_turn;
 
