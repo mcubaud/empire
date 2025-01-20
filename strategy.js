@@ -117,7 +117,7 @@ class Player {
       if (city.army) {
         city.army.addSoldiers(newSoldiers);
       } else {
-        const newArmy = new Army(newSoldiers, city.row, city.col, this);
+        const newArmy = new Army(newSoldiers, city.hex, city.row, city.col, this);
         this.addArmy(newArmy);
         city.army = newArmy;
       }
@@ -261,6 +261,9 @@ class City {
 
   // Set the owner of the city
   setOwner(player) {
+    if(this.owner){
+      this.owner.removeCity(this);
+    }
     this.owner = player;
     this.updateMarker(); // Update the marker to reflect the new owner
   }
@@ -369,13 +372,14 @@ function end_turn(){
   player_turn.armies.forEach(army=>{
     army.exhaustion = Math.max(0, army.exhaustion-3);
   })
+  player_turn.produceSoldiers();
   reset_hexs();
   list_cities.forEach(city=>{
     if(city.hex.army){
       city.stationArmy(city.hex.army);
       if(city.owner != city.hex.army.owner){
         city.population = Math.round(0.6 * city.population);//conquering a city make the population drops
-        city.setOwner(city.hex.army.owner);
+        city.hex.army.owner.addCity(city);
         onEachFeature(city.hex.feature, city.hex);//update the display
       }
     }else{
