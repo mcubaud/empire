@@ -370,7 +370,12 @@ function end_turn(){
   list_cities.forEach(city=>{
     if(city.hex.army){
       city.stationArmy(city.hex.army);
-      city.setOwner(city.hex.army.owner);
+      if(city.owner != city.hex.army.owner){
+        city.population = Math.round(0.6 * city.population);//conquering a city make the population drops
+        city.setOwner(city.hex.army.owner);
+      }
+    }else{
+      city.population = Math.round(1.01 * city.population);//1% population growth per turn in unoccupied cities;
     }
   })
 }
