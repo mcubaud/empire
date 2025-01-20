@@ -537,7 +537,8 @@ function ai_turn() {
   ai_armies = player_turn.armies.filter(x=>true)
   let ai_army_Interval = setInterval(x=>{
     if(i >= ai_armies.length){
-      clearInterval(ai_army_Interval)
+      clearInterval(ai_army_Interval);
+      end_turn();
     }else{
       var army = ai_armies[i];
       i++;
