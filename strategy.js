@@ -71,8 +71,8 @@ request_strat.onload = function() {
   create_cities()
   hex0 = list_hexs[0]
   army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_index, player1);
-  army2 = new Army(50, list_hexs[1], list_hexs[1].feature.properties.row_index, list_hexs[1].feature.properties.col_index, player1);
-  army3 = new Army(50, list_hexs[2], list_hexs[2].feature.properties.row_index, list_hexs[2].feature.properties.col_index, player2);
+  army2 = new Army(50, list_hexs[1], list_hexs[1].feature.properties.row_index, list_hexs[1].feature.properties.col_index, player2);
+  army3 = new Army(50, list_hexs[2], list_hexs[2].feature.properties.row_index, list_hexs[2].feature.properties.col_index, player1);
   player_turn = player1;
   turn_number = 0;
   update_turn_display()
@@ -139,11 +139,14 @@ class Army {
     this.marker = null; // Leaflet marker for the army
     this.city_stationed = null;
     this.updateMarker(); // Initialize the marker
+    this.owner.addArmy(this);
   }
 
   // Set the owner of the army
   setOwner(player) {
+    this.owner.removeArmy(this);
     this.owner = player;
+    player.addArmy(this);
   }
 
   // Add soldiers to the army
