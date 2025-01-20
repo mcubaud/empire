@@ -376,9 +376,11 @@ function end_turn(){
       if(city.owner != city.hex.army.owner){
         city.population = Math.round(0.6 * city.population);//conquering a city make the population drops
         city.setOwner(city.hex.army.owner);
+        onEachFeature(city.hex.feature, city.hex);//update the display
       }
     }else{
       city.population = Math.round(1.01 * city.population);//1% population growth per turn in unoccupied cities;
+      onEachFeature(city.hex.feature, city.hex);//update the display
     }
   })
 }
