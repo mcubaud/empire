@@ -1,5 +1,6 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
 hex_group = L.featureGroup().addTo(mymap);
+mymap.removeEventListener("click");
 var geojsondata = {};
 var initial_mvmt = 5;
 var terrainColors = {
@@ -63,12 +64,16 @@ request_strat.onload = function() {
   var bounds = L.geoJSON(geojsondata).getBounds();
   mymap.fitBounds(bounds);
   player1 = new Player("Alice", "blue");
+  player2 = new Player("Bob", "red");
+  list_players = [player1, player2]
   list_hexs = hex_group.getLayers()[0].getLayers()
   compute_neighbors()
   create_cities()
   hex0 = list_hexs[0]
   army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
   player_turn = player1;
+  turn_number = 0;
+  update_turn_display()
 }
 
 // Class for Players
@@ -349,3 +354,18 @@ function reset_hexs(){
   })
 }
 
+function end_turn(){
+  turn_number ++
+  player_turn = list_players[turn_number%list_players.length];
+  update_turn_display();
+  //exhaustion recuperation
+  player_turn.armies.forEach(army=>{
+    army.exhaustion = Math.min(5, army.exhaustion+3);
+  })
+}
+document.getElementById("end_turn").onclick = end_turn;
+
+function update_turn_display(){
+  document.getElementById("current_player").innerHTML = `Tour ${Math.floor(turn_number/list_players.length)+1} de ${player_turn.name}`;
+  document.getElementById("current_player").style.color = player_turn.color;
+}
