@@ -97,7 +97,6 @@ class Player {
   // Remove a city from the player's control
   removeCity(city) {
     this.cities = this.cities.filter(c => c !== city);
-    city.setOwner(null);
   }
 
   // Add an army to the player's control
