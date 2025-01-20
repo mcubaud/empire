@@ -70,7 +70,9 @@ request_strat.onload = function() {
   compute_neighbors()
   create_cities()
   hex0 = list_hexs[0]
-  army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_inde, player1);
+  army1 = new Army(50, hex0, hex0.feature.properties.row_index, hex0.feature.properties.col_index, player1);
+  army2 = new Army(50, list_hexs[1], list_hexs[1].feature.properties.row_index, list_hexs[1].feature.properties.col_index, player1);
+  army3 = new Army(50, list_hexs[2], list_hexs[2].feature.properties.row_index, list_hexs[2].feature.properties.col_index, player2);
   player_turn = player1;
   turn_number = 0;
   update_turn_display()
@@ -360,8 +362,9 @@ function end_turn(){
   update_turn_display();
   //exhaustion recuperation
   player_turn.armies.forEach(army=>{
-    army.exhaustion = Math.min(5, army.exhaustion+3);
+    army.exhaustion = Math.max(0, army.exhaustion-3);
   })
+  reset_hexs();
 }
 document.getElementById("end_turn").onclick = end_turn;
 
