@@ -1,4 +1,5 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
+var army_number = 0;
 hex_group = L.featureGroup().addTo(mymap);
 mymap.removeEventListener("click");
 var geojsondata = {};
@@ -363,6 +364,7 @@ function reset_hexs(){
 }
 
 function end_turn(){
+  army_number = 0
   turn_number ++
   player_turn = list_players[turn_number%list_players.length];
   update_turn_display();
@@ -370,7 +372,6 @@ function end_turn(){
   player_turn.armies.forEach(army=>{
     army.exhaustion = Math.max(0, army.exhaustion-3);
   })
-  player_turn.produceSoldiers();
   reset_hexs();
   list_cities.forEach(city=>{
     if(city.hex.army){
@@ -379,12 +380,15 @@ function end_turn(){
         city.population = Math.round(0.6 * city.population);//conquering a city make the population drops
         city.hex.army.owner.addCity(city);
         onEachFeature(city.hex.feature, city.hex);//update the display
+        city.updateMarker();
       }
     }else{
       city.population = Math.round(1.01 * city.population);//1% population growth per turn in unoccupied cities;
       onEachFeature(city.hex.feature, city.hex);//update the display
+      city.updateMarker();
     }
-  })  
+  })
+  player_turn.produceSoldiers();  
   if(player_turn.armies.length==0){
     alert(player_turn.name + " a été vaincu!");
     turn_number --;//fix turn number so that the next turn remains the next player;
@@ -395,6 +399,8 @@ function end_turn(){
     }
     end_turn();
 
+  }else{
+    mymap.flyTo(player_turn.armies[0].marker.getLatLng()) ;
   }
 }
 document.getElementById("end_turn").onclick = end_turn;
@@ -417,12 +423,108 @@ function battle(attacking_army, defending_army){
     defending_army.soldiers = 0;
     defending_army.owner.removeArmy(defending_army);
     mymap.removeLayer(defending_army.marker);
+    displayBattleResults(attacking_army, defending_army, attacking_army, defending_army, defending_strength, attacking_strength);
   }else{
     defending_army.exhaustion+=3
     defending_army.takeCasualties(attacking_strength);
     attacking_army.soldiers = 0;
     attacking_army.owner.removeArmy(attacking_army);
     mymap.removeLayer(attacking_army.marker);
+    displayBattleResults(attacking_army, defending_army, defending_army, attacking_army, attacking_strength, defending_strength);
   }
-  //TODO: display the results of the battle in a div
 }
+
+function displayBattleResults(attacking_army, defending_army, winner, loser, winnerCasualties, loserCasualties) {
+  // Create the results div
+  const resultsDiv = document.createElement('div');
+  resultsDiv.style.border = '1px solid black';
+  resultsDiv.style.padding = '10px';
+  resultsDiv.style.backgroundColor = '#f8f9fa';
+  resultsDiv.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+  resultsDiv.style.position = 'absolute';
+  resultsDiv.style.left = '40%';
+  resultsDiv.style.top = '35%';
+  resultsDiv.style.width = '20%';
+  resultsDiv.style.zindex = '20000';
+  // Title
+  const title = document.createElement('h3');
+  title.textContent = 'Battle Results';
+  resultsDiv.appendChild(title);
+
+  // Create the table
+  const table = document.createElement('table');
+  table.style.width = '100%';
+  table.style.borderCollapse = 'collapse';
+
+  // Add table headers
+  const headers = ['Army', 'Owner', 'Casualties', 'Remaining Troops', 'Result'];
+  const headerRow = document.createElement('tr');
+  headers.forEach(header => {
+    const th = document.createElement('th');
+    th.textContent = header;
+    th.style.border = '1px solid black';
+    th.style.padding = '5px';
+    th.style.backgroundColor = '#e9ecef';
+    headerRow.appendChild(th);
+  });
+  table.appendChild(headerRow);
+
+  // Add rows for attacking and defending armies
+  const armies = [
+    {
+      army: 'Attacking',
+      owner: attacking_army.owner.name,
+      casualties: loser === attacking_army ? loserCasualties : winnerCasualties,
+      remaining: attacking_army.soldiers,
+      result: winner === attacking_army ? 'Winner' : 'Loser',
+    },
+    {
+      army: 'Defending',
+      owner: defending_army.owner.name,
+      casualties: loser === defending_army ? loserCasualties : winnerCasualties,
+      remaining: defending_army.soldiers,
+      result: winner === defending_army ? 'Winner' : 'Loser',
+    },
+  ];
+
+  armies.forEach(({ army, owner, casualties, remaining, result }) => {
+    const row = document.createElement('tr');
+    [army, owner, casualties, remaining, result].forEach(value => {
+      const td = document.createElement('td');
+      td.textContent = value;
+      td.style.border = '1px solid black';
+      td.style.padding = '5px';
+      row.appendChild(td);
+    });
+    table.appendChild(row);
+  });
+
+  resultsDiv.appendChild(table);
+
+  // Add a close button
+  const closeButton = document.createElement('button');
+  closeButton.textContent = 'Close';
+  closeButton.style.marginTop = '10px';
+  closeButton.style.padding = '5px 10px';
+  closeButton.style.backgroundColor = '#dc3545';
+  closeButton.style.color = '#fff';
+  closeButton.style.border = 'none';
+  closeButton.style.cursor = 'pointer';
+  closeButton.addEventListener('click', () => {
+    resultsDiv.remove();
+  });
+
+  resultsDiv.appendChild(closeButton);
+
+  // Append the resultsDiv to the body or a specific container
+  document.body.appendChild(resultsDiv);
+}
+
+function next_army(){
+  army_number++;
+  if(player_turn.armies.length>0){
+    mymap.flyTo(player_turn.armies[army_number%player_turn.armies.length].marker.getLatLng())
+  }
+  
+}
+document.getElementById("next_army").onclick = next_army;
