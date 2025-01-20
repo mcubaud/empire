@@ -146,7 +146,6 @@ class Army {
   setOwner(player) {
     this.owner.removeArmy(this);
     this.owner = player;
-    player.addArmy(this);
   }
 
   // Add soldiers to the army
