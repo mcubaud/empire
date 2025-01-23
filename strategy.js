@@ -121,6 +121,7 @@ class Player {
         const newArmy = new Army(newSoldiers, city.hex, city.row, city.col, this);
         this.addArmy(newArmy);
         city.army = newArmy;
+        newArmy.city_stationed = city;
       }
     });
   }
