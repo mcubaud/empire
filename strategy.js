@@ -171,6 +171,7 @@ class Army {
       this.addSoldiers(this.hex.army.soldiers)
       this.hex.army.owner.removeArmy(this.hex.army);
       mymap.removeLayer(this.hex.army.marker);
+      this.hex.army = this;
       //Merge armies
     }else{
       console.log("bataille");
