@@ -119,7 +119,7 @@ class Player {
         city.army.addSoldiers(newSoldiers);
       } else {
         const newArmy = new Army(newSoldiers, city.hex, city.row, city.col, this);
-        this.addArmy(newArmy);
+        //this.addArmy(newArmy);//already in the army constructor
         city.army = newArmy;
         newArmy.city_stationed = city;
       }
@@ -185,8 +185,8 @@ class Army {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color};">
-        <img src="game/images/player.png" style="width: 32px; height: 32px;" />
         <div>${this.soldiers}</div>
+        <img src="game/images/player.png" style="width: 32px; height: 32px;" />
       </div>
     `;
 
