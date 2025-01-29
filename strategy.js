@@ -453,7 +453,7 @@ function displayBattleResults(attacking_army, defending_army, winner, loser, win
   resultsDiv.style.left = '40%';
   resultsDiv.style.top = '35%';
   resultsDiv.style.width = '20%';
-  resultsDiv.style.zindex = '200000';
+  resultsDiv.style.z_index = '200000';
   // Title
   const title = document.createElement('h3');
   title.textContent = 'Battle Results';
@@ -557,7 +557,7 @@ function ai_turn() {
       list_cities.forEach(city => {
         if (city.owner !== player_turn) {
           let distance = mymap.distance(city.hex.getCenter(), army.hex.getCenter());
-          let score = 10 + Math.floor(city.population / 100); // More populated cities are higher priority
+          let score = 10 + Math.floor(city.population / 1000); // More populated cities are higher priority
           
           if (city.army) {
             if (city.army.soldiers >= army.soldiers){; // Avoid stronger armies
@@ -569,8 +569,8 @@ function ai_turn() {
             score -= city.hex.army.soldiers; // Lower priority if already occupied by AI army
           }
 
-          if (score / distance > priorityScore) {
-            priorityScore = score / distance;
+          if (score / distance**2 > priorityScore) {
+            priorityScore = score / distance**2;
             minDistance = distance;
             target = city;
           }
@@ -591,8 +591,8 @@ function ai_turn() {
               closest_army_distance = distance;
           }
 
-          if (score / distance > priorityScore) {
-            priorityScore = score / distance;
+          if (score / distance**2 > priorityScore) {
+            priorityScore = score / distance**2;
             minDistance = distance;
             target = enemyArmy;
           }
