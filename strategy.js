@@ -453,7 +453,7 @@ function displayBattleResults(attacking_army, defending_army, winner, loser, win
   resultsDiv.style.left = '40%';
   resultsDiv.style.top = '35%';
   resultsDiv.style.width = '20%';
-  resultsDiv.style.zindex = '20000';
+  resultsDiv.style.zindex = '200000';
   // Title
   const title = document.createElement('h3');
   title.textContent = 'Battle Results';
@@ -538,57 +538,103 @@ function next_army(){
 document.getElementById("next_army").onclick = next_army;
 
 function ai_turn() {
-  var i = 0
-  ai_armies = player_turn.armies.filter(x=>true)
-  let ai_army_Interval = setInterval(x=>{
-    if(i >= ai_armies.length){
+  var i = 0;
+  let ai_armies = player_turn.armies.slice(); // Clone array to avoid modification issues
+  let ai_army_Interval = setInterval(() => {
+    if (i >= ai_armies.length) {
       clearInterval(ai_army_Interval);
       end_turn();
-    }else{
+    } else {
       var army = ai_armies[i];
       i++;
       mymap.panTo(army.marker.getLatLng());
-      // Step 1: Choose the closest city not controlled by player_turn
-      let targetCity = null;
+
+      // Step 1: Find the Best Target (Enemy Army or City)
+      let target = null;
       let minDistance = Infinity;
+      let priorityScore = -Infinity; // Higher is better
 
       list_cities.forEach(city => {
-        if (city.owner !== player_turn ){
-          var distance = mymap.distance(city.hex.getCenter(), army.hex.getCenter());//Math.abs(city.row - army.row) + Math.abs(city.col - army.col);
-          distance = (!city.army)? distance : ( (city.army.soldiers < army.soldiers)? distance : Infinity);
-          if (distance < minDistance) {
+        if (city.owner !== player_turn) {
+          let distance = mymap.distance(city.hex.getCenter(), army.hex.getCenter());
+          let score = 10 + Math.floor(city.population / 100); // More populated cities are higher priority
+          
+          if (city.army) {
+            if (city.army.soldiers >= army.soldiers){; // Avoid stronger armies
+              score -= 1.5 * city.army.soldiers; // Lower priority if defended but weaker
+            }
+          }
+          
+          if (city.hex.army && city.hex.army.owner === player_turn) {
+            score -= city.hex.army.soldiers; // Lower priority if already occupied by AI army
+          }
+
+          if (score / distance > priorityScore) {
+            priorityScore = score / distance;
             minDistance = distance;
-            targetCity = city;
+            target = city;
           }
         }
       });
-      console.log(targetCity);
-      // If no target city found, AI skips this army's turn
-      if (!targetCity) {
-        console.log("No target city available for AI.");
+
+      // Also consider attacking enemy armies directly
+      var closest_army_distance = Infinity;
+      list_hexs.forEach(hex => {
+        if (hex.army && hex.army.owner !== player_turn) {
+          let enemyArmy = hex.army;
+          let distance = mymap.distance(enemyArmy.hex.getCenter(), army.hex.getCenter());
+          let score = enemyArmy.soldiers * 0.5; // Prioritize larger enemy armies
+
+          if (army.soldiers < enemyArmy.soldiers) return; // Avoid stronger armies
+          
+          if (distance<closest_army_distance){
+              closest_army_distance = distance;
+          }
+
+          if (score / distance > priorityScore) {
+            priorityScore = score / distance;
+            minDistance = distance;
+            target = enemyArmy;
+          }
+        }
+      });
+
+      console.log(`AI Target Chosen:`, target);
+
+      // Defensive Strategy: Don't leave a city if enemy is nearby
+      if (army.city_stationed) {
+        let enemyNearby = closest_army_distance<22000*4;
+        if (enemyNearby) {
+          console.log(`AI army ${army.soldiers} is staying to defend ${army.city_stationed.name}.`);
+          return;
+        }
+      }
+
+      // If no valid target, skip this army's turn
+      if (!target) {
+        console.log("No valid target found for AI army.");
         return;
       }
 
-      // Step 2: Move toward the target city
+      // Step 2: Move Toward Target
       let currentHex = army.hex;
-
-      let myInterval = setInterval( x=>{
+      let movementInterval = setInterval(() => {
         let validNeighbors = currentHex.neighbors.filter(neighbor => {
           return initial_mvmt - army.exhaustion > move_cost(neighbor);
         });
-        console.log(currentHex.neighbors, army.exhaustion, validNeighbors);
-        // If no valid moves, stop the turn for this army
+
         if (validNeighbors.length === 0) {
           console.log(`AI army ${army.soldiers} is exhausted or blocked.`);
-          clearInterval(myInterval);
+          clearInterval(movementInterval);
+          return;
         }
 
-        // Find the neighbor closest to the target city
+        // Find the neighbor closest to the target
         let nextHex = null;
         let minNeighborDistance = Infinity;
 
         validNeighbors.forEach(neighbor => {
-          const distance = mymap.distance(neighbor.getCenter(), targetCity.hex.getCenter());
+          const distance = mymap.distance(neighbor.getCenter(), target.hex.getCenter());
           if (distance < minNeighborDistance) {
             minNeighborDistance = distance;
             nextHex = neighbor;
@@ -600,18 +646,15 @@ function ai_turn() {
           army.move(nextHex);
           currentHex = nextHex;
         } else {
-          // No valid move found; stop the turn
-          clearInterval(myInterval);
+          clearInterval(movementInterval);
         }
 
-        // Check if the army has reached the target city
-        if (currentHex === targetCity.hex) {
-          console.log(`AI army ${army.soldiers} reached target city.`);
-          clearInterval(myInterval); 
+        if (currentHex === target.hex) {
+          console.log(`AI army ${army.soldiers} reached its target.`);
+          clearInterval(movementInterval);
         }
 
       }, 500);
     }
   }, 1700);
-  
 }
