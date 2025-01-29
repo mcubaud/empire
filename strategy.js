@@ -453,7 +453,7 @@ function displayBattleResults(attacking_army, defending_army, winner, loser, win
   resultsDiv.style.left = '40%';
   resultsDiv.style.top = '35%';
   resultsDiv.style.width = '20%';
-  resultsDiv.style.z_index = '200000';
+  resultsDiv.style.zIndex = '200000';
   // Title
   const title = document.createElement('h3');
   title.textContent = 'Battle Results';
