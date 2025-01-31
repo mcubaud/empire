@@ -71,6 +71,8 @@ request_strat.onload = function() {
   create_cities()
   list_players = [];
   let pendingArmy = null;
+  let list_available_logos = ["game/images/player.png", "game/images/brigand.png", "game/images/thief1.png"]
+  let selected_logo = "game/images/player.png";
 
   // UI Container
   let uiContainer = document.createElement("div");
@@ -93,6 +95,8 @@ request_strat.onload = function() {
           </select>
           <label for="playerColor">Choose Color:</label>
           <input type="color" id="playerColor" value="#000000" />
+          <p>Armies logo :</p>
+          <div id="armies_logo_div"></div>
           <button id="addPlayer">Add Player</button>
       </div>
       <div>
@@ -113,6 +117,21 @@ request_strat.onload = function() {
   `;
   document.body.appendChild(uiContainer);
 
+  //Add armies logo
+  list_available_logos.forEach((logo_name, index)=>{
+    
+    document.getElementById("armies_logo_div").innerHTML += `
+    <input id="logo_${index}" type="image" src=${logo_name} style="height:30px;">
+    `
+    document.getElementById(`logo_${index}"`).onclick = function(e){
+      for(let i=0; i<e.target.parentElement.children.length; i++){
+        e.target.parentElement.children.item(i).style.border= "";
+      }
+      e.target.style.border= "1px solid red"
+      selected_logo = e.target.src;
+    }
+  })
+
   // Event: Add Player
   document.getElementById("addPlayer").addEventListener("click", function () {
       let name = document.getElementById("playerName").value.trim();
@@ -124,7 +143,7 @@ request_strat.onload = function() {
       }
 
       let color = document.getElementById("playerColor").value;
-      let newPlayer = new Player(name, color, type === "ai");
+      let newPlayer = new Player(name, color, type === "ai", army_logo=selected_logo);
 
       list_players.push(newPlayer);
       updatePlayerList();
@@ -224,10 +243,11 @@ request_strat.onload = function() {
 
 // Class for Players
 class Player {
-  constructor(name, color, ai_controlled=false) {
+  constructor(name, color, ai_controlled=false, army_logo="game/images/player.png") {
     this.name = name; // Name of the player
     this.color = color; // Player's color (e.g., for mymap/army representation)
     this.ai_controlled = ai_controlled;
+    this.army_logo = army_logo;
     this.cities = []; // List of cities controlled by the player
     this.armies = []; // List of armies controlled by the player
   }
@@ -329,7 +349,7 @@ class Army {
     const htmlContent = `
       <div style="text-align: center; color: ${this.owner.color}; text-shadow: 1px 1px black;">
         <div>${this.soldiers}</div>
-        <img src="game/images/player.png" style="width: 32px; height: 32px;" />
+        <img src=${this.owner.army_logo} style="width: 32px; height: 32px;" />
       </div>
     `;
 
