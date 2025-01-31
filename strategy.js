@@ -68,157 +68,154 @@ request_strat.onload = function() {
   list_hexs = hex_group.getLayers()[0].getLayers()
   compute_neighbors()
   create_cities()
-  document.addEventListener("DOMContentLoaded", function () {
-    let list_players = [];
-    let currentPlayer = null;
-    let pendingArmy = null;
-  
-    // UI Container
-    let uiContainer = document.createElement("div");
-    uiContainer.style.position = "absolute";
-    uiContainer.style.top = "10px";
-    uiContainer.style.left = "10px";
-    uiContainer.style.width = "300px";
-    uiContainer.style.background = "white";
-    uiContainer.style.padding = "15px";
-    uiContainer.style.border = "2px solid black";
-    uiContainer.style.zIndex = "100000000";
-    uiContainer.innerHTML = `
-        <h3>Game Setup</h3>
-        <div>
-            <h4>Add Player</h4>
-            <input type="text" id="playerName" placeholder="Player Name" />
-            <select id="playerType">
-                <option value="human">Human</option>
-                <option value="ai">AI</option>
-            </select>
-            <label for="playerColor">Choose Color:</label>
-            <input type="color" id="playerColor" value="#000000" />
-            <button id="addPlayer">Add Player</button>
-        </div>
-        <div>
-            <h4>Players</h4>
-            <ul id="playerList"></ul>
-        </div>
-        <div>
-            <h4>Add Army</h4>
-            <select id="armyPlayer"></select>
-            <input type="number" id="armySize" placeholder="Soldiers" min="1" />
-            <button id="placeArmy">Place Army</button>
-        </div>
-        <div>
-            <h4>Armies</h4>
-            <ul id="armyList"></ul>
-        </div>
-        <button id="startGame">Start Game</button>
-    `;
-    document.body.appendChild(uiContainer);
-  
-    // Event: Add Player
-    document.getElementById("addPlayer").addEventListener("click", function () {
-        let name = document.getElementById("playerName").value.trim();
-        let type = document.getElementById("playerType").value;
-  
-        if (name === "") {
-            alert("Enter a player name!");
-            return;
-        }
-  
-        let color = document.getElementById("playerColor").value;
-        let newPlayer = new Player(name, color, type === "ai");
-  
-        list_players.push(newPlayer);
-        updatePlayerList();
-        document.getElementById("playerName").value = "";
-    });
-  
-    function updatePlayerList() {
-        let list = document.getElementById("playerList");
-        list.innerHTML = "";
-        let select = document.getElementById("armyPlayer");
-        select.innerHTML = "";
-  
-        list_players.forEach(player => {
-            let li = document.createElement("li");
-            li.textContent = `${player.name} (${player.ai_controlled ? "AI" : "Human"})`;
-            li.style.color = player.color;
-            list.appendChild(li);
-  
-            let option = document.createElement("option");
-            option.value = player.name;
-            option.textContent = player.name;
-            select.appendChild(option);
-        });
-    }
-  
-    // Event: Prepare to Place Army
-    document.getElementById("placeArmy").addEventListener("click", function () {
-        let playerName = document.getElementById("armyPlayer").value;
-        let size = parseInt(document.getElementById("armySize").value);
-  
-        if (!size || size <= 0) {
-            alert("Enter a valid number of soldiers!");
-            return;
-        }
-  
-        let player = list_players.find(p => p.name === playerName);
-        if (!player) {
-            alert("Invalid player selection!");
-            return;
-        }
-  
-        pendingArmy = { player, size };
-        alert("Click on a hex to place the army.");
-    });
-  
-    // Hex Click Event for Army Placement
-    list_hexs.forEach(hex => {
-        hex.addEventListener("click", function () {
-            if (!pendingArmy) return;
-  
-            let { player, size } = pendingArmy;
-            new Army(size, hex, hex.feature.properties.row_index, hex.feature.properties.col_index, player);
-            updateArmyList();
-            pendingArmy = null;
-        });
-    });
-  
-    function updateArmyList() {
-        let list = document.getElementById("armyList");
-        list.innerHTML = "";
-  
-        list_players.forEach(player => {
-            player.armies.forEach(army => {
-                let li = document.createElement("li");
-                li.textContent = `${player.name} - ${army.soldiers} soldiers at (${army.row}, ${army.col})`;
-                li.style.color = player.color;
-                list.appendChild(li);
-            });
-        });
-    }
-  
-    // Event: Start Game
-    document.getElementById("startGame").addEventListener("click", function () {
-        if (list_players.length === 0) {
-            alert("Add at least one player!");
-            return;
-        }
-  
-        if (list_players.every(p => p.armies.length === 0)) {
-            alert("Place at least one army before starting!");
-            return;
-        }
-  
-        alert("Game Started!");
-        uiContainer.style.display = "none"; // Hide setup panel
-        startGame(list_players);
-    });
-  
-    function startGame(list_players) {
-        console.log("Game initialized with players:", list_players);
-        player_turn = list_players[0]; // Set first player as current turn
-    }
+  list_players = [];
+  let pendingArmy = null;
+
+  // UI Container
+  let uiContainer = document.createElement("div");
+  uiContainer.style.position = "absolute";
+  uiContainer.style.top = "10px";
+  uiContainer.style.left = "10px";
+  uiContainer.style.width = "300px";
+  uiContainer.style.background = "white";
+  uiContainer.style.padding = "15px";
+  uiContainer.style.border = "2px solid black";
+  uiContainer.style.zIndex = "100000000";
+  uiContainer.innerHTML = `
+      <h3>Game Setup</h3>
+      <div>
+          <h4>Add Player</h4>
+          <input type="text" id="playerName" placeholder="Player Name" />
+          <select id="playerType">
+              <option value="human">Human</option>
+              <option value="ai">AI</option>
+          </select>
+          <label for="playerColor">Choose Color:</label>
+          <input type="color" id="playerColor" value="#000000" />
+          <button id="addPlayer">Add Player</button>
+      </div>
+      <div>
+          <h4>Players</h4>
+          <ul id="playerList"></ul>
+      </div>
+      <div>
+          <h4>Add Army</h4>
+          <select id="armyPlayer"></select>
+          <input type="number" id="armySize" placeholder="Soldiers" min="1" />
+          <button id="placeArmy">Place Army</button>
+      </div>
+      <div>
+          <h4>Armies</h4>
+          <ul id="armyList"></ul>
+      </div>
+      <button id="startGame">Start Game</button>
+  `;
+  document.body.appendChild(uiContainer);
+
+  // Event: Add Player
+  document.getElementById("addPlayer").addEventListener("click", function () {
+      let name = document.getElementById("playerName").value.trim();
+      let type = document.getElementById("playerType").value;
+
+      if (name === "") {
+          alert("Enter a player name!");
+          return;
+      }
+
+      let color = document.getElementById("playerColor").value;
+      let newPlayer = new Player(name, color, type === "ai");
+
+      list_players.push(newPlayer);
+      updatePlayerList();
+      document.getElementById("playerName").value = "";
   });
+
+  function updatePlayerList() {
+      let list = document.getElementById("playerList");
+      list.innerHTML = "";
+      let select = document.getElementById("armyPlayer");
+      select.innerHTML = "";
+
+      list_players.forEach(player => {
+          let li = document.createElement("li");
+          li.textContent = `${player.name} (${player.ai_controlled ? "AI" : "Human"})`;
+          li.style.color = player.color;
+          list.appendChild(li);
+
+          let option = document.createElement("option");
+          option.value = player.name;
+          option.textContent = player.name;
+          select.appendChild(option);
+      });
+  }
+
+  // Event: Prepare to Place Army
+  document.getElementById("placeArmy").addEventListener("click", function () {
+      let playerName = document.getElementById("armyPlayer").value;
+      let size = parseInt(document.getElementById("armySize").value);
+
+      if (!size || size <= 0) {
+          alert("Enter a valid number of soldiers!");
+          return;
+      }
+
+      let player = list_players.find(p => p.name === playerName);
+      if (!player) {
+          alert("Invalid player selection!");
+          return;
+      }
+
+      pendingArmy = { player, size };
+      alert("Click on a hex to place the army.");
+  });
+
+  // Hex Click Event for Army Placement
+  list_hexs.forEach(hex => {
+      hex.addEventListener("click", function () {
+          if (!pendingArmy) return;
+
+          let { player, size } = pendingArmy;
+          new Army(size, hex, hex.feature.properties.row_index, hex.feature.properties.col_index, player);
+          updateArmyList();
+          pendingArmy = null;
+      });
+  });
+
+  function updateArmyList() {
+      let list = document.getElementById("armyList");
+      list.innerHTML = "";
+
+      list_players.forEach(player => {
+          player.armies.forEach(army => {
+              let li = document.createElement("li");
+              li.textContent = `${player.name} - ${army.soldiers} soldiers at (${army.row}, ${army.col})`;
+              li.style.color = player.color;
+              list.appendChild(li);
+          });
+      });
+  }
+
+  // Event: Start Game
+  document.getElementById("startGame").addEventListener("click", function () {
+      if (list_players.length === 0) {
+          alert("Add at least one player!");
+          return;
+      }
+
+      if (list_players.every(p => p.armies.length === 0)) {
+          alert("Place at least one army before starting!");
+          return;
+      }
+
+      alert("Game Started!");
+      uiContainer.style.display = "none"; // Hide setup panel
+      startGame(list_players);
+  });
+
+  function startGame(list_players) {
+      console.log("Game initialized with players:", list_players);
+      player_turn = list_players[0]; // Set first player as current turn
+  }
   update_turn_display()
 }
 
