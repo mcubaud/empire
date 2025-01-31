@@ -1,6 +1,7 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
 var army_number = 0;
 var ai_turn_speed = 500
+var pan_bool = true;
 hex_group = L.featureGroup().addTo(mymap);
 mymap.removeEventListener("click");
 var geojsondata = {};
@@ -326,7 +327,7 @@ class Army {
   updateMarker() {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
-      <div style="text-align: center; color: ${this.owner.color};">
+      <div style="text-align: center; color: ${this.owner.color}; text-shadow: 1px 1px black;">
         <div>${this.soldiers}</div>
         <img src="game/images/player.png" style="width: 32px; height: 32px;" />
       </div>
@@ -415,7 +416,7 @@ class City {
   updateMarker() {
     const position = this.hex.getCenter(); // Assuming grid coordinates match mymap lat/lng
     const htmlContent = `
-      <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'};">
+      <div style="text-align: center; color: ${this.owner ? this.owner.color : 'gray'}; text-shadow: 1px 1px black;">
         <img src="Blasons/pontcastel.png" style="width: 32px; height: 32px;" />
         <div>${this.population}</div>
       </div>
@@ -586,6 +587,9 @@ function battle(attacking_army, defending_army){
 
 function displayBattleResults(attacking_army, defending_army, winner, loser, winnerCasualties, loserCasualties) {
   // Create the results div
+  if(document.getElementById("resultsDiv")){
+    document.getElementById("resultsDiv").remove();
+  }
   const resultsDiv = document.createElement('div');
   resultsDiv.style.border = '1px solid black';
   resultsDiv.style.padding = '10px';
@@ -594,8 +598,9 @@ function displayBattleResults(attacking_army, defending_army, winner, loser, win
   resultsDiv.style.position = 'absolute';
   resultsDiv.style.left = '40%';
   resultsDiv.style.top = '35%';
-  resultsDiv.style.width = '20%';
+  resultsDiv.style.minWidth = '20%';
   resultsDiv.style.zIndex = '200000';
+  resultsDiv.id = "resultsDiv"
   // Title
   const title = document.createElement('h3');
   title.textContent = 'Battle Results';
@@ -689,7 +694,10 @@ function ai_turn() {
     } else {
       var army = ai_armies[i];
       i++;
-      mymap.panTo(army.marker.getLatLng());
+      if(pan_bool){
+        mymap.panTo(army.marker.getLatLng());
+      }
+      
 
       // Step 1: Find the Best Target (Enemy Army or City)
       let target = null;
