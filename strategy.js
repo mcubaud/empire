@@ -210,13 +210,15 @@ request_strat.onload = function() {
       alert("Game Started!");
       uiContainer.style.display = "none"; // Hide setup panel
       startGame(list_players);
+      
   });
 
   function startGame(list_players) {
       console.log("Game initialized with players:", list_players);
-      player_turn = list_players[0]; // Set first player as current turn
+      turn_number = -1
+      end_turn();
   }
-  update_turn_display()
+  
 }
 
 // Class for Players
