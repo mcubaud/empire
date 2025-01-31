@@ -91,6 +91,7 @@ request_strat.onload = function() {
             <select id="playerType">
                 <option value="human">Human</option>
                 <option value="ai">AI</option>
+                <input type="color" id="playerColor" value="#000000" />
             </select>
             <button id="addPlayer">Add Player</button>
         </div>
@@ -122,7 +123,7 @@ request_strat.onload = function() {
             return;
         }
   
-        let color = "#" + Math.floor(Math.random() * 16777215).toString(16); // Random color
+        let color = document.getElementById("playerColor").value;
         let newPlayer = new Player(name, color, type === "ai");
   
         list_players.push(newPlayer);
