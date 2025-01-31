@@ -123,15 +123,17 @@ request_strat.onload = function() {
     document.getElementById("armies_logo_div").innerHTML += `
     <input id="logo_${index}" type="image" src=${logo_name} style="height:30px;">
     `
-
-    document.getElementById(`logo_${index}`).onclick = function(e){
-      for(let i=0; i<e.target.parentElement.children.length; i++){
-        e.target.parentElement.children.item(i).style.border= "";
-      }
-      e.target.style.border= "1px solid red"
-      selected_logo = e.target.src;
-    }
   })
+  list_available_logos.forEach((logo_name, index)=>{
+    console.log(`logo_${index}`)
+      document.getElementById(`logo_${index}`).onclick = function(e){
+        for(let i=0; i<e.target.parentElement.children.length; i++){
+          e.target.parentElement.children.item(i).style.border= "";
+        }
+        e.target.style.border= "1px solid red"
+        selected_logo = e.target.src;
+      }
+    })
 
   // Event: Add Player
   document.getElementById("addPlayer").addEventListener("click", function () {
