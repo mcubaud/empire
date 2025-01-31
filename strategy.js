@@ -65,7 +65,6 @@ request_strat.onload = function() {
   // Adjust the mymap view to fit the data bounds
   var bounds = L.geoJSON(geojsondata).getBounds();
   mymap.fitBounds(bounds);
-  list_players = [player1, player2]
   list_hexs = hex_group.getLayers()[0].getLayers()
   compute_neighbors()
   create_cities()
