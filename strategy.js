@@ -71,7 +71,7 @@ request_strat.onload = function() {
   create_cities()
   list_players = [];
   let pendingArmy = null;
-  let list_available_logos = ["game/images/player.png", "game/images/brigand.png", "game/images/thief1.png"]
+  let list_available_logos = ["game/images/player.png", "game/images/brigand.png", "game/images/thief1.png", "game/soldiers/barbare.png", "game/soldiers/chevalier_faucon.png", "game/soldiers/chevalier_imperial.png", "game/soldiers/chevalier_roi.png", "game/soldiers/corsaire.png", "game/soldiers/cowboy.png", "game/soldiers/.png", "game/soldiers/dragon_rouge.png", "game/soldiers/dragon_vert.png", "game/soldiers/dragonoville.png", "game/soldiers/lion_noir.png", "game/soldiers/nordiste.png", "game/soldiers/novelmore.png", "game/soldiers/papo.png", "game/soldiers/pirate.png", "game/soldiers/playmobil-chef-indien-4589-Photoroom.png", "game/soldiers/romain.png", "game/soldiers/viking.png", "game/images/squelette_1.png"]
   let selected_logo = "game/images/player.png";
 
   // UI Container
