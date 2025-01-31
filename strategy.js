@@ -91,8 +91,9 @@ request_strat.onload = function() {
             <select id="playerType">
                 <option value="human">Human</option>
                 <option value="ai">AI</option>
-                <input type="color" id="playerColor" value="#000000" />
             </select>
+            <label for="playerColor">Choose Color:</label>
+            <input type="color" id="playerColor" value="#000000" />
             <button id="addPlayer">Add Player</button>
         </div>
         <div>
