@@ -1,5 +1,6 @@
 var geojsonDataUrl = 'strategy_game/grille.geojson';
 var army_number = 0;
+var ai_turn_speed = 500
 hex_group = L.featureGroup().addTo(mymap);
 mymap.removeEventListener("click");
 var geojsondata = {};
@@ -720,7 +721,7 @@ function ai_turn() {
       });
 
       // Also consider attacking enemy armies directly
-      var closest_army_distance = Infinity;
+      var number_close_armies = 0;
       list_hexs.forEach(hex => {
         if (hex.army && hex.army.owner !== player_turn) {
           let enemyArmy = hex.army;
@@ -729,8 +730,8 @@ function ai_turn() {
 
           if (army.soldiers < enemyArmy.soldiers) return; // Avoid stronger armies
           
-          if (distance<closest_army_distance){
-              closest_army_distance = distance;
+          if (distance<22000*4){
+            number_close_armies ++;
           }
 
           if (score / distance**2 > priorityScore) {
@@ -745,7 +746,7 @@ function ai_turn() {
 
       // Defensive Strategy: Don't leave a city if enemy is nearby
       if (army.city_stationed) {
-        let enemyNearby = closest_army_distance<22000*4;
+        let enemyNearby = number_close_armies>2;
         if (enemyNearby) {
           console.log(`AI army ${army.soldiers} is staying to defend ${army.city_stationed.name}.`);
           return;
@@ -795,8 +796,8 @@ function ai_turn() {
           console.log(`AI army ${army.soldiers} reached its target.`);
           clearInterval(movementInterval);
         }
-
-      }, 500);
+        reset_hexs();
+      }, ai_turn_speed);
     }
-  }, 1700);
+  }, 4*ai_turn_speed);
 }
