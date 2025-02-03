@@ -1026,6 +1026,66 @@
         "descr":"<div class='popup_content'><h2>Zucritch :</h2>La forteresse hantée de Zucritch est située dans les marais, au centre du delta du Fleuve des Esprits.<div>"
         },
     {
+        "titre":"Hauptsgrad",
+        "lat":24.367114,  
+        "long":  -31.157227,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Hauptsgrad :</h2>Hauptsgrad, située sur les rives du Sahkourine, est la capitale des territoires Petits Soldats. Ville fortifiée, elle est divisée entre un vieux quartier martial et des manufactures modernes inspirées des avancées de Duchmie.<div>"
+        },
+    {
+        "titre":"Waldenberg",
+        "lat":22.055096,  
+        "long":   -29.998169,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Waldenberg :</h2>Waldenberg est un port industriel du sud des territoires petits soldats, qui exporte notament du bois provenant des forêts voisines.<div>"
+        },
+    {
+        "titre":"Kreutzheim",
+        "lat":26.608174,  
+        "long":  -33.969727,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Kreutzheim :</h2>Ville-forteresse du nord, dernier rempart face au royaume des géants.<div>"
+        },
+    {
+        "titre":"Kornstadt",
+        "lat":23.019076, 
+        "long":  -34.694824 ,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Kornstadt :</h2>Kornstadt, situé au centre des plaines du Stahlmark, est le plus grand centre agro-industriel du pays.<div>"
+        },
+    {
+        "titre":"Krieghaffen",
+        "lat":22.055096,  
+        "long":   -29.998169,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Krieghaffen :</h2>Krieghaffen est le principal chantier naval militaire des Petits Soldats en Larium.<div>"
+        },
+    {
+        "titre":"Ritterburg",
+        "lat":22.055096,  
+        "long":   -29.998169,
+        "class":"ville",
+        "parent":"petits_soldats_larium",
+        "zoom_min":7,
+        "zoom_max":12,
+        "descr":"<div class='popup_content'><h2>Ritterburg :</h2>Citadelle perchée dans les montagnes sombres, c'est le bastion des guerriers traditionnels. Ses murailles sont noircies par le temps et les batailles.<div>"
+        },
+    {
         "titre":"Grande Forêt Noire",
         "lat":16.465777,
         "long": -54.885864,
