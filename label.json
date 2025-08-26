@@ -455,6 +455,16 @@
         "descr":"<div class='popup_content'>Le golfe d'Ephèse est situé au nord ouest de Dragonoland, et au sud du Royaume Papo. Une haute falaise le sépare du désert de Navajo, et il est surplombé au nord par la chaîne des montagnes papos.</div>"
         },
     {
+        "titre":"Île de la Tortue",
+        "lat":14.187175,
+        "long":-45.392761,
+        "class":"geographie",
+        "parent":"",
+        "zoom_min":8,
+        "zoom_max":20,
+        "descr":"L'Île de la Tortue est la plus grande de l'archipel situé au large de Fort Tigrou. Situé entre la baie du Loup et la mer des cascades, elle est le chef lieu supposé de la Confrérie des Pirates."
+        },
+    {
         "titre":"Toble",
         "lat":-22.893574,
         "long":-75.962976,
@@ -1356,4 +1366,5 @@
         "zoom_max":12,
         "descr":""
         }     
+
 ]
