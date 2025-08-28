@@ -206,6 +206,7 @@ button:hover, button:focus {
 
 .royaumes_ennemis h3{
     color : red;
+    font-size:1.3em;
     width : 100px;
 }
 .ville h3{
@@ -219,7 +220,14 @@ button:hover, button:focus {
 
 .textes_provinces h3{
     color: green;
+    font-size:1.3em;
     width: 135px;
+}
+
+.Rivière h3{
+    color: blue;
+    font-size:0.8em;
+    width: 100px;
 }
 
 .geographie h3{
@@ -229,7 +237,7 @@ button:hover, button:focus {
 }
 
 .textes_continents h3{
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-left: -120%;
     padding-left: 10%;
     width: 150px;
