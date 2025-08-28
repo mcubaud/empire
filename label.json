@@ -284,8 +284,8 @@
         },
     {   
         "titre":"Terre des Morts",
-        "lat":21.979502,
-        "long":-39.594727,
+        "lat":21.043491,
+        "long":-41.923828,
         "class":"royaumes_ennemis",
         "parent":"LARIUM",
         "zoom_min":4,
@@ -1418,7 +1418,7 @@
         "descr":""
         },
     {
-        "titre":"Siam",
+        "titre":"Rivière Siam",
         "lat":16.491399, 
         "long":-48.172302,
         "class":"Rivière",
@@ -1428,7 +1428,7 @@
         "descr":""
         },
     {
-        "titre":"Irn",
+        "titre":"Rivière Irn",
         "lat":17.442372, 
         "long":-49.257202,
         "class":"Rivière",
@@ -1441,7 +1441,7 @@
         "titre":"Lac Stinfale",
         "lat":17.633552, 
         "long": -48.131104,
-        "class":"lieu",
+        "class":"Rivière",
         "parent":"Petit-Chienland",
         "zoom_min":9,
         "zoom_max":15,
@@ -1451,7 +1451,7 @@
         "titre":"Lac Pourpre",
         "lat":17.177531, 
         "long":-48.501892,
-        "class":"lieu",
+        "class":"Rivière",
         "parent":"Petit-Chienland",
         "zoom_min":9,
         "zoom_max":15,
@@ -1479,6 +1479,7 @@
         }             
 
 ]
+
 
 
 
