@@ -40,7 +40,7 @@
         },
     {
         "titre":"LARIUM",
-        "lat":26.18351,
+        "lat":23.644524,
         "long":-44.296875,
         "class":"textes_continents",
         "parent":"",
@@ -1479,5 +1479,6 @@
         }             
 
 ]
+
 
 
