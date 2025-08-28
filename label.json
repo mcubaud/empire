@@ -462,7 +462,7 @@
         "parent":"",
         "zoom_min":8,
         "zoom_max":20,
-        "descr":"L'Île de la Tortue est la plus grande de l'archipel situé au large de Fort Tigrou. Situé entre la baie du Loup et la mer des cascades, elle est le chef lieu supposé de la Confrérie des Pirates."
+        "descr":"<div class='popup_content'>L'Île de la Tortue est la plus grande de l'archipel situé au large de Fort Tigrou. Situé entre la baie du Loup et la mer des cascades, elle est le chef lieu supposé de la Confrérie des Pirates.</div>"
         },
     {
         "titre":"Toble",
@@ -1368,3 +1368,4 @@
         }     
 
 ]
+
