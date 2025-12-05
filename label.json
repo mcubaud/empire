@@ -1768,6 +1768,16 @@
         "descr":""
         },
     {
+        "titre":"Esturmer",
+        "lat":14.236431, 
+        "long":   -53.701673,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
         "titre":"Le Corbier",
         "lat":15.786802,
         "long":   -53.029476,
