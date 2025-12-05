@@ -1528,9 +1528,9 @@
         "descr":"Petite ville agricole de 1633 habitants."
         },
     {
-        "titre":"Havreloin",
-        "lat":13.90022, 
-        "long": -55.269928,
+        "titre":"Esturmer",
+        "lat":14.236431, 
+        "long":   -53.701673,
         "class":"ville",
         "parent":"Dragonoland",
         "zoom_min":9,
@@ -1761,16 +1761,6 @@
         "titre":"Rivebarque",
         "lat":15.519025, 
         "long":  -52.607712,
-        "class":"ville",
-        "parent":"Dragonoland",
-        "zoom_min":9,
-        "zoom_max":15,
-        "descr":""
-        },
-    {
-        "titre":"Esturmer",
-        "lat":14.236431, 
-        "long":   -53.701673,
         "class":"ville",
         "parent":"Dragonoland",
         "zoom_min":9,
