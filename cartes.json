@@ -62,7 +62,7 @@
     {
         "nom":"dragonoland_scale_3.png",
         "imageBounds" : [[20.0, -58.75], [11.26, -50.8]],
-        "zoom" :7
+        "zoom" :8
     },
 
     {
@@ -80,12 +80,12 @@
     {
         "nom":"centre_echelle_4.png",
         "imageBounds" :  [[16.840910, -54.190233], [13.921149, -51.540233]],
-        "zoom" :9
+        "zoom" :10
     },
     {
         "nom":"rempart.png",
         "imageBounds" : [[16.095959, -53.405571], [16.078801, -53.386345]],
-        "zoom" :10
+        "zoom" :13
     }
 
 

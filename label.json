@@ -1476,7 +1476,447 @@
         "zoom_min":9,
         "zoom_max":15,
         "descr":""
-        }             
+        },
+    {
+        "titre":"Havreloin",
+        "lat":13.90022, 
+        "long": -55.269928,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Port sur la Baie d'Arkhan, 1992 habitants"
+        },
+    {
+        "titre":"Tour Noire",
+        "lat":14.99728, 
+        "long":  -55.120239,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Cette tour a été construite par les papos à l'époque où ils oppressaient la région. La prise de cette forteresse est donc un évènement symbolique de la libération de l'Empire. La tour, aujourd'hui en ruine, est le fief des seigneurs Barbares. 1799 habitants vivent dans la tour ou dans ses environs immédiats."
+        },
+    {
+        "titre":"Dendargent",
+        "lat":14.807813, 
+        "long":  -54.434738,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"La petite ville de Dendargent, 2451 habitants, est connue pour ses mines de minerais précieux."
+        },
+    {
+        "titre":"Sombrépi",
+        "lat":14.688317,
+        "long":  -54.118881,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Petite ville agricole proche de Dragonoville, à l'intersection des routes de Petit-chienville, de la forêt, et du port de Dragonoville. 3548 habitants."
+        },
+    {
+        "titre":"Morneplaine",
+        "lat":14.496325, 
+        "long": -53.530426, 
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Petite ville agricole de 1633 habitants."
+        },
+    {
+        "titre":"Havreloin",
+        "lat":13.90022, 
+        "long": -55.269928,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Port à l'embouchure de la rivière d'argent, 4034 habitants."
+        },
+    {
+        "titre":"Boucagne",
+        "lat":14.526593,
+        "long":  -53.062609 ,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Saulestant",
+        "lat":15.001458, 
+        "long":  -53.855843,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Vertchamp",
+        "lat":14.93699,
+        "long": -53.214715,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Bompré",
+        "lat":14.702812,
+        "long":  -52.843085,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Grandpont",
+        "lat":14.539388,
+        "long":  -52.682717,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Galiflamme",
+        "lat":14.897013, 
+        "long":  -52.848334,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Silurel",
+        "lat":14.952248, 
+        "long":  -52.709138,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Fruiterelle",
+        "lat":14.865118, 
+        "long":  -52.589117,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Doucerive",
+        "lat":14.993872,
+        "long":  -52.144411,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Portmousse",
+        "lat":14.236223, 
+        "long":  -51.631489,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Rosépine",
+        "lat":14.583916, 
+        "long":  -51.17519,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }   ,
+    {
+        "titre":"Veaulieu",
+        "lat":15.328082, 
+        "long":  -52.343483,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Doréclat",
+        "lat":15.266218, 
+        "long":  -52.598449,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Vandoise",
+        "lat":15.713529,
+        "long":  -52.248652,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Maréstang",
+        "lat":16.047628,
+        "long":  -52.489894 ,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }   ,
+    {
+        "titre":"Marchétal",
+        "lat":15.9258, 
+        "long":  -51.246519,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Montchemin",
+        "lat":16.596138, 
+        "long":  -51.40195,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Tegzace city",
+        "lat":17.370791,
+        "long":  -51.543056,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Goldstone Creek",
+        "lat":17.818974, 
+        "long":  -53.026893,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Conflebourg",
+        "lat":15.216614, 
+        "long": -52.827931,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Sourcepure",
+        "lat":15.476181, 
+        "long":  -53.115136,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Faucillon",
+        "lat":15.429936, 
+        "long":  -52.790776,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }  ,
+    {
+        "titre":"Rivebarque",
+        "lat":15.519025, 
+        "long":  -52.607712,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Le Corbier",
+        "lat":15.786802,
+        "long":   -53.029476,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Vasiéreux",
+        "lat":16.018137, 
+        "long": -52.798496,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Rempart",
+        "lat":16.086496, 
+        "long":   -53.395404,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Bordubois",
+        "lat":15.78164, 
+        "long":   -54.042617,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Bucheronde",
+        "lat":16.505389, 
+        "long": -54.010523,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Morteterre",
+        "lat":16.497653,  
+        "long":  -53.358559,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Clairval",
+        "lat":16.769864, 
+        "long": -54.957406,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Briseroche",
+        "lat":16.967323,
+        "long":  -54.443805,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Camp de flèche rapide",
+        "lat":17.54257,  
+        "long":  -54.536337,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Camp de lune sereine",
+        "lat":18.350289, 
+        "long":  -55.280132,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Fleuve dragon",
+        "lat":14.65534, 
+        "long":  -52.682869,
+        "class":"Rivière",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"La Douceuse",
+        "lat":14.891041,  
+        "long":  -52.426842,
+        "class":"Rivière",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Rivière écarlate",
+        "lat":15.279549, 
+        "long":  -53.147907,
+        "class":"Rivière",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Rivière de Soie",
+        "lat":16.301358, 
+        "long":  -52.393923,
+        "class":"Rivière",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } ,
+    {
+        "titre":"Rivière Dorée",
+        "lat":18.144057, 
+        "long": -53.052002,
+        "class":"Rivière",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        }           
 
 ]
 
