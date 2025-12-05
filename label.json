@@ -1918,105 +1918,205 @@
         "descr":""
         },
         {
-        "titre": "Orée-des-Ombres",
-        "lat": 14.854000,
-        "long": -54.050000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Ce village de bûcherons (450 habitants) marque la lisière dangereuse de la Grande Forêt Noire. Les habitants fournissent le bois de charpente à Saulestant."
+    "titre": "Petit-Bois",
+    "lat": 15.052412,
+    "long": -54.223891,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/petit-bois'>Petit-Bois :</a><img src='Blasons/petit-bois.png' width=200px></img><b>942 habitants</b><p>Village au bord de la Grande Forêt Noire, connu pour ses bûcherons et petites scieries artisanales.</p></div>"
     },
     {
-        "titre": "Gué-Rouge",
-        "lat": 15.180000,
-        "long": -53.250000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 11,
-        "zoom_max": 15,
-        "descr": "Petit hameau de 320 âmes situé sur un passage à gué de la rivière Écarlate. L'eau y est chargée d'argile ferreuse, donnant sa couleur et son nom au village."
+    "titre": "Clairétang",
+    "lat": 14.948137,
+    "long": -53.981254,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/clairetang'>Clairétang :</a><img src='Blasons/clairetang.png' width=200px></img><b>781 habitants</b><p>Petit hameau autour d'un étang limpide, apprécié des apiculteurs et des pêcheurs.</p></div>"
     },
     {
-        "titre": "Trèfle-les-Oies",
-        "lat": 15.100000,
-        "long": -53.600000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Situé au carrefour des routes entre Alaris, Vertchamp et Saulestant. Ses 890 habitants sont réputés pour leur élevage de volailles et leur immense auberge relais."
+    "titre": "Liseron",
+    "lat": 15.120084,
+    "long": -53.430702,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/liseron'>Liseron :</a><img src='Blasons/liseron.png' width=200px></img><b>629 habitants</b><p>Village perché sur une petite colline, entouré de cultures maraîchères et de vignes.</p></div>"
     },
     {
-        "titre": "Mieldou",
-        "lat": 14.920000,
-        "long": -52.350000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 11,
-        "zoom_max": 15,
-        "descr": "Proche de la Douceuse, ce village de 615 habitants vit de l'apiculture. On dit que le miel produit ici est le préféré de l'Empereur."
+    "titre": "Hautesouches",
+    "lat": 14.782305,
+    "long": -54.089431,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/hautesouches'>Hautesouches :</a><img src='Blasons/hautesouches.png' width=200px></img><b>514 habitants</b><p>Ancien poste forestier à la lisière de la Grande Forêt Noire, abrite un petit moulin à tan.</p></div>"
     },
     {
-        "titre": "Pic-au-Vent",
-        "lat": 15.550000,
-        "long": -53.300000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Perché dans les collines au nord de Vertchamp, ce village (280 habitants) abrite des bergers et un vieux moulin à vent qui ne s'arrête jamais."
+    "titre": "Noyerfleur",
+    "lat": 14.640902,
+    "long": -53.073011,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/noyerfleur'>Noyerfleur :</a><img src='Blasons/noyerfleur.png' width=200px></img><b>487 habitants</b><p>Village de vergers réputé pour ses noyers et ses confitures artisanales.</p></div>"
     },
     {
-        "titre": "L'Écume",
-        "lat": 14.350000,
-        "long": -52.000000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Village de pêcheurs (740 habitants) sur la côte de la Mer des Cascades. C'est le dernier arrêt sûr pour les navires avant le grand large."
+    "titre": "Mistralot",
+    "lat": 14.332107,
+    "long": -52.915432,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/mistralot'>Mistralot :</a><img src='Blasons/mistralot.png' width=200px></img><b>398 habitants</b><p>Petit village côtier, balayé par les vents de la Mer des Cascades, spécialisé dans la pêche côtière.</p></div>"
     },
     {
-        "titre": "Roc-Fendu",
-        "lat": 14.300000,
-        "long": -54.000000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 11,
-        "zoom_max": 15,
-        "descr": "Niché dans les contreforts volcaniques près de Dragonoville, ce village de 550 habitants exploite les carrières de pierre noire utilisées pour les remparts de la capitale."
+    "titre": "Brumevaux",
+    "lat": 14.873221,
+    "long": -52.745612,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/brumevaux'>Brumevaux :</a><img src='Blasons/brumevaux.png' width=200px></img><b>725 habitants</b><p>Au bord du fleuve dragon, village réputé pour ses vergers inondés de brume matinale.</p></div>"
     },
     {
-        "titre": "Confluent-Nord",
-        "lat": 15.350000,
-        "long": -52.700000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Situé juste avant que la rivière ne rejoigne le Fleuve Dragon. Ses 920 habitants contrôlent le trafic fluvial secondaire venant de Sourcepure."
+    "titre": "Peyrecrête",
+    "lat": 15.198664,
+    "long": -52.925384,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/peyrecrete'>Peyrecrête :</a><img src='Blasons/peyrecrete.png' width=200px></img><b>556 habitants</b><p>Petit village sur une crête rocheuse offrant une vue sur la vallée du fleuve dragon.</p></div>"
     },
     {
-        "titre": "Val-Tendre",
-        "lat": 14.650000,
-        "long": -53.300000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 11,
-        "zoom_max": 15,
-        "descr": "Un village paisible de 380 habitants entre Morneplaine et Boucagne, connu pour ses prairies grasses et ses fromages."
+    "titre": "Ruisselet",
+    "lat": 14.980442,
+    "long": -52.520133,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/ruisselet'>Ruisselet :</a><img src='Blasons/ruisselet.png' width=200px></img><b>341 habitants</b><p>Hameau traversé par un petit ruisseau qui se jette dans la Douceuse, communauté de jardiniers et tisserands.</p></div>"
     },
     {
-        "titre": "Vigie-du-Fleuve",
-        "lat": 14.750000,
-        "long": -52.750000,
-        "class": "village",
-        "parent": "Dragonoland",
-        "zoom_min": 10,
-        "zoom_max": 15,
-        "descr": "Installé sur une butte dominant le Fleuve Dragon, ce village fortifié de 850 habitants sert de poste avancé pour surveiller le trafic vers Grandpont."
-    }           
+    "titre": "Montécaille",
+    "lat": 14.623701,
+    "long": -52.988765,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/montecaille'>Montécaille :</a><img src='Blasons/montecaille.png' width=200px></img><b>673 habitants</b><p>Village stratégiquement placé sur une butte donnant sur la Mer des Cascades, connu pour ses fortifications en pierre.</p></div>"
+    },
+    {
+    "titre": "Valgrive",
+    "lat": 14.855918,
+    "long": -53.210044,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/valgrive'>Valgrive :</a><img src='Blasons/valgrive.png' width=200px></img><b>518 habitants</b><p>Petit village de vallée, producteurs de fromage de chèvre et d'herbes aromatiques.</p></div>"
+    },
+    {
+    "titre": "Rocheau",
+    "lat": 15.357004,
+    "long": -52.398762,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/rocheau'>Rocheau :</a><img src='Blasons/rocheau.png' width=200px></img><b>299 habitants</b><p>Niché au pied d'une falaise, Rocheau sert d'étape aux voyageurs entre Veaulieu et Conflebourg.</p></div>"
+    },
+    {
+    "titre": "Sautelaube",
+    "lat": 14.999221,
+    "long": -52.182900,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/sautelaube'>Sautelaube :</a><img src='Blasons/sautelaube.png' width=200px></img><b>204 habitants</b><p>Petit hameau proche de la Douceuse, célèbre pour une chute d'eau qui alimente un ancien moulin.</p></div>"
+    },
+    {
+    "titre": "Pinetale",
+    "lat": 15.024811,
+    "long": -53.601072,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/pinetale'>Pinetale :</a><img src='Blasons/pinetale.png' width=200px></img><b>712 habitants</b><p>Village de résineux au bord d'une ancienne route forestière, fournisseur de charbon de bois.</p></div>"
+    },
+    {
+    "titre": "Luneval",
+    "lat": 14.451992,
+    "long": -52.764309,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/luneval'>Luneval :</a><img src='Blasons/luneval.png' width=200px></img><b>833 habitants</b><p>Village riverain situé entre le port de Dragonoville et Sombrépi, réputé pour ses fêtes de la lune sur la jetée.</p></div>"
+    },
+    {
+    "titre": "Écarlotte",
+    "lat": 15.262190,
+    "long": -53.506980,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/ecarlotte'>Écarlotte :</a><img src='Blasons/ecarlotte.png' width=200px></img><b>276 habitants</b><p>Village installé le long de la rivière écarlate (qui passe vers Alaris), célèbre pour ses petites tanneries utilisant l'eau rougeâtre.</p></div>"
+    },
+    {
+    "titre": "Borddouce",
+    "lat": 14.960102,
+    "long": -52.140621,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/borddouce'>Borddouce :</a><img src='Blasons/borddouce.png' width=200px></img><b>489 habitants</b><p>Petit village riverain sur l'affluent Douceuse, connu pour ses vergers et ses pêcheries fluviales.</p></div>"
+    },
+    {
+    "titre": "Estanil",
+    "lat": 15.480223,
+    "long": -52.760104,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/estanil'>Estanil :</a><img src='Blasons/estanil.png' width=200px></img><b>622 habitants</b><p>Hameau d'agriculteurs et d'éleveurs dans la plaine, étape entre Sourcepure et Conflebourg.</p></div>"
+    },
+    {
+    "titre": "Bec-sur-Mer",
+    "lat": 14.212908,
+    "long": -52.907450,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/bec-sur-mer'>Bec-sur-Mer :</a><img src='Blasons/bec-sur-mer.png' width=200px></img><b>358 habitants</b><p>Petit port de pêche face à la Mer des Cascades, cabanes de pêcheurs et séchoirs à poisson.</p></div>"
+    },
+    {
+    "titre": "Falaises",
+    "lat": 14.288664,
+    "long": -51.745991,
+    "class": "village",
+    "parent": "Dragonoland",
+    "zoom_min": 9,
+    "zoom_max": 15,
+    "descr": "<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/falaises'>Falaises :</a><img src='Blasons/falaises.png' width=200px></img><b>273 habitants</b><p>Village situé sur une série de falaises dominant la Mer des Cascades, souvent visité pour ses panoramas.</p></div>"
+    }      
 
 ]
 
