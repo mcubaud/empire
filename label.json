@@ -1568,7 +1568,7 @@
         "descr":""
         },
     {
-        "titre":"Bompré",
+        "titre":"Bonpré",
         "lat":14.702812,
         "long":  -52.843085,
         "class":"ville",
@@ -1615,7 +1615,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 1358 habitants, située à proximité de l'embouchure de la Douceuse avec le fleuve Dragon. Elle est réputée pour ses vergers."
         },
     {
         "titre":"Doucerive",
@@ -1916,7 +1916,107 @@
         "zoom_min":9,
         "zoom_max":15,
         "descr":""
-        }           
+        },
+        {
+        "titre": "Orée-des-Ombres",
+        "lat": 14.854000,
+        "long": -54.050000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Ce village de bûcherons (450 habitants) marque la lisière dangereuse de la Grande Forêt Noire. Les habitants fournissent le bois de charpente à Saulestant."
+    },
+    {
+        "titre": "Gué-Rouge",
+        "lat": 15.180000,
+        "long": -53.250000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 11,
+        "zoom_max": 15,
+        "descr": "Petit hameau de 320 âmes situé sur un passage à gué de la rivière Écarlate. L'eau y est chargée d'argile ferreuse, donnant sa couleur et son nom au village."
+    },
+    {
+        "titre": "Trèfle-les-Oies",
+        "lat": 15.100000,
+        "long": -53.600000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Situé au carrefour des routes entre Alaris, Vertchamp et Saulestant. Ses 890 habitants sont réputés pour leur élevage de volailles et leur immense auberge relais."
+    },
+    {
+        "titre": "Mieldou",
+        "lat": 14.920000,
+        "long": -52.350000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 11,
+        "zoom_max": 15,
+        "descr": "Proche de la Douceuse, ce village de 615 habitants vit de l'apiculture. On dit que le miel produit ici est le préféré de l'Empereur."
+    },
+    {
+        "titre": "Pic-au-Vent",
+        "lat": 15.550000,
+        "long": -53.300000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Perché dans les collines au nord de Vertchamp, ce village (280 habitants) abrite des bergers et un vieux moulin à vent qui ne s'arrête jamais."
+    },
+    {
+        "titre": "L'Écume",
+        "lat": 14.350000,
+        "long": -52.000000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Village de pêcheurs (740 habitants) sur la côte de la Mer des Cascades. C'est le dernier arrêt sûr pour les navires avant le grand large."
+    },
+    {
+        "titre": "Roc-Fendu",
+        "lat": 14.300000,
+        "long": -54.000000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 11,
+        "zoom_max": 15,
+        "descr": "Niché dans les contreforts volcaniques près de Dragonoville, ce village de 550 habitants exploite les carrières de pierre noire utilisées pour les remparts de la capitale."
+    },
+    {
+        "titre": "Confluent-Nord",
+        "lat": 15.350000,
+        "long": -52.700000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Situé juste avant que la rivière ne rejoigne le Fleuve Dragon. Ses 920 habitants contrôlent le trafic fluvial secondaire venant de Sourcepure."
+    },
+    {
+        "titre": "Val-Tendre",
+        "lat": 14.650000,
+        "long": -53.300000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 11,
+        "zoom_max": 15,
+        "descr": "Un village paisible de 380 habitants entre Morneplaine et Boucagne, connu pour ses prairies grasses et ses fromages."
+    },
+    {
+        "titre": "Vigie-du-Fleuve",
+        "lat": 14.750000,
+        "long": -52.750000,
+        "class": "village",
+        "parent": "Dragonoland",
+        "zoom_min": 10,
+        "zoom_max": 15,
+        "descr": "Installé sur une butte dominant le Fleuve Dragon, ce village fortifié de 850 habitants sert de poste avancé pour surveiller le trafic vers Grandpont."
+    }           
 
 ]
 
