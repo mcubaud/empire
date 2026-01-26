@@ -1545,7 +1545,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 4108 habitants, connue pour sa foire."
         },
     {
         "titre":"Saulestant",
@@ -1555,7 +1555,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 2489 habitants à l'orée de la Grande Forêt Noire."
         },
     {
         "titre":"Vertchamp",
@@ -1565,7 +1565,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 3621 habitants, au coeur des plaines agricoles du sud ouest de Dragonoville."
         },
     {
         "titre":"Bonpré",
@@ -1575,7 +1575,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Petite ville agricole de 1597 habitants."
         },
     {
         "titre":"Grandpont",
@@ -1585,7 +1585,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Dernier pont avant l'estuaire du fleuve Dragon, cette ville de 9431 habitants est un passage obligatoire sur la route entre Dragonoville et Chiot-chiotville."
         },
     {
         "titre":"Galiflamme",
@@ -1595,7 +1595,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville agricole de 2854 habitants, sur la route qui mène du Port de Dragonoville à Pontcastel en longeant le fleuve."
         },
     {
         "titre":"Silurel",
@@ -1605,7 +1605,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de pecheurs sur le fleuve Dragon. 1107 habitants"
         },
     {
         "titre":"Fruiterelle",
@@ -1625,7 +1625,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Doucerive est située au bord de la rivière Douceuse, à l'orée de la forêt d'Ophalie, sur la route menant de Pontcastel à Chiot-chiotville."
         }  ,
     {
         "titre":"Portmousse",
@@ -1635,7 +1635,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Port de 3819 habitants situé au sud de Chiot-chiotville."
         }  ,
     {
         "titre":"Rosépine",
