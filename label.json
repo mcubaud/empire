@@ -1545,7 +1545,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Ville de 4108 habitants, connue pour sa foire."
+        "descr":"Ville de 4108 habitants, connue pour ses élevages ovins."
         },
     {
         "titre":"Saulestant",
@@ -1585,7 +1585,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Dernier pont avant l'estuaire du fleuve Dragon, cette ville de 9431 habitants est un passage obligatoire sur la route entre Dragonoville et Chiot-chiotville."
+        "descr":"Dernier pont avant l'estuaire du fleuve Dragon, cette ville de 9431 habitants est un passage obligatoire et stratégique sur la route entre Dragonoville et Chiot-chiotville."
         },
     {
         "titre":"Galiflamme",
@@ -1645,7 +1645,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 4733 habitants, proche de la frontière entre Dragonoland et Petit-chienland. Connue pour ses jardins."
         }   ,
     {
         "titre":"Veaulieu",
@@ -1655,7 +1655,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 4355 habitants, connue pour ses élevages bovins. Sur la route entre Doucerive et Pontcastel."
         } ,
     {
         "titre":"Doréclat",
@@ -1665,7 +1665,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village céréalier de 1753 habitants."
         } ,
     {
         "titre":"Vandoise",
@@ -1675,7 +1675,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville commercante de 8627 habitants, sur la route entre Pontcastel et Petit-chienville."
         } ,
     {
         "titre":"Maréstang",
@@ -1685,7 +1685,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de 1660 habitants, proche des marais."
         }   ,
     {
         "titre":"Marchétal",
@@ -1695,7 +1695,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 8024 habitants, qui tient sa prospérité de sa position sur la route entre Pontcastel et Petit-chienville, proche de la frontière des deux porvinces."
         }  ,
     {
         "titre":"Montchemin",
@@ -1705,7 +1705,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de 1806 habitants situé sur les hauteurs des collines, sur la route de Pontcastel à Coyote Town."
         }  ,
     {
         "titre":"Tegzace city",
@@ -1715,7 +1715,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de cow-boys du désert de Navajo. 6983 habitants"
         }  ,
     {
         "titre":"Goldstone Creek",
@@ -1725,7 +1725,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Petite ville minière proche des canyons du désert de Navajo. 2055 habitants."
         }  ,
     {
         "titre":"Conflebourg",
@@ -1735,7 +1735,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 3324 habitants située au confluent entre la rivière écarlate et le fleuve Dragon."
         }  ,
     {
         "titre":"Sourcepure",
