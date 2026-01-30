@@ -692,7 +692,7 @@
         "parent":"Dragonoland",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/carouacas-1'>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 100000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/carouacas-1'>Carouacas</a><img src='Blasons/bouclier_indien.png' width=250px></img><b>≈ 10000 habitants</b><p> Carouacas est le plus grand campement Indien du désert de Navajo, au nord de Dragonoland. Contrairement à la plupart des autres campements, nomades, le site de Carouacas est permanent.</p></div>"
         },
     {
         "titre":"Petit-Chienville",
@@ -1705,7 +1705,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Village de 1806 habitants situé sur les hauteurs des collines, sur la route de Pontcastel à Coyote Town."
+        "descr":"Village de 1806 habitants situé sur les hauteurs des Collines Silencieuses, sur la route de Pontcastel à Coyote Town."
         }  ,
     {
         "titre":"Tegzace city",
@@ -1745,7 +1745,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 5134 habitants connue pour sa source miraculeuse."
         }  ,
     {
         "titre":"Faucillon",
@@ -1755,7 +1755,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Petite ville de 1643 habitants."
         }  ,
     {
         "titre":"Rivebarque",
@@ -1765,7 +1765,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Port sur le fleuve Dragon, 2239 habitants."
         },
     {
         "titre":"Le Corbier",
@@ -1775,7 +1775,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village agricole de 1053 habitants."
         } ,
     {
         "titre":"Vasiéreux",
@@ -1785,7 +1785,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de 1509 habitants à l'ouest du marais."
         } ,
     {
         "titre":"Rempart",
@@ -1795,7 +1795,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Cette ville de 7327 habitants est nommée d'après ces imposantes fortifications qui lui permirent de résister aux invasions Papos."
         } ,
     {
         "titre":"Bordubois",
@@ -1805,7 +1805,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de bucherons non loin de la Grande Forêt Noire. 1780 habitants"
         } ,
     {
         "titre":"Bucheronde",
@@ -1815,7 +1815,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village sylvicole de 1208 habitants, à proximité de la Grande Forêt Noire et au pied des Collines Silencieuses."
         } ,
     {
         "titre":"Morteterre",
@@ -1825,7 +1825,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Petite ville de 2484 habitants, à l'abri au sud des Collines Silencieuses."
         } ,
     {
         "titre":"Clairval",
@@ -1835,7 +1835,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Village de 1273 habitants situé dans un vallon à l'intérieur de la Grande Forêt Noire. De nombreuses rumeurs circulent sur de mystérieux évènements qui s'y produiraient."
         } ,
     {
         "titre":"Briseroche",
@@ -1845,7 +1845,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Ville de 6076 habitants située dans un col des Collines Silencieuses, au nord de la Grande Forêt Noire. Elle est réputée pour ses carrières."
         } ,
     {
         "titre":"Camp de flèche rapide",
@@ -1855,7 +1855,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Le clan de la flèche rapide est un des plus grands clans indiens, composés de 1701 individus. Il s'établit généralement dans le Sud Ouest du désert de Navajo, à proximité des routes impériales afin d'y faire du commerce de fourrure et de viande de bison."
         } ,
     {
         "titre":"Camp de lune sereine",
@@ -1865,7 +1865,17 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":""
+        "descr":"Avec ces 1792 personnes, le clan de la lune sereine est l'un des clans indiens les plus importants. Il s'installe généralement au Nord Ouest du désert de Navajo, à proximité des Montagnes Noires ou des falaises du golfe d'Ephèse."
+        } ,
+    {
+        "titre":"Porte Noire",
+        "lat":18.817917,
+        "long":  -54.407291,
+        "class":"ville",
+        "parent":"Dragonoland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":"Le col traversant les montagnes noires et permettant de traverser la frontière entre le royaume des Papos et l'Empire est fortifié des 2 côtés. Côté impérial, la Porte Noire acceuille une garnison de 1000 légionnaires, auxquels s'ajoutent 115 autres habitants, civils ou militaires. Elle a été le théâtre de nombreux affrontements aux cours des ages."
         } ,
     {
         "titre":"Fleuve dragon",
@@ -1916,7 +1926,17 @@
         "zoom_min":9,
         "zoom_max":15,
         "descr":""
-        }
+        },
+    {
+        "titre":"Pontarlant",
+        "lat":15.37226,
+        "long":   -48.847853,
+        "class":"ville",
+        "parent":"Petit-Chienland",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        } 
 
 ]
 
