@@ -296,9 +296,9 @@ function print_neighborhoods(marker, popup){
                     }
                 },1000)
             }else{
-                //a character is open
-                talk_character({"target":{"id":char_id}}, popup, marker, neighborhood["characters"])
-
+                // CORRECTION : Au lieu de crash sur un char_id inexistant,
+                // on réaffiche proprement le menu principal du quartier au clic.
+                print_neighborhoods(marker, popup);
             }
         }
     )
