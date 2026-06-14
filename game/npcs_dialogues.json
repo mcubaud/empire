@@ -432,5 +432,9 @@
     "Garde de la ville":{
         "description":"",
         "dialogues":[]
+    },
+    "Pélerin":{
+        "description":"",
+        "dialogues":[]
     }
 }
