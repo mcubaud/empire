@@ -4,34 +4,47 @@
         "Alaris":12,
         "Pontcastel":22,
         "Port de Dragonoville":12,
-        "Chiot-chioville":24  
+        "Chiot-chiotville":24,
+        "Nécropole": 6  
         },
     "Alaris":{
         "Dragonoville":12,
         "Alaris":0,
         "Pontcastel":10,
         "Port de Dragonoville":12,
-        "Chiot-chioville":24  
+        "Chiot-chiotville":24 ,
+        "Nécropole": 18 
         },
     "Pontcastel":{
         "Dragonoville":22,
         "Alaris":10,
         "Pontcastel":0,
         "Port de Dragonoville":15,
-        "Chiot-chioville":18  
+        "Chiot-chiotville":18,
+        "Nécropole": 28  
         },
     "Port de Dragonoville":{
         "Dragonoville":12,
         "Alaris":12,
         "Pontcastel":15,
         "Port de Dragonoville":0,
-        "Chiot-chioville":12  
+        "Chiot-chiotville":12,
+        "Nécropole": 18  
         },
-    "Chiot-chioville":{
+    "Chiot-chiotville":{
         "Dragonoville":24,
         "Alaris":24,
         "Pontcastel":18,
         "Port de Dragonoville":12,
-        "Chiot-chioville":0  
+        "Chiot-chiotville":0,
+        "Nécropole": 30  
+        },
+    "Nécropole":{
+        "Dragonoville":6,
+        "Alaris":18,
+        "Pontcastel":28,
+        "Port de Dragonoville":18,
+        "Chiot-chiotville":30,
+        "Nécropole": 0  
         }
 }

@@ -295,7 +295,10 @@
             }
         },
         "3":
-            {
+            {"Nécropole":{
+                "flavour_text":"Vous vous tenez devant la sinistre et ancienne Nécropole. L'air y est glacial...",
+                "neighborhoods":{}
+            },
             "Dragonoville":{
                 "flavour_text":"L'excitation est à son comble alors que Dragonoville se prépare à accueillir l'empereur. Les rues sont décorées de bannières festives, et une foule enthousiaste se rassemble le long du parcours du cortège impérial. Pour le joueur, c'est un moment crucial, car l'arrivée de l'empereur signifie qu'il doit être prêt à agir. Les rumeurs de complot sont devenues plus pressantes, le poussant à accélérer ses recherches.",
                 "neighborhoods":{
@@ -396,6 +399,10 @@
         },
         "4":
             {
+            "Nécropole":{
+                "flavour_text":"Vous vous tenez devant la sinistre et ancienne Nécropole. L'air y est glacial...",
+                "neighborhoods":{}
+            },
             "Dragonoville":{
                 "flavour_text":"Dragonoville déborde de vie alors que les festivités battent leur plein. Les rues résonnent de musique et de rires, et les marchés regorgent de délices culinaires et d'objets artisanaux. Pourtant, le joueur sait que derrière cette façade de célébration, le danger rôde toujours. Il se hâte de rassembler les dernières pièces du puzzle, conscient que le temps presse.",
                 "neighborhoods":{
@@ -497,6 +504,10 @@
         },
         "5":
             {
+            "Nécropole":{
+                "flavour_text":"Vous vous tenez devant la sinistre et ancienne Nécropole. L'air y est glacial...",
+                "neighborhoods":{}
+            },
             "Dragonoville":{
                 "flavour_text":"La ville est plongée dans une atmosphère électrique alors que la nuit tombe sur Dragonoville. Les feux d'artifice illuminent le ciel nocturne, éclairant les visages souriants des habitants. Mais pour le joueur, c'est un moment d'urgence. Les pièces du complot commencent à se mettre en place, et il doit agir rapidement pour les arrêter avant qu'il ne soit trop tard.",
                 "neighborhoods":{
@@ -598,6 +609,10 @@
         },
         "6":
             {
+            "Nécropole":{
+                "flavour_text":"Vous vous tenez devant la sinistre et ancienne Nécropole. L'air y est glacial...",
+                "neighborhoods":{}
+            },
             "Dragonoville":{
                 "flavour_text":"C'est le grand jour de la fête de Dragono à Dragonoville. La ville est en ébullition, alors que les citoyens se pressent vers le magnifique temple dédié au dieu Dragono. Le joueur se tient prêt, conscient que le moment de la vérité est arrivé. Alors que l'empereur et les nobles entrent dans le temple, il sait que c'est maintenant ou jamais.",
                 "neighborhoods":{
@@ -699,6 +714,10 @@
         },
         "7":
             {
+            "Nécropole":{
+                "flavour_text":"Vous vous tenez devant la sinistre et ancienne Nécropole. L'air y est glacial...",
+                "neighborhoods":{}
+            },
             "Dragonoville":{
                 "flavour_text":"",
                 "neighborhoods":{

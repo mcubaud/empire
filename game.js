@@ -264,41 +264,68 @@ function print_neighborhoods(marker, popup){
     neighborhoods = positions_day[current_position]["neighborhoods"]
     popup = remove_existing_content(popup)
     popup_content = popup.getContent()
+    
+    // Contenu de base (Texte d'ambiance)
     popup_content += `<div class='div_neighborhood popup_content'>
-    <i>${flavour_text}</i>
-    <p>Vous pouvez accéder aux quartiers suivants :</p>
-    `
-    for(neighborhood in neighborhoods){
-        popup_content += `<button id=${neighborhood.replaceAll(" ", "_")}>${neighborhood}</button>`
+    <i>${flavour_text}</i>`
+
+    // COMPORTEMENT SPÉCIAL POUR LA NÉCROPOLE
+    if (current_position === "Nécropole") {
+        popup_content += `
+        <p>Ce lieu semble mystérieux et abandonné...</p>
+        <button id="BtnExplorerNecropole">Explorer la Nécropole</button>
+        `
+    } else {
+        // Comportement normal pour les autres villes / lieux
+        popup_content += `<p>Vous pouvez accéder aux quartiers suivants :</p>`
+        for(neighborhood in neighborhoods){
+            popup_content += `<button id=${neighborhood.replaceAll(" ", "_")}>${neighborhood}</button>`
+        }
+        popup_content += `<p>Vous pouvez également vous reposer dans une taverne :</p>
+        <button id="Repos">Se reposer dans une taverne (6h)</button>`
     }
-    popup_content += `<p>Vous pouvez également vous reposer dans une taverne :</p>
-    <button id="Repos">Se reposer dans une taverne (6h)</button>
-    `
+    
     popup_content += "</div>"
     popup.setContent(popup_content)
+
+    // Gestion des événements au clic (popupopen)
     marker.on(
         "popupopen",
         function(e){
-            if(document.getElementById("Repos")){
-                setTimeout(function(){
-                    for(neighborhood in neighborhoods){
-                        console.log(neighborhood.replaceAll(" ", "_"));
-                        document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)};
-                    }
-                    document.getElementById("Repos").onclick=function(e){
-                        current_day+=6/24;
-                        update_time(current_day);
-                        set_popups_using_daily_position(positions_day, current_day);
-                        player_health = max_player_health;
-                        night_events(current_position, "");
-                        marker.closePopup();
-                        marker.openPopup();
-                    }
-                },1000)
-            }else{
-                // CORRECTION : Au lieu de crash sur un char_id inexistant,
-                // on réaffiche proprement le menu principal du quartier au clic.
-                print_neighborhoods(marker, popup);
+            // Événement pour la Nécropole
+            if (current_position === "Nécropole") {
+                if (document.getElementById("BtnExplorerNecropole")) {
+                    setTimeout(function(){
+                        document.getElementById("BtnExplorerNecropole").onclick = function(e){
+                            marker.closePopup(); // Ferme la popup de la carte avant de lancer l'exploration
+                            explore(4);
+                        }
+                    }, 1000);
+                } else {
+                    print_neighborhoods(marker, popup);
+                }
+            } 
+            // Événement pour les autres villes (avec le bouton Repos)
+            else {
+                if(document.getElementById("Repos")){
+                    setTimeout(function(){
+                        for(neighborhood in neighborhoods){
+                            console.log(neighborhood.replaceAll(" ", "_"));
+                            document.getElementById(neighborhood.replaceAll(" ", "_")).onclick=function(e){show_characters(e, popup, marker, neighborhoods)};
+                        }
+                        document.getElementById("Repos").onclick=function(e){
+                            current_day+=6/24;
+                            update_time(current_day);
+                            set_popups_using_daily_position(positions_day, current_day);
+                            player_health = max_player_health;
+                            night_events(current_position, "");
+                            marker.closePopup();
+                            marker.openPopup();
+                        }
+                    },1000)
+                }else{
+                    print_neighborhoods(marker, popup);
+                }
             }
         }
     )
