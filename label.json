@@ -1937,6 +1937,16 @@
         "zoom_max":15,
         "descr":""
         },
+        {
+        "titre":"Fleuve des Esprits",
+        "lat":21.378495,
+        "long": -38.870382,
+        "class":"Rivière",
+        "parent":"Terre des Morts",
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
     {
         "titre":"Rivière de Fer",
         "lat":15.627476, 
@@ -1958,6 +1968,16 @@
         "descr":""
         },
     {
+        "titre":"Fleuve Sahkourine",
+        "lat":24.02945, 
+        "long": -30.477183,
+        "class":"Rivière",
+        "parent":"Territoires Petits Soldats",
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
         "titre":"Rivière d'Acier",
         "lat":17.148928, 
         "long":  -35.047155,
@@ -1974,7 +1994,7 @@
         "long":  -36.274077,
         "class":"lieu",
         "parent":"Royaumes Méga-Blocks",
-        "zoom_min":9,
+        "zoom_min":8,
         "zoom_max":15,
         "descr":""
         },
@@ -1985,7 +2005,38 @@
         "long": -31.817107,
         "class":"lieu",
         "parent":"Royaumes Méga-Blocks",
-        "zoom_min":9,
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+
+    {
+        "titre":"Collines des Trépassés",
+        "lat":21.746201,  
+        "long": -35.829351,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Montagnes Sombres",
+        "lat":22.741984,  
+        "long": -42.603969,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Montagnes Noires",
+        "lat":19.171875, 
+        "long": -51.905521,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":8,
         "zoom_max":15,
         "descr":""
         },
