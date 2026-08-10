@@ -2084,8 +2084,8 @@
     
     {
         "titre":"Contreforts de Jurak'Tor",
-        "lat":18.489897, 
-        "long": -47.766402,
+        "lat":20.325269,
+        "long":  -44.929401,
         "class":"lieu",
         "parent":"LARIUM",
         "zoom_min":9,
