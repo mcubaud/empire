@@ -732,7 +732,7 @@
         "parent":"Petit-Chienland",
         "zoom_min":7,
         "zoom_max":12,
-        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/wulf'>Wulf :</a><img src='Blasons/wulf_provisoire.png' width=250px></img><b>60000 habitants</b><p>La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Grises et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers.</p></div>"
+        "descr":"<div class='popup_content'><a href='https://lempireeternel.blog4ever.com/wulf'>Wulf :</a><img src='Blasons/wulf_provisoire.png' width=250px></img><b>60000 habitants</b><p>La ville de Wulf se trouve au nord ouest de la baie du Loup, coincé entre les Montagnes Glacées et la mer, dans la province de Petit-Chienland. C'est une ville de marins et de guerriers.</p></div>"
         },
     {
         "titre":"Fort Tigrou",
@@ -1705,7 +1705,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Village de 1806 habitants situé sur les hauteurs des Collines Silencieuses, sur la route de Pontcastel à Coyote Town."
+        "descr":"Village de 1806 habitants situé sur les hauteurs des Collines Venteuses, sur la route de Pontcastel à Coyote Town."
         }  ,
     {
         "titre":"Tegzace city",
@@ -1815,7 +1815,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Village sylvicole de 1208 habitants, à proximité de la Grande Forêt Noire et au pied des Collines Silencieuses."
+        "descr":"Village sylvicole de 1208 habitants, à proximité de la Grande Forêt Noire et au pied des Collines Venteuses."
         } ,
     {
         "titre":"Morteterre",
@@ -1825,7 +1825,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Petite ville de 2484 habitants, à l'abri au sud des Collines Silencieuses."
+        "descr":"Petite ville de 2484 habitants, à l'abri au sud des Collines Venteuses."
         } ,
     {
         "titre":"Clairval",
@@ -1845,7 +1845,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Ville de 6076 habitants située dans un col des Collines Silencieuses, au nord de la Grande Forêt Noire. Elle est réputée pour ses carrières."
+        "descr":"Ville de 6076 habitants située dans un col des Collines Venteuses, au nord de la Grande Forêt Noire. Elle est réputée pour ses carrières."
         } ,
     {
         "titre":"Camp de flèche rapide",
@@ -1865,7 +1865,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Avec ces 1792 personnes, le clan de la lune sereine est l'un des clans indiens les plus importants. Il s'installe généralement au Nord Ouest du désert de Navajo, à proximité des Montagnes Noires ou des falaises du golfe d'Ephèse."
+        "descr":"Avec ces 1792 personnes, le clan de la lune sereine est l'un des clans indiens les plus importants. Il s'installe généralement au Nord Ouest du désert de Navajo, à proximité des Montagnes Papos ou des falaises du golfe d'Ephèse."
         } ,
     {
         "titre":"Porte Noire",
@@ -1875,7 +1875,7 @@
         "parent":"Dragonoland",
         "zoom_min":9,
         "zoom_max":15,
-        "descr":"Le col traversant les montagnes noires et permettant de traverser la frontière entre le royaume des Papos et l'Empire est fortifié des 2 côtés. Côté impérial, la Porte Noire acceuille une garnison de 1000 légionnaires, auxquels s'ajoutent 115 autres habitants, civils ou militaires. Elle a été le théâtre de nombreux affrontements aux cours des ages."
+        "descr":"Le col traversant les montagnes Papos et permettant de traverser la frontière entre le royaume des Papos et l'Empire est fortifié des 2 côtés. Côté impérial, la Porte Noire acceuille une garnison de 1000 légionnaires, auxquels s'ajoutent 115 autres habitants, civils ou militaires. Elle a été le théâtre de nombreux affrontements aux cours des ages."
         } ,
     {
         "titre":"Fleuve dragon",
@@ -2031,12 +2031,64 @@
         "descr":""
         },
     {
-        "titre":"Montagnes Noires",
+        "titre":"Montagnes Papos",
         "lat":19.171875, 
         "long": -51.905521,
         "class":"lieu",
         "parent":"LARIUM",
         "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Montagnes Silencieuses",
+        "lat":18.624551,
+        "long":  -49.620431 ,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Montagnes Glacées",
+        "lat":17.828369, 
+        "long": -46.505605,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Massif de Buratie",
+        "lat":17.363948,
+        "long":  -44.257624,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":8,
+        "zoom_max":15,
+        "descr":""
+        },
+    
+    {
+        "titre":"Montagnes Papos",
+        "lat":18.489897, 
+        "long": -47.766402,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    
+    {
+        "titre":"Contreforts de Jurak'Tor",
+        "lat":18.489897, 
+        "long": -47.766402,
+        "class":"lieu",
+        "parent":"LARIUM",
+        "zoom_min":9,
         "zoom_max":15,
         "descr":""
         },
