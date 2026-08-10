@@ -1918,6 +1918,78 @@
         "descr":""
         } ,
     {
+        "titre":"Fleuve de Souffre",
+        "lat":17.751657, 
+        "long": -35.420501,
+        "class":"Rivière",
+        "parent":"Royaume Fyren",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Rivière de Plomb",
+        "lat":18.264265,  
+        "long": -34.439339,
+        "class":"Rivière",
+        "parent":"Royaume Fyren",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Rivière de Fer",
+        "lat":15.627476, 
+        "long": -35.470373 ,
+        "class":"Rivière",
+        "parent":"Royaume Valteran",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Rivière d'Airain",
+        "lat":15.388056, 
+        "long":  -32.742154,
+        "class":"Rivière",
+        "parent":"Royaume Draigar",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
+        "titre":"Rivière d'Acier",
+        "lat":17.148928, 
+        "long":  -35.047155,
+        "class":"Rivière",
+        "parent":"Royaume Valteran",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+
+    {
+        "titre":"Montagnes de l'Aube",
+        "lat":14.753979, 
+        "long":  -36.274077,
+        "class":"lieu",
+        "parent":"Royaumes Méga-Blocks",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+
+    {
+        "titre":"Forêt de Vorgia",
+        "lat":16.891217,  
+        "long": -31.817107,
+        "class":"lieu",
+        "parent":"Royaumes Méga-Blocks",
+        "zoom_min":9,
+        "zoom_max":15,
+        "descr":""
+        },
+    {
         "titre":"Rivière Dorée",
         "lat":18.144057, 
         "long": -53.052002,
