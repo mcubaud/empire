@@ -230,6 +230,21 @@ button:hover, button:focus {
     width: 100px;
 }
 
+.montagnes h3{
+    font-family: "Manufacturing Consent", 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+    width: 130px;
+    color: #803f2a;
+}
+
+.forets h3{
+    font-size: 0.9em;
+    font-family: "Fleur De Leah", cursive;
+    color: darkgreen;
+    width:90px;
+    text-align: center;
+}
+
 .geographie h3{
     font-style: italic;
     font-weight: bold;
