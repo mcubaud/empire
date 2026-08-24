@@ -81,7 +81,7 @@ async function chargerDonnees() {
             if (label.descr) {
                 marker.bindPopup(label.descr);
             }
-
+            marker.addTo(group);
             return marker;
         });
 
