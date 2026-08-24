@@ -89,7 +89,7 @@ async function chargerDonnees() {
         mettre_a_jour_carte();
 
         // Initialisation de la barre de recherche une fois les données chargées
-        initSearchControl();
+        //initSearchControl();
 
     } catch (erreur) {
         console.error("Erreur de chargement :", erreur);
