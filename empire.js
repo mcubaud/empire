@@ -79,7 +79,7 @@ async function chargerDonnees() {
             marker.zoom_min = label.zoom_min;
             marker.zoom_max = label.zoom_max;
 
-            if (label.texte) | (label.blason_url) {
+            if (label.texte) || (label.blason_url) {
                 marker.bindPopup(
                     genererHTMLPopup(label)
                 );
