@@ -87,7 +87,7 @@ async function chargerDonnees() {
         });
 
         // Initialisation de la barre de recherche une fois les données chargées
-        //initSearchControl();
+        initSearchControl();
 
         // Premier affichage une fois les données prêtes
         mettre_a_jour_carte();
