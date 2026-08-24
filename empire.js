@@ -75,12 +75,12 @@ function mettre_a_jour_carte(){
     //Affiche uniquement les objets presents pour lesquels le zoom minimum est inférieur au zoom de la carte
    group.clearLayers();
     listeCartes.forEach(function(objet){
-        if(mymap._zoom>objet.zoom){
+        if(mymap.getZoom()>objet.zoom){
             L.imageOverlay(objet.nom, objet.imageBounds).addTo(group);
         }
     })
     listeMarkers.forEach(function(marker){
-        if(marker.zoom_max>=mymap._zoom && mymap._zoom>=marker.zoom_min){
+        if(marker.zoom_max>=mymap.getZoom() && mymap.getZoom()>=marker.zoom_min){
             marker.addTo(group);
         }
     })
