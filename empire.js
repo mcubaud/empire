@@ -100,7 +100,7 @@ function initSearchControl() {
     // LayerGroup séparé pour le moteur de recherche contenant TOUS les marqueurs
     const searchLayer = L.layerGroup(listeMarkers);
 
-    const searchControl = new L.Control.Search({
+    var searchControl = new L.Control.Search({
         layer: searchLayer,
         propertyName: 'name',
         initial: false,
