@@ -1,8 +1,8 @@
-///affichage de la carte
-mymap = L.map('mapid').setView([0,0], 2);
+/// Initialisation de la carte
+var mymap = L.map('mapid').setView([0, 0], 2);
 mymap.setMinZoom(2);
 
-Icone = L.Icon.extend({
+var Icone = L.Icon.extend({
     options: {
         shadowUrl: '',
         iconSize:     [42, 95],
@@ -13,90 +13,95 @@ Icone = L.Icon.extend({
     }
 });
 
-//group contient tous les marqueurs, avec un marqueur par unité.
-group=L.featureGroup().addTo(mymap);
+// Group contient tous les marqueurs et overlays
+var group = L.featureGroup().addTo(mymap);
 
-/*
-var imageUrl = 'test.jpg',
-    imageBounds = [[45.847,4.788], mymap.unproject([mymap.project([45.847,4.788]).x+2338,mymap.project([45.847,4.788]).y-1699])];
-L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
-*/
+// Stockage des données
+var listeCartes = [];
+var listeMarkers = [];
 
-function preloadImage(url)
-{
-    var img=new Image();
-    img.src=url;
+// Fonction de préchargement d'image
+function preloadImage(url) {
+    const img = new Image();
+    img.src = url;
 }
 
+// Fonction de mise à jour de la carte
+function mettre_a_jour_carte() {
+    let currentZoom = mymap.getZoom(); 
+    group.clearLayers();
 
-var listeCartes=[];
-var requestURL = 'cartes.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-    listeCartes=request.response;
-    console.log(request)
-    listeCartes.forEach(function(objet){
-        preloadImage(objet.nom)
-    })
-    mettre_a_jour_carte();
-}
-
-
-var listeMarkers=[];
-var requestURL2 = 'label.json';
-var request2 = new XMLHttpRequest();
-request2.open('GET', requestURL2);
-request2.responseType = 'json';
-request2.send();
-request2.onload = function() {
-    var labels=request2.response;
-    labels.forEach(function(label){
-        var marker=L.marker([label.lat,label.long],{icon:L.divIcon({className: label.class ,html:"<h3>"+label.titre+"</h3>"})})
-        marker.name = label.titre;
-        marker.zoom_min=label.zoom_min;
-        marker.zoom_max=label.zoom_max;
-        if(label.descr){
-            marker.bindPopup(label.descr);
-        }
-
-        listeMarkers.push(marker);
-    });
-    mettre_a_jour_carte();
-}
-
-
-
-
-
-function mettre_a_jour_carte(){
-    //Affiche uniquement les objets presents pour lesquels le zoom minimum est inférieur au zoom de la carte
-   group.clearLayers();
-    listeCartes.forEach(function(objet){
-        if(mymap.getZoom()>objet.zoom){
+    // Affichage des overlays d'images selon le zoom
+    listeCartes.forEach(objet => {
+        if (currentZoom > objet.zoom) {
             L.imageOverlay(objet.nom, objet.imageBounds).addTo(group);
         }
-    })
-    listeMarkers.forEach(function(marker){
-        if(marker.zoom_max>=mymap.getZoom() && mymap.getZoom()>=marker.zoom_min){
+    });
+
+    // Affichage des marqueurs selon les bornes de zoom
+    listeMarkers.forEach(marker => {
+        if (marker.zoom_max >= currentZoom && currentZoom >= marker.zoom_min) {
             marker.addTo(group);
         }
-    })
+    });
 }
-mymap.addEventListener("zoomend",function(e){
-    //Met à jour la carte en cas de zoom.
-    mettre_a_jour_carte();
-});
 
-function onMapClick(e) {
-    var popup = L.popup();
-    popup
+// Chargement asynchrone des données avec fetch / async/await
+async function chargerDonnees() {
+    try {
+        // Chargement en parallèle des cartes et des labels
+        const [resCartes, resLabels] = await Promise.all([
+            fetch('cartes.json'),
+            fetch('label.json')
+        ]);
+
+        if (!resCartes.ok || !resLabels.ok) {
+            throw new Error('Erreur lors du chargement des fichiers JSON');
+        }
+
+        listeCartes = await resCartes.json();
+        const labels = await resLabels.json();
+
+        // Préchargement des images de cartes
+        listeCartes.forEach(objet => preloadImage(objet.nom));
+
+        // Traitement des marqueurs
+        listeMarkers = labels.map(label => {
+            const marker = L.marker([label.lat, label.long], {
+                icon: L.divIcon({
+                    className: label.class,
+                    html: `<h3>${label.titre}</h3>`
+                })
+            });
+
+            marker.name = label.titre;
+            marker.zoom_min = label.zoom_min;
+            marker.zoom_max = label.zoom_max;
+
+            if (label.descr) {
+                marker.bindPopup(label.descr);
+            }
+
+            return marker;
+        });
+
+        // Premier affichage une fois les données prêtes
+        mettre_a_jour_carte();
+
+    } catch (erreur) {
+        console.error("Erreur de chargement :", erreur);
+    }
+}
+
+// Lancement du chargement
+chargerDonnees();
+
+// Événements
+mymap.on("zoomend", mettre_a_jour_carte);
+
+mymap.on('click', (e) => {
+    L.popup()
         .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
+        .setContent(`You clicked the map at ${e.latlng.toString()}`)
         .openOn(mymap);
-}
-mymap.on('click', onMapClick);
-
-//mettre_a_jour_carte();
+});
