@@ -79,8 +79,10 @@ async function chargerDonnees() {
             marker.zoom_min = label.zoom_min;
             marker.zoom_max = label.zoom_max;
 
-            if (label.descr) {
-                marker.bindPopup(label.descr);
+            if (label.texte) {
+                marker.bindPopup(
+                    genererHTMLPopup(label)
+                );
             }
             marker.addTo(group);
             return marker;
@@ -141,6 +143,38 @@ function initSearchControl() {
             targetMarker.openPopup();
         }
     });
+}
+
+function genererHTMLPopup(item) {
+    let elements = [];
+
+    // 1. Titre (Lien <a> si un blog_link existe, sinon <h2>)
+    if (item.titre) {
+        if (item.blog_link) {
+            elements.push(`<a href="${item.blog_link}">${item.titre} :</a>`);
+        } else {
+            elements.push(`<h2>${item.titre} :</h2>`);
+        }
+    }
+
+    // 2. Blason / Image (avec gestion de la largeur)
+    if (item.blason_url) {
+        const widthAttr = item.blason_width ? ` width="${item.blason_width}"` : ' width="250px"';
+        elements.push(`<img src="${item.blason_url}"${widthAttr}>`);
+    }
+
+    // 3. Population
+    if (item.population) {
+        elements.push(`<b>${item.population}</b>`);
+    }
+
+    // 4. Texte descriptif
+    if (item.texte) {
+        elements.push(`<p>${item.texte}</p>`);
+    }
+
+    // Assemblage final dans le conteneur englobant
+    return `<div class='popup_content'>${elements.join('')}</div>`;
 }
 
 // Lancement du chargement
