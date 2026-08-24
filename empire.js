@@ -71,7 +71,8 @@ async function chargerDonnees() {
                 icon: L.divIcon({
                     className: label.class,
                     html: `<h3>${label.titre}</h3>`
-                })
+                }),
+                title: label.titre
             });
 
             marker.name = label.titre;
@@ -85,11 +86,11 @@ async function chargerDonnees() {
             return marker;
         });
 
-        // Premier affichage une fois les données prêtes
-        mettre_a_jour_carte();
-
         // Initialisation de la barre de recherche une fois les données chargées
         //initSearchControl();
+
+        // Premier affichage une fois les données prêtes
+        mettre_a_jour_carte();
 
     } catch (erreur) {
         console.error("Erreur de chargement :", erreur);
@@ -97,44 +98,49 @@ async function chargerDonnees() {
 }
 
 function initSearchControl() {
-    // LayerGroup séparé pour le moteur de recherche contenant TOUS les marqueurs
-    const searchLayer = L.layerGroup(listeMarkers);
+    // Groupe contenant tous les marqueurs
+    searchLayer = L.layerGroup(listeMarkers);
 
-    var searchControl = new L.Control.Search({
+    searchControl = new L.Control.Search({
         layer: searchLayer,
-        propertyName: 'name',
+        propertyName: 'title', // Cible marker.options.title
         initial: false,
-        zoom: null, // Désactive le zoom auto par défaut pour qu'on gère le zoom adaptatif
-        marker: false, // Ne pas rajouter de pin par défaut lors de la recherche
+        zoom: null,            // Gestion manuelle du zoom
+        marker: false,         // Pas d'icône rouge de recherche
         textPlaceholder: 'Rechercher un lieu...'
     });
 
-    // Événement déclenché lors de la sélection d'un résultat
+    // 1. Ajout du contrôle à la carte ( Leaflet Search y ajoute aussi searchLayer )
+    mymap.addControl(searchControl);
+
+    // 2. On retire immédiatement le calque de la carte :
+    // Le moteur de recherche garde l'index, mais la carte reste propre !
+    mymap.removeLayer(searchLayer);
+
+    // 3. Comportement lors de la sélection d'un résultat
     searchControl.on('search:locationfound', (e) => {
         const targetMarker = e.layer;
         const currentZoom = mymap.getZoom();
-
-        // Vérifier si le niveau de zoom actuel permet d'afficher le marqueur
         let targetZoom = currentZoom;
+
+        // Ajustement selon le zoom_min et zoom_max du marqueur trouvé
         if (currentZoom < targetMarker.zoom_min) {
             targetZoom = targetMarker.zoom_min;
         } else if (currentZoom > targetMarker.zoom_max) {
             targetZoom = targetMarker.zoom_max;
         }
 
-        // Déplacer et zoomer la carte sur la cible
+        // Déplacement de la vue
         mymap.setView(targetMarker.getLatLng(), targetZoom);
 
-        // Mettre à jour la carte pour afficher le marqueur s'il n'était pas visible
+        // Mise à jour de l'affichage selon le nouveau zoom
         mettre_a_jour_carte();
 
-        // Ouvrir la popup si elle existe
+        // Ouverture de la popup
         if (targetMarker.getPopup()) {
             targetMarker.openPopup();
         }
     });
-
-    mymap.addControl(searchControl);
 }
 
 // Lancement du chargement
